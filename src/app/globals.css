@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "intl-tel-input/styles";
 
 :root {
   --iti-path-flags-1x: url(/intl-tel-input-img/flags.webp);
@@ -33,7 +32,7 @@
   --rule: rgba(10, 22, 40, 0.12);
   --rule-strong: rgba(10, 22, 40, 0.22);
 
-  --background: #ffffff;
+  --background: #f5f6f7;
   --foreground: #171717;
 }
 
@@ -127,12 +126,13 @@ canvas {
   display: block;
   max-width: 100%;
 }
-
+section {
+  padding: 60px 40px;
+}
 .container {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: 20px;
 }
 
 .container-narrow {

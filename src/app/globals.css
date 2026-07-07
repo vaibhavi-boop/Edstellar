@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "intl-tel-input/styles";
-
 :root {
   --iti-path-flags-1x: url(/intl-tel-input-img/flags.webp);
   --iti-path-flags-2x: url(/intl-tel-input-img/flags@2x.webp);
@@ -142,29 +140,5 @@ canvas {
   padding-inline: 20px;
 }
 
-.iti {
-  width: 100%;
-}
 
-.iti input {
-  width: 100%;
-  height: 56px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  font-size: 18px;
-}
 
-.iti--separate-dial-code .iti__selected-country {
-  background: white;
-}
-
-#form2 .iti input {
-  height: 46px;
-  border-radius: 3px;
-  border: 1px solid #c1c1c1;
-  font-size: 14px;
-}
-
-#form2 .iti input:focus {
-  border: 2px solid #3898ec;
-}

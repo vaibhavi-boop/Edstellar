@@ -8,13 +8,13 @@ const navItems = [
   { label: "Consulting" },
   { label: "Company" },
   { label: "Resources" },
-  { label: "Blog", href: "/blogs/leadership-training-companies-saudi-arabia" },
+  { label: "Blog", href: "/blogleadership-training-companies-saudi-arabia" },
 ];
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
+      <div className="container px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <img src="/Images/logo.webp" alt="Edstellar" className="h-8" />

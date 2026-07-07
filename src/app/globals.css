@@ -1,26 +1,170 @@
 @import "tailwindcss";
+@import "intl-tel-input/styles";
 
 :root {
+  --iti-path-flags-1x: url(/intl-tel-input-img/flags.webp);
+  --iti-path-flags-2x: url(/intl-tel-input-img/flags@2x.webp);
+
+  /* Fonts */
+  --display: var(--font-sora), sans-serif;
+  --serif: var(--font-cormorant), "Cormorant Garamond", serif;
+  --body: var(--font-dm-sans), "DM Sans", sans-serif;
+  --mono: var(--font-dm-mono), "DM Mono", monospace;
+
+  /* Colors */
+  --navy: #0a1628;
+  --navy-soft: #14233d;
+  --navy-deep: #050d1a;
+
+  --lime: #c8f135;
+  --lime-soft: #e4f89a;
+
+  --ink: #0a1628;
+
+  --paper: #fafaf7;
+  --paper-warm: #f2f0e8;
+  --paper-cream: #ede9dd;
+
+  --white: #ffffff;
+
+  --muted: rgba(10, 22, 40, 0.6);
+  --muted-soft: rgba(10, 22, 40, 0.45);
+
+  --rule: rgba(10, 22, 40, 0.12);
+  --rule-strong: rgba(10, 22, 40, 0.22);
+
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-navy-deep: var(--navy-deep);
+
+  --color-lime: var(--lime);
+  --color-lime-soft: var(--lime-soft);
+
+  --color-ink: var(--ink);
+
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-paper-cream: var(--paper-cream);
+
+  --color-muted: var(--muted);
+  --color-muted-soft: var(--muted-soft);
+
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+
+  /* Font utilities */
+  --font-sans: var(--body);
+  --font-display: var(--display);
+  --font-serif: var(--serif);
+  --font-mono: var(--mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body);
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--display);
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: var(--body);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.iti {
+  width: 100%;
+}
+
+.iti input {
+  width: 100%;
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 18px;
+}
+
+.iti--separate-dial-code .iti__selected-country {
+  background: white;
+}
+
+#form2 .iti input {
+  height: 46px;
+  border-radius: 3px;
+  border: 1px solid #c1c1c1;
+  font-size: 14px;
+}
+
+#form2 .iti input:focus {
+  border: 2px solid #3898ec;
 }

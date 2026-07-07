@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "intl-tel-input/styles";
 
 :root {
   --iti-path-flags-1x: url(/intl-tel-input-img/flags.webp);

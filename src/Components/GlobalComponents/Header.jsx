@@ -13,8 +13,8 @@ const navItems = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="container px-6 flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 px-6 bg-white border-b border-gray-100 shadow-sm">
+      <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <img src="/Images/logo.webp" alt="Edstellar" className="h-8" />

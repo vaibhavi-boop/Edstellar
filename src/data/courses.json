@@ -1,0 +1,53 @@
+[
+  {
+    "title": "ML Model Monitoring",
+    "category": "artificial-intelligence",
+    "slug": "ml-model-monitoring",
+    "description": "Dummy description for ML Model Monitoring.",
+    "hero": {
+      "breadcrumb": "Home / IT & Technical / Artificial Intelligence / ML Model Monitoring",
+      "badge": "Instructor-led Corporate Training · IT & Technical",
+      "headline": "ML Model",
+      "headlineEm": "Monitoring",
+      "headlineSuffix": "Corporate Training",
+      "subtitle": "Keep production ML models accurate, fair, and trusted.",
+      "lede": "ML Model Monitoring corporate training equips your ML, data science, and MLOps teams to run production models with confidence, covering drift detection, performance tracking, alerting, retraining, and fairness governance. Instructor-led, fully customised, and delivered to your teams onsite or virtually worldwide.",
+      "chips": [
+        { "label": "Duration", "value": "16–24 hrs" },
+        { "label": "Delivery", "value": "Instructor-led", "sub": "Virtual · On-site · Off-site" },
+        { "label": "Languages", "value": "10", "sub": "incl. EN, ES, DE, 中文" },
+        { "label": "Reach", "value": "100+", "sub": "countries" }
+      ]
+    },
+    "whatIs": {
+      "title": "What is ",
+      "titleEm": "ML model monitoring?",
+      "intro": "ML Model Monitoring is a critical discipline for organisations that deploy machine learning models in production and need them to stay accurate, reliable, fair, and compliant over time. This corporate training covers the complete production monitoring lifecycle, so your teams can operate ML systems with confidence.",
+      "more": [
+        "The programme spans data and concept drift detection, performance metric tracking, alerting infrastructure, retraining pipelines, A/B testing, explainability monitoring, and fairness governance. Through hands-on labs with real production monitoring tools, incident simulations, and case-driven exercises, participants build the operational expertise to maintain robust ML monitoring systems that protect model performance and organisational trust.",
+        "Edstellar's instructor-led course is designed for ML engineering, data science, and MLOps teams, and is delivered virtually or onsite, fully tailored to your stack and your production reality."
+      ],
+      "oldLabel": "Traditional software monitoring",
+      "newLabel": "ML model monitoring",
+      "rows": [
+        {
+          "old": "Watches uptime and errors",
+          "new": "Watches accuracy, drift, and fairness"
+        },
+        {
+          "old": "Fails loudly when it breaks",
+          "new": "Degrades silently as data shifts"
+        },
+        {
+          "old": "Fixed logic, stable over time",
+          "new": "Behaviour decays without code changes"
+        },
+        {
+          "old": "Pass or fail checks",
+          "new": "Statistical drift and threshold guardrails"
+        },
+        { "old": "Redeploy to fix", "new": "Retrain, A/B test, and govern" }
+      ]
+    }
+  }
+]

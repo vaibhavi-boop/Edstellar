@@ -7,6 +7,8 @@ import NumberSec from "../../Components/StrategicWorkspacePlanning/numbersec";
 import InsightsVer from "../../Components/StrategicWorkspacePlanning/insightsver";
 import Slides from "../../Components/StrategicWorkspacePlanning/slides";
 import ServiceSlides from "../../Components/StrategicWorkspacePlanning/serviceslides";
+import ReadyCTA from "../../Components/StrategicWorkspacePlanning/readycta";
+import FAQs from "../../Components/StrategicWorkspacePlanning/faqs";
 
 import DataHero from "../data/datahero";
 import stats from "../data/stats";
@@ -17,6 +19,8 @@ import DataNumberSec from "../data/datanumbersec";
 import VerInsight from "../data/verinsight";
 import DataSlides from "../data/dataslides";
 import DataServiceSlides from "../data/dataserviceslides";
+import DataReadyCTA from "../data/datareadycta";
+import Datafaq from "../data/datafaq";
 
 export default function Home() {
   return (
@@ -38,6 +42,8 @@ export default function Home() {
       <InsightsVer {...VerInsight} />
       <Slides data={DataSlides} />
       <ServiceSlides data={DataServiceSlides} />
+      <FAQs data={Datafaq} />
+      <ReadyCTA data={DataReadyCTA} />
     </>
   );
 }

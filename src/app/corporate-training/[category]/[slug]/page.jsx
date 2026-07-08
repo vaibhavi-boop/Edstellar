@@ -1,5 +1,5 @@
-import courses from "@/data/courses.json";
-import allCourses from "@/data/course.json";
+import { courses } from "@/data/mlMonitoringData";
+import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";
 import CourseSideNav from "@/Components/CourseComponents/CourseSideNav";
 import CourseHero from "@/Components/CourseComponents/CourseHero";

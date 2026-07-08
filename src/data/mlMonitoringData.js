@@ -1,3 +1,45 @@
+export const courses = [
+  {
+    title: "ML Model Monitoring",
+    category: "artificial-intelligence",
+    slug: "ml-model-monitoring",
+    description: "Dummy description for ML Model Monitoring.",
+    hero: {
+      breadcrumb: "Home / IT & Technical / Artificial Intelligence / ML Model Monitoring",
+      badge: "Instructor-led Corporate Training · IT & Technical",
+      headline: "ML Model",
+      headlineEm: "Monitoring",
+      headlineSuffix: "Corporate Training",
+      subtitle: "Keep production ML models accurate, fair, and trusted.",
+      lede: "ML Model Monitoring corporate training equips your ML, data science, and MLOps teams to run production models with confidence, covering drift detection, performance tracking, alerting, retraining, and fairness governance. Instructor-led, fully customised, and delivered to your teams onsite or virtually worldwide.",
+      chips: [
+        { label: "Duration", value: "16–24 hrs" },
+        { label: "Delivery", value: "Instructor-led", sub: "Virtual · On-site · Off-site" },
+        { label: "Languages", value: "10", sub: "incl. EN, ES, DE, 中文" },
+        { label: "Reach", value: "100+", sub: "countries" },
+      ],
+    },
+    whatIs: {
+      title: "What is ",
+      titleEm: "ML model monitoring?",
+      intro: "ML Model Monitoring is a critical discipline for organisations that deploy machine learning models in production and need them to stay accurate, reliable, fair, and compliant over time. This corporate training covers the complete production monitoring lifecycle, so your teams can operate ML systems with confidence.",
+      more: [
+        "The programme spans data and concept drift detection, performance metric tracking, alerting infrastructure, retraining pipelines, A/B testing, explainability monitoring, and fairness governance. Through hands-on labs with real production monitoring tools, incident simulations, and case-driven exercises, participants build the operational expertise to maintain robust ML monitoring systems that protect model performance and organisational trust.",
+        "Edstellar's instructor-led course is designed for ML engineering, data science, and MLOps teams, and is delivered virtually or onsite, fully tailored to your stack and your production reality.",
+      ],
+      oldLabel: "Traditional software monitoring",
+      newLabel: "ML model monitoring",
+      rows: [
+        { old: "Watches uptime and errors", new: "Watches accuracy, drift, and fairness" },
+        { old: "Fails loudly when it breaks", new: "Degrades silently as data shifts" },
+        { old: "Fixed logic, stable over time", new: "Behaviour decays without code changes" },
+        { old: "Pass or fail checks", new: "Statistical drift and threshold guardrails" },
+        { old: "Redeploy to fix", new: "Retrain, A/B test, and govern" },
+      ],
+    },
+  },
+];
+
 export const lifecycle = [
   { ix:"01", t:"Detect drift", over:"Catch <b>data and concept drift</b> before it quietly degrades accuracy.", p:"Production inputs shift over time. Your teams learn to detect data drift, concept drift, and model staleness using the right statistical tests and detectors.", mods:"Modules 1–2", does:["Statistical tests: KS, Chi-squared, PSI, JS divergence","Advanced detectors: MMD, ADWIN, Page-Hinkley","Concept drift methods: DDM and EDDM","Drift monitoring with Evidently AI"] },
   { ix:"02", t:"Track performance", over:"Monitor <b>accuracy, error, and slices</b> against agreed thresholds.", p:"Beyond a single accuracy number, teams track the right metrics per model type and per data slice, with dashboards that non-technical stakeholders can read.", mods:"Module 3", does:["Classification, regression, and ranking metrics","Slice-based and segment-level performance","Ground truth collection and delayed feedback","Performance dashboards for ML teams"] },
@@ -135,18 +177,18 @@ export const why = [
 
 export const quotes = [
   { q:"Edstellar's virtual ML Model Monitoring training gave our ML platform team the operational discipline needed to manage production models at scale. Within 60 days, we deployed a centralised drift monitoring system across 40 production models, reduced undetected degradation incidents by 70%, and cut mean time to detect from 3 weeks to under 48 hours.", w:"Suresh Raghavan", r:"Head of ML Platform · Global Insurance Technology Company" },
-  { q:"The onsite training was exactly what our data science and engineering teams needed to operate production models responsibly. Post-training, we built alerting and retraining pipelines that reduced model-related incidents by 55% in the first quarter.", w:"Meghna Pillai", r:"VP of AI Operations · Leading Retail Technology Enterprise" },
-  { q:"We ran our entire ML and MLOps team through Edstellar's intensive programme off-site. Our model health dashboard now covers 100% of production models and compliance audit prep dropped by 40%.", w:"Deepa Krishnan", r:"Chief Machine Learning Officer · Multinational FinTech Group" },
+  { q:"The onsite training was exactly what our data science and engineering teams needed to operate production models responsibly. The hands-on labs with Evidently AI, Prometheus, and Grafana were directly applicable to our stack. Post-training, we built alerting and retraining pipelines that reduced model-related incidents by 55% in the first quarter.", w:"Meghna Pillai", r:"VP of AI Operations · Leading Retail Technology Enterprise" },
+  { q:"We ran our entire ML and MLOps team through Edstellar's intensive programme off-site. The coverage from drift detection to fairness monitoring and lifecycle management gave our team a unified operational playbook. Our model health dashboard now covers 100% of production models and compliance audit prep dropped by 40%.", w:"Deepa Krishnan", r:"Chief Machine Learning Officer · Multinational FinTech Group" },
   { q:"Edstellar's IT and technical training programmes have been instrumental in strengthening our engineering teams and building future-ready capabilities. The hands-on approach and expert guidance improved technical depth, problem-solving, and execution across projects.", w:"Aditi Rao", r:"L&D Head · Global Technology Company" },
 ];
 
 export const faqs = [
   { q:"What is ML Model Monitoring training?", a:"It is an instructor-led corporate training programme that teaches teams how to keep production machine learning models accurate, reliable, fair, and compliant over time. It covers the full monitoring lifecycle: data and concept drift detection, performance tracking, alerting and incident response, retraining and lifecycle management, A/B testing, explainability, and fairness and compliance monitoring." },
   { q:"How long is the training and what is the format?", a:"The programme typically runs 16 to 24 hours, instructor-led, delivered virtually, onsite, or offsite, in 10+ languages, and is fully customisable to your team's schedule, experience level, and production stack." },
-  { q:"Which tools and techniques does the course cover?", a:"Hands-on labs use real production tooling, including Evidently AI, Prometheus, and Grafana, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, SHAP for explainability, and Fairlearn and AI Fairness 360 for fairness monitoring." },
+  { q:"Which tools and techniques does the course cover?", a:"Hands-on labs use real production tooling, including Evidently AI, Prometheus, and Grafana, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, SHAP for explainability, and Fairlearn and AI Fairness 360 for fairness monitoring. Platforms such as WhyLabs and Arize are also covered." },
   { q:"Who should attend?", a:"It suits ML engineers and data scientists, MLOps and DevOps engineers, AI platform and infrastructure engineers, data engineers supporting ML pipelines, AI product managers, and analytics engineers and data architects." },
   { q:"What are the prerequisites?", a:"Participants should have experience in machine learning model development and Python programming." },
-  { q:"Do participants receive a certificate?", a:"Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum is fully customised to your industry, tools, and production environment." },
+  { q:"Do participants receive a certificate?", a:"Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum, examples, and labs are fully customised to your industry, tools, and production environment, and delivered for teams onsite, offsite, or virtually worldwide." },
 ];
 
 export const related = [

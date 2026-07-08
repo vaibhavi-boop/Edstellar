@@ -20,7 +20,7 @@ export default function ModesSection() {
           Training delivery: <em className="[font-family:var(--serif)] italic">onsite, virtual</em>, and offsite.
         </h2>
         <p className="text-[var(--muted)] text-[clamp(15px,1.2vw,17px)] leading-[1.7] mb-8 max-w-[64ch]">
-          We design training your teams actually engage with, then deliver it the way that suits you, in 10+ languages.
+          We design training your teams actually engage with, then deliver it the way that suits you, in 10+ languages through a vetted global trainer network.
         </p>
 
         <div className="flex gap-2 border-b border-[var(--rule)] mb-8 flex-wrap">

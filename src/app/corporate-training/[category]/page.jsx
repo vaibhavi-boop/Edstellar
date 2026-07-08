@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import courses from "@/data/course.json";
+import courses from "@/data/courses.json";
 
 export default async function CategoryPage({ params }) {
   const { category } = await params;

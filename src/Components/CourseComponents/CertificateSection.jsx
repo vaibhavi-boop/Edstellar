@@ -15,7 +15,7 @@ export default function CertificateSection() {
               Your ML Model Monitoring <em className="[font-family:var(--serif)] italic">training certificate</em>.
             </h2>
             <p className="text-[16px] leading-[1.75] text-[var(--muted)] max-w-[52ch]">
-              On successful completion, employees receive an Edstellar course completion certificate, recognising their commitment to ongoing learning and professional development. It validates the skills they have built and motivates them to keep growing.
+              On successful completion, employees receive an Edstellar course completion certificate, recognising their commitment to ongoing learning and professional development. It validates the skills they have built and motivates them to keep growing and contribute to organisational success.
             </p>
           </div>
 

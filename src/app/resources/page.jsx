@@ -1,3 +1,5 @@
+import HeroSection from "@/Components/resources/HeroSection";
+import { heroData } from "@/data/heroData";
 import Link from "next/link";
 const resources = [
   {
@@ -29,32 +31,40 @@ const resources = [
 function page() {
   return (
     <>
-      <section className="bg-[#0a1628]">
+      <HeroSection {...heroData.resources} />
+
+      <section className="bg-[#fbfbf8] py-20">
         <div className="container">
-          <h1 className="text-[42px] text-center text-white">Resources</h1>
-        </div>
-      </section>
-      <section className="bg-[#fbfbf8] py-16">
-        <div className="mx-auto w-full max-w-[1460px] px-6">
-          <div className="grid grid-cols-1 border border-[#d9ddd8] md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {resources.map((item) => (
-              <Link key={item.title} href={item.slug || "#"} className="block">
-                <div className="group border-b border-[#d9ddd8] p-10 transition-all duration-300 hover:bg-white md:p-14 md:even:border-l md:[&:nth-child(n+3)]:border-b-0">
-                  <h3 className="mb-5 text-[30px] font-semibold leading-tight text-[#00142d]">
+              <Link
+                key={item.title}
+                href={item.slug || "#"}
+                className="group block"
+              >
+                <div className="flex h-full flex-col rounded-2xl border border-[#d9ddd8] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#264CBE] hover:shadow-xl md:p-10">
+                  <div className="mb-8 flex items-start justify-between gap-6">
+                    <p className="rounded-full bg-[#EEF3FF] px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#264CBE]">
+                      {item.count} Resources
+                    </p>
+
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#264CBE]/20 text-[#264CBE] transition-all duration-300 group-hover:bg-[#264CBE] group-hover:text-white">
+                      →
+                    </span>
+                  </div>
+
+                  <h3 className="mb-4 text-[28px] font-semibold leading-tight text-[#00142d]">
                     {item.title}
                   </h3>
 
-                  <p className="mb-6 text-[18px] leading-7 text-[#425066]">
+                  <p className="mb-8 text-[17px] leading-7 text-[#425066]">
                     {item.description}
                   </p>
 
-                  <p className="mb-6 text-[13px] font-medium uppercase tracking-[0.35em] text-[#00142d]">
-                    {item.count} Resources
-                  </p>
-
-                  <span className="inline-flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.35em] text-[#00142d] transition-all duration-300 group-hover:gap-5">
-                    Explore <span className="text-lg">→</span>
-                  </span>
+                  <div className="mt-auto inline-flex items-center gap-3 text-sm font-semibold text-[#264CBE] transition-all duration-300 group-hover:gap-5">
+                    Explore Resources
+                    <span>→</span>
+                  </div>
                 </div>
               </Link>
             ))}

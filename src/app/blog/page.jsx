@@ -42,23 +42,65 @@ export default async function Page() {
             Our Recent <span className="font-serif italic">Blogs</span>
           </h2>
 
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogs.map((blog) => (
               <Link
-                key={blog.slug}
+                key={blog.id}
                 href={`/blog/${blog.fieldData.slug}`}
-                className="rounded-xl border p-2 transition hover:bg-gray-50"
+                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-600 hover:shadow-2xl"
               >
-                <img
-                  src={blog.fieldData["cover-photo"]?.url}
-                  alt={blog.fieldData.name}
-                  className="h-60 w-full rounded-lg object-cover mb-4"
-                />
+                <div className="overflow-hidden">
+                  <img
+                    src={blog.fieldData["cover-photo"]?.url}
+                    alt={blog.fieldData.name}
+                    className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
 
-                <h3 className="text-xl font-semibold">{blog.fieldData.name}</h3>
-                <p className="mt-2 text-sm text-gray-500">
-                  {blog.fieldData.slug}
-                </p>
+                {/* Content */}
+                <div className="p-6">
+                  {/* Date */}
+                  <p className="mb-3 text-sm font-medium text-blue-600">
+                    {new Date(
+                      blog.fieldData["post-published-date"],
+                    ).toLocaleDateString("en-US", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </p>
+
+                  <h3 className="line-clamp-2 text-xl font-semibold leading-snug text-gray-900 transition-colors duration-300 group-hover:text-blue-700">
+                    {blog.fieldData.name}
+                  </h3>
+
+                  <p className="mt-4 line-clamp-3 text-[15px] leading-7 text-gray-600">
+                    {blog.fieldData.description}
+                  </p>
+
+                  <div className="mt-6 flex items-center justify-between border-t border-gray-100 pt-5">
+                    <span className="text-sm font-medium text-gray-500">
+                      {blog.fieldData.views} Views
+                    </span>
+
+                    <span className="flex items-center gap-2 font-semibold text-blue-700 transition-all duration-300 group-hover:gap-4">
+                      Read More
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 12h14M13 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>

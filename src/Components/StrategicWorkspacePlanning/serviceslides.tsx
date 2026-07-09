@@ -95,7 +95,7 @@ export default function ServiceSlides({ data }: Props) {
         >
           {data.cards.map((card, index) => (
             <SwiperSlide key={index}>
-              <div className="flex h-full min-h-[490px] flex-col rounded-3xl border border-white/10 bg-[#2e3054] p-7 transition duration-300 hover:-translate-y-2 hover:border-lime-400">
+              <div className="flex h-full min-h-[490px] flex-col rounded-3xl border border-white/10 bg-[#2e3054] p-7 transition duration-300 hover:bg-[#3A3C7E] hover:border-lime-400">
                 {/* Top */}
                 <div className="mb-3 flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#454A80]">
@@ -118,7 +118,7 @@ export default function ServiceSlides({ data }: Props) {
                 </h3>
 
                 {/* Description */}
-                <p className="mb-5 flex-grow text-[18px] leading-9 text-white/90">
+                <p className="mb-5 flex-grow text-[16px] leading-7 text-white/90">
                   {card.description}
                 </p>
 

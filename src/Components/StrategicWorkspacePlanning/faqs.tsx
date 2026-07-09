@@ -24,7 +24,7 @@ export default function FAQs({ data }: Props) {
   };
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-15 px-10">
       <div className="mx-auto max-w-[950px]">
 
         <h2 className="mb-4 text-[36px] font-semibold text-[#3d3d3d]">

@@ -6,13 +6,13 @@ import { Check, ArrowRight } from "lucide-react";
 
 export default function HeroSection({ data }) {
   return (
-    <section className="Section bg-[#242B67]">
+    <section className="bg-[#242B67]">
       <div className="container">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_520px]">
           {/* Left Content */}
           <div>
             {/* Breadcrumb */}
-            <div className="mb-4 flex items-center gap-3 text-sm text-white/80">
+            <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-white/80">
               {data.breadcrumbs.map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   {item.href ? (
@@ -34,12 +34,12 @@ export default function HeroSection({ data }) {
             </div>
 
             {/* Heading */}
-            <h1 className="mb-6 text-5xl font-semibold leading-[1.12] text-white lg:text-[48px]">
+            <h1 className="mb-6 text-4xl font-semibold leading-[1.12] text-white lg:text-[48px]">
               {data.heading}
             </h1>
 
             {/* Description */}
-            <p className="mb-5 max-w-xl text-[16px] leading-7 text-white/90">
+            <p className="mb-5 text-[16px] leading-7 text-white/90">
               {data.description}
             </p>
 
@@ -69,12 +69,11 @@ export default function HeroSection({ data }) {
           </div>
 
           {/* Right Image */}
-          <div className="relative h-[590px] w-[520px] overflow-hidden rounded-2xl">
-            <Image
+          <div>
+            <img 
               src={data.image}
               alt={data.imageAlt}
-              fill
-              className="object-cover"
+              className="object-cover w-full rounded-lg"
             />
           </div>
         </div>

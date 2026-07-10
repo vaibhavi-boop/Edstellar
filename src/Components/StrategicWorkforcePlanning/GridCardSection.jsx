@@ -24,7 +24,7 @@ function GridCard({
       ref={ref}
       className="rounded-lg bg-[#2E316F] p-5 transition-all duration-300 hover:-translate-y-[3px]"
     >
-      <div className="flex items-start gap-4">
+      <div className="flex flex-col items-start lg:flex-row gap-4">
         <div className="flex min-h-12 min-w-12 items-center justify-center rounded-md bg-[#6E7B54] text-[#D9F227]">
           {icon}
         </div>

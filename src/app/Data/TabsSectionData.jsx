@@ -13,7 +13,7 @@ const TabsSectionData = {
         "Edstellar's workforce demand forecasting services model future headcount and capability requirements by function, geography, and role family across a 1 to 5 year horizon. We connect your business growth plans, market scenarios, and operational drivers to produce a concrete view of what talent your organization will need, and when.",
       description2:
         "The output is a demand forecast your finance, HR, and business leaders can plan against together, replacing annual headcount guessing with structured, evidence-based projections that update as business conditions evolve.",
-      image: "/StrategicWorkspacePlanningAssets/Workforce Demand Forecasting.webp",
+      image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f33687c358e98eba4ff702_Workforce%20Demand%20Forecasting%20(1).webp",
 
       points: [
       "Business driver analysis linking growth plans, revenue targets, and market entry to workforce requirements",
@@ -34,7 +34,7 @@ const TabsSectionData = {
      "Edstellar's skills gap analysis consulting maps your current workforce capabilities against future role requirements and quantifies the gap by department, level, and criticality. We move beyond headcount to understand what your people can actually do, and what they cannot do yet, so talent investment decisions are grounded in evidence.",
      description2:
      "The output is a skills gap matrix that shows exactly where your organization is exposed, which gaps are addressable through development, and which require hiring or sourcing from outside, giving HR and business leaders the data they need to prioritize.",
-     image: "/StrategicWorkspacePlanningAssets/Skills Gap Analysis.webp",
+     image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f336a69cc0ba23b2daa272_Skills%20Gap%20Analysis%20(1).webp",
 
      points: [
      "Current-state skills inventory across functions, levels, and business units",
@@ -55,7 +55,7 @@ const TabsSectionData = {
     "Edstellar's talent sourcing consulting designs a structured approach to closing workforce gaps through the right combination of internal development, external hiring, contingent talent, and automation. We use a Build / Buy / Borrow / Bot framework to evaluate each gap and recommend the most cost-effective and strategically appropriate sourcing route.",
   description2:
     "The output is a sourcing strategy your talent acquisition, HR, and L&D teams can execute from, replacing ad hoc hiring and training decisions with an integrated plan sequenced to your workforce demand forecast.",
-  image: "/StrategicWorkspacePlanningAssets/Talent Sourcing Strategy.webp",
+  image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f336c288cbc8449e598860_Talent%20Sourcing%20Strategy%20(1).webp",
 
   points: [
     "Build / Buy / Borrow / Bot analysis for each identified capability gap",
@@ -76,7 +76,7 @@ const TabsSectionData = {
     "Edstellar's role architecture consulting defines future-ready role structures, job families, and career pathways that align to organizational strategy and support workforce flexibility. We help organizations move from title-based role definitions to skills-based, modular job architecture that enables talent mobility, supports compensation equity, and creates career pathways employees can actually navigate.",
     description2:
     "The output is a role architecture your HR, talent acquisition, and L&D teams use as a common framework, eliminating the confusion, duplication, and inequity that comes from roles defined inconsistently across business units.",
-    image: "/StrategicWorkspacePlanningAssets/Role Architecture and Job Design.webp",
+    image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f336dcec6e6cc9e1c2a1ce_Role%20Architecture%20and%20Job%20Design%20(1).webp",
 
     points: [
     "Job family and role hierarchy design aligned to business strategy and operating model",
@@ -97,7 +97,7 @@ const TabsSectionData = {
       "Edstellar's workforce scenario planning services model multiple business and market scenarios, including growth, contraction, disruption, merger, and market entry, and stress-test your talent strategy against each. We build the scenario models your executive team needs to make workforce decisions with confidence even when the business environment is uncertain.",
       description2:
       "The output is a scenario planning toolkit your HR and business leaders can use to evaluate talent decisions in context, understand the workforce implications of strategic choices before they are made, and activate contingency plans without delay when scenarios shift.",
-      image: "/StrategicWorkspacePlanningAssets/Talent Sourcing Strategy1.webp",
+      image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f3372d6b9a01397495cb9e_Talent%20Sourcing%20Strategy%20(2).webp",
 
       points: [
       "Identification of key workforce planning uncertainties and scenario drivers",
@@ -118,7 +118,7 @@ const TabsSectionData = {
       "Edstellar's workforce planning consulting capability building service embeds strategic workforce planning as an ongoing organizational capability, not a one-off project. We design the process, governance, tools, and internal skill set your HR team needs to run workforce planning independently, updating forecasts and gap analyses as business conditions change.",
       description2:
       "The output is a workforce planning operating model your organization owns: a defined process, a governance rhythm, a toolset, and HR practitioners who know how to use them.",
-      image: "/StrategicWorkspacePlanningAssets/Workforce Planning Capability Building.webp",
+      image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f3374649da67c1cd0eb0c8_Workforce%20Planning%20Capability%20Building%20(1).webp",
 
       points: [
       "Workforce planning process design and standard operating procedures",

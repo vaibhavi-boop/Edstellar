@@ -20,7 +20,7 @@ function StatCard({ value, title }) {
     >
       <div className="mb-6 h-[3px] w-8 bg-[#D7F11E]" />
 
-      <h3 className="text-[36px] font-bold leading-none text-white sm:text-[42px]">
+      <h3 className="text-[36px] font-semibold leading-none text-white sm:text-[42px]">
         {isNumeric ? (
           <>
             {inView ? (

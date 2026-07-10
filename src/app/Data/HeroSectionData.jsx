@@ -27,7 +27,7 @@ const HeroSectionData = {
   buttonText: "Request a Consultation",
 
   image:
-    "/StrategicWorkspacePlanningAssets/Strategic Workforce Planning for Enterprises.webp",
+    "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f33645d20f4ed12ea12ee5_Strategic%20Workforce%20Planning%20for%20Enterprises%20(1).webp",
 
   imageAlt: "Strategic Workforce Planning for Enterprises",
 };

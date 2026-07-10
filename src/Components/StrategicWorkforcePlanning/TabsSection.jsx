@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 export default function TabsSection({ data }) {
@@ -40,7 +39,7 @@ export default function TabsSection({ data }) {
         <div className="mt-8 overflow-hidden rounded-xl border border-[#E6D4C7] bg-white">
           <div className="grid lg:grid-cols-[1fr_500px]">
             {/* Left */}
-            <div className="p-6 sm:p-8">
+            <div className="p-5 lg:p-8">
               <div className="text-[36px] font-bold leading-none text-[#ECEEF4] sm:text-[42px] lg:text-[48px]">
                 {service.number}
               </div>
@@ -78,14 +77,12 @@ export default function TabsSection({ data }) {
             </div>
 
             {/* Right */}
-            <div className="bg-[#2A2F68] p-5 sm:p-8">
-              <div className="relative h-[280px] w-full overflow-hidden rounded-lg sm:h-[420px] lg:h-full lg:min-h-[580px]">
-                <Image
+            <div className="bg-[#2A2F68] lg:p-8 sm:p-5">
+              <div>
+                <img
                   src={service.image}
                   alt={service.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 500px"
+                  className="object-cover w-full rounded-lg"
                 />
               </div>
             </div>

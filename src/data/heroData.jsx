@@ -5,7 +5,7 @@ export const heroData = {
     title: "Free Resources",
     description:
       "Explore guides, insights, and resources to improve employee training and development.",
-    image: "/Images/Resources/resources-banner.webp",
+    image: "/Images/Resources/Catelog-1.webp",
     alt: "Free resources banner",
   },
 
@@ -13,7 +13,7 @@ export const heroData = {
     title: "Free L&D Templates",
     description:
       "Get access to extensive library features ready-to-use Excel templates, PDF frameworks, and online editable tools that address every stage of the learning lifecycle—from training needs analysis and skill assessments to performance evaluations and program ROI measurement.",
-    image: "/Images/Templates/Learning and development Templates.webp",
+    image: "/Images/Resources/Learning and development Templates.webp",
     alt: "Learning and development templates",
   },
   tools: {

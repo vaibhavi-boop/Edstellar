@@ -1,0 +1,639 @@
+[
+  {
+    "id": 1,
+    "title": "Learning Content Design and Development Solutions",
+    "slug": "learning-content-design-and-development-solutions",
+    "category": "Tool",
+    "description": "Design engaging learning content, assessments, and digital learning experiences tailored to your workforce.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/learning-content-design.jpg",
+    "heroImage": "/tools/learning-content-design.jpg",
+    "readingTime": "8 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Learning content design helps organizations create structured, engaging, and outcome-driven learning experiences for employees.",
+      "why": "High-quality learning content improves learner engagement, knowledge retention, and workplace performance.",
+      "conclusion": "This solution helps businesses build scalable learning materials for classroom, virtual, blended, and digital learning delivery."
+    },
+    "features": [
+      "Instructional Design",
+      "eLearning Development",
+      "Microlearning",
+      "Assessment Creation",
+      "Facilitator Guides",
+      "Participant Workbooks"
+    ],
+    "benefits": [
+      "Improve learner engagement",
+      "Standardize training content",
+      "Reduce content development time",
+      "Support digital learning delivery"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Analyze Learning Needs",
+        "description": "Understand learner profiles, business goals, and skill gaps."
+      },
+      {
+        "step": 2,
+        "title": "Design Content Structure",
+        "description": "Create learning objectives, modules, activities, and assessments."
+      },
+      {
+        "step": 3,
+        "title": "Develop Learning Assets",
+        "description": "Build training decks, guides, videos, quizzes, and digital content."
+      },
+      {
+        "step": 4,
+        "title": "Review and Launch",
+        "description": "Validate the content and deploy it across learning channels."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What type of learning content can be created?",
+        "answer": "Instructor-led content, virtual training material, eLearning modules, assessments, facilitator guides, and learner workbooks."
+      },
+      {
+        "question": "Can the content be customized?",
+        "answer": "Yes, content can be customized based on industry, business goals, learner level, and delivery format."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Learning Content Design and Development Solutions | Edstellar",
+      "metaDescription": "Create engaging learning content, assessments, and digital training experiences for your workforce."
+    }
+  },
+  {
+    "id": 2,
+    "title": "Learning Strategy Readiness Checklist",
+    "slug": "learning-strategy-readiness-checklist",
+    "category": "Tool",
+    "description": "Is your organisation ready to design a learning strategy? Take our free 20-question readiness check and get your score instantly.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/learning-strategy-checklist.jpg",
+    "heroImage": "/tools/learning-strategy-checklist.jpg",
+    "readingTime": "6 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "The Learning Strategy Readiness Checklist helps organizations evaluate how prepared they are to create a structured learning strategy.",
+      "why": "A strong learning strategy connects employee development with business priorities, performance goals, and future workforce needs.",
+      "conclusion": "This tool gives organizations a clear readiness score and helps identify areas that need improvement before building a learning strategy."
+    },
+    "features": [
+      "20-Question Checklist",
+      "Instant Readiness Score",
+      "Strategy Gap Identification",
+      "Actionable Recommendations",
+      "Learning Maturity Insights"
+    ],
+    "benefits": [
+      "Understand current learning readiness",
+      "Identify gaps in L&D planning",
+      "Align learning with business goals",
+      "Improve training investment decisions"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Answer Readiness Questions",
+        "description": "Complete a structured checklist across key learning strategy areas."
+      },
+      {
+        "step": 2,
+        "title": "Get Your Score",
+        "description": "Receive an instant readiness score based on your responses."
+      },
+      {
+        "step": 3,
+        "title": "Review Gaps",
+        "description": "Understand which areas need more planning or improvement."
+      },
+      {
+        "step": 4,
+        "title": "Plan Next Steps",
+        "description": "Use recommendations to strengthen your learning strategy."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who should use this checklist?",
+        "answer": "L&D leaders, HR teams, training managers, and business leaders planning learning initiatives."
+      },
+      {
+        "question": "Does this tool provide a score?",
+        "answer": "Yes, the tool provides an instant readiness score based on your answers."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Learning Strategy Readiness Checklist | Edstellar",
+      "metaDescription": "Check your organization’s readiness to build a successful learning strategy with Edstellar’s readiness checklist."
+    }
+  },
+  {
+    "id": 3,
+    "title": "Learning Technology Consulting",
+    "slug": "learning-technology-consulting",
+    "category": "Tool",
+    "description": "Evaluate learning technologies and identify the right LMS, LXP, and digital learning ecosystem for your organization.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/learning-technology.jpg",
+    "heroImage": "/tools/learning-technology.jpg",
+    "readingTime": "7 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Learning Technology Consulting helps organizations choose and optimize digital platforms for employee learning.",
+      "why": "The right LMS, LXP, or learning ecosystem improves training delivery, reporting, learner engagement, and scalability.",
+      "conclusion": "This solution helps businesses evaluate current systems and select learning technologies that match their workforce needs."
+    },
+    "features": [
+      "LMS Evaluation",
+      "LXP Consulting",
+      "Platform Selection",
+      "Learning Analytics",
+      "Technology Gap Analysis",
+      "Integration Planning"
+    ],
+    "benefits": [
+      "Choose the right learning platform",
+      "Improve digital learning delivery",
+      "Reduce technology mismatch",
+      "Enable better training analytics"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Assess Current Systems",
+        "description": "Review existing learning tools, platforms, and workflows."
+      },
+      {
+        "step": 2,
+        "title": "Identify Requirements",
+        "description": "Define business, learner, reporting, and integration needs."
+      },
+      {
+        "step": 3,
+        "title": "Compare Platforms",
+        "description": "Evaluate LMS, LXP, and other learning technology options."
+      },
+      {
+        "step": 4,
+        "title": "Recommend Solution",
+        "description": "Provide a practical technology roadmap for implementation."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can this help us choose an LMS?",
+        "answer": "Yes, this solution helps evaluate and select LMS platforms based on your organization’s needs."
+      },
+      {
+        "question": "Can existing tools be reviewed?",
+        "answer": "Yes, current learning technologies can be assessed for gaps, usability, scalability, and reporting."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Learning Technology Consulting | Edstellar",
+      "metaDescription": "Evaluate LMS, LXP, and digital learning platforms with Edstellar’s learning technology consulting solution."
+    }
+  },
+  {
+    "id": 4,
+    "title": "Learning and Development Consulting",
+    "slug": "learning-and-development-consulting",
+    "category": "Tool",
+    "description": "Assess your learning function and discover opportunities to improve workforce capability and business impact.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/ld-consulting.jpg",
+    "heroImage": "/tools/ld-consulting.jpg",
+    "readingTime": "8 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Learning and Development Consulting helps organizations improve their training strategy, learning operations, and workforce capability development.",
+      "why": "A mature L&D function supports business growth by building skills, improving productivity, and preparing employees for future roles.",
+      "conclusion": "This solution helps organizations align learning programs with business needs and measure the impact of training investments."
+    },
+    "features": [
+      "L&D Strategy Review",
+      "Capability Frameworks",
+      "Learning Program Design",
+      "Training Governance",
+      "Measurement Framework",
+      "Learning Roadmap"
+    ],
+    "benefits": [
+      "Improve learning function maturity",
+      "Align training with business goals",
+      "Build workforce capability",
+      "Measure training impact"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Review Current L&D Function",
+        "description": "Assess current learning processes, programs, and governance."
+      },
+      {
+        "step": 2,
+        "title": "Identify Capability Gaps",
+        "description": "Map employee capabilities against business priorities."
+      },
+      {
+        "step": 3,
+        "title": "Design L&D Roadmap",
+        "description": "Create a structured roadmap for learning improvement."
+      },
+      {
+        "step": 4,
+        "title": "Support Implementation",
+        "description": "Guide execution, measurement, and continuous improvement."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does L&D consulting include?",
+        "answer": "It includes strategy review, training needs analysis, program design, governance, and measurement planning."
+      },
+      {
+        "question": "Is this suitable for large organizations?",
+        "answer": "Yes, it is suitable for small, mid-sized, and enterprise organizations."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Learning and Development Consulting | Edstellar",
+      "metaDescription": "Improve your L&D strategy, training programs, and workforce capability with Edstellar’s consulting solution."
+    }
+  },
+  {
+    "id": 5,
+    "title": "Talent Assessment Services",
+    "slug": "talent-assessment-services",
+    "category": "Tool",
+    "description": "Evaluate employee capabilities and identify strengths, skill gaps, and future development opportunities.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/talent-assessment.jpg",
+    "heroImage": "/tools/talent-assessment.jpg",
+    "readingTime": "7 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Talent Assessment Services help organizations evaluate employee skills, potential, performance readiness, and development needs.",
+      "why": "Accurate talent assessment supports better hiring, promotion, succession planning, and workforce development decisions.",
+      "conclusion": "This solution helps businesses make data-driven talent decisions and create focused development plans."
+    },
+    "features": [
+      "Skill Assessments",
+      "Role-Based Evaluation",
+      "Leadership Assessment",
+      "Competency Mapping",
+      "Development Reports",
+      "Talent Insights"
+    ],
+    "benefits": [
+      "Identify employee strengths",
+      "Discover skill gaps",
+      "Support succession planning",
+      "Improve development decisions"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Define Assessment Goals",
+        "description": "Identify roles, competencies, and evaluation objectives."
+      },
+      {
+        "step": 2,
+        "title": "Conduct Assessments",
+        "description": "Evaluate employees using structured assessment methods."
+      },
+      {
+        "step": 3,
+        "title": "Analyze Results",
+        "description": "Review strengths, gaps, and readiness levels."
+      },
+      {
+        "step": 4,
+        "title": "Create Development Plan",
+        "description": "Recommend learning and growth actions for employees."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What can be assessed?",
+        "answer": "Technical skills, behavioral competencies, leadership readiness, and role-specific capabilities can be assessed."
+      },
+      {
+        "question": "Can assessment reports be customized?",
+        "answer": "Yes, reports can be customized based on role, department, skill area, and business objective."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Talent Assessment Services | Edstellar",
+      "metaDescription": "Evaluate employee skills, capabilities, and development needs with Edstellar’s talent assessment services."
+    }
+  },
+  {
+    "id": 6,
+    "title": "Organizational Strategy Consulting",
+    "slug": "organizational-strategy-consulting",
+    "category": "Tool",
+    "description": "Assess organizational readiness and align business strategy with workforce development initiatives.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/organizational-strategy.jpg",
+    "heroImage": "/tools/organizational-strategy.jpg",
+    "readingTime": "8 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Organizational Strategy Consulting helps companies align business goals, workforce capabilities, and operational priorities.",
+      "why": "A clear organizational strategy helps teams work toward shared objectives and prepares the workforce for future business challenges.",
+      "conclusion": "This solution supports strategic alignment, workforce planning, and capability-building initiatives across the organization."
+    },
+    "features": [
+      "Strategy Assessment",
+      "Workforce Alignment",
+      "Capability Planning",
+      "Organizational Readiness",
+      "Change Planning",
+      "Business Goal Mapping"
+    ],
+    "benefits": [
+      "Align people strategy with business goals",
+      "Improve organizational readiness",
+      "Support change initiatives",
+      "Strengthen workforce capability"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Understand Business Priorities",
+        "description": "Review business goals, challenges, and future plans."
+      },
+      {
+        "step": 2,
+        "title": "Assess Organization Readiness",
+        "description": "Evaluate workforce, structure, processes, and capability gaps."
+      },
+      {
+        "step": 3,
+        "title": "Build Strategy Roadmap",
+        "description": "Create an action plan to align workforce and business strategy."
+      },
+      {
+        "step": 4,
+        "title": "Enable Execution",
+        "description": "Support implementation through learning, communication, and change planning."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is organizational strategy consulting?",
+        "answer": "It helps organizations align people, processes, capabilities, and goals to improve business performance."
+      },
+      {
+        "question": "Can this support workforce transformation?",
+        "answer": "Yes, it can support workforce planning, change management, and capability development."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Organizational Strategy Consulting | Edstellar",
+      "metaDescription": "Align workforce development with business goals through Edstellar’s organizational strategy consulting solution."
+    }
+  },
+  {
+    "id": 7,
+    "title": "Training Needs Analysis",
+    "slug": "training-needs-analysis",
+    "category": "Tool",
+    "description": "Identify skill gaps and prioritize learning initiatives using a structured training needs assessment framework.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a15246d3184b9604e64eb38_Closing%20HIPAA%20Audit%20Gaps-.webp",
+    "heroImage": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a15246d3184b9604e64eb38_Closing%20HIPAA%20Audit%20Gaps-.webp",
+    "readingTime": "7 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Training Needs Analysis helps organizations identify the skills employees need to perform effectively in their roles.",
+      "why": "Without proper needs analysis, training programs may not address real performance gaps or business priorities.",
+      "conclusion": "This tool helps prioritize training investments by identifying skill gaps, target learners, and learning priorities."
+    },
+    "features": [
+      "Skill Gap Analysis",
+      "Role-Based Assessment",
+      "Training Priority Mapping",
+      "Department-Level Insights",
+      "Learning Recommendations",
+      "Capability Matrix"
+    ],
+    "benefits": [
+      "Identify real training needs",
+      "Avoid unnecessary training spend",
+      "Prioritize critical skill gaps",
+      "Improve training effectiveness"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Define Roles and Skills",
+        "description": "Map required skills for each role or department."
+      },
+      {
+        "step": 2,
+        "title": "Assess Current Capability",
+        "description": "Evaluate existing employee skills and proficiency levels."
+      },
+      {
+        "step": 3,
+        "title": "Identify Gaps",
+        "description": "Compare required skills with current capability."
+      },
+      {
+        "step": 4,
+        "title": "Prioritize Training",
+        "description": "Create a focused training plan based on business impact."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is Training Needs Analysis important?",
+        "answer": "It helps organizations invest in the right training programs based on actual skill and performance gaps."
+      },
+      {
+        "question": "Can this be used for multiple departments?",
+        "answer": "Yes, it can be applied across teams, departments, job roles, or the entire organization."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Training Needs Analysis Tool | Edstellar",
+      "metaDescription": "Identify employee skill gaps and prioritize training programs with Edstellar’s Training Needs Analysis solution."
+    }
+  },
+  {
+    "id": 8,
+    "title": "Leadership Pipeline & Succession Planning",
+    "slug": "leadership-pipeline-succession-planning",
+    "category": "Tool",
+    "description": "Assess leadership readiness and build succession plans to strengthen your future leadership pipeline.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/leadership-pipeline.jpg",
+    "heroImage": "/tools/leadership-pipeline.jpg",
+    "readingTime": "8 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "Leadership Pipeline and Succession Planning helps organizations identify, prepare, and develop future leaders.",
+      "why": "Strong leadership continuity reduces business risk and ensures critical roles are supported by capable successors.",
+      "conclusion": "This solution helps organizations assess leadership potential and create structured development plans for future leaders."
+    },
+    "features": [
+      "Leadership Readiness Assessment",
+      "Successor Identification",
+      "Role-Criticality Mapping",
+      "Leadership Development Plans",
+      "Talent Review Support",
+      "Pipeline Risk Analysis"
+    ],
+    "benefits": [
+      "Build future-ready leaders",
+      "Reduce succession risk",
+      "Improve leadership continuity",
+      "Support strategic talent planning"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Identify Critical Roles",
+        "description": "Determine which leadership positions require succession planning."
+      },
+      {
+        "step": 2,
+        "title": "Assess Leadership Talent",
+        "description": "Evaluate potential successors based on skills, readiness, and potential."
+      },
+      {
+        "step": 3,
+        "title": "Map Succession Risks",
+        "description": "Identify gaps in leadership coverage and readiness."
+      },
+      {
+        "step": 4,
+        "title": "Create Development Plans",
+        "description": "Build targeted learning plans for leadership growth."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is succession planning important?",
+        "answer": "It ensures business continuity by preparing employees to take on critical leadership roles."
+      },
+      {
+        "question": "Can this identify future leaders?",
+        "answer": "Yes, it helps identify high-potential employees and assess their readiness for future leadership roles."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Leadership Pipeline and Succession Planning | Edstellar",
+      "metaDescription": "Assess leadership readiness and build succession plans with Edstellar’s leadership pipeline solution."
+    }
+  },
+  {
+    "id": 9,
+    "title": "Organizational Risk Scorecard",
+    "slug": "organizational-risk-scorecard",
+    "category": "Tool",
+    "description": "Rate your organisation across five risk dimensions and receive an instant risk heat map with actionable recommendations.",
+    "buttonText": "Launch Tool",
+    "date": "2026-07-09",
+    "thumbnail": "/tools/organizational-risk-scorecard.jpg",
+    "heroImage": "/tools/organizational-risk-scorecard.jpg",
+    "readingTime": "6 min read",
+    "author": {
+      "name": "Edstellar Team",
+      "avatar": "/authors/edstellar.png"
+    },
+    "content": {
+      "intro": "The Organizational Risk Scorecard helps businesses evaluate risk across key organizational dimensions.",
+      "why": "Understanding organizational risk allows leaders to act early, reduce disruption, and strengthen business resilience.",
+      "conclusion": "This tool provides a simple way to visualize risk levels and identify priority areas for improvement."
+    },
+    "features": [
+      "Five Risk Dimensions",
+      "Instant Risk Score",
+      "Risk Heat Map",
+      "Actionable Recommendations",
+      "Business Readiness Insights"
+    ],
+    "benefits": [
+      "Identify organizational risk areas",
+      "Improve business resilience",
+      "Support leadership decisions",
+      "Prioritize risk reduction actions"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Rate Risk Areas",
+        "description": "Evaluate your organization across five structured risk dimensions."
+      },
+      {
+        "step": 2,
+        "title": "Generate Score",
+        "description": "Get an instant score based on your inputs."
+      },
+      {
+        "step": 3,
+        "title": "View Heat Map",
+        "description": "See risk levels visually across different areas."
+      },
+      {
+        "step": 4,
+        "title": "Review Recommendations",
+        "description": "Use suggested actions to reduce risk and improve readiness."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does the scorecard measure?",
+        "answer": "It measures organizational risk across multiple dimensions such as capability, readiness, leadership, process, and execution."
+      },
+      {
+        "question": "Does it give recommendations?",
+        "answer": "Yes, the tool provides recommendations based on the risk score."
+      }
+    ],
+    "seo": {
+      "metaTitle": "Organizational Risk Scorecard | Edstellar",
+      "metaDescription": "Assess organizational risk and receive an instant heat map with Edstellar’s Organizational Risk Scorecard."
+    }
+  }
+]

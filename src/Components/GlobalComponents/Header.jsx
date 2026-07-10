@@ -7,8 +7,8 @@ const navItems = [
   { label: "Managed Training" },
   { label: "Consulting" },
   { label: "Company" },
-  { label: "Resources" },
-  { label: "Blog", href: "/blogleadership-training-companies-saudi-arabia" },
+  { label: "Resources", href: "/resources" },
+  { label: "Blog", href: "/blog/leadership-training-companies-saudi-arabia" },
 ];
 
 export default function Header() {

@@ -19,7 +19,7 @@ export default async function TemplatePage({ params }) {
             <Link href="/">Home</Link> &#10140;
             <Link href="/resources">Resources</Link> &#10140;
             <Link href="/resources/templates">Templates</Link> &#10140;
-            <p className="text-[rgb(38, 76, 190)]">{template.title}</p>
+            <p className="">{template.title}</p>
             <h1 className="mb-6 text-4xl font-semibold">{template.title}</h1>
             <p className="whitespace-pre-line text-lg leading-8">
               {template.content}

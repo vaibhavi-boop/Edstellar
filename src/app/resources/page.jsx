@@ -20,11 +20,13 @@ const resources = [
     title: "Brochures",
     description: "Detailed service brochures and program overviews.",
     count: "9",
+    slug: "resources/brochures",
   },
   {
     title: "Case Studies",
     description: "Real-world client success stories and measurable outcomes.",
     count: "9",
+    slug: "resources/case-studies",
   },
 ];
 

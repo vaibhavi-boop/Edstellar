@@ -1,3 +1,7 @@
+import CaseStudiesCard from "@/Components/resources/CaseStudiesCard";
+import Link from "next/link";
+import CaseStudies from "@/data/CaseStudies.json";
+
 function page() {
   return (
     <div>
@@ -5,28 +9,42 @@ function page() {
         <div className="container">
           <div className="grid grid-cols-[1fr_420px] gap-10">
             <div>
-              <img
-                src="https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/64ad5c0ce36a0585e4dc7a8b_Group%201000001896%20(1).webp"
-                alt="invensis"
-              />
-            </div>
-            <div>
-              <div
-                className="bg-[#3a3c7e] rounded-lg p-10 flex flex-col
-"
-              >
-                <h2 className="text-2xl text-center mb-[10px] text-white">
-                  Discover the power of managed training services
-                </h2>
-                <p className="mb-[10px] text-center text-white">
-                  Let Edstellar handle your organization's training needs. Focus
-                  on your business while we support your growth.
+              <div className="relative">
+                <img
+                  src="https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/64ad5c0ce36a0585e4dc7a8b_Group%201000001896%20(1).webp"
+                  alt="Invensis Technologies"
+                  className="h-[450px] w-full object-cover"
+                />
+
+                <h1 className="absolute bottom-8 left-8 right-8 text-4xl font-semi-bold text-white">
+                  Invensis Technologies Uses Edstellar to Streamline Training
+                  Process
+                </h1>
+              </div>
+              <div className="space-x-2">
+                <Link href="/">Home</Link> &#10140;
+                <Link href="/resources">Resources</Link> &#10140;
+                <Link href="/resources/case-studies">Case Studies</Link>{" "}
+                &#10140;
+                <p className="">
+                  {" "}
+                  Invensis Technologies Uses Edstellar to Streamline Training
+                  Process
                 </p>
-                <a className="rounded-[8px] bg-[#c8e130] px-6 py-3 text-center font-medium text-[#22295a] no-underline transition-all duration-300">
-                  Schedule a demo
-                </a>
+                <br />
+                <div>
+                  <h2 className="text-3xl mb-4">
+                    {CaseStudies.sections[0].title}
+                  </h2>
+                  {CaseStudies.sections[0].content.map((paragraph, index) => (
+                    <p key={index} className="mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
+            <CaseStudiesCard />
           </div>
         </div>
       </section>

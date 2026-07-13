@@ -10,7 +10,7 @@ function page() {
         <div className="container">
           <div className="grid grid-cols-3">
             <Link
-              href="resources/case-studies/invensis-technologies-uses-edstellar-to-streamline-training-process"
+              href="/resources/case-studies/invensis-technologies-uses-edstellar-to-streamline-training-process"
               className="relative h-[450px]  overflow-hidden rounded-xl bg-cover bg-center"
               style={{
                 backgroundImage:

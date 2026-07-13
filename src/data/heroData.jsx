@@ -23,4 +23,11 @@ export const heroData = {
     image: "/Images/Templates/Learning and development Templates.webp",
     alt: "Learning and development templates",
   },
+  casestudies: {
+    title: "Case Studies",
+    description:
+      "Edstellar enables teams to do more through its unparalleled training delivery. Witness here the classic cases of why Edstellar is chosen by organizations globally for their workforce development.",
+    image: "/Images/Templates/Learning and development Templates.webp",
+    alt: "Learning and development templates",
+  },
 };

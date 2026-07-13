@@ -1,7 +1,9 @@
+import { heroData } from "@/data/heroData";
+import HeroSection from "@/Components/resources/HeroSection";
 function page() {
   return (
     <div>
-      <h1>Case Studies Main Page</h1>
+      <HeroSection {...heroData.casestudies} />
     </div>
   );
 }

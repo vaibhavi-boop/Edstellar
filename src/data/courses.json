@@ -1,0 +1,136 @@
+[
+  {
+    "category": "artificial-intelligence",
+    "slug": "machine-learning",
+    "title": "Machine Learning"
+  },
+  {
+    "category": "artificial-intelligence",
+    "slug": "deep-learning",
+    "title": "Deep Learning"
+  },
+  {
+    "category": "artificial-intelligence",
+    "slug": "generative-ai",
+    "title": "Generative AI"
+  },
+  {
+    "category": "artificial-intelligence",
+    "slug": "prompt-engineering",
+    "title": "Prompt Engineering"
+  },
+  {
+    "category": "artificial-intelligence",
+    "slug": "ai-for-business",
+    "title": "AI for Business"
+  },
+  {
+    "category": "artificial-intelligence",
+    "slug": "ml-model-monitoring",
+    "title": "ML Model Monitoring"
+  },
+
+  {
+    "category": "leadership",
+    "slug": "strategic-leadership",
+    "title": "Strategic Leadership"
+  },
+  {
+    "category": "leadership",
+    "slug": "first-time-manager",
+    "title": "First Time Manager"
+  },
+  {
+    "category": "leadership",
+    "slug": "executive-leadership",
+    "title": "Executive Leadership"
+  },
+  {
+    "category": "leadership",
+    "slug": "change-management",
+    "title": "Change Management"
+  },
+  {
+    "category": "leadership",
+    "slug": "decision-making",
+    "title": "Decision Making"
+  },
+
+  {
+    "category": "project-management",
+    "slug": "pmp",
+    "title": "PMP Certification"
+  },
+  {
+    "category": "project-management",
+    "slug": "prince2",
+    "title": "PRINCE2 Foundation"
+  },
+  {
+    "category": "project-management",
+    "slug": "scrum-master",
+    "title": "Certified Scrum Master"
+  },
+  {
+    "category": "project-management",
+    "slug": "agile-fundamentals",
+    "title": "Agile Fundamentals"
+  },
+  {
+    "category": "project-management",
+    "slug": "risk-management",
+    "title": "Risk Management"
+  },
+
+  {
+    "category": "devops",
+    "slug": "docker",
+    "title": "Docker"
+  },
+  {
+    "category": "devops",
+    "slug": "kubernetes",
+    "title": "Kubernetes"
+  },
+  {
+    "category": "devops",
+    "slug": "jenkins",
+    "title": "Jenkins"
+  },
+  {
+    "category": "devops",
+    "slug": "terraform",
+    "title": "Terraform"
+  },
+  {
+    "category": "devops",
+    "slug": "ci-cd",
+    "title": "CI/CD Pipeline"
+  },
+
+  {
+    "category": "cyber-security",
+    "slug": "ethical-hacking",
+    "title": "Ethical Hacking"
+  },
+  {
+    "category": "cyber-security",
+    "slug": "network-security",
+    "title": "Network Security"
+  },
+  {
+    "category": "cyber-security",
+    "slug": "soc-analyst",
+    "title": "SOC Analyst"
+  },
+  {
+    "category": "cyber-security",
+    "slug": "cloud-security",
+    "title": "Cloud Security"
+  },
+  {
+    "category": "cyber-security",
+    "slug": "penetration-testing",
+    "title": "Penetration Testing"
+  }
+]

@@ -61,14 +61,14 @@ export default function Header() {
                         >
                           IT & Technical Training (1045+)
                         </a>
-
+                        
                         <a
                           href="#"
                           className="block text-gray-600 hover:text-blue-600"
                         >
                           Artificial Intelligence Training (130)
                         </a>
-
+                  
                         <a
                           href="#"
                           className="block text-gray-600 hover:text-blue-600"

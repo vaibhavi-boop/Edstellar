@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "artificial-intelligence",
+    "title": "Artificial Intelligence",
+    "description": "Corporate training programs in AI, Machine Learning, Deep Learning, Generative AI, and MLOps."
+  },
+  {
+    "slug": "leadership",
+    "title": "Leadership",
+    "description": "Leadership development programs for managers, executives, and high-potential employees."
+  },
+  {
+    "slug": "project-management",
+    "title": "Project Management",
+    "description": "Corporate training in PMP, Agile, Scrum, PRINCE2, and project delivery best practices."
+  },
+  {
+    "slug": "devops",
+    "title": "DevOps",
+    "description": "Instructor-led DevOps training covering Docker, Kubernetes, Jenkins, Terraform, and CI/CD."
+  },
+  {
+    "slug": "cyber-security",
+    "title": "Cyber Security",
+    "description": "Cyber security training including ethical hacking, SOC operations, cloud security, and penetration testing."
+  }
+]

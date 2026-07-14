@@ -1,7 +1,7 @@
 import { heroData } from "@/data/heroData";
 import HeroSection from "@/Components/resources/HeroSection";
 import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
-import brochures from "@/data/Brochures.json";
+import brouchures from "@/data/brouchures.json";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ function page() {
               items={[
                 { label: "Home", href: "/" },
                 { label: "Resources", href: "/resources" },
-                { label: "Brochures" },
+                { label: "Brouchures" },
               ]}
             />
           </div>
@@ -30,7 +30,7 @@ function page() {
             and capabilities to make informed learning and business decisions.
           </p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {brochures.map((item) => (
+            {brouchures.map((item) => (
               <div
                 key={item.id}
                 className="flex h-full flex-col overflow-hidden bg-white border-b-[5px] border-b-[#C8E130]"

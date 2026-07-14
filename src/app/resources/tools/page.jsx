@@ -3,6 +3,7 @@ import { heroData } from "@/data/heroData";
 import Tools from "@/data/Tools.json";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
 
 function page() {
   return (
@@ -10,6 +11,24 @@ function page() {
       <HeroSection {...heroData.tools} />
       <section>
         <div className="container">
+          <div className="flex justify-center">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Resources", href: "/resources" },
+                { label: "Tools" },
+              ]}
+            />
+          </div>
+          <h2 className="text-center text-[36px] font-semibold">
+            Explore Free Learning & Development Tools
+          </h2>
+          <p className="mx-auto mb-10 mt-4 max-w-[800px] text-center">
+            Discover practical tools designed to simplify training planning,
+            assess organizational readiness, and support smarter learning
+            decisions. Use these free resources to improve workforce development
+            and training effectiveness.
+          </p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Tools.map((item) => (
               <div

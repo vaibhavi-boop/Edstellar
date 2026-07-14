@@ -1,5 +1,6 @@
 import { heroData } from "@/data/heroData";
 import HeroSection from "@/Components/resources/HeroSection";
+import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
 import Link from "next/link";
 
 function page() {
@@ -8,6 +9,24 @@ function page() {
       <HeroSection {...heroData.casestudies} />
       <section>
         <div className="container">
+          <div className="flex justify-center">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Resources", href: "/resources" },
+                { label: "Case Studies" },
+              ]}
+            />
+          </div>
+          <h2 className="text-center text-[36px] font-semibold">
+            Customer Success Stories
+          </h2>
+          <p className="mx-auto mb-10 mt-4 max-w-[800px] text-center">
+            Discover real-world examples of how leading organizations have
+            transformed employee learning, optimized training delivery, and
+            accelerated business growth with Edstellar.
+          </p>
+
           <div className="grid grid-cols-3">
             <Link
               href="/resources/case-studies/invensis-technologies-uses-edstellar-to-streamline-training-process"

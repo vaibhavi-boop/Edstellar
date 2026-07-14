@@ -22,6 +22,7 @@ export default async function TemplatePage({ params }) {
                 { label: "Home", href: "/" },
                 { label: "Resources", href: "/resources" },
                 { label: "Templates", href: "/resources/templates" },
+                { label: template.title },
               ]}
             />
             <h1 className="mb-6 text-4xl font-semibold">{template.title}</h1>

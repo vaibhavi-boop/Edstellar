@@ -3,13 +3,23 @@ import { heroData } from "@/data/heroData";
 import HeroSection from "@/Components/resources/HeroSection";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
 function Page() {
   return (
     <>
       <HeroSection {...heroData.templates} />
       <section className="py-20">
         <div className="container">
-          <h2 className="text-center text-[42px] font-semibold">
+          <div className="flex justify-center">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Resources", href: "/resources" },
+                { label: "Templates" },
+              ]}
+            />
+          </div>
+          <h2 className="text-center text-[36px] font-semibold">
             Explore Our Curated L&D Templates
           </h2>
 

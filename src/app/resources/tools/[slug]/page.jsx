@@ -1,6 +1,7 @@
 import Tools from "@/data/Tools.json";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
 
 export default async function ToolsPage({ params }) {
   const { slug } = await params;
@@ -18,15 +19,14 @@ export default async function ToolsPage({ params }) {
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
               {/* Breadcrumb */}
-              <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-[#5b6475]">
-                <Link href="/">Home</Link>
-                <span>/</span>
-                <Link href="/resources">Resources</Link>
-                <span>/</span>
-                <Link href="/resources/tools">Tools</Link>
-                <span>/</span>
-                <span className="font-medium text-[#00142d]">{tool.title}</span>
-              </div>
+              <Breadcrumbs
+                items={[
+                  { label: "Home", href: "/" },
+                  { label: "Resources", href: "/resources" },
+                  { label: "Tools", href: "/resources/tools" },
+                  { label: tool.title },
+                ]}
+              />
 
               <span className="rounded-full bg-[#e9f7db] px-4 py-1 text-sm font-semibold text-[#5a8f00]">
                 {tool.category}

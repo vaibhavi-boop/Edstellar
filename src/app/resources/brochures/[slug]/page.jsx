@@ -1,12 +1,19 @@
-export default async function TemplatePage({ params }) {
+import Brochures from "@/data/Brochures.json";
+import { notFound } from "next/navigation";
+
+export default async function BrochurePage({ params }) {
   const { slug } = await params;
 
-  const template = brouchures.find((item) => item.slug === slug);
+  const brochure = Brochures.find((item) => item.slug === slug);
 
-  if (!template) {
+  if (!brochure) {
     notFound();
   }
-    return (
-      
-    )
+
+  return (
+    <main className="container">
+      <h1>{brochure.title}</h1>
+      <p>{brochure.description}</p>
+    </main>
+  );
 }

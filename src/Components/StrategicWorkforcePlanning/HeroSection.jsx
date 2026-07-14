@@ -1,6 +1,6 @@
 "use client";
-import { Check, ArrowRight } from "lucide-react";
-import Breadcrumb from "./Breadcrub";
+import { Check } from "lucide-react";
+import Breadcrumb from "./Breadcrumb";
 import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function HeroSection({ data, breadcrumbs }) {

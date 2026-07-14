@@ -25,7 +25,7 @@ import {
   ServiceSlidesSectionData,
   FAQSectionData,
   CTASectionData,
-} from "../Data/AllComponetsData";
+} from "../Data/Strategic_Workflow_Planning_Data";
 
 export default function Home() {
   return (

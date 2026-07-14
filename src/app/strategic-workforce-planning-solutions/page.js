@@ -11,19 +11,21 @@ import ServiceSlidesSection from "../../Components/StrategicWorkforcePlanning/Se
 import FaqSection from "../../Components/StrategicWorkforcePlanning/FaqSection";
 import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";
 
-import HeroSectionData from "../Data/HeroSectionData";
-import BreadcrumbData from "../Data/BreadcrumbData";
-import StatsData from "../Data/StatsSectionData";
-import LogoSectionData from "../Data/LogoSectionData";
-import StaticCardSectionData from "../Data/StaticCardSectionData";
-import GridCardSectionData from "../Data/GridCardSectionData";
-import TabsSectionData from "../Data/TabsSectionData";
-import NumberSectionData from "../Data/NumberSectionData";
-import VerticleLineSectionData from "../Data/VerticleLineSectionData";
-import SlidesSectionData from "../Data/SlidesSectionData";
-import ServiceSlidesSectionData from "../Data/ServiceSlidesSectionData";
-import FaqSectionData from "../Data/FaqSectionData";
-import CTASectionData from "../Data/CTASectionData";
+import {
+  HeroSectionData,
+  BreadcrumbData,
+  StatsData,
+  LogoSectionData,
+  StaticCardSectionData,
+  GridCardSectionData,
+  TabsSectionData,
+  NumberSectionData,
+  VerticleLineSectionData,
+  SlidesSectionData,
+  ServiceSlidesSectionData,
+  FAQSectionData,
+  CTASectionData,
+} from "../Data/AllComponetsData";
 
 export default function Home() {
   return (
@@ -38,7 +40,7 @@ export default function Home() {
       <VerticleLineSection data={VerticleLineSectionData} />
       <SlidesSection data={SlidesSectionData} />
       <ServiceSlidesSection data={ServiceSlidesSectionData} />
-      <FaqSection data={FaqSectionData} />
+      <FaqSection data={FAQSectionData} />
       <CTASection data={CTASectionData} />
     </>
   );

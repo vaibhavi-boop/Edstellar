@@ -1,9 +1,12 @@
-function page() {
-  return (
-    <div>
-      <h1>Brochures Detail Page</h1>
-    </div>
-  );
-}
+export default async function TemplatePage({ params }) {
+  const { slug } = await params;
 
-export default page;
+  const template = brouchures.find((item) => item.slug === slug);
+
+  if (!template) {
+    notFound();
+  }
+    return (
+      
+    )
+}

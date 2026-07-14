@@ -30,4 +30,11 @@ export const heroData = {
     image: "/Images/Templates/Learning and development Templates.webp",
     alt: "Learning and development templates",
   },
+  brouchures: {
+    title: "Download Learning & Consulting Brochures",
+    description:
+      "Access comprehensive brochures covering our learning strategy, leadership development, talent assessment, organizational consulting, and training solutions designed to support business growth.",
+    image: "/Images/Templates/Learning and development Templates.webp",
+    alt: "Learning and development templates",
+  },
 };

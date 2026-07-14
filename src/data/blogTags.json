@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Business Development",
+    "slug": "business-development-articles"
+  },
+  {
+    "id": 2,
+    "title": "Diversity & Inclusion",
+    "slug": "diversity-inclusion-articles"
+  },
+  {
+    "id": 3,
+    "title": "Popular Training Topics",
+    "slug": "popular-training-topics-articles"
+  },
+  {
+    "id": 4,
+    "title": "Workplace Statistics & Trends",
+    "slug": "workplace-statistics-trends-articles"
+  },
+  {
+    "id": 5,
+    "title": "Employee Activities, Games & Exercises",
+    "slug": "employee-activities-games-exercises-articles"
+  },
+  {
+    "id": 6,
+    "title": "Soft Skills",
+    "slug": "soft-skills-articles"
+  },
+  {
+    "id": 7,
+    "title": "Leadership Skills",
+    "slug": "leadership-articles"
+  },
+  {
+    "id": 8,
+    "title": "Job Roles & Responsibilities",
+    "slug": "job-roles-responsibilities-articles"
+  },
+  {
+    "id": 9,
+    "title": "Building a Team",
+    "slug": "building-a-team-articles"
+  },
+  {
+    "id": 10,
+    "title": "In-Demand Skills",
+    "slug": "in-demand-skills-articles"
+  },
+  {
+    "id": 11,
+    "title": "Human Resource",
+    "slug": "human-resource-articles"
+  },
+  {
+    "id": 12,
+    "title": "Employee Training",
+    "slug": "employee-training-articles"
+  },
+  {
+    "id": 13,
+    "title": "Popular Training Providers",
+    "slug": "popular-training-providers-articles"
+  },
+  {
+    "id": 14,
+    "title": "Workforce Optimization",
+    "slug": "workforce-optimization-articles"
+  },
+  {
+    "id": 15,
+    "title": "Learning and Development",
+    "slug": "learning-and-development-articles"
+  },
+  {
+    "id": 16,
+    "title": "Frameworks / Models / Templates",
+    "slug": "frameworks-models-templates"
+  },
+  {
+    "id": 17,
+    "title": "Digital Transformation",
+    "slug": "digital-transformation"
+  },
+  {
+    "id": 18,
+    "title": "Trending Technologies",
+    "slug": "trending-technologies"
+  }
+]

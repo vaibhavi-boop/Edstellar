@@ -45,6 +45,11 @@ const StaticCardSectionData = {
       description: "Leadership and succession plans are not connected to the broader workforce picture, creating blind spots at the top of the organization.",
     },
   ],
+  button: {
+    text: "Request a Consultation",
+    href: "https://www.edstellar.com/",
+    title: "Click Here to Request a Workforce Planning Consultation",
+  },
 };
 
 export default StaticCardSectionData;

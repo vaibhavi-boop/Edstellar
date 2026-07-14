@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -79,16 +78,11 @@ export default function ServiceSlides({ data }) {
         >
           {data.cards.map((card, index) => (
             <SwiperSlide key={index}>
-              <div className="flex h-full min-h-[470px] flex-col rounded-3xl border border-white/10 bg-[#2E3054] p-6 transition-all duration-300 hover:border-lime-400 hover:bg-[#3A3C7E] lg:min-h-[490px] lg:p-7">
+              <div className="group flex h-full min-h-[420px] flex-col rounded-[8px] border border-white/10 bg-[#2E3054] p-5 transition-all duration-300 hover:border-lime-400 hover:bg-[#3A3C7E]">
                 {/* Top */}
                 <div className="mb-4 flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#454A80]">
-                    <Image
-                      src={card.icon}
-                      alt=""
-                      width={22}
-                      height={22}
-                    />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#454A80] text-[#D9FF34] transition-all duration-300 group-hover:bg-[#D9FF34] group-hover:text-[#31346F]">
+                    {card.icon}
                   </div>
 
                   <span className="rounded-lg bg-[#454A80] px-4 py-2 text-sm font-semibold text-[#D9FF34]">
@@ -97,7 +91,7 @@ export default function ServiceSlides({ data }) {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-3 text-[20px] font-bold leading-[30px] text-white lg:leading-[38px]">
+                <h3 className="mb-3 text-[20px] font-bold leading-[28px] text-white">
                   {card.title}
                 </h3>
 

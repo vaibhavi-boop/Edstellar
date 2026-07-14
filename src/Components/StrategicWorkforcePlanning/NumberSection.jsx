@@ -1,63 +1,78 @@
+"use client";
+
 export default function NumberSection({ data }) {
   return (
     <section className="section bg-white">
       <div className="container">
         {/* Heading */}
-        <div className="mx-auto max-w-[800px] text-center">
-          <h2 className="text-[28px] font-bold leading-[1.2] text-[#2A2A2A] sm:text-[32px] lg:text-[36px] lg:leading-[44px]">
+        <div className="mx-auto mb-10 max-w-[800px] text-center">
+          <h2 className="mb-4 font-bold leading-[1.2] text-[#2A2A2A] lg:text-[36px]">
             {data.heading}
           </h2>
 
-          <p className="mt-5 text-[16px] leading-7 text-[#454545]">
+          <p className="text-[16px] leading-7 text-[#454545]">
             {data.description}
           </p>
         </div>
 
         {/* Timeline */}
         <div className="relative mt-12">
-          {/* Desktop Timeline Line */}
-          <div className="absolute left-0 right-0 top-[28px] hidden h-[2px] bg-[#CBD5F0] lg:block" />
+          {/* ================= Desktop Timeline ================= */}
+          <div className="absolute left-0 right-0 top-[24px] hidden lg:block">
+            {/* Horizontal Line */}
+            <div className="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-[#03307d80]" />
+
+            {/* Small Dots (Desktop Only) */}
+            <span className="absolute left-[20%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
+
+            <span className="absolute left-[40%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
+
+            <span className="absolute left-[60%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
+
+            <span className="absolute left-[80%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
+          </div>
+
+          {/* ================= Mobile Timeline ================= */}
+          <div className="absolute bottom-0 left-[26px] top-0 w-[2px] bg-[#03307d80] lg:hidden" />
 
           {/* Steps */}
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
+          <div className="grid gap-4 lg:grid-cols-5 lg:gap-6">
             {data.steps.map((step) => (
-              <div key={step.number} className="relative">
-                {/* Mobile Vertical Line */}
-                <div className="absolute left-[26px] top-[54px] bottom-0 w-[2px] bg-[#CBD5F0] lg:hidden last:hidden" />
-
+              <div
+                key={step.number}
+                className="relative flex items-start gap-4 lg:block"
+              >
                 {/* Circle */}
-                <div className="relative flex justify-center lg:justify-center">
-                  <div className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-[#2A2F68] text-[22px] font-bold text-white">
-                    {step.number}
-                  </div>
+                <div className="relative z-10 flex h-[54px] w-[54px] flex-shrink-0 items-center justify-center rounded-full bg-[#2A2F68] text-[22px] font-bold text-white lg:mx-auto">
+                  {step.number}
                 </div>
 
                 {/* Content */}
-                <div className="mt-4 text-center">
-                  <h3 className="text-[24px] font-bold text-[#3a3a3a] lg:text-[20px]">
+                <div className="flex-1 lg:mt-4">
+                  <h3 className="mb-2 text-[20px] font-bold text-[#3a3a3a] lg:text-center lg:text-[20px]">
                     {step.title}
                   </h3>
 
-                  <p className="mt-2 text-[16px] leading-7 text-[#333]">
+                  <p className="mb-4 text-[16px] leading-7 text-[#333] lg:text-center">
                     {step.description}
                   </p>
 
                   {/* Tags */}
-                  <div className="mt-4 flex flex-wrap justify-center gap-3">
-                    <span className="whitespace-nowrap rounded bg-[#215aff1a] px-3 py-1 text-[12px] font-semibold text-[#3a3a3a]">
+                  <div className="mb-2.5 flex flex-wrap gap-2 lg:justify-center">
+                    <span className="rounded bg-[#215aff1a] px-3 py-1 text-[12px] font-semibold text-[#3a3a3a]">
                       {step.week}
                     </span>
 
-                    <span className="whitespace-nowrap rounded border border-[#5167E8] px-3 py-1 text-[12px] font-semibold leading-[18px] text-[#3a3a3a]">
+                    <span className="rounded border border-[#5167E8] px-3 py-1 text-[12px] font-semibold text-[#3a3a3a]">
                       {step.badge}
                     </span>
                   </div>
 
                   {/* Points */}
-                  <ul className="mt-2.5 space-y-2 text-left text-[14px] leading-6 text-[#3a3a3a]">
+                  <ul className="mt-4 space-y-2 text-[14px] leading-6 text-[#000]">
                     {step.points.map((point, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span>•</span>
+                      <li key={index} className="mb-1 flex items-start gap-2">
+                        <span className="text-xl leading-none">•</span>
                         <span>{point}</span>
                       </li>
                     ))}

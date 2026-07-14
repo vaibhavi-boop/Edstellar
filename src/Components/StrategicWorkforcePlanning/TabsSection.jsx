@@ -81,7 +81,8 @@ export default function TabsSection({ data }) {
               <div>
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={service.alt}
+                  title={service.title}
                   className="object-cover w-full rounded-lg"
                 />
               </div>

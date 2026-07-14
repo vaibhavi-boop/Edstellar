@@ -7,7 +7,7 @@ const VerticleLineSectionData = {
   description:
     "From the way we connect planning to learning delivery, to the way we transfer capability to your team, Edstellar's approach is built to produce outcomes your organization continues to own after the engagement ends.",
 
-  image: "/StrategicWorkspacePlanningAssets/Workforce Demand.webp",
+  image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f337f2bdb20258b1556d23_Workforce%20Demand%20Forecasting%20(2).webp",
 
   features: [
     {

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function StaticCardSection({ data }) {
   const { heading, description, items } = data;
@@ -56,13 +57,12 @@ export default function StaticCardSection({ data }) {
             delivery.
           </p>
 
-          <button className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[#D7F11E] px-6 py-3 text-[16px] font-medium text-black transition hover:bg-lime-300 sm:w-auto">
-            Request a Consultation
-            <ArrowRight
-              size={22}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </button>
+          {/* Button */}
+          <PrimaryButton
+            text={data.button.text}
+            href={data.button.href}
+            title={data.button.title}
+          />
         </div>
       </div>
     </section>

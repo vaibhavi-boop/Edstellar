@@ -1,9 +1,18 @@
+import {
+  WalletCards,
+  Users,
+  BadgeCheck,
+  Building2,
+  GraduationCap,
+  Network,
+} from "lucide-react";
+
 const ServiceSlidesSectionData = {
   heading: "Integrated with Edstellar's Full Consulting Ecosystem",
 
   cards: [
     {
-      icon: "/icons/icon1.svg",
+      icon: <WalletCards size={22} />,
       category: "Consulting",
       title: "Training Needs Analysis",
       description:
@@ -12,7 +21,7 @@ const ServiceSlidesSectionData = {
     },
 
     {
-      icon: "/icons/icon2.svg",
+      icon: <Users size={22} />,
       category: "OD Consulting",
       title: "Leadership Pipeline and Succession Planning",
       description:
@@ -21,7 +30,7 @@ const ServiceSlidesSectionData = {
     },
 
     {
-      icon: "/icons/icon3.svg",
+      icon: <BadgeCheck size={22} />,
       category: "Consulting",
       title: "Talent Assessments",
       description:
@@ -30,7 +39,7 @@ const ServiceSlidesSectionData = {
     },
 
     {
-      icon: "/icons/icon3.svg",
+      icon: <Building2 size={22} />,
       category: "OD Consulting",
       title: "Organizational Strategy Consulting",
       description:
@@ -38,17 +47,17 @@ const ServiceSlidesSectionData = {
       link: "https://www.edstellar.com/strategic-workforce-planning-solutions",
     },
 
-      {
-      icon: "/icons/icon3.svg",
-      category: "l&D Consulting",
+    {
+      icon: <GraduationCap size={22} />,
+      category: "L&D Consulting",
       title: "Learning Strategy and Design",
       description:
         "Reskilling requirements identified in workforce planning become learning programs — Edstellar connects planning outputs directly to learning design and delivery.",
       link: "https://www.edstellar.com/learning-strategy-design-consulting",
     },
 
-      {
-      icon: "/icons/icon3.svg",
+    {
+      icon: <Network size={22} />,
       category: "OD Consulting",
       title: "Organizational Development Consulting",
       description:

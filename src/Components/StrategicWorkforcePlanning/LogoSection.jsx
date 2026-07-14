@@ -6,7 +6,7 @@ export default function LogoSection({ data }) {
   return (
     <section className="overflow-hidden bg-[#31346F]">
       <div className="container">
-        <h2 className="mb-12 text-center text-[36px] font-semibold text-white lg:text-[36px]">
+        <h2 className="mb-12 text-center text-[30px] font-semibold text-white lg:text-[36px]">
           {data.heading}
         </h2>
 
@@ -21,6 +21,7 @@ export default function LogoSection({ data }) {
                 <Image
                   src={logo.image}
                   alt={logo.alt}
+                  title={logo.title}
                   width={120}
                   height={44}
                   className="h-auto max-h-[48px] w-auto object-contain"
@@ -41,8 +42,9 @@ export default function LogoSection({ data }) {
                 <Image
                   src={logo.image}
                   alt={logo.alt}
+                  title={logo.title}
                   width={120}
-                  height={4}
+                  height={44}
                   className="h-auto max-h-[52px] w-auto object-contain"
                 />
               </div>

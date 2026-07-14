@@ -12,6 +12,7 @@ import FaqSection from "../../Components/StrategicWorkforcePlanning/FaqSection";
 import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";
 
 import HeroSectionData from "../Data/HeroSectionData";
+import BreadcrumbData from "../Data/BreadcrumbData";
 import StatsData from "../Data/StatsSectionData";
 import LogoSectionData from "../Data/LogoSectionData";
 import StaticCardSectionData from "../Data/StaticCardSectionData";
@@ -27,7 +28,7 @@ import CTASectionData from "../Data/CTASectionData";
 export default function Home() {
   return (
     <>
-      <HeroSection data={HeroSectionData} />
+      <HeroSection data={HeroSectionData} breadcrumbs={BreadcrumbData} />
       <StatsSection items={StatsData} />
       <LogoSection data={LogoSectionData} />
       <StaticCardSection data={StaticCardSectionData} />

@@ -30,12 +30,12 @@ export default function VerticleLineSection({ data }) {
             </p>
 
             <div className="relative h-[260px] overflow-hidden rounded-xl sm:h-[360px] lg:h-[420px]">
-              <Image
+              <img
                 src={image}
                 alt={title}
+                title={title}
                 fill
-                className="object-cover"
-                sizes="(max-width:1024px) 100vw, 600px"
+                className="object-cover w-full rounded-lg"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function VerticleLineSection({ data }) {
               >
                 {/* Left Color Bar */}
                 <span
-                  className={`absolute left-0 top-5 h-12 w-1 rounded-full ${item.color}`}
+                  className={`absolute left-0 top-1 h-12 w-1 rounded-full ${item.color}`}
                 />
 
                 {/* Content */}

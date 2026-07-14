@@ -1,7 +1,7 @@
 function page() {
   return (
     <div>
-      <h1>Brichures</h1>
+      <h1>Brochures Detail Page</h1>
     </div>
   );
 }

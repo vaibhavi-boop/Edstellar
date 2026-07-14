@@ -1,6 +1,7 @@
 import HeroSection from "@/Components/resources/HeroSection";
 import { heroData } from "@/data/heroData";
 import Link from "next/link";
+import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
 const resources = [
   {
     title: "Tools",
@@ -37,6 +38,19 @@ function page() {
 
       <section className="bg-[#fbfbf8] py-20">
         <div className="container">
+          <div className="flex justify-center">
+            <Breadcrumbs
+              items={[{ label: "Home", href: "/" }, { label: "Resources" }]}
+            />
+          </div>
+          <h2 className="text-center text-4xl mb-5">
+            Resources for Every Learning Need
+          </h2>
+          <p className="text-center max-w-[600px] mx-auto mb-10">
+            Browse a curated collection of free resources to help you plan
+            training initiatives, improve learning outcomes, and make informed
+            decisions across your organization.
+          </p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {resources.map((item) => (
               <Link

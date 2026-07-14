@@ -19,11 +19,12 @@ export default async function Page() {
     <>
       <section className="bg-[#0f1b86] py-16">
         <div className="container">
+          <div className="absoulte right-0">
+            <img src="./Images/blog/Eds banner.webp" alt="Edstellar" />
+          </div>
           <h1 className="mx-auto mb-4 w-full max-w-[1000px] text-center text-[40px] font-semibold text-white">
-            Discover the Latest Topics on{" "}
-            <span className="font-serif italic">
-              Training, L&D, Talent & Skill Development
-            </span>
+            Discover the Latest Topics on Training, L&D, Talent & Skill
+            Development
           </h1>
 
           <p className="mx-auto w-full max-w-[1000px] text-center text-white">
@@ -31,7 +32,11 @@ export default async function Page() {
             learning and development takes center stage. Dive into our latest
             collection of articles, news, and featured content tailored for
             organizations, HR and L&D teams keen on advancing their talent,
-            leadership and employee development strategies.
+            leadership and employee development strategies. From innovative
+            skill-building techniques to transformative learning experiences,
+            Edstellar is your premier source for insights and trends that
+            empower your team to excel in today's fast-paced world. Join us in
+            shaping the next generation of industry leaders.
           </p>
         </div>
       </section>
@@ -39,7 +44,7 @@ export default async function Page() {
       <section className="py-16">
         <div className="container">
           <h2 className="mb-10 text-center text-[36px]">
-            Our Recent <span className="font-serif italic">Blogs</span>
+            Explore the Latest Blog Posts
           </h2>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

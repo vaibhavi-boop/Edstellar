@@ -11,7 +11,6 @@ export default async function TemplatePage({ params }) {
   if (!template) {
     notFound();
   }
-
   return (
     <section>
       <main className="container">

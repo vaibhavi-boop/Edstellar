@@ -8,7 +8,7 @@ const navItems = [
   { label: "Consulting" },
   { label: "Company" },
   { label: "Resources", href: "/resources" },
-  { label: "Blog", href: "/blog/leadership-training-companies-saudi-arabia" },
+  { label: "Blog", href: "/blog" },
   {
     label: "Course",
     href: "/corporate-training/artificial-intelligence/ml-model-monitoring",

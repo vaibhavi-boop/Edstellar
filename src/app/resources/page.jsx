@@ -21,7 +21,7 @@ const resources = [
     title: "Brochures",
     description: "Detailed service brochures and program overviews.",
     count: "9",
-    slug: "resources/brochures",
+    slug: "resources/brouchures",
   },
   {
     title: "Case Studies",

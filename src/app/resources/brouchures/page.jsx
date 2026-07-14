@@ -72,7 +72,7 @@ function page() {
                       href={`/resources/brouchures/${item.slug}`}
                       className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg border-2 border-[#264CBE] px-4 py-2 font-medium text-[#264CBE] transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-[#264CBE] hover:text-white"
                     >
-                      <span>Download Template</span>
+                      <span>View Brouchure</span>
                       <ArrowUpRight className="h-4 w-4 shrink-0" />
                     </Link>
                   </div>

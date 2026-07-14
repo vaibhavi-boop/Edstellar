@@ -1,5 +1,4 @@
 import CaseStudiesCard from "@/Components/resources/CaseStudiesCard";
-import Link from "next/link";
 import CaseStudies from "@/data/CaseStudies.json";
 import Courses from "@/Components/resources/Courses";
 import CaseStudiesCTA from "@/Components/resources/CaseStudiesCTA";

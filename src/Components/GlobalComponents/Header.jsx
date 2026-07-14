@@ -9,6 +9,10 @@ const navItems = [
   { label: "Company" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog/leadership-training-companies-saudi-arabia" },
+  {
+    label: "Course",
+    href: "/corporate-training/artificial-intelligence/ml-model-monitoring",
+  },
 ];
 
 export default function Header() {
@@ -61,14 +65,14 @@ export default function Header() {
                         >
                           IT & Technical Training (1045+)
                         </a>
-                        
+
                         <a
                           href="#"
                           className="block text-gray-600 hover:text-blue-600"
                         >
                           Artificial Intelligence Training (130)
                         </a>
-                  
+
                         <a
                           href="#"
                           className="block text-gray-600 hover:text-blue-600"

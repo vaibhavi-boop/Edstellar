@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import allCountries from "intl-tel-input/data";
 import countryNames from "./countryNames";
-
+import "intl-tel-input/dist/css/intlTelInput.css";
 const preferredCodes = ["us", "gb", "in", "au", "ca"];
 
 // Force native dropdown option text/background regardless of OS dark theme.
@@ -176,7 +176,8 @@ export default function TrainingEnquiryForm({ className = "" }) {
     // at submit time, regardless of effect timing or re-renders.
     const segments = window.location.pathname.split("/").filter(Boolean);
     if (branchRef.current) {
-      branchRef.current.value = branchRef.current.value || segments[0] || "course";
+      branchRef.current.value =
+        branchRef.current.value || segments[0] || "course";
     }
     if (pageNameRef.current) {
       pageNameRef.current.value =
@@ -232,8 +233,8 @@ export default function TrainingEnquiryForm({ className = "" }) {
         Contact Us
       </h2>
       <p className="mt-2 mb-6 text-sm text-gray-500">
-        Submit your Training Requirements below and We&apos;ll get in touch
-        with you shortly.
+        Submit your Training Requirements below and We&apos;ll get in touch with
+        you shortly.
       </p>
 
       <form

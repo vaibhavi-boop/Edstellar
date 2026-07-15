@@ -140,7 +140,7 @@ export default function BlogListSection({ blogs = [] }) {
       <section className="py-16">
         <div className="container">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
-            <div className="min-w-0">
+            <div className="order-2 lg:order-1 min-w-0">
               {paginatedBlogs.length > 0 ? (
                 <>
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -296,7 +296,7 @@ export default function BlogListSection({ blogs = [] }) {
               )}
             </div>
 
-            <aside className="lg:sticky lg:top-10 lg:self-start">
+            <aside className="order-1 lg:order-2 lg:sticky lg:top-10 lg:self-start">
               <BlogCateRightSide
                 searchTerm={searchTerm}
                 onSearchChange={handleSearchChange}

@@ -15,7 +15,7 @@ export default function BlogTagsPage() {
               key={tag.id}
               href={`/blog/category/${tag.slug}`}
               title={`Click Here to View ${tag.title} Related Articles`}
-              className="rounded-[8px] border border-[#d9ddd8] bg-white p-3 text-sm font-medium text-[#00142d] transition-all duration-300 hover:border-[#c8e130] hover:bg-[#c8e130]"
+              className="rounded-[8px] border border-[#d9ddd8] bg-white p-2 px-4 text-[12px] font-medium text-[#00142d] transition-all duration-300 hover:border-[#c8e130] hover:bg-[#c8e130]"
             >
               {tag.title}
             </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogCateRightSide from "@/Components/Blog/BlogCateRightSide";
+import Tabs from "@/Components/Blog/Tabs";
 
 async function getBlogs() {
   const res = await fetch("https://webflow-blog-api.vercel.app/api/blogs", {
@@ -46,13 +47,15 @@ export default async function Page() {
           </p>
         </div>
       </section>
+      <Tabs blogs={blogs} />
 
+      <div className="bg-[#dbe9ff] p-4 mb-8 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:content-[''] after:bg-[linear-gradient(to_right,_#F6CF70_0%,_#255FFF_38%,_#C8E130_64%,_#BCEFC2_95%)]">
+        <h2 className="text-center text-[30px]">
+          Explore the Latest Blog Posts
+        </h2>
+      </div>
       <section className="py-16">
         <div className="container">
-          <h2 className="mb-10 text-center text-[36px]">
-            Explore the Latest Blog Posts
-          </h2>
-
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
             {/* First column: blog cards */}
             <div className="grid min-w-0 grid-cols-1 gap-8 md:grid-cols-2">

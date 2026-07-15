@@ -9,13 +9,6 @@ import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";
 import ServiceSlidesSection from "../../Components/StrategicWorkforcePlanning/ServiceSlidesSection";
 import FaqSection from "../../Components/StrategicWorkforcePlanning/FaqSection";
 
-/*import LogoSection from "../../Components/StrategicWorkforcePlanning/LogoSection";
-import StaticCardSection from "../../Components/StrategicWorkforcePlanning/StaticCardSection";
-import NumberSection from "../../Components/StrategicWorkforcePlanning/NumberSection";
-import SlidesSection from "../../Components/StrategicWorkforcePlanning/SlidesSection";
-
-*/
-
 import {
   HeroSectionData,
   BreadcrumbData,

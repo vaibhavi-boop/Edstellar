@@ -35,7 +35,11 @@ export default function Home() {
       <LogoSection data={LogoSectionData} />
       <StaticCardSection data={StaticCardSectionData} />
       <GridCardSection data={GridCardSectionData} />
-      <TabsSection data={TabsSectionData} />
+      <TabsSection
+          data={TabsSectionData}
+          centered={false}
+          showDescription={false}
+      />
       <NumberSection data={NumberSectionData} />
       <VerticleLineSection data={VerticleLineSectionData} />
       <SlidesSection data={SlidesSectionData} />

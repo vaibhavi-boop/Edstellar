@@ -4,11 +4,11 @@ import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function VerticleIconSection({ data }) {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white">
       <div className="container">
         {/* Heading */}
         <div className="mx-auto mb-5">
-          <h2 className="mb-4 text-[42px] font-semibold leading-[50px] text-[#3a3a3a]">
+          <h2 className="mb-4 text-[36px] font-semibold leading-[44px] text-[#3a3a3a]">
             {data.heading}
           </h2>
 
@@ -18,7 +18,7 @@ export default function VerticleIconSection({ data }) {
         </div>
 
         {/* Content */}
-        <div className="grid gap-16 mb-6 lg:grid-cols-[480px_1fr]">
+        <div className="grid gap-16 mb-6 lg:grid-cols-[520px_1fr]">
           {/* Sticky Image */}
           <div className="hidden lg:block">
             <div className="sticky top-17">

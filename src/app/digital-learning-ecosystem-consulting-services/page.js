@@ -1,33 +1,33 @@
 import HeroSection from "../../Components/StrategicWorkforcePlanning/HeroSection";
 import StatsSection from "../../Components/StrategicWorkforcePlanning/StatsSection";
 import VerticleIconSection from "../../Components/digitallearningecosystemconsulting/VerticleIconSection";
+import TabsSection from "../../Components/StrategicWorkforcePlanning/TabsSection";
+import TimelineSection from "../../Components/digitallearningecosystemconsulting/TimelineSection";
+import VerticleLineSection from "../../Components/StrategicWorkforcePlanning/VerticleLineSection";
+import GridCardSection from "../../Components/StrategicWorkforcePlanning/GridCardSection";
+import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";
+import ServiceSlidesSection from "../../Components/StrategicWorkforcePlanning/ServiceSlidesSection";
+import FaqSection from "../../Components/StrategicWorkforcePlanning/FaqSection";
 
 /*import LogoSection from "../../Components/StrategicWorkforcePlanning/LogoSection";
 import StaticCardSection from "../../Components/StrategicWorkforcePlanning/StaticCardSection";
-import GridCardSection from "../../Components/StrategicWorkforcePlanning/GridCardSection";
-import TabsSection from "../../Components/StrategicWorkforcePlanning/TabsSection";
 import NumberSection from "../../Components/StrategicWorkforcePlanning/NumberSection";
-import VerticleLineSection from "../../Components/StrategicWorkforcePlanning/VerticleLineSection";
 import SlidesSection from "../../Components/StrategicWorkforcePlanning/SlidesSection";
-import ServiceSlidesSection from "../../Components/StrategicWorkforcePlanning/ServiceSlidesSection";
-import FaqSection from "../../Components/StrategicWorkforcePlanning/FaqSection";
-import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";*/
+
+*/
 
 import {
   HeroSectionData,
   BreadcrumbData,
   StatsData,
   VerticleIconSectionData,
-  /*LogoSectionData,
-  StaticCardSectionData,
-  GridCardSectionData,
   TabsSectionData,
-  NumberSectionData,
+  TimelineSectionData,
   VerticleLineSectionData,
-  SlidesSectionData,
-  ServiceSlidesSectionData,
+  GridCardSectionData,
+  CTASectionData,
   FAQSectionData,
-  CTASectionData,*/
+  ServiceSlidesSectionData,
 } from "../Data/Digital_Learning_Ecosystem_Consulting_Services";
 
 export default function Home() {
@@ -36,16 +36,17 @@ export default function Home() {
       <HeroSection data={HeroSectionData} breadcrumbs={BreadcrumbData} />
       <StatsSection items={StatsData} />
       <VerticleIconSection data={VerticleIconSectionData} />
-      {/*<LogoSection data={LogoSectionData} />
-      <StaticCardSection data={StaticCardSectionData} />
-      <GridCardSection data={GridCardSectionData} />
-      <TabsSection data={TabsSectionData} />
-      <NumberSection data={NumberSectionData} />
+      <TabsSection
+          data={TabsSectionData}
+          centered={true}
+          showDescription={true}
+      />
+      <TimelineSection data={TimelineSectionData} />
       <VerticleLineSection data={VerticleLineSectionData} />
-      <SlidesSection data={SlidesSectionData} />
-      <ServiceSlidesSection data={ServiceSlidesSectionData} />
+      <GridCardSection data={GridCardSectionData} />
+      <CTASection data={CTASectionData} />
       <FaqSection data={FAQSectionData} />
-      <CTASection data={CTASectionData} />*/}
+      <ServiceSlidesSection data={ServiceSlidesSectionData} />
     </>
   );
 }

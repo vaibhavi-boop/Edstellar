@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function CTASection({ data }) {
   return (
@@ -19,24 +19,22 @@ export default function CTASection({ data }) {
 
         {/* Buttons */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href={data.primaryButton.link}
-            className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[#D9FF34] px-6 py-3 text-[16px] font-semibold text-[#222] transition hover:bg-[#C8EB2F] sm:w-auto"
-          >
-            {data.primaryButton.text}
-
-            <ArrowRight
-              size={20}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+          {data.button?.text && (
+            <PrimaryButton
+              text={data.button.text}
+              href={data.button.href}
+              title={data.button.title}
             />
-          </Link>
+          )}
 
-          <Link
-            href={data.secondaryButton.link}
-            className="inline-flex w-full items-center justify-center rounded-lg border border-white px-6 py-3 text-[16px] font-semibold text-white transition hover:bg-white hover:text-[#31346F] sm:w-auto"
-          >
+          {data.secondaryButton?.text ? (
+            <Link
+              href={data.secondaryButton.link}
+              className="inline-flex w-full items-center justify-center rounded-lg border border-white px-6 py-3 text-[16px] font-semibold text-white transition hover:bg-white hover:text-[#31346F] sm:w-auto"
+            >
             {data.secondaryButton.text}
-          </Link>
+            </Link>
+          ) : null}
         </div>
       </div>
     </section>

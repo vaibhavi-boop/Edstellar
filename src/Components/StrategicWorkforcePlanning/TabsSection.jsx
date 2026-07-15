@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
-export default function TabsSection({ data }) {
+export default function TabsSection({
+  data,
+  centered = false,
+  showDescription = false,
+}) {
   const [activeTab, setActiveTab] = useState(0);
 
   if (!data || !data.tabs?.length) return null;
@@ -13,13 +17,28 @@ export default function TabsSection({ data }) {
   return (
     <section className="section bg-[#F6F7FB]">
       <div className="container">
+
         {/* Heading */}
-        <h2 className="text-[28px] font-bold leading-[1.2] text-[#3a3a3a] sm:text-[32px] lg:text-[36px]">
-          {data.heading}
-        </h2>
+        <div
+          className={`${
+            centered
+              ? "mx-auto mb-8 max-w-[900px] text-center"
+              : "mb-8"
+          }`}
+        >
+          <h2 className="text-[28px] font-bold leading-[1.2] text-[#3a3a3a] sm:text-[30px] lg:text-[36px]">
+            {data.heading}
+          </h2>
+
+          {showDescription && (
+            <p className="mx-auto mt-5 max-w-[900px] text-[16px] leading-7 text-[#555]">
+              {data.description}
+            </p>
+          )}
+        </div>
 
         {/* Tabs */}
-        <div className="mt-8 flex flex-wrap gap-3 lg:gap-4">
+        <div className="flex flex-wrap gap-3 lg:gap-4">
           {data.tabs.map((tab, index) => (
             <button
               key={tab.id}
@@ -38,8 +57,10 @@ export default function TabsSection({ data }) {
         {/* Content */}
         <div className="mt-8 overflow-hidden rounded-xl border border-[#E6D4C7] bg-white">
           <div className="grid lg:grid-cols-[1fr_500px]">
+
             {/* Left */}
             <div className="p-5 lg:p-8">
+
               <div className="text-[36px] font-bold leading-none text-[#ECEEF4] sm:text-[42px] lg:text-[48px]">
                 {service.number}
               </div>
@@ -60,7 +81,7 @@ export default function TabsSection({ data }) {
                 {service.points.map((point, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 border-b border-[#000] pb-2 mb-2"
+                    className="mb-2 flex items-start gap-3 border-b border-[#000] pb-2"
                   >
                     <CheckCircle2
                       size={26}
@@ -74,21 +95,22 @@ export default function TabsSection({ data }) {
                   </div>
                 ))}
               </div>
+
             </div>
 
             {/* Right */}
-            <div className="bg-[#2A2F68] lg:p-8 sm:p-5">
-              <div>
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  title={service.title}
-                  className="object-cover w-full rounded-lg"
-                />
-              </div>
+            <div className="bg-[#2A2F68] p-5 lg:p-8">
+              <img
+                src={service.image}
+                alt={service.alt}
+                title={service.title}
+                className="w-full rounded-lg object-cover"
+              />
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

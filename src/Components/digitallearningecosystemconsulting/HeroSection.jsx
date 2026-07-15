@@ -1,9 +1,13 @@
-import VerticleIconSection from "../../Components/DigitalLearningEcosystem/VerticleIconSection";
 import {
   HeroSectionData,
   BreadcrumbData,
   StatsData,
-  VerticleIconSectionData
+  TabsSectionData,
+  VerticleLineSectionData,
+  GridCardSectionData,
+  CTASectionData,
+  FAQSectionData,
+  ServiceSlidesSectionData,
 } from "../Data/Digital_Learning_Ecosystem_Consulting_Services";
 
 export default function Home() {
@@ -12,9 +16,13 @@ export default function Home() {
     <HeroSection
     breadcrumbs={BreadcrumbData}  
     data={HeroSectionData}
-    items={StatsData}
-    />
-    <VerticleIconSection data={VerticleIconSectionData} />
+    items={StatsData} />
+    <TabsSection data={TabsSectionData} />
+    data={VerticleLineSectionData}
+    data={GridCardSectionData}
+    data={CTASectionData}
+    FaqSection data={FAQSectionData}
+    data={ServiceSlidesSectionData}
     </>
   );
 }

@@ -121,7 +121,7 @@ export default function BlogListSection({ blogs = [] }) {
     <>
       <div
         ref={resultsRef}
-        className="relative mb-8 scroll-mt-24 bg-[#dbe9ff] p-4 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[linear-gradient(to_right,_#F6CF70_0%,_#255FFF_38%,_#C8E130_64%,_#BCEFC2_95%)] after:content-['']"
+        className="relative scroll-mt-16 bg-[#dbe9ff] p-4 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[linear-gradient(to_right,_#F6CF70_0%,_#255FFF_38%,_#C8E130_64%,_#BCEFC2_95%)] after:content-['']"
       >
         <h2 className="text-center text-[30px]">
           {searchTerm.trim()
@@ -179,7 +179,7 @@ export default function BlogListSection({ blogs = [] }) {
                           </h3>
 
                           {blog.fieldData.description && (
-                            <p className="mt-4 line-clamp-3 text-[15px] leading-7 text-gray-600">
+                            <p className="mt-4 line-clamp-2 text-[15px] leading-7 text-gray-600">
                               {blog.fieldData.description}
                             </p>
                           )}

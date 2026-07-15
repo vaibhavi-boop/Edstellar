@@ -111,7 +111,7 @@ export default function Tabs({ blogs = [] }) {
           </div>
 
           {/* Tabs */}
-          <div className="overflow-hidden bg-white shadow-[4px_4px_13px_#0000001f]">
+          <div className="overflow-hidden rounded-xl bg-white shadow-[4px_4px_13px_#0000001f]">
             <div className="flex">
               {tabs.map((tab) => (
                 <button

@@ -29,7 +29,7 @@ export default async function Page() {
         </div>
 
         <div className="container relative z-10">
-          <h1 className="mx-auto mb-4 w-full max-w-[1000px] text-center text-[40px] font-semibold text-white">
+          <h1 className="mx-auto mb-4 w-full max-w-[1000px] text-center text-4xl font-semibold text-white">
             Discover the Latest Topics on Training, L&amp;D, Talent &amp; Skill
             Development
           </h1>

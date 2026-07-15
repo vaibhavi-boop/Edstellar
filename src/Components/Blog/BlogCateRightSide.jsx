@@ -13,8 +13,8 @@ export default function BlogCateRightSide({
   };
 
   return (
-    <div className="rounded-[8px] bg-white px-4 py-8 shadow-[4px_4px_13px_4px_#0000001f]">
-      <div className="mx-auto w-full px-6">
+    <div className="rounded-[8px] bg-white p-8 shadow-[4px_4px_13px_4px_#0000001f]">
+      <div className="mx-auto w-full">
         <form onSubmit={handleSubmit} className="mb-6">
           <label htmlFor="blog-search" className="sr-only">
             Search blogs

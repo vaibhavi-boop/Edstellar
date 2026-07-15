@@ -5,8 +5,8 @@ import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function CTASection({ data }) {
   return (
-    <section className="bg-[#31346F] px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="bg-[#31346F]">
+      <div className="container">
         {/* Heading */}
         <h2 className="mb-4 text-[28px] font-semibold leading-[1.2] text-white sm:text-[32px] lg:text-[36px]">
           {data.heading}

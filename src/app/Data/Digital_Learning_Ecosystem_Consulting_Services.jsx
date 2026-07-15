@@ -1,9 +1,5 @@
 import {
-  Target,
   Clock3,
-  Cpu,
-  Briefcase,
-  Database,
   Users,
   Image,
   CircleDollarSign,
@@ -11,8 +7,11 @@ import {
   WalletCards,
   BadgeCheck,
   Building2,
-  GraduationCap,
-  Network,
+  GitBranch,
+  ChartColumnIncreasing,
+  PieChart,
+  FileText,
+  UserRoundSearch,
 } from "lucide-react";
 
 /* Breadcrumb data */
@@ -90,7 +89,7 @@ export const VerticleIconSectionData = {
 
   items: [
     {
-      icon: "⚡",
+      icon: <GitBranch size={22} strokeWidth={1.8} className="text-[#FF4D3D]" />,
       title: "Fragmented Tools, Siloed Experiences",
       description:
         "Employees navigate multiple disconnected platforms with separate logins, different interfaces, and no unified learning path. Knowledge falls through the cracks between systems, and learners disengage from the fragmented experience.",
@@ -99,7 +98,7 @@ export const VerticleIconSectionData = {
     },
 
     {
-      icon: "📊",
+      icon: <ChartColumnIncreasing size={22} strokeWidth={1.8} className="text-[#FF4D3D]" />,
       title: "Expensive Platforms Sitting Underutilized",
       description:
         "Organizations invest in premium learning platforms but adoption stalls at 20-30% of features. Licenses go unused, integrations remain incomplete, and the promised ROI never materializes because deployment lacked a strategic framework.",
@@ -108,7 +107,7 @@ export const VerticleIconSectionData = {
     },
 
     {
-      icon: "📈",
+      icon: <PieChart size={22} strokeWidth={1.8} className="text-[#FF4D3D]" />,
       title: "No Unified Analytics Across Platforms",
       description:
         "Learning data sits in silos across your LMS, LXP, content libraries, and HRIS. Without a unified analytics layer, you cannot measure true learning impact, track skills growth, or connect learning activity to business outcomes.",
@@ -117,7 +116,7 @@ export const VerticleIconSectionData = {
     },
 
     {
-      icon: "📄",
+      icon: <FileText size={22} strokeWidth={1.8} className="text-[#FF4D3D]" />,
       title: "Content Sprawl Without Governance",
       description:
         "Duplicate courses, outdated materials, and inconsistent quality plague organizations that lack content governance. Teams create content independently, leading to redundancy, confusion, and wasted development budgets.",
@@ -126,7 +125,7 @@ export const VerticleIconSectionData = {
     },
 
     {
-      icon: "🛠️",
+      icon: <UserRoundSearch size={22} strokeWidth={1.8} className="text-[#FF4D3D]" />,
       title: "Technology Decisions Driven by Vendors, Not Strategy",
       description:
         "Platform purchases happen based on vendor demos and sales pitches rather than strategic fit. The result is an incoherent technology stack where tools overlap, integrate poorly, and serve vendor interests rather than organizational learning goals.",

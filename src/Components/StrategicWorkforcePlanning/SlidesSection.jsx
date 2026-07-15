@@ -13,7 +13,7 @@ export default function SlidesSection({ data }) {
   } = data;
 
   return (
-    <section className="section bg-[#F5F7FC]">
+    <section className="bg-[#F5F7FC]">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[1fr_680px] lg:items-start lg:gap-10">
           {/* Left */}

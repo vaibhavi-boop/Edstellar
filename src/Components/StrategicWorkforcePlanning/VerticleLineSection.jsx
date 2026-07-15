@@ -12,7 +12,7 @@ export default function VerticleLineSection({ data }) {
   } = data;
 
   return (
-    <section className="section bg-[#F5F6F8] sm:px-8 lg:px-[40px]">
+    <section className="bg-[#F5F6F8]">
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
           {/* Left */}

@@ -7,7 +7,7 @@ export default function StaticCardSection({ data }) {
   const { heading, description, items } = data;
 
   return (
-    <section className="section bg-[#F7F7F7]">
+    <section className="bg-[#F7F7F7]">
       <div className="container">
         {/* Heading */}
         <div className="mx-auto max-w-[950px] text-center">

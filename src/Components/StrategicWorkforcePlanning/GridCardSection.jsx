@@ -54,7 +54,7 @@ export default function GridCardSection({ data }) {
   const { heading, description, items } = data;
 
   return (
-    <section className="section bg-white">
+    <section className="bg-white">
       <div className="container">
         <div className="grid items-start gap-8 lg:grid-cols-[400px_1fr]">
           {/* Heading */}

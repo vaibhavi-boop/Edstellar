@@ -15,7 +15,7 @@ export default function TabsSection({
   const service = data.tabs[activeTab];
 
   return (
-    <section className="section bg-[#F6F7FB]">
+    <section className="bg-[#F6F7FB]">
       <div className="container">
 
         {/* Heading */}

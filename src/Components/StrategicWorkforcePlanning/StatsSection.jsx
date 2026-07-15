@@ -47,7 +47,7 @@ function StatCard({ value, title }) {
 
 export default function StatsSection({ items }) {
   return (
-    <section className="section bg-[#F5F5F5]">
+    <section className="bg-[#F5F5F5]">
       <div className="container">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, index) => (

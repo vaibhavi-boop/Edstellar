@@ -11,8 +11,8 @@ export default function FaqSection({ data }) {
   };
 
   return (
-    <section className="bg-white px-5 py-[60px] sm:px-8 lg:px-[40px]">
-      <div className="mx-auto max-w-[950px]">
+    <section className="bg-white">
+      <div className="container">
         {/* Heading */}
         <h2 className="mb-4 text-[28px] font-semibold leading-[1.2] text-[#3d3d3d] sm:text-[32px] lg:text-[36px]">
           {data.heading}

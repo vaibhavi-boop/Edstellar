@@ -15,8 +15,8 @@ export default function ServiceSlides({ data }) {
   const nextRef = useRef(null);
 
   return (
-    <section className="bg-[#31346F] py-[60px] px-5 sm:px-8 lg:px-[40px]">
-      <div className="mx-auto max-w-[1280px]">
+    <section className="bg-[#31346F]">
+      <div className="container">
         {/* Header */}
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-center md:justify-between">
           <h2 className="text-[28px] font-semibold leading-[1.2] text-white sm:text-[32px] lg:text-[36px]">
@@ -78,7 +78,7 @@ export default function ServiceSlides({ data }) {
         >
           {data.cards.map((card, index) => (
             <SwiperSlide key={index}>
-              <div className="group flex h-full min-h-[420px] flex-col rounded-[8px] border border-white/10 bg-[#2E3054] p-5 transition-all duration-300 hover:border-lime-400 hover:bg-[#3A3C7E]">
+              <div className="group flex h-full min-h-[380px] flex-col rounded-[8px] border border-white/10 bg-[#2E3054] p-5 transition-all duration-300 hover:border-lime-400 hover:bg-[#3A3C7E]">
                 {/* Top */}
                 <div className="mb-4 flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#454A80] text-[#D9FF34] transition-all duration-300 group-hover:bg-[#D9FF34] group-hover:text-[#31346F]">
@@ -101,7 +101,7 @@ export default function ServiceSlides({ data }) {
                 </p>
 
                 {/* Divider */}
-                <div className="my-6 h-px bg-white/20 lg:my-8" />
+                <div className="mb-5 h-px bg-white/20" />
 
                 {/* Link */}
                 <Link

@@ -33,8 +33,14 @@ export const metadata = {
     default: "Edstellar",
     template: "%s | Edstellar",
   },
+
   description:
     "Corporate training and workforce development solutions by Edstellar.",
+
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -49,9 +55,11 @@ export default function RootLayout({ children }) {
         h-full antialiased
       `}
     >
-      <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
+      <body className="flex min-h-screen flex-col bg-background font-sans text-foreground">
         <Header />
+
         <main className="flex-1">{children}</main>
+
         <Footer />
       </body>
     </html>

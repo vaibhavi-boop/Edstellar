@@ -1,4 +1,5 @@
 "use client";
+import Breadcrumbs from "../GlobalComponents/Breadcrumbs";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -50,6 +51,10 @@ export default function Tabs({ blogs = [] }) {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_570px] lg:gap-16">
           {/* Featured blog */}
           <div>
+            <Breadcrumbs
+              className="mb-2"
+              items={[{ label: "Home", href: "/" }, { label: "Blog" }]}
+            />
             <h2 className="mb-10 text-2xl font-semibold">
               Featured Blog Posts
             </h2>

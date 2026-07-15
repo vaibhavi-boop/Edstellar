@@ -1,4 +1,5 @@
 import BlogListSection from "@/Components/Blog/BlogListSection";
+import BlogMainPageCTA from "@/Components/Blog/BlogMainPageCTA";
 import Tabs from "@/Components/Blog/Tabs";
 
 async function getBlogs() {
@@ -49,6 +50,7 @@ export default async function Page() {
       <Tabs blogs={blogs} />
 
       <BlogListSection blogs={blogs} />
+      <BlogMainPageCTA />
     </>
   );
 }

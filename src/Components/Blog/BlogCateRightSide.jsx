@@ -1,8 +1,13 @@
 "use client";
+
 import Link from "next/link";
 import blogTags from "@/data/blogTags.json";
 
-export default function BlogCateRightSide({ searchTerm, setSearchTerm }) {
+export default function BlogCateRightSide({
+  searchTerm,
+  onSearchChange,
+  onClearSearch,
+}) {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
@@ -20,7 +25,7 @@ export default function BlogCateRightSide({ searchTerm, setSearchTerm }) {
               id="blog-search"
               type="search"
               value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
+              onChange={(event) => onSearchChange(event.target.value)}
               placeholder="Search blogs..."
               className="min-w-0 flex-1 bg-white px-4 py-3 text-sm text-[#00142d] outline-none placeholder:text-[#64748b]"
             />
@@ -33,6 +38,16 @@ export default function BlogCateRightSide({ searchTerm, setSearchTerm }) {
             </button>
           </div>
         </form>
+
+        {searchTerm.trim() && (
+          <button
+            type="button"
+            onClick={onClearSearch}
+            className="mb-6 text-sm font-medium text-[#0f1b86] underline underline-offset-4"
+          >
+            Clear search
+          </button>
+        )}
 
         <h2 className="mb-5 text-2xl font-semibold text-[#00142d]">
           Blog Topics

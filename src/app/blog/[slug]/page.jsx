@@ -4,6 +4,7 @@ import "@/Components/Blog/styles/BlogContent.css";
 import "@/Components/Blog/styles/Games.css";
 import "@/Components/Blog/styles/CoporateCompanies.css";
 import "@/Components/Blog/styles/InDemandSkills.css";
+import "@/Components/Blog/styles/Faq.css";
 
 import TrainingCard from "@/Components/Blog/TrainingCard";
 import BlogFaqScript from "@/Components/Blog/BlogFaqScript";

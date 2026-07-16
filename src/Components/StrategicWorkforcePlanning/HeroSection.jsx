@@ -41,7 +41,7 @@ export default function HeroSection({ data, breadcrumbs }) {
             
             {/* Buttons */}
 
-            <div className="flex gap-5">
+            <div className="flex flex-col gap-5 md:flex-row items-start">
               {data.buttons?.[0]?.text && (
                 <PrimaryButton
                   text={data.buttons[0].text}

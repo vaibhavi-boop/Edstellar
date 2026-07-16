@@ -147,15 +147,20 @@ export default async function BlogPage({ params }) {
           )}
         </div>
       </section>
-      <div className="p-4">
-        <Breadcrumbs
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Blog", href: "/blog" },
-            { label: title },
-          ]}
-        />
+      <div>
+        <div className="container">
+          <div className="p-4">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Blog", href: "/blog" },
+                { label: title },
+              ]}
+            />
+          </div>
+        </div>
       </div>
+
       {content && (
         <section className="bg-white py-12">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-[200px_auto_270px] gap-4">

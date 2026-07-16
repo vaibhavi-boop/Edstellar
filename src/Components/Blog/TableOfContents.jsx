@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { startTransition, useEffect, useState } from "react";
 
@@ -45,16 +46,16 @@ export default function TableOfContents() {
       </h3>
 
       <nav>
-        {headings.map((item) => (
-          <a
-            key={item.id}
+        {headings.map((item, index) => (
+          <Link
+            key={`${item.id}-${index}`}
             href={`#${item.id}`}
             className={`block px-2 py-[5px] text-[12px] leading-4 text-[#1d1d1d] border-l-2 border-transparent hover:bg-[rgba(41,98,255,0.1)] hover:border-l-black transition-all ${
               item.level === "h3" ? "ml-3" : ""
             }`}
           >
             {item.text}
-          </a>
+          </Link>
         ))}
       </nav>
     </aside>

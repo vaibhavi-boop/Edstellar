@@ -8,7 +8,7 @@ export default function TimelineSection({ data }) {
       <div className="container">
 
         <div className="mb-10">
-          <h2 className="text-white text-4xl font-bold leading-tight mb-4">
+          <h2 className="text-white text-[30px] lg:text-[36px] font-bold leading-tight mb-4">
             {heading}
           </h2>
 
@@ -21,7 +21,7 @@ export default function TimelineSection({ data }) {
 
           {/* Vertical Line */}
 
-          <div className="absolute left-5.5 top-0 bottom-0 w-[3px] bg-[#ffffff1a]" />
+          <div className="absolute left-4.5 lg:left-5.5 top-0 bottom-0 w-[3px] bg-[#ffffff1a]" />
 
           <div className="space-y-5">
 
@@ -29,14 +29,13 @@ export default function TimelineSection({ data }) {
 
               <div
                 key={index}
-                className="group relative flex gap-8"
-              >
+                className="group relative flex gap-2 lg:gap-8">
 
                 {/* Number */}
                 <div className="relative z-10">
 
                   <div
-                    className="w-12 h-12 rounded-full bg-[#4C4F87] flex items-center justify-center text-white font-semibold transition-all duration-300
+                    className="w-9 h-9 lg:w-12 lg:h-12 rounded-full bg-[#4C4F87] flex items-center justify-center text-white font-semibold transition-all duration-300
                     group-hover:bg-[#D7F11E]
                     group-hover:text-black"
                   >
@@ -47,9 +46,9 @@ export default function TimelineSection({ data }) {
 
                 {/* Card */}
                 <div
-                  className="flex-1 rounded-lg border border-[#c5e82633] bg-[#ffffff0a] p-6 transition-all duration-300 group-hover:border-[#D7F11E]"
+                  className="flex-1 rounded-lg border border-[#c5e82633] bg-[#ffffff0a] p-3 lg:p-6 transition-all duration-300 group-hover:border-[#D7F11E]"
                 >
-                  <div className="flex justify-between gap-6">
+                  <div className="flex justify-between gap-6 max-lg:flex-col lg:flex-row">
 
                     <div className="max-w-3xl">
 
@@ -75,7 +74,7 @@ export default function TimelineSection({ data }) {
                       </div>
                     </div>
 
-                    <div className="flex gap-2 h-fit">
+                    <div className="flex gap-2 h-fit max-lg:self-start">
                       <span
                         className="rounded-md bg-[#c8e130] text-#3a3a3a px-3 py-1 text-xs font-semibold"
                       >

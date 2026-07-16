@@ -59,7 +59,7 @@ export default function GridCardSection({ data }) {
         <div className="grid items-start gap-8 lg:grid-cols-[400px_1fr]">
           {/* Heading */}
           <div className="mb-10 max-w-5xl">
-            <h2 className="mb-4 text-[32px] font-semibold leading-[1.12] text-[#3a3a3a] lg:text-[36px]">
+            <h2 className="mb-4 text-[30px] font-semibold leading-[1.12] text-[#3a3a3a] lg:text-[36px]">
               {heading}
             </h2>
 

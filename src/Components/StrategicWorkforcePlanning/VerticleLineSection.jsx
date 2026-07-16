@@ -17,7 +17,7 @@ export default function VerticleLineSection({ data }) {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
           {/* Left */}
           <div>
-            <h2 className="mb-4 text-[28px] font-semibold leading-[1.2] text-[#3a3a3a] sm:text-[32px] lg:text-[36px]">
+            <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#3a3a3a] lg:text-[36px]">
               {title}
             </h2>
 

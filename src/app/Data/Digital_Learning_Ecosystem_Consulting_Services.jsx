@@ -44,11 +44,18 @@ export const HeroSectionData = {
     "Proven integration frameworks using xAPI, LTI, and SCORM standards",
   ],
 
-  button: {
+  buttons: [
+  {
     text: "Request a Consultation",
     href: "https://www.edstellar.com/",
     title: "Click Here to Request a Workforce Planning Consultation",
   },
+  {
+    text: "",
+    href: "",
+    title: "",
+  },
+],
 
   image:
     "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc84abb60d0e23edcbf6a1_Build%20a%20Connected%20Digital%20Learning%20Ecosystem.webp",

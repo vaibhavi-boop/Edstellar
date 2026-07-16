@@ -2,6 +2,7 @@
 import { Check } from "lucide-react";
 import Breadcrumb from "./Breadcrumb";
 import PrimaryButton from "../../app/Buttons/PrimaryButton";
+import SecondryButton from "../../app/Buttons/SecondryButton";
 
 export default function HeroSection({ data, breadcrumbs }) {
   return (
@@ -9,10 +10,10 @@ export default function HeroSection({ data, breadcrumbs }) {
       <div className="container">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_520px]">
           {/* Left Content */}
-          <div>
+          <div className="order-2 lg:order-1">
             <Breadcrumb items={breadcrumbs} />
             {/* Heading */}
-            <h1 className="mb-6 text-4xl font-semibold leading-[1.12] text-white lg:text-[48px]">
+            <h1 className="mb-6 text-[36px] font-semibold leading-[1.12] text-white lg:text-[48px]">
               {data.heading}
             </h1>
 
@@ -35,17 +36,30 @@ export default function HeroSection({ data, breadcrumbs }) {
                 </div>
               ))}
             </div>
+            
+            {/* Buttons */}
 
-            {/* Button */}
-            <PrimaryButton
-              text={data.button.text}
-              href={data.button.href}
-              title={data.button.title}
-            />
+            <div className="flex gap-5">
+              {data.buttons?.[0]?.text && (
+                <PrimaryButton
+                  text={data.buttons[0].text}
+                  href={data.buttons[0].href}
+                  title={data.buttons[0].title}
+                />
+              )}
+
+              {data.buttons?.[1]?.text && (
+                <SecondryButton
+                  text={data.buttons[1].text}
+                  href={data.buttons[1].href}
+                  title={data.buttons[1].title}
+                />
+              )}
+            </div>
           </div>
 
           {/* Right Image */}
-          <div>
+          <div className="order-1 lg:order-2">
             <img 
               src={data.image}
               alt={data.imageAlt}

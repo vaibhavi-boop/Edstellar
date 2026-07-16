@@ -11,7 +11,7 @@ export default function StaticCardSection({ data }) {
       <div className="container">
         {/* Heading */}
         <div className="mx-auto max-w-[950px] text-center">
-          <h2 className="text-[28px] font-bold leading-[1.15] text-[#3a3a3a] sm:text-[32px] lg:text-[36px]">
+          <h2 className="text-[30px] font-bold leading-[1.15] text-[#3a3a3a] lg:text-[36px]">
             {heading}
           </h2>
 

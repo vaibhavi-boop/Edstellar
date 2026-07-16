@@ -8,7 +8,7 @@ export default function VerticleIconSection({ data }) {
       <div className="container">
         {/* Heading */}
         <div className="mx-auto mb-5">
-          <h2 className="mb-4 text-[36px] font-semibold leading-[44px] text-[#3a3a3a]">
+          <h2 className="mb-4 text-[30px] lg:text-[36px] font-semibold leading-[44px] text-[#3a3a3a]">
             {data.heading}
           </h2>
 
@@ -18,7 +18,7 @@ export default function VerticleIconSection({ data }) {
         </div>
 
         {/* Content */}
-        <div className="grid gap-16 mb-6 lg:grid-cols-[520px_1fr]">
+        <div className="grid gap-0 lg:gap-16 mb-6 lg:grid-cols-[520px_1fr]">
           {/* Sticky Image */}
           <div className="hidden lg:block">
             <div className="sticky top-17">
@@ -52,7 +52,7 @@ export default function VerticleIconSection({ data }) {
                 key={index}
                 className="mb-4 p-2.5 group border-b border-[#E5E7EB] transition-all duration-300 last:border-b-0 hover:rounded-lg hover:bg-[#FFF5F4] hover:shadow-md"
               >
-                <div className="flex gap-5">
+                <div className="flex flex-col gap-5 md:flex-row">
                   {/* Icon */}
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#FFF2F0] text-[20px]">
                     {item.icon}

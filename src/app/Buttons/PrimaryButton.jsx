@@ -13,13 +13,13 @@ export default function PrimaryButton({
     <Link
       href={href}
       title={title}
-      className={`group inline-flex items-center gap-3 rounded-lg bg-[#D7F11E] px-6 py-3 text-[16px] font-medium text-black transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4F7DF7] hover:to-[#2D63F2] hover:text-white ${className}`}
+      className={`group inline-flex items-center gap-3 rounded-lg border border-[#c8e130] bg-[#c8e130] px-5 py-2 lg:px-6 lg:py-3 text-[16px] font-medium text-[#3a3a3a] transition-all duration-400 hover:bg-[#2563EB] hover:border-[#2563EB] hover:text-white ${className}`}
     >
       <span>{text}</span>
 
       <ArrowRight
         size={22}
-        className="transition-all duration-300 group-hover:translate-x-1"
+        className="transition-all duration-400 group-hover:translate-x-1"
       />
     </Link>
   );

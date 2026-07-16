@@ -45,11 +45,18 @@ export const HeroSectionData = {
     "Data-driven insights for HR and business leaders",
   ],
 
-  button: {
+  buttons: [
+  {
     text: "Request a Consultation",
     href: "https://www.edstellar.com/",
     title: "Click Here to Request a Workforce Planning Consultation",
   },
+  {
+    text: "",
+    href: "",
+    title: "",
+  },
+],
 
   image:
     "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69f33645d20f4ed12ea12ee5_Strategic%20Workforce%20Planning%20for%20Enterprises%20(1).webp",

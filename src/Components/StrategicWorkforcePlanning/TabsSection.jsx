@@ -22,11 +22,11 @@ export default function TabsSection({
         <div
           className={`${
             centered
-              ? "mx-auto mb-8 max-w-[900px] text-center"
+              ? "mx-auto mb-8 max-w-[900px] text-left lg:text-center"
               : "mb-8"
           }`}
         >
-          <h2 className="text-[28px] font-bold leading-[1.2] text-[#3a3a3a] sm:text-[30px] lg:text-[36px]">
+          <h2 className="text-[30px] font-bold leading-[1.2] text-[#3a3a3a] lg:text-[36px]">
             {data.heading}
           </h2>
 

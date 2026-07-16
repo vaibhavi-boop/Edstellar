@@ -13,18 +13,19 @@ export default function FaqSection({ data }) {
   return (
     <section className="bg-white">
       <div className="container">
+        <div className="mx-auto max-w-[950px]">
         {/* Heading */}
-        <h2 className="mb-4 text-[28px] font-semibold leading-[1.2] text-[#3d3d3d] sm:text-[32px] lg:text-[36px]">
+        <h2 className="mb-4 font-semibold leading-[1.2] text-[#3d3d3d] text-[30px] lg:text-[36px]">
           {data.heading}
         </h2>
 
         {/* Description */}
-        <p className="text-[16px] leading-7 text-[#3d3d3d]">
+        <p className="mb-6 text-[16px] leading-7 text-[#3d3d3d]">
           {data.description}
         </p>
 
         {/* FAQ Items */}
-        <div className="mt-8">
+        <div>
           {data.items.map((item, index) => {
             const open = active === index;
 
@@ -69,6 +70,7 @@ export default function FaqSection({ data }) {
             );
           })}
         </div>
+       </div>
       </div>
     </section>
   );

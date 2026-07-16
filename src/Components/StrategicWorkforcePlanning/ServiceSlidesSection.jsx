@@ -15,11 +15,11 @@ export default function ServiceSlides({ data }) {
   const nextRef = useRef(null);
 
   return (
-    <section className="bg-[#31346F]">
+    <section id="services" className="bg-[#31346F]">
       <div className="container">
         {/* Header */}
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-center md:justify-between">
-          <h2 className="text-[28px] font-semibold leading-[1.2] text-white sm:text-[32px] lg:text-[36px]">
+          <h2 className="text-[30px] font-semibold leading-[1.2] text-white lg:text-[36px]">
             {data.heading}
           </h2>
 

@@ -18,7 +18,7 @@ export default function SlidesSection({ data }) {
         <div className="grid gap-8 lg:grid-cols-[1fr_680px] lg:items-start lg:gap-10">
           {/* Left */}
           <div>
-            <h2 className="mb-4 text-[36px] font-semibold leading-[1.2] text-[#3a3a3a] sm:text-[32px] lg:text-[36px] lg:leading-[44px]">
+            <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#3a3a3a] lg:text-[36px]">
               {heading}
             </h2>
 

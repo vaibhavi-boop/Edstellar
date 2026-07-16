@@ -2,11 +2,11 @@
 
 export default function NumberSection({ data }) {
   return (
-    <section className="section bg-white">
+    <section className="bg-white">
       <div className="container">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-[800px] text-center">
-          <h2 className="mb-4 font-bold leading-[1.2] text-[#2A2A2A] lg:text-[36px]">
+          <h2 className="mb-4 font-bold leading-[1.2] text-[#2A2A2A] text-[30px] lg:text-[36px]">
             {data.heading}
           </h2>
 

@@ -187,7 +187,10 @@ export default function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button className="p-2 text-gray-500 hover:text-blue-600 transition-colors rounded-md hover:bg-gray-50">
+          <button
+            className="p-2 text-gray-500 hover:text-blue-600 transition-colors rounded-md hover:bg-gray-50"
+            aria-label="Open navigation menu"
+          >
             <Search size={18} />
           </button>
 

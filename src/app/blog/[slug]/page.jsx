@@ -93,14 +93,14 @@ export default async function BlogPage({ params }) {
             "url('https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/672af632823a23f66a00034a_Rectangle%2028584.svg')",
         }}
       >
-        <div className="relative z-10 mx-auto max-w-5xl text-center px-6">
+        <div className="relative z-10 mx-auto max-w-5xl text-center py-6">
           {category && (
             <span className="inline-flex rounded-full bg-white/15 px-5 py-2 text-sm font-semibold">
               {category}
             </span>
           )}
 
-          <h1 className="mx-auto mt-6 max-w-[900px] text-center text-white text-5xl font-bold leading-tight mb-4">
+          <h1 className="mx-auto mt-6 mb-4 max-w-[900px] text-center text-3xl font-bold leading-tight text-white md:text-4xl lg:text-4clexl">
             {title}
           </h1>
           <p className="max-w-[900px]">{desc}</p>

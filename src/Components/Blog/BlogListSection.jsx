@@ -148,6 +148,7 @@ export default function BlogListSection({ blogs = [] }) {
                       <Link
                         key={blog.id}
                         href={`/blog/${blog.fieldData.slug}`}
+                        loading="lazy"
                         className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-600 hover:shadow-2xl"
                       >
                         <div className="overflow-hidden">
@@ -160,6 +161,7 @@ export default function BlogListSection({ blogs = [] }) {
                             className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
                             width={426}
                             height={240}
+                            loading="lazy"
                           />
                         </div>
 

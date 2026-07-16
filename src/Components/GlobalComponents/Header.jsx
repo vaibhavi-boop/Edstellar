@@ -25,10 +25,11 @@ export default function Header() {
           <Image
             src="/Images/logo.webp"
             width={139}
-            height={40}
+            height={32}
             alt="Edstellar"
             className="h-8"
-            priority
+            fetchPriority="high"
+            objectFit="contain"
           />
         </Link>
 

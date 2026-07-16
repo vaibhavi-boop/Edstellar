@@ -1,6 +1,6 @@
 "use client";
 import Breadcrumbs from "../GlobalComponents/Breadcrumbs";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -65,8 +65,9 @@ export default function Tabs({ blogs = [] }) {
                 className="group block overflow-hidden rounded-xl bg-white shadow-[4px_4px_13px_#0000001f]"
               >
                 <div className="overflow-hidden">
-                  <img
+                  <Image
                     src={featuredImage}
+                    loading="eager"
                     alt={
                       featuredData?.["cover-photo"]?.alt ||
                       featuredData?.name ||
@@ -144,8 +145,9 @@ export default function Tabs({ blogs = [] }) {
                     href={`/blog/${blogData.slug}`}
                     className="group grid grid-cols-[120px_minmax(0,1fr)] gap-4 border-b border-gray-200 py-5 last:border-b-0"
                   >
-                    <img
+                    <Image
                       src={imageUrl}
+                      loading="eager"
                       alt={
                         blogData["cover-photo"]?.alt || blogData.name || "Blog"
                       }

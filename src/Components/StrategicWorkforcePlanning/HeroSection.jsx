@@ -8,14 +8,16 @@ export default function HeroSection({ data, breadcrumbs }) {
   return (
     <section className="bg-[#242B67]">
       <div className="container">
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_520px]">
+        <div className="grid items-start gap-8 lg:gap-10 lg:grid-cols-[1fr_520px]">
           {/* Left Content */}
           <div className="order-2 lg:order-1">
-            <Breadcrumb items={breadcrumbs} />
+            <div className="mb-7 lg:mb-5">
+              <Breadcrumb items={breadcrumbs} />
+            </div>
             {/* Heading */}
-            <h1 className="mb-6 text-[36px] font-semibold leading-[1.12] text-white lg:text-[48px]">
-              {data.heading}
-            </h1>
+            <h1 className="mb-6 text-[36px] font-semibold leading-[1.12] text-white lg:text-[48px]"
+              dangerouslySetInnerHTML={{ __html: data.heading }}
+            />
 
             {/* Description */}
             <p className="mb-5 text-[16px] leading-7 text-white/90">

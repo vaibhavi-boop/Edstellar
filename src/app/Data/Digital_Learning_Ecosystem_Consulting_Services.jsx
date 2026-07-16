@@ -33,7 +33,7 @@ export const BreadcrumbData = [
 
 /* Breadcrumb data */
 export const HeroSectionData = {
-  heading: "Digital Learning Ecosystem Consulting",
+  heading: "<span class='text-[#c8e130]'>Digital Learning Ecosystem</span> Consulting",
 
   description:
     "Fragmented learning tools create fragmented learner experiences. Edstellar's digital learning ecosystem consulting helps enterprises design, integrate, and optimize a connected technology ecosystem by linking your LMS, LXP, content libraries, analytics, and performance support tools seamlessly. Our vendor-neutral approach ensures every platform decision serves your business goals, not vendor relationships.",

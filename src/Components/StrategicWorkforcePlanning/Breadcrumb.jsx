@@ -16,7 +16,7 @@ export default function Breadcrumb({ items }) {
               {item.label}
             </Link>
           ) : (
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-[#c8e130]">
               {item.label}
               
             </span>

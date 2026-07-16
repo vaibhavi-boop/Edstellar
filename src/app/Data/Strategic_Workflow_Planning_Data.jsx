@@ -34,7 +34,7 @@ export const BreadcrumbData = [
 
 /* Breadcrumb data */
 export const HeroSectionData = {
-  heading: "Strategic Workforce Planning for Enterprises",
+  heading: "<span class='text-[#c8e130]'>Strategic Workforce Planning</span> for Enterprises",
 
   description:
     "Edstellar's strategic workforce planning consulting helps enterprise organisations align talent strategy to business goals, forecasting future capability needs, identifying gaps, and designing sourcing and development strategies that close them before they limit performance. Trusted by HR and business leaders across industries, our consultant-led, data-driven approach builds the workforce required to execute strategy rather than react to it, and transfers capability to your internal HR team.",

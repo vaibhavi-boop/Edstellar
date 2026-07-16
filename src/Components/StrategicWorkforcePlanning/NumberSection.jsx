@@ -33,7 +33,7 @@ export default function NumberSection({ data }) {
           </div>
 
           {/* ================= Mobile Timeline ================= */}
-          <div className="absolute bottom-0 left-[26px] top-0 w-[2px] bg-[#03307d80] lg:hidden" />
+          <div className="absolute bottom-0 left-[18px] lg:left-[26px] top-0 w-[2px] bg-[#03307d80] lg:hidden" />
 
           {/* Steps */}
           <div className="grid gap-4 lg:grid-cols-5 lg:gap-6">
@@ -43,7 +43,7 @@ export default function NumberSection({ data }) {
                 className="relative flex items-start gap-4 lg:block"
               >
                 {/* Circle */}
-                <div className="relative z-10 flex h-[54px] w-[54px] flex-shrink-0 items-center justify-center rounded-full bg-[#2A2F68] text-[22px] font-bold text-white lg:mx-auto">
+                <div className="relative z-10 flex w-9 h-9 lg:w-12 lg:h-12 flex-shrink-0 items-center justify-center rounded-full bg-[#2A2F68] text-[22px] font-bold text-white lg:mx-auto">
                   {step.number}
                 </div>
 

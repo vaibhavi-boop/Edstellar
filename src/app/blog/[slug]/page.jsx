@@ -5,6 +5,7 @@ import "@/Components/Blog/styles/Games.css";
 import "@/Components/Blog/styles/CoporateCompanies.css";
 import "@/Components/Blog/styles/InDemandSkills.css";
 import "@/Components/Blog/styles/Faq.css";
+import Breadcrumbs from "@/Components/GlobalComponents/Breadcrumbs";
 
 import TrainingCard from "@/Components/Blog/TrainingCard";
 import BlogFaqScript from "@/Components/Blog/BlogFaqScript";
@@ -146,6 +147,15 @@ export default async function BlogPage({ params }) {
           )}
         </div>
       </section>
+      <div className="p-4">
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: title },
+          ]}
+        />
+      </div>
       {content && (
         <section className="bg-white py-12">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-[200px_auto_270px] gap-4">

@@ -1,6 +1,7 @@
 import BlogListSection from "@/Components/Blog/BlogListSection";
 import BlogMainPageCTA from "@/Components/Blog/BlogMainPageCTA";
 import Tabs from "@/Components/Blog/Tabs";
+import Image from "next/image";
 
 async function getBlogs() {
   const res = await fetch("https://webflow-blog-api.vercel.app/api/blogs", {
@@ -21,10 +22,13 @@ export default async function Page() {
     <>
       <section className="relative overflow-hidden bg-[#0f1b86] py-16">
         <div className="absolute inset-y-0 right-0">
-          <img
+          <Image
             src="/Images/blog/Eds banner.webp"
-            alt=""
+            alt="Banner Image"
+            width={168}
+            height={312}
             className="h-full w-auto object-cover"
+            priority
           />
         </div>
 

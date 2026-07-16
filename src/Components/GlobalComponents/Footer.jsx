@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 import {
   FaLinkedinIn,
@@ -49,15 +50,17 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_1fr]">
           <div>
-            <img
+            <Image
               src="/Images/logo.webp"
-              className="h-10 mb-4"
+              alt="Edstellar"
+              width={139}
+              height={40}
+              className="mb-4"
               style={{
                 filter: "grayscale(1) invert(1) brightness(10)",
                 mixBlendMode: "screen",
                 opacity: 0.85,
               }}
-              alt="Edstellar"
             />
 
             <p className="max-w-xs text-sm leading-6 text-white/80">

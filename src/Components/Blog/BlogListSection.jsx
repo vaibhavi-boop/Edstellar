@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BlogCateRightSide from "@/Components/Blog/BlogCateRightSide";
@@ -151,13 +151,15 @@ export default function BlogListSection({ blogs = [] }) {
                         className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-600 hover:shadow-2xl"
                       >
                         <div className="overflow-hidden">
-                          <img
+                          <Image
                             src={
                               blog.fieldData["cover-photo"]?.url ||
                               "/Images/blog/default-blog.webp"
                             }
                             alt={blog.fieldData.name || "Blog cover"}
-                            className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            width={426}
+                            height={240}
                           />
                         </div>
 

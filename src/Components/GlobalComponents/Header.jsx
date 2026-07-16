@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronDown, Search } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Training Programs" },
@@ -21,7 +22,14 @@ export default function Header() {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="shrink-0">
-          <img src="/Images/logo.webp" alt="Edstellar" className="h-8" />
+          <Image
+            src="/Images/logo.webp"
+            width={139}
+            height={40}
+            alt="Edstellar"
+            className="h-8"
+            priority
+          />
         </Link>
 
         {/* Nav */}

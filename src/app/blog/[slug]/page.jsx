@@ -103,7 +103,7 @@ export default async function BlogPage({ params }) {
           <h1 className="mx-auto mt-6 mb-4 max-w-[900px] text-center text-3xl font-bold leading-tight text-white md:text-4xl lg:text-4clexl">
             {title}
           </h1>
-          <p className="max-w-[900px]">{desc}</p>
+          <p className="max-w-[900px] mx-auto">{desc}</p>
 
           <div className="mx-auto mt-12 max-w-2xl border-y border-white/10 py-6">
             <div className="flex items-center justify-center gap-4">

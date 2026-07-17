@@ -27,9 +27,8 @@ export default function Header() {
             width={139}
             height={32}
             alt="Edstellar"
-            className="h-8"
+            className="h-8 object-contain"
             fetchPriority="high"
-            objectFit="contain"
           />
         </Link>
 

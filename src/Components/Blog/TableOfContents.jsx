@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 
 import { startTransition, useEffect, useState } from "react";
 
@@ -11,22 +10,36 @@ export default function TableOfContents() {
       ".blog-content h2, .blog-content h3",
     );
 
-    const items = Array.from(elements).map((heading, index) => {
-      const text = heading.textContent || "";
+    const usedIds = new Set();
 
-      let id =
+    const items = Array.from(elements).map((heading, index) => {
+      const text = heading.textContent?.trim() || `Heading ${index + 1}`;
+
+      const baseId =
         heading.id ||
         text
           .toLowerCase()
-          .replace(/[^a-z0-9\s]/g, "")
+          .replace(/[^a-z0-9\s-]/g, "")
+          .trim()
           .replace(/\s+/g, "-");
 
-      if (!id) id = `heading-${index}`;
+      let uniqueId = baseId || `heading-${index}`;
 
-      heading.id = id;
+      let count = 1;
+
+      while (usedIds.has(uniqueId)) {
+        uniqueId = `${baseId}-${count}`;
+        count++;
+      }
+
+      usedIds.add(uniqueId);
+      heading.id = uniqueId;
+
+      // Keeps the heading visible below a sticky header
+      heading.style.scrollMarginTop = "110px";
 
       return {
-        id,
+        id: uniqueId,
         text,
         level: heading.tagName.toLowerCase(),
       };
@@ -40,22 +53,22 @@ export default function TableOfContents() {
   if (!headings.length) return null;
 
   return (
-    <aside className="toc-wrapper sticky top-24 self-start w-[200px] min-w-[200px] h-[80vh] overflow-y-auto">
-      <h3 className="text-[#1B40A9] mb-5 text-[16px] font-medium leading-5">
+    <aside className="toc-wrapper sticky top-24 h-[80vh] w-[200px] min-w-[200px] self-start overflow-y-auto">
+      <h3 className="mb-5 text-[16px] font-medium leading-5 text-[#1B40A9]">
         Content
       </h3>
 
       <nav>
-        {headings.map((item, index) => (
-          <Link
-            key={`${item.id}-${index}`}
+        {headings.map((item) => (
+          <a
+            key={item.id}
             href={`#${item.id}`}
-            className={`block px-2 py-[5px] text-[12px] leading-4 text-[#1d1d1d] border-l-2 border-transparent hover:bg-[rgba(41,98,255,0.1)] hover:border-l-black transition-all ${
+            className={`block border-l-2 border-transparent px-2 py-[5px] text-[12px] leading-4 text-[#1d1d1d] transition-all hover:border-l-black hover:bg-[rgba(41,98,255,0.1)] ${
               item.level === "h3" ? "ml-3" : ""
             }`}
           >
             {item.text}
-          </Link>
+          </a>
         ))}
       </nav>
     </aside>

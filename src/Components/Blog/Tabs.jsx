@@ -68,6 +68,8 @@ export default function Tabs({ blogs = [] }) {
                   <Image
                     src={featuredImage}
                     loading="eager"
+                    width={600}
+                    height={340}
                     alt={
                       featuredData?.["cover-photo"]?.alt ||
                       featuredData?.name ||
@@ -147,10 +149,11 @@ export default function Tabs({ blogs = [] }) {
                   >
                     <Image
                       src={imageUrl}
-                      loading="eager"
                       alt={
                         blogData["cover-photo"]?.alt || blogData.name || "Blog"
                       }
+                      width={120}
+                      height={85}
                       className="h-[85px] w-[120px] rounded-md object-cover"
                     />
 

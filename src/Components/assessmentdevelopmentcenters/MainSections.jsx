@@ -1,7 +1,10 @@
 import {
   HeroSectionData,
   BreadcrumbData,
-  VerticleIconSectionData
+  StatsData,
+  StaticCardSectionData,
+  TabsSectionData,
+  TimelineSectionData,
 } from "../Data/Digital_Learning_Ecosystem_Consulting_Services";
 
 export default function Home() {
@@ -9,8 +12,11 @@ export default function Home() {
     <>
     <HeroSection
     breadcrumbs={BreadcrumbData}  
-    data={HeroSectionData} />
-    data={VerticleIconSectionData}
+    data={HeroSectionData}
+    items={StatsData} />
+    data={StaticCardSectionData}
+    <TabsSection data={TabsSectionData} />
+    data={TimelineSectionData}
     </>
   );
 }

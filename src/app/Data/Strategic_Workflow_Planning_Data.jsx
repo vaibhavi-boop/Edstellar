@@ -131,11 +131,10 @@ export const LogoSectionData = {
 
 /* Static Cards section data */
 export const StaticCardSectionData = {
+  variant: "red",
+
   heading: "Why Strategic Workforce Planning Matters",
-
-  description:
-    "Most organizations plan their business strategy in detail. Their workforce strategy is an afterthought. Roles go unfilled at critical moments. Skills gaps appear only after they have already slowed growth. Talent decisions are made reactively, at higher cost and lower quality than a 12-month forward view would have prevented.Strategic workforce planning changes that equation. If any of the following challenges resonate, our strategic workforce planning consulting practice is built specifically to address them.",
-
+  description: "Most organizations plan their business strategy in detail. Their workforce strategy is an afterthought. Roles go unfilled at critical moments. Skills gaps appear only after they have already slowed growth. Talent decisions are made reactively, at higher cost and lower quality than a 12-month forward view would have prevented.Strategic workforce planning changes that equation. If any of the following challenges resonate, our strategic workforce planning consulting practice is built specifically to address them.",
   items: [
     {
       icon: <Target size={18} />,
@@ -168,6 +167,9 @@ export const StaticCardSectionData = {
       description: "Leadership and succession plans are not connected to the broader workforce picture, creating blind spots at the top of the organization.",
     },
   ],
+
+  ctaText:
+    "If any of these resonate, you are in the right place. Our strategic workforce planning consulting practice is built to address them through governed frameworks, measurable outcomes, and consultant-led delivery.",
 
   button: {
     text: "Request a Consultation",

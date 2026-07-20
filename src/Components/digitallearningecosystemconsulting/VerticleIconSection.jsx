@@ -80,21 +80,38 @@ export default function VerticleIconSection({ data }) {
         </div>
 
         {/* Bottom CTA */}
-        <div className="rounded-lg bg-[#F5F7FB] py-6 px-5">
-          <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
-            <div className="max-w-[820px]">
-              <p className="text-[16px] leading-7 text-[#3a3a3a]">
-                {data.cta.text}
-              </p>
-            </div>
+          <div className="rounded-lg bg-[#F5F7FB] px-5 py-6">
+            {data.cta.heading ? (
+              // Heading with Center CTA
+              <div className="mx-auto flex max-w-[900px] flex-col items-center text-center">
+                <h3 className="mb-4 text-[20px] font-semibold leading-[1.2] text-[#3A3A3A]">
+                  {data.cta.heading}
+                </h3>
 
-            <PrimaryButton
-              text={data.cta.button.text}
-              href={data.cta.button.href}
-              title={data.cta.button.title}
-            />
+                <PrimaryButton
+                  text={data.cta.button.text}
+                  href={data.cta.button.href}
+                  title={data.cta.button.title}
+                />
+              </div>
+            ) : (
+              // Paragraph with left CTA
+              <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
+                <div className="max-w-[820px]">
+                  <p className="text-[16px] leading-7 text-[#3A3A3A]">
+                    {data.cta.text}
+                  </p>
+                </div>
+
+                <PrimaryButton
+                  text={data.cta.button.text}
+                  href={data.cta.button.href}
+                  title={data.cta.button.title}
+                />
+              </div>
+            )}
           </div>
-        </div>
+
       </div>
     </section>
   );

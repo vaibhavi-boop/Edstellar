@@ -678,6 +678,90 @@ export const VerticleLineSectionData = {
   ],
 };
 
+/* Slides with Stats Section data */
+export const SlidesStatsSectionData = {
+  heading: "Assessment Center Consulting Success Stories",
+
+  slides: [
+    {
+      image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc80697bc4589d2ecf4a7f_Why%20Choose%20Edstellar%20for%20Assessment%20and%20Development%20Center%20Consulting.webp",
+      quote: "A multinational bank needed to identify succession-ready leaders for 45 critical senior leadership roles across 12 countries. Existing succession plans were based on manager nominations with no objective assessment data. Two recent C-suite appointments had failed within 18 months. Edstellar designed a leadership assessment center program across 8 locations (4 in-person, 4 virtual), evaluating 180 senior leaders using behavioral simulations.",
+      company: "Global Financial Services Group",
+      title: "Global Financial Services Group",
+
+      stats: [
+        {
+          value: "38",
+          suffix: "",
+          title:
+            "Succession-ready leaders identified (vs. 12 originally nominated)",
+        },
+        {
+          value: "42",
+          suffix: "%",
+          title: "Reduction in external senior hiring",
+        },
+        {
+          value: "3.2",
+          suffix: "X",
+          title: "Higher performance ratings for assessed successors",
+        },
+      ],
+    },
+
+    {
+      image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc80ac535c3e8722f2ca39_Why%20Choose%20Edstellar%20for%20Assessment%20and%20Development%20Center%20Consulting.webp",
+      quote: "A Fortune 500 manufacturing company needed to assess 250+ plant managers across 60 facilities for digital transformation readiness. Leadership decisions were decentralized with no common competency framework. Edstellar built a unified competency framework, designed a hybrid assessment-development center model, and trained 24 internal HR professionals as certified assessors.",
+      company: "Global Manufacturing Corporation",
+      title: "Global Manufacturing Corporation",
+
+      stats: [
+        {
+          value: "60",
+          suffix: "",
+          title: "Facilities with common leadership standard",
+        },
+        {
+          value: "0.87",
+          suffix: "",
+          title: "Inter-rater reliability by internal assessors",
+        },
+        {
+          value: "40",
+          suffix: "%",
+          title: "Faster time-to-performance for promoted leaders",
+        },
+      ],
+    },
+
+    {
+      image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc80e44698ed300313ee64_Why%20Choose%20Edstellar%20for%20Assessment%20and%20Development%20Center%20Consulting.webp",
+      quote: "A Series D technology company scaling from 800 to 3,000 employees needed a leadership pipeline for 35 new director and VP roles within 24 months. Edstellar designed a high-potential identification center evaluating 120 senior individual contributors and managers, then built a development center program for the top 40 identified high-potentials.",
+      company: "High-Growth Technology Company",
+      title: "High-Growth Technology Company",
+
+      stats: [
+        {
+          value: "22/35",
+          suffix: "",
+          title: "Target roles filled internally within 18 months",
+        },
+        {
+          value: "$4.4",
+          suffix: "M",
+          title: "Saved in external recruitment fees",
+        },
+        {
+          value: "2.8",
+          suffix: "X",
+          title: "Higher promotion rate for HiPo cohort",
+        },
+      ],
+    },
+
+  ],
+};
+
 /* Logos section data */
 export const LogoSectionData = {
   heading: "Organizations That Trust Edstellar for Assessment and Development Centers",

@@ -7,6 +7,7 @@ import TabsSection from "../../Components/StrategicWorkforcePlanning/TabsSection
 import AssessmentSection from "../../Components/assessmentdevelopmentcenters/AssessmentSection";
 import TimelineSection from "../../Components/digitallearningecosystemconsulting/TimelineSection";
 import VerticleLineSection from "../../Components/StrategicWorkforcePlanning/VerticleLineSection";
+import SlidesStatsSection from "../../Components/assessmentdevelopmentcenters/SlidesStatsSection";
 import LogoSection from "../../Components/StrategicWorkforcePlanning/LogoSection";
 import SlidesSection from "../../Components/StrategicWorkforcePlanning/SlidesSection";
 import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";
@@ -25,6 +26,7 @@ import {
   TimelineSectionData,
   TabsSectionDataSub,
   VerticleLineSectionData,
+  SlidesStatsSectionData,
   LogoSectionData,
   SlidesSectionData,
   CTASectionData,
@@ -45,6 +47,7 @@ export default function Home() {
       <TimelineSection data={TimelineSectionData} />
       <TabsSection data={TabsSectionDataSub} />
       <VerticleLineSection data={VerticleLineSectionData} />
+      <SlidesStatsSection data={SlidesStatsSectionData} />
       <LogoSection data={LogoSectionData} />
       <SlidesSection data={SlidesSectionData} />
       <CTASection data={CTASectionData} />

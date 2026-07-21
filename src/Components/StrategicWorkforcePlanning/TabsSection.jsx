@@ -6,12 +6,10 @@ import { CheckCircle2 } from "lucide-react";
 export default function TabsSection({
   data,
   centered = false,
-  showDescription = false,
+
 }) {
   const [activeTab, setActiveTab] = useState(0);
-
   if (!data || !data.tabs?.length) return null;
-
   const service = data.tabs[activeTab];
 
   return (
@@ -30,8 +28,8 @@ export default function TabsSection({
             {data.heading}
           </h2>
 
-          {showDescription && (
-            <p className="mx-auto mt-5 max-w-[900px] text-[16px] leading-7 text-[#555]">
+          {data.showDescription && (
+            <p className="mt-5 max-w-[780px] text-[16px] leading-7 text-[#3a3a3a]">
               {data.description}
             </p>
           )}

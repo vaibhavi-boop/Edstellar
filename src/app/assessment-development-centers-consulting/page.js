@@ -6,6 +6,12 @@ import StaticCardSection from "../../Components/StrategicWorkforcePlanning/Stati
 import TabsSection from "../../Components/StrategicWorkforcePlanning/TabsSection";
 import AssessmentSection from "../../Components/assessmentdevelopmentcenters/AssessmentSection";
 import TimelineSection from "../../Components/digitallearningecosystemconsulting/TimelineSection";
+import VerticleLineSection from "../../Components/StrategicWorkforcePlanning/VerticleLineSection";
+import LogoSection from "../../Components/StrategicWorkforcePlanning/LogoSection";
+import SlidesSection from "../../Components/StrategicWorkforcePlanning/SlidesSection";
+import CTASection from "../../Components/StrategicWorkforcePlanning/CTASection";
+import FaqSection from "../../Components/StrategicWorkforcePlanning/FaqSection";
+import ServiceSlidesSection from "../../Components/StrategicWorkforcePlanning/ServiceSlidesSection";
 
 import {
   HeroSectionData,
@@ -16,7 +22,14 @@ import {
   StaticCardSectionData,
   TabsSectionData,
   AssessmentSectionData,
-  TimelineSectionData
+  TimelineSectionData,
+  TabsSectionDataSub,
+  VerticleLineSectionData,
+  LogoSectionData,
+  SlidesSectionData,
+  CTASectionData,
+  FAQSectionData,
+  ServiceSlidesSectionData,
 } from "../Data/Assessment_Development_Centers";
 
 export default function Home() {
@@ -30,6 +43,14 @@ export default function Home() {
       <TabsSection data={TabsSectionData} />
       <AssessmentSection data={AssessmentSectionData} />
       <TimelineSection data={TimelineSectionData} />
+      <TabsSection data={TabsSectionDataSub} />
+      <VerticleLineSection data={VerticleLineSectionData} />
+      <LogoSection data={LogoSectionData} />
+      <SlidesSection data={SlidesSectionData} />
+      <CTASection data={CTASectionData} />
+      <FaqSection data={FAQSectionData} />
+      <ServiceSlidesSection data={ServiceSlidesSectionData} />
+      
     </>
   );
 }

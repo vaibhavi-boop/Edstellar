@@ -492,6 +492,7 @@ export const ServiceSlidesSectionData = {
       description:
         "Workforce gap analysis identifies the capability gaps; TNA turns them into prioritized learning interventions your L&D function can act on immediately.",
       link: "https://www.edstellar.com/strategic-workforce-planning-solutions",
+      buttonText: "Explore Service",
     },
 
     {
@@ -501,6 +502,7 @@ export const ServiceSlidesSectionData = {
       description:
         "Strategic workforce planning informs future leadership requirements; succession planning builds the pipeline to fill them before critical roles go vacant.",
       link: "https://www.edstellar.com/leadership-succession-planning-consulting",
+      buttonText: "Explore Service",
     },
 
     {
@@ -510,6 +512,7 @@ export const ServiceSlidesSectionData = {
       description:
         "Skills inventory and assessment data feeds directly into the gap analysis, giving workforce planning a verified, evidence-based picture of current capabilities.",
       link: "https://www.edstellar.com/talent-assessment-services",
+      buttonText: "Explore Service",
     },
 
     {
@@ -519,6 +522,7 @@ export const ServiceSlidesSectionData = {
       description:
         "Workforce planning executes what organizational strategy defines — the two disciplines work in tandem to align structure, roles, and talent to strategic direction.",
       link: "https://www.edstellar.com/strategic-workforce-planning-solutions",
+      buttonText: "Explore Service",
     },
 
     {
@@ -528,6 +532,7 @@ export const ServiceSlidesSectionData = {
       description:
         "Reskilling requirements identified in workforce planning become learning programs — Edstellar connects planning outputs directly to learning design and delivery.",
       link: "https://www.edstellar.com/learning-strategy-design-consulting",
+      buttonText: "Explore Service",
     },
 
     {
@@ -537,6 +542,7 @@ export const ServiceSlidesSectionData = {
       description:
         "Role architecture, capability frameworks, and workforce design connect directly to OD consulting — ensuring structure and talent strategy reinforce each other.",
       link: "https://www.edstellar.com/organizational-development-consulting",
+      buttonText: "Explore Service",
     },
   ],
 };

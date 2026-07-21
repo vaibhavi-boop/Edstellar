@@ -48,9 +48,9 @@ export default function TimelineSection({ data }) {
                 <div
                   className="flex-1 rounded-lg border border-[#c5e82633] bg-[#ffffff0a] p-3 lg:p-6 transition-all duration-300 group-hover:border-[#D7F11E]"
                 >
-                  <div className="flex justify-between gap-6 max-lg:flex-col lg:flex-row">
+                  <div className="flex justify-between max-lg:flex-col lg:flex-row">
 
-                    <div className="max-w-3xl">
+                    <div className="max-w-[720px]">
 
                       <h3 className="text-white text-xl font-semibold mb-2">
                         {item.title}

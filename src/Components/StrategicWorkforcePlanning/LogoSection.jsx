@@ -6,9 +6,15 @@ export default function LogoSection({ data }) {
   return (
     <section className="overflow-hidden bg-[#31346F]">
       <div className="container">
-        <h2 className="mb-12 text-center text-[30px] font-semibold text-white lg:text-[36px]">
-          {data.heading}
-        </h2>
+        <div className="mb-12 mx-auto max-w-[900px] text-center">
+          <h2 className="mb-4 text-center text-[30px] leading-[42px] font-semibold text-white lg:text-[36px]">
+            {data.heading}
+          </h2>
+
+          <p className="text-center text-[16px] text-white">
+            {data.description}
+          </p>
+        </div>
 
         {/* Top Row */}
         <div className="relative mb-10 overflow-hidden">

@@ -44,7 +44,7 @@ export default function TabsSection({
               className={`rounded-full border px-5 py-3 text-[14px] font-semibold transition-all duration-300 sm:px-6 sm:text-[15px] ${
                 activeTab === index
                   ? "border-[#2A2F68] bg-[#2A2F68] text-white"
-                  : "border-[#D6D8E6] bg-white text-[#5c5e6e] hover:border-[#2A2F68]"
+                  : "border-[#D6D8E6] bg-white text-[#5c5e6e] hover:border-[#2d2f6b] hover:text-[#2d2f6b]"
               }`}
             >
               {tab.button}

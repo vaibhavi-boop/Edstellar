@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 export default function Breadcrumb({ items }) {
   return (
     <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-white/80">

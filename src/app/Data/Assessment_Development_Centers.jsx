@@ -1,9 +1,5 @@
 import {
-  Clock3,
   Users,
-  Image,
-  CircleDollarSign,
-  Globe,
   WalletCards,
   BadgeCheck,
   CircleDot,
@@ -15,6 +11,14 @@ import {
   UserRoundSearch,
   Rocket,
   TrendingUp,
+  Landmark,
+  Laptop,
+  HeartPulse,
+  Factory,
+  Zap,
+  ShoppingBag,
+  Briefcase,
+  Activity,
 } from "lucide-react";
 
 /* Breadcrumb data */
@@ -26,7 +30,7 @@ export const BreadcrumbData = [
   },
   {
     label: "Talent Assessment",
-    href: "https://www.edstellar.com/talent-assessment-services",
+    href: "/talent-assessment-services",
     title: "Click Here to View Talent Assessment", 
   },
   {
@@ -34,7 +38,7 @@ export const BreadcrumbData = [
   },
 ];
 
-/* Breadcrumb data */
+/* Hero Section Data */
 export const HeroSectionData = {
   heading: "<span class='text-[#c8e130]'>Digital Learning Ecosystem</span> Consulting",
   description:"Fragmented learning tools create fragmented learner experiences. Edstellar's digital learning ecosystem consulting helps enterprises design, integrate, and optimize a connected technology ecosystem by linking your LMS, LXP, content libraries, analytics, and performance support tools seamlessly. Our vendor-neutral approach ensures every platform decision serves your business goals, not vendor relationships.",
@@ -641,7 +645,349 @@ export const TabsSectionDataSub = {
   ],
 };
 
-/* Tabs with Stats Section data */
+/* Industry Tabs Section */
+export const IndustryTabsSectionData = {
+  heading: "Assessment and Development Centers Across Industries",
+  description: "Every industry has unique leadership challenges, regulatory requirements, and competency demands that shape how assessment and development centers must be designed. Edstellar adapts our assessment center methodology to your industry's talent landscape.",
+
+  industries: [
+    {
+      icon: <Landmark size={16} />,
+      name: "Financial Services",
+      title: "Financial Services & Banking",
+      description: "Regulatory scrutiny, risk management acumen, and client relationship excellence define leadership in financial services. We design assessment centers that evaluate regulatory awareness, ethical decision-making, risk appetite calibration, and commercial judgment.",
+
+      points: [
+        "Regulatory and compliance leadership assessment",
+        "Risk management competency evaluation",
+        "Client advisory leadership simulation",
+        "Ethical decision-making exercises",
+      ],
+
+      stats: [
+        {
+          value: "420",
+          suffix: "+",
+          title: "Leaders assessed across banking",
+        },
+        {
+          value: "0.89",
+          suffix: "",
+          title: "Assessment accuracy rate",
+        },
+        {
+          value: "38",
+          suffix: "%",
+          title: "Internal promotions increased",
+        },
+        {
+          value: "92",
+          suffix: "%",
+          title: "Succession pipeline confidence",
+        },
+      ],
+    },
+
+    {
+      icon: <Laptop size={16} />,
+      name: "Technology/SaaS",
+      title: "Technology & SaaS",
+      description: "Rapid innovation cycles and distributed teams demand leaders who combine technical depth with strategic vision and people leadership. Our assessment centers evaluate product thinking, agile leadership, cross-functional influence, and scaling ability.",
+
+      points: [
+        "Product and engineering leadership AC",
+        "Agile and cross-functional influence assessment",
+        "Hypergrowth scaling simulations",
+        "Remote-first virtual assessment design",
+      ],
+
+      stats: [
+        {
+          value: "350",
+          suffix: "+",
+          title: "Tech leaders assessed",
+        },
+        {
+          value: "0.86",
+          suffix: "",
+          title: "Predictive accuracy",
+        },
+        {
+          value: "42",
+          suffix: "%",
+          title: "Internal fills for director+ roles",
+        },
+        {
+          value: "2.8",
+          suffix: "X",
+          title: "Higher promotion success rate",
+        },
+      ],
+    },
+
+    {
+  icon: <HeartPulse size={16} />,
+  name: "Healthcare",
+  title: "Healthcare & Life Sciences",
+  description: "Patient safety, clinical governance, and regulatory compliance create leadership competency demands unlike any other industry. We design assessment centers that evaluate clinical-operational leadership integration and patient safety culture.",
+
+  points: [
+    "Clinical leadership competency assessment",
+    "Patient safety culture evaluation",
+    "Regulatory navigation simulations",
+    "Multidisciplinary team leadership exercises",
+  ],
+
+  stats: [
+    {
+      value: "280",
+      suffix: "+",
+      title: "Healthcare leaders assessed",
+    },
+    {
+      value: "0.84",
+      suffix: "",
+      title: "Assessment validity",
+    },
+    {
+      value: "35",
+      suffix: "%",
+      title: "Internal succession placements",
+    },
+    {
+      value: "88",
+      suffix: "%",
+      title: "Participant satisfaction",
+    },
+  ],
+},
+
+    {
+  icon: <Factory size={16} />,
+  name: "Manufacturing",
+  title: "Manufacturing & Engineering",
+  description: "Operational excellence, safety leadership, and continuous improvement discipline define manufacturing leadership. Our assessment centers evaluate lean thinking, safety culture leadership, and technical problem-solving under pressure.",
+
+  points: [
+    "Safety culture and compliance simulations",
+    "Lean and continuous improvement exercises",
+    "Multi-site operational leadership evaluation",
+    "Plant and operations leadership assessment",
+  ],
+
+  stats: [
+    {
+      value: "500",
+      suffix: "+",
+      title: "Operational leaders assessed",
+    },
+    {
+      value: "0.87",
+      suffix: "",
+      title: "Inter-rater reliability",
+    },
+    {
+      value: "40",
+      suffix: "%",
+      title: "Faster time-to-performance",
+    },
+    {
+      value: "85",
+      suffix: "%",
+      title: "Rated DC highly valuable",
+    },
+  ],
+},
+
+    {
+  icon: <Zap size={16} />,
+  name: "Energy",
+  title: "Energy & Utilities",
+  description: "High-consequence operational environments where leadership decisions directly impact safety, environmental compliance, and community well-being. Assessment centers evaluate crisis decision-making and energy transition leadership.",
+
+  points: [
+    "Crisis and emergency leadership assessment",
+    "Stakeholder management simulations",
+    "Energy transition leadership exercises",
+    "Environmental and safety compliance evaluation",
+  ],
+
+  stats: [
+    {
+      value: "180",
+      suffix: "+",
+      title: "Energy leaders assessed",
+    },
+    {
+      value: "0.85",
+      suffix: "",
+      title: "Assessment accuracy",
+    },
+    {
+      value: "32",
+      suffix: "%",
+      title: "Internal placements increased",
+    },
+    {
+      value: "90",
+      suffix: "%",
+      title: "Succession plan effectiveness",
+    },
+  ],
+},
+
+    {
+  icon: <Building2 size={16} />,
+  name: "Government",
+  title: "Government & Public Sector",
+  description: "Public accountability, policy complexity, and multi-stakeholder governance create unique leadership assessment requirements. We design assessment centers that evaluate policy judgment and public communication capability.",
+
+  points: [
+    "Policy judgment and stakeholder assessment",
+    "Public communication simulations",
+    "Resource-constrained leadership exercises",
+    "Multi-stakeholder governance evaluation",
+  ],
+
+  stats: [
+    {
+      value: "220",
+      suffix: "+",
+      title: "Public sector leaders assessed",
+    },
+    {
+      value: "0.83",
+      suffix: "",
+      title: "Assessment validity",
+    },
+    {
+      value: "28",
+      suffix: "%",
+      title: "Internal succession rate",
+    },
+    {
+      value: "14",
+      suffix: "+",
+      title: "Government Agencies served",
+    },
+  ],
+},
+
+    {
+  icon: <ShoppingBag size={16} />,
+  name: "Retail",
+  title: "Retail & Consumer Goods",
+  description: "Customer-centricity, commercial acumen, and the ability to lead large distributed workforces define retail leadership. Our assessment centers evaluate customer experience vision and multi-site operational leadership.",
+
+  points: [
+    "Customer experience leadership assessment",
+    "Commercial decision-making simulations",
+    "Multi-site operational exercises",
+    "Seasonal demand leadership evaluation",
+  ],
+
+  stats: [
+    {
+      value: "310",
+      suffix: "+",
+      title: "Retail leaders assessed",
+    },
+    {
+      value: "0.82",
+      suffix: "",
+      title: "Assessment accuracy",
+    },
+    {
+      value: "36",
+      suffix: "%",
+      title: "Internal promotions improved",
+    },
+    {
+      value: "91",
+      suffix: "%",
+      title: "Manager satisfaction with reports",
+    },
+  ],
+},
+
+    {
+  icon: <Briefcase size={16} />,
+  name: "Professional Services",
+  title: "Professional Services",
+  description: "Client relationship excellence, business development capability, and the ability to lead knowledge workers define professional services leadership. Assessment centers evaluate client engagement sophistication and practice development acumen.",
+
+  points: [
+    "Client engagement leadership assessment",
+    "Business development simulations",
+    "Thought leadership and practice building exercises",
+    "Knowledge worker management evaluation",
+  ],
+
+  stats: [
+    {
+      value: "260",
+      suffix: "+",
+      title: "Professional services leaders assessed",
+    },
+    {
+      value: "0.88",
+      suffix: "",
+      title: "Assessment validity",
+    },
+    {
+      value: "44",
+      suffix: "%",
+      title: "Partner pipeline filled internally",
+    },
+    {
+      value: "3.1",
+      suffix: "X",
+      title: "Higher success rate in promoted roles",
+    },
+  ],
+},
+
+    {
+  icon: <Activity size={16} />,
+  name: "Telecom",
+
+  title: "Telecommunications",
+
+  description:
+    "Technology convergence, regulatory evolution, and customer experience transformation create complex leadership demands. Our assessment centers evaluate digital transformation leadership and competitive strategy under market disruption.",
+
+  points: [
+    "Digital transformation leadership assessment",
+    "Competitive strategy simulations",
+    "Regulatory agility exercises",
+    "Customer experience transformation evaluation",
+  ],
+
+  stats: [
+    {
+      value: "190",
+      suffix: "+",
+      title: "Telecom leaders assessed",
+    },
+    {
+      value: "0.84",
+      suffix: "",
+      title: "Assessment accuracy",
+    },
+    {
+      value: "33",
+      suffix: "%",
+      title: "Internal fills for critical roles",
+    },
+    {
+      value: "87",
+      suffix: "%",
+      title: "Assessment participant satisfaction",
+    },
+  ],
+},
+  ],
+};
 
 /* Verticle Line Section data */
 export const VerticleLineSectionData = {

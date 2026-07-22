@@ -1,0 +1,774 @@
+{
+  "heroSection": {
+    "breadcrumb": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Talent Assessments",
+        "url": "/talent-assessments",
+        "active": true
+      }
+    ],
+    "title": {
+      "highlight": "Corporate Talent Assessment",
+      "text": "Services for Workforce Readiness"
+    },
+    "description": "Edstellar's Talent Assessments, powered by our Talent Diagnostics methodology, give CHROs and L&D Leaders the objective, validated capability insights they need, replacing guesswork with evidence. Prioritize capability investments across revenue, throughput, attrition, and succession risk.",
+    "highlights": [
+      {
+        "icon": "check-circle",
+        "label": "100+ Global Delivery Locations"
+      },
+      {
+        "icon": "check-circle",
+        "label": "13,650+ Assessments Delivered"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Request a Diagnostic Consultation",
+        "href": "/contact-us",
+        "style": "primary"
+      },
+      {
+        "text": "Download Brochure",
+        "href": "/brochure.pdf",
+        "style": "outline"
+      }
+    ],
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdafb1fdc000c350e31a3_Corporate%20Talent%20Assessment%20Services%20for%20Workforce%20Readiness.webp",
+      "alt": "Corporate Talent Assessment Services for Workforce Readiness"
+    }
+  },
+  "statistics": [
+    {
+      "value": 50,
+      "suffix": "+",
+      "label": "Industry domains assessed globally",
+      "icon": "assessment"
+    },
+    {
+      "value": 14,
+      "suffix": "+",
+      "label": "Years enterprise assessment experience",
+      "icon": "experience"
+    },
+    {
+      "value": 3,
+      "suffix": "x",
+      "label": "Higher readiness risk when skill data is unverified",
+      "icon": "risk"
+    },
+    {
+      "value": 100,
+      "suffix": "+",
+      "label": "Global delivery locations worldwide",
+      "icon": "global"
+    }
+  ],
+  "mostRequestedAssessments": {
+    "title": "Most Requested Assessments",
+    "description": "Assessment categories ranked by enterprise delivery volume across Edstellar's global client base.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Psychometric Assessments",
+        "description": "MBTI, DiSC, Hogan, 16PF, personality profiling for selection and development",
+        "count": {
+          "value": 4500,
+          "suffix": "+"
+        }
+      },
+      {
+        "id": 2,
+        "title": "360-Degree Feedback",
+        "description": "45/90/180/270/360 multi-rater programs, Qualtrics, SurveyMonkey, Custom",
+        "count": {
+          "value": 3200,
+          "suffix": "+"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Leadership Potential",
+        "description": "Gallup StrengthsFinder, Saville Wave, Hogan Lead, Identify high-potential leaders",
+        "count": {
+          "value": 2800,
+          "suffix": "+"
+        }
+      },
+      {
+        "id": 4,
+        "title": "Skill Proficiency Assessments",
+        "description": "Lominger, Korn Ferry, Custom Frameworks, validate role-relevant capability",
+        "count": {
+          "value": 1900,
+          "suffix": "+"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Emotional Intelligence (EQ)",
+        "description": "EQ-i 2.0, Genos, MSCEIT, emotional intelligence instruments for leaders and teams",
+        "count": {
+          "value": 1200,
+          "suffix": "+"
+        }
+      },
+      {
+        "id": 6,
+        "title": "Virtual & Digital Readiness",
+        "description": "Digital Skills, Agile Mindset Index, Learning Agility Index, workforce transformation readiness",
+        "badge": {
+          "text": "New",
+          "variant": "success"
+        }
+      },
+      {
+        "id": 7,
+        "title": "Gamified & Video Assessments",
+        "description": "Virtual Assessment Centres, Remote Proctoring, Gamified platforms, assess talent anywhere",
+        "badge": {
+          "text": "New",
+          "variant": "success"
+        }
+      },
+      {
+        "id": 8,
+        "title": "Role-Based Skill Validation",
+        "description": "Structured role-fit evaluations against competency profiles for selection and internal mobility"
+      },
+      {
+        "id": 9,
+        "title": "Culture & Values Alignment",
+        "description": "Denison, Barrett CVA, OCI, culture and values diagnostics for organisational design"
+      }
+    ]
+  },
+  "diagnoseToDevelop": {
+    "title": "The Diagnose-to-Develop Advantage",
+    "description": "Most assessment vendors stop at the report. Edstellar closes the loop. Every diagnostic finding connects directly to targeted development action.",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Diagnose",
+        "description": "Structured assessment across behavioral, skills, and organizational dimensions. Objective data, not guesswork."
+      },
+      {
+        "id": 2,
+        "title": "Interpret",
+        "description": "Expert debrief sessions translate raw data into actionable insight: capability gaps, risk areas, development priorities."
+      },
+      {
+        "id": 3,
+        "title": "Develop",
+        "description": "Findings feed directly into Edstellar's 2,000+ training programs, OD consulting practice, or skills intelligence platform."
+      },
+      {
+        "id": 4,
+        "title": "Measure",
+        "description": "Post-development reassessment tracks capability improvement, proving ROI with before-and-after evidence."
+      }
+    ],
+    "highlight": {
+      "icon": "check-circle",
+      "title": "What makes Edstellar different:",
+      "description": "No other provider in our benchmark set offers a fully closed diagnostic-to-development loop. Edstellar's model connects every finding to a training program, OD engagement, or skills intelligence dashboard, with post-development reassessment proving ROI."
+    }
+  },
+  "talentAssessmentOverview": {
+    "sections": [
+      {
+        "title": "What is a Talent Assessment?",
+        "description": "A Talent Assessment is an objective, repeatable process for measuring, validating, and verifying employee workforce capabilities, producing proficiency data that is defensible, auditable, and actionable across talent decisions. Unlike performance reviews or informal skill conversations, talent assessments apply a structured framework to each evaluation.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdb4ed2d608496e7ded3f_What%20is%20a%20Talent%20Assessment%3F.webp",
+          "alt": "What is a Talent Assessment?",
+          "position": "left"
+        },
+        "cards": [
+          {
+            "title": "Role-First Evaluation",
+            "description": "Scoped against governed role profiles, not generic skill lists",
+            "icon": "BriefcaseBusiness"
+          },
+          {
+            "title": "Employee Self-Assessment",
+            "description": "Employees rate proficiency against structured behavioral indicators",
+            "icon": "ClipboardCheck"
+          },
+          {
+            "title": "Manager Verification",
+            "description": "Managers review, confirm, or adjust. Every disagreement creates an audit trail.",
+            "icon": "UserCheck"
+          }
+        ]
+      },
+      {
+        "title": "From Score to Development Strategy",
+        "description": "Edstellar's approach goes further. Our Talent Diagnostics methodology connects every assessment finding directly to targeted development action. Where standard assessments produce a score, Edstellar diagnostics produce a development strategy.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdb6c6c0f0e91b23f7628_From%20Score%20to%20Development%20Strategy.webp",
+          "alt": "From Score to Development Strategy",
+          "position": "right"
+        },
+        "cards": [
+          {
+            "title": "Closed-Loop Model",
+            "description": "Findings feed directly into 2,000+ training programs, OD consulting, or skills intelligence.",
+            "icon": "RefreshCw"
+          },
+          {
+            "title": "Evidence-Based",
+            "description": "Every instrument is psychometrically validated and administered by certified practitioners.",
+            "icon": "BadgeCheck"
+          },
+          {
+            "title": "ROI Measured",
+            "description": "Post-development reassessment tracks capability improvement with before-and-after evidence.",
+            "icon": "ChartColumnIncreasing"
+          }
+        ]
+      }
+    ]
+  },
+  "learningStrategies": {
+    "title": "Learning Strategy for Every Enterprise Challenge",
+    "tabs": [
+      {
+        "id": 1,
+        "label": "Behavioral & Psychological Profiling",
+        "number": "01",
+        "title": "Behavioral & Psychological Profiling",
+        "description": "Understand who your people are beneath the surface. Psychometric, cognitive, and emotional intelligence assessments that reveal behavioral drivers, decision-making patterns, and leadership temperament.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdb8c0c82142652c45ddc_Behavioral%20%26%20Psychological%20Profiling.webp",
+          "alt": "Behavioral & Psychological Profiling"
+        },
+        "points": [
+          "Psychometric Assessments, MBTI, DiSC, Hogan, 16PF",
+          "Cognitive & Decision-Making, Watson-Glaser, Raven's, SHL Verify",
+          "Technology recommendation report"
+        ]
+      },
+      {
+        "id": 2,
+        "label": "Skills & Competency Validation",
+        "number": "02",
+        "title": "Skills & Competency Validation",
+        "description": "Validate what your workforce can actually do, not what their CVs claim. Structured measurement of role-relevant competencies, applied decision-making under realistic conditions.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdbaa365b28b89a46e57b_Skills%20%26%20Competency%20Validation.webp",
+          "alt": "Skills & Competency Validation"
+        },
+        "points": [
+          "Skill Proficiency, Lominger, Korn Ferry, Custom",
+          "Situational Judgement Tests, SHL SJT, Cappfinity",
+          "Conflict Management, TKI, Kraybill, IDI"
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Org Alignment & Multi-Rater Feedback",
+        "number": "03",
+        "title": "Org Alignment & Multi-Rater Feedback",
+        "description": "See your leaders through every stakeholder's eyes. From 45-degree quick-pulse to full 360-degree multi-rater programs, combined with leadership potential and culture alignment diagnostics.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdbda920c9bf4d2f986b4_Org%20Alignment%20%26%20Multi-Rater%20Feedback.webp",
+          "alt": "Org Alignment & Multi-Rater Feedback"
+        },
+        "points": [
+          "Leadership Potential, Gallup StrengthsFinder, Saville Wave",
+          "Culture & Values Alignment, Denison, Barrett CVA, OCI",
+          "360-Degree Feedback, Qualtrics 360, Custom Multi-Rater"
+        ]
+      }
+    ]
+  },
+  "corporateTalentAssessmentServices": {
+    "title": "Corporate Talent Assessment Services",
+    "description": "Validated, practitioner-led assessment services across behavioral profiling, skills validation, and organisational alignment.",
+    "services": [
+      {
+        "id": 1,
+        "title": "Psychometric Assessments",
+        "description": "MBTI, DiSC, Hogan, 16PF, personality profiling for selection and development.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdbfb0b97e76b922dfa9b_Psychometric%20Assessments.webp",
+          "alt": "Psychometric Assessments"
+        }
+      },
+      {
+        "id": 2,
+        "title": "Cognitive & Decision-Making",
+        "description": "Watson-Glaser, Raven's, SHL Verify, measure reasoning, critical thinking and decision quality.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ccc31a3396eb61cfcd5fdc_Cognitive%20%26%20Decision-Making%20(1).webp",
+          "alt": "Cognitive & Decision-Making"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Emotional Intelligence (EQ)",
+        "description": "EQ-i 2.0, Genos, MSCEIT, emotional intelligence instruments for leaders and teams.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ccc367071e4a312a82d1da_Emotional%20Intelligence%20(EQ)%20(1).webp",
+          "alt": "Emotional Intelligence (EQ)"
+        }
+      },
+      {
+        "id": 4,
+        "title": "Skill Proficiency",
+        "description": "Lominger, Korn Ferry, Custom Frameworks, validate role-relevant capability against defined benchmarks.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ccc3ad7790a1835542de79_Skill%20Proficiency.webp",
+          "alt": "Skill Proficiency"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Leadership Potential",
+        "description": "Gallup StrengthsFinder, Saville Wave, Hogan Lead, identify and fast-track high-potential leaders.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdcae77dfd2b429a7f45d_Leadership%20Potential.webp",
+          "alt": "Leadership Potential"
+        }
+      },
+      {
+        "id": 6,
+        "title": "360-Degree Feedback",
+        "description": "45/90/180/270/360-degree multi-rater programs, Qualtrics, SurveyMonkey, and custom platforms.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ccc44dc294945d09d334b6_360-Degree%20Feedback%20(1).webp",
+          "alt": "360-Degree Feedback"
+        }
+      },
+      {
+        "id": 7,
+        "title": "Culture & Values Alignment",
+        "description": "Denison, Barrett CVA, OCI, culture and values diagnostics that inform organisational design.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ccc4999812da8a08dfce58_Culture%20%26%20Values%20Alignment.webp",
+          "alt": "Culture & Values Alignment"
+        }
+      },
+      {
+        "id": 8,
+        "title": "Digital Readiness & Future Skills",
+        "description": "Digital Skills, Agile Mindset Index, Learning Agility Index, evaluate workforce readiness for transformation.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdd0c169ced718bcff9cd_Digital%20Readiness%20%26%20Future%20Skills.webp",
+          "alt": "Digital Readiness & Future Skills"
+        }
+      },
+      {
+        "id": 9,
+        "title": "Virtual & Gamified Assessments",
+        "description": "Virtual Assessment Centres, Remote Proctoring, Gamified Assessments, assess talent anytime, anywhere.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dcdd2cf9bfb1b80bae831a_%E2%80%8DVirtual%20%26%20Gamified%20Assessments.webp",
+          "alt": "Virtual & Gamified Assessments"
+        }
+      }
+    ]
+  },
+  "whyEdstellar": {
+    "title": "Why Edstellar for Corporate Talent Assessments",
+    "description": "Boards expect data. CFOs expect ROI. L&D needs clarity on where capability gaps sit. Edstellar's diagnostics solutions solve all three through one integrated assessment engagement.",
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ccc5a0fa979afed245ba52_Why%20Edstellar%20for%20Corporate%20Talent%20Assessments%20(1).webp",
+      "alt": "Why Edstellar for Corporate Talent Assessments"
+    },
+    "features": [
+      {
+        "id": 1,
+        "title": "Closed-loop Diagnose-to-Develop model",
+        "description": "Findings always connect to action. Every assessment outcome maps directly to a targeted development recommendation.",
+        "icon": "closed-loop"
+      },
+      {
+        "id": 2,
+        "title": "Science-backed assessments",
+        "description": "Every instrument is psychometrically validated and administered by certified practitioners with documented reliability data.",
+        "icon": "science"
+      },
+      {
+        "id": 3,
+        "title": "Certified expert assessors across 100+ global locations",
+        "description": "Enterprise-scale delivery capacity across APAC, Middle East, Europe, and the Americas with local context expertise.",
+        "icon": "global"
+      },
+      {
+        "id": 4,
+        "title": "Before-and-after ROI measurement",
+        "description": "Post-development reassessment included, proving capability improvement with documented evidence for board-level reporting.",
+        "icon": "roi"
+      },
+      {
+        "id": 5,
+        "title": "Manager Verification layer",
+        "description": "Proficiency ratings confirmed by line managers. Every disagreement generates an auditable resolution trail.",
+        "icon": "verification"
+      },
+      {
+        "id": 6,
+        "title": "Integrated service ecosystem",
+        "description": "Connects to 2,000+ training programs and OD consulting, ensuring diagnostic findings translate into measurable capability improvement.",
+        "icon": "ecosystem"
+      }
+    ]
+  },
+  "assessmentProcess": {
+    "title": "From Scoping to Reassessment, a Structured Diagnostic Engagement",
+    "description": "Every talent assessment engagement follows a structured methodology, grounded in diagnostic rigour, calibrated to your context, and designed to produce actionable capability data.",
+    "steps": [
+      {
+        "id": 1,
+        "number": "01",
+        "title": "Scoping & Role Benchmarking",
+        "description": "Define role profiles, competency standards, and assessment objectives.",
+        "activities": [
+          "Role profiling",
+          "Stakeholder interviews",
+          "Competency mapping",
+          "Scope definition"
+        ],
+        "timeline": "Week 1",
+        "phase": "Workshop"
+      },
+      {
+        "id": 2,
+        "number": "02",
+        "title": "Instrument Selection & Design",
+        "description": "Select validated tools and configure them for your organisational context.",
+        "activities": [
+          "Tool selection",
+          "Custom configuration",
+          "Framework alignment",
+          "Pilot design"
+        ],
+        "timeline": "Weeks 1–2",
+        "phase": "Co-design"
+      },
+      {
+        "id": 3,
+        "number": "03",
+        "title": "Administration & Data Collection",
+        "description": "Deliver assessments across populations, virtually or in person.",
+        "activities": [
+          "Assessment delivery",
+          "Data collection",
+          "Quality assurance",
+          "Progress tracking"
+        ],
+        "timeline": "Weeks 2–4",
+        "phase": "Delivery"
+      },
+      {
+        "id": 4,
+        "number": "04",
+        "title": "Expert Analysis & Debrief",
+        "description": "Certified practitioners analyse results and deliver stakeholder debriefs.",
+        "activities": [
+          "Data analysis",
+          "Stakeholder debrief",
+          "Gap identification",
+          "Priority mapping"
+        ],
+        "timeline": "Weeks 4–5",
+        "phase": "Workshop"
+      },
+      {
+        "id": 5,
+        "number": "05",
+        "title": "Development Pathway Activation",
+        "description": "Findings are mapped to training, OD consulting, or skills intelligence.",
+        "activities": [
+          "Learning pathways",
+          "OD engagement",
+          "Skills intelligence",
+          "Action planning"
+        ],
+        "timeline": "Weeks 5–6",
+        "phase": "Activation"
+      },
+      {
+        "id": 6,
+        "number": "06",
+        "title": "Reassessment & Impact Tracking",
+        "description": "Post-development reassessment proves capability improvement and ROI.",
+        "activities": [
+          "Reassessment",
+          "Impact measurement",
+          "ROI reporting",
+          "Continuous improvement"
+        ],
+        "timeline": "Ongoing",
+        "phase": "Support"
+      }
+    ]
+  },
+  "industryAssessmentServices": {
+    "title": "Talent Assessment Services Across Key Industries",
+    "description": "Assessment challenges are universal, but the context, constraints, and critical capability gaps differ by industry.",
+    "industries": [
+      {
+        "id": 1,
+        "title": "Manufacturing & Industrial",
+        "description": "Volume hiring assessments, safety and reliability profiling, operator and supervisor readiness.",
+        "icon": "manufacturing"
+      },
+      {
+        "id": 2,
+        "title": "Engineering & Technology",
+        "description": "Technical skill validation, coding assessments, digital readiness for transformation roles.",
+        "icon": "engineering"
+      },
+      {
+        "id": 3,
+        "title": "Financial Services & Banking",
+        "description": "Risk and compliance profiling, leadership succession for regulated environments.",
+        "icon": "financial-services"
+      },
+      {
+        "id": 4,
+        "title": "Healthcare & Life Sciences",
+        "description": "Clinical competency validation, leadership under pressure, multi-site team alignment.",
+        "icon": "healthcare"
+      },
+      {
+        "id": 5,
+        "title": "Consumer & Retail",
+        "description": "Volume hiring, customer service profiling, high-potential identification for head office.",
+        "icon": "retail"
+      },
+      {
+        "id": 6,
+        "title": "Aviation & Maritime",
+        "description": "Flight crew, cabin crew, chief engineer, and captain competency assessments. IMC-aligned.",
+        "icon": "aviation"
+      },
+      {
+        "id": 7,
+        "title": "Professional Services",
+        "description": "Partner and director succession, billable-hour performance profiling, culture diagnostics.",
+        "icon": "professional-services"
+      },
+      {
+        "id": 8,
+        "title": "Early Careers & Graduates",
+        "description": "Entry-level aptitude, learning agility, graduate potential programmes.",
+        "icon": "graduates"
+      },
+      {
+        "id": 9,
+        "title": "Public Sector & Government",
+        "description": "Civil service competency frameworks, leadership potential, policy capability assessments.",
+        "icon": "government"
+      }
+    ]
+  },
+  "assessmentReadiness": {
+    "title": "Not sure where your assessment practice stands?",
+    "description": "Before choosing an assessment type or a provider, it helps to know where your current capability sits. Most organisations overestimate their assessment maturity and underestimate the gaps that limit what their data can actually tell them. Answer 9 questions and get an instant readiness score, your top diagnostic gaps, and a recommended next step.",
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a0be9ba9e67e2b3b01b458a_assessment%20practice%20stands%20%20(1).webp",
+      "alt": "assessment practice stands",
+      "title": "Not sure where your assessment practice stands?"
+    },
+    "cta": {
+      "label": "Check your assessment readiness →",
+      "url": "https://www.edstellar.com/tool/talent-assessment-services",
+      "target": "_blank",
+      "title": "Click Here to Check your assessment readiness"
+    },
+    "footerText": "3 minutes · Instant score · No commitment"
+  },
+  "testimonials": {
+    "title": {
+      "highlight": "Talent assessment services",
+      "text": "that deliver measurable results"
+    },
+    "description": "Enterprise organisations trust Edstellar to deliver objective, validated capability data that drives better talent decisions.",
+    "items": [
+      {
+        "id": 1,
+        "quote": "Edstellar's leadership development program transformed how our senior managers approach strategic decision-making. The customization to our industry context was exceptional. The Diagnose-to-Develop approach meant we didn't just receive a report, we received a full development strategy our team could act on immediately.",
+        "author": {
+          "name": "CHRO",
+          "company": "Fortune 500 Manufacturing Company",
+          "image": {
+            "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ce449eaf864bc11e8ccecb_CHRO%20(1).webp",
+            "alt": "What our clients say about Edstellar's assessment center consulting"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "quote": "The assessment methodology gave us something we'd never had before: objective, defensible capability data across our entire leadership pipeline. For the first time, succession decisions are grounded in evidence rather than tenure.",
+        "author": {
+          "name": "VP Talent Management",
+          "company": "Global Technology Company",
+          "image": {
+            "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69ce44fcbc0deddedebcc0c2_VP%20Talent%20Management%20(2).webp",
+            "alt": "The impact, in our clients' words"
+          }
+        }
+      }
+    ]
+  },
+  "results": {
+    "title": "Built for CHROs Who Demand Evidence",
+    "description": "The following outcomes are aggregated across enterprise diagnostic engagements.",
+    "metrics": [
+      {
+        "id": 1,
+        "value": "42",
+        "suffix": "%",
+        "title": "Improvement in quality of hire after diagnostics"
+      },
+      {
+        "id": 2,
+        "value": "3.2",
+        "suffix": "x",
+        "title": "Training return on investment after diagnostics"
+      },
+      {
+        "id": 3,
+        "value": "67",
+        "suffix": "%",
+        "title": "Faster time-to-productivity following diagnostics"
+      },
+      {
+        "id": 4,
+        "value": "58",
+        "suffix": "%",
+        "title": "Improvement in bench strength and succession readiness"
+      },
+      {
+        "id": 5,
+        "value": "13,650",
+        "suffix": "+",
+        "title": "Assessments delivered globally"
+      },
+      {
+        "id": 6,
+        "value": "100",
+        "suffix": "+",
+        "title": "Global delivery locations"
+      }
+    ]
+  },
+  "ecosystem": {
+    "title": "Complete Your Talent Assessment Ecosystem Design",
+    "description": "Talent assessment services deliver maximum impact when connected to skills intelligence, training, and organisational design infrastructure.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Skills Intelligence",
+        "description": "Build a Skills-Based Organisation. Connect diagnostic data to skills taxonomy design, AI-powered gap analysis, and workforce dashboards.",
+        "cta": {
+          "label": "Explore Skills Intelligence",
+          "url": "/skill-based-organization",
+          "title": "Click Here to Explore Skills Intelligence"
+        }
+      },
+      {
+        "id": 2,
+        "title": "Training Programs",
+        "description": "Close the Gaps You've Identified. 2,000+ expert-led programs directly mapped to diagnostic findings across all business functions.",
+        "cta": {
+          "label": "Explore Training Programs",
+          "url": "/corporate-training-courses",
+          "title": "Click Here to Explore Training Programs"
+        }
+      },
+      {
+        "id": 3,
+        "title": "OD Consulting",
+        "description": "Transform the Structure, Not Just the Skills. Competency frameworks, succession planning, culture audits, and organisational design, powered by diagnostic evidence.",
+        "cta": {
+          "label": "Explore OD Consulting",
+          "url": "/organizational-development-consulting",
+          "title": "Click Here to Explore OD Consulting"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions on talent assessment services",
+    "description": "Everything you need to know about Edstellar's corporate talent assessment services",
+    "items": [
+      {
+        "question": "What is a talent assessment and how does it differ from a standard performance review?",
+        "answer": "A talent assessment is an objective, repeatable process for measuring, validating, and verifying employee capabilities, producing proficiency data that is defensible and actionable across talent decisions. Unlike a performance review, which assesses past output, a talent assessment measures the underlying capabilities that drive future performance."
+      },
+      {
+        "question": "What types of talent assessments does Edstellar offer?",
+        "answer": "Edstellar offers eleven assessment categories across three pillars: Behavioral & Psychological Profiling (psychometric, cognitive, EQ); Skills & Competency Validation (proficiency, role-based, situational judgement, conflict management); and Org Alignment & Multi-Rater Feedback (360 degrees, leadership potential, culture alignment)."
+      },
+      {
+        "question": "How does manager verification work in a talent assessment?",
+        "answer": "Manager verification is a structural step, not an optional feature. After employees self-rate their proficiency against behavioral indicators, their line manager reviews, confirms, disagrees, or adjusts each rating. Every manager action generates a documented resolution trail."
+      },
+      {
+        "question": "How does Edstellar's Diagnose-to-Develop model work?",
+        "answer": "Our closed-loop model begins with structured diagnostic assessment, translates findings into targeted development recommendations via expert debrief sessions, and connects directly to Edstellar's 2,000+ training programs, OD consulting practice, or skills intelligence platform."
+      },
+      {
+        "question": "Who typically commissions talent assessment services?",
+        "answer": "CHROs, L&D Directors, Talent Management Heads, and OD Leaders in enterprise organisations, typically with 200 or more employees, who need objective capability data to guide development spend and succession decisions."
+      },
+      {
+        "question": "Can assessments be delivered globally across multiple locations?",
+        "answer": "Yes. Edstellar administers assessment programs across 100+ locations worldwide with certified assessors in APAC, Middle East, Europe, and the Americas."
+      },
+      {
+        "question": "What happens after the assessment reports are delivered?",
+        "answer": "Unlike standalone assessment vendors, Edstellar doesn't stop at the report. Certified assessors conduct debrief sessions with stakeholders, map findings to prioritised development recommendations, and connect directly to training, consulting, or skills intelligence solutions."
+      }
+    ]
+  },
+  "resources": {
+    "id": "resources",
+    "title": "Edstellar Resources",
+    "highlight": "Resources",
+    "description": "Deep dive into industry trends, expert insights, success stories and innovative training practices",
+    "items": [
+      {
+        "type": "BLOG",
+        "category": "In-Demand Skills",
+        "title": "10 Most In-Demand Skills in Nigeria for 2026",
+        "date": "July 20, 2026",
+        "url": "/blog/skills-in-demand-in-nigeria",
+        "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/67c6efcda4f9b532957937ba_In-Demand%20Skills%20in%20Nigeria%20-%201200x600.webp",
+        "alt": "10 Most In-Demand Skills in Nigeria for 2026"
+      },
+      {
+        "type": "BLOG",
+        "category": "In-Demand Skills",
+        "title": "10 Most In-Demand Skills in Mexico for 2026",
+        "date": "July 20, 2026",
+        "url": "/blog/skills-in-demand-in-mexico",
+        "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/67c1badbdfad8e223c0536bd_1200%20x%20600%20Most%20In-Demand%20Skills%20in%20Mexico%20for%202025.webp",
+        "alt": "10 Most In-Demand Skills in Mexico for 2026"
+      },
+      {
+        "type": "BLOG",
+        "category": "Popular Training Providers",
+        "title": "14 Best Finance Training Companies for 2026",
+        "date": "July 20, 2026",
+        "url": "/blog/finance-training-companies",
+        "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6810a7fd624d6658e2fe4b17_Top%20Finance%20Management%20Training%20Companies%201200x600%20(1).webp",
+        "alt": "14 Best Finance Training Companies for 2026"
+      }
+    ]
+  },
+  "form": {
+    "sectionTitle": "Ready to Replace Guesswork With Evidence?",
+    "description": "Start with a diagnostic consultation, scoped to your organisation, not a generic template. Our assessment specialists will scope the right diagnostic approach for your workforce."
+  }
+}

@@ -1,8 +1,6 @@
 import Header from "../Components/GlobalComponents/Header";
 import Footer from "../Components/GlobalComponents/Footer";
-
 import { Cormorant_Garamond, DM_Sans, DM_Mono, Sora } from "next/font/google";
-
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -57,9 +55,7 @@ export default function RootLayout({ children }) {
     >
       <body className="flex min-h-screen flex-col bg-background font-sans text-foreground">
         <Header />
-
         <main className="flex-1">{children}</main>
-
         <Footer />
       </body>
     </html>

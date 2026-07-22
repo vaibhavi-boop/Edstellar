@@ -85,7 +85,7 @@ export default function SlidesSection({ data }) {
             >
               {slides.map((item, index) => (
                 <SwiperSlide key={index} className="!h-auto">
-                  <div className="flex h-[390px] flex-col rounded-lg bg-white p-5 lg:p-10">
+                  <div className="flex h-auto md:h-[390px] flex-col rounded-lg bg-white p-5 lg:p-10">
                     <p className="flex-1 border-b border-[#E8EAF1] pb-4 text-[18px] italic font-medium leading-8 text-[#3a3a3a] lg:text-[20px]">
                       "{item.quote}"
                     </p>

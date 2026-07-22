@@ -48,7 +48,7 @@ function StatCard({ stat, statKey, animatedRef }) {
   return (
     <div
       ref={ref}
-      className="rounded-lg border border-[#D8D9E3] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+      className="rounded-lg border border-[#D8D9E3] bg-white p-3 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
     >
       <div className="mb-2.5 text-[40px] font-bold leading-none text-[#215aff]">
         {shouldAnimate && inView ? (

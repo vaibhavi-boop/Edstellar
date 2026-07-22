@@ -16,7 +16,7 @@ function StatCard({ value, title }) {
   return (
     <div
       ref={ref}
-      className="flex h-full flex-col rounded-lg bg-[#242B67] p-6"
+      className="flex h-full flex-col rounded-lg bg-[#242B67] p-5 sm:p-6"
     >
       <div className="mb-6 h-[3px] w-10 bg-[#D7F11E]" />
 

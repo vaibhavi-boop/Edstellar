@@ -55,7 +55,7 @@ export default function AssessmentSection({ data }) {
               />
 
               {/* Content */}
-              <div className="p-10">
+              <div className="md:p-10 p-5">
                 <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#3A3A3A] lg:text-[36px]">
                   {section.title}
                 </h2>
@@ -67,13 +67,13 @@ export default function AssessmentSection({ data }) {
             </div>
 
             {/* Bottom Cards */}
-            <div className="grid gap-8 border-t md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid border-t-[0.5px] border-t-[#00000021] sm:grid-cols-1 lg:grid-cols-3">
               {section.cards.map((card, index) => {
                 const Icon = iconMap[card.icon];
 
                 return (
                   <div key={index} className="p-5">
-                    <div className="flex items-start gap-4">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                       {/* Icon */}
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#F4F7D4]">
                         {Icon && <Icon size={22} strokeWidth={1.8} />}

@@ -22,12 +22,12 @@ export default function SlidesStatsSection({ data }) {
     <section className="bg-[#F5F7FC]">
       <div className="container">
         {/* Heading */}
-        <div className="mb-12 flex items-center justify-between">
-          <h2 className="text-[30px] font-semibold leading-[1.2] text-[#3A3A3A] lg:text-[36px]">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <h2 className="max-w-[720px] text-[30px] font-semibold leading-[1.2] text-[#3A3A3A] lg:text-[36px]">
             {heading}
           </h2>
 
-          <div className="flex gap-8">
+          <div className="flex justify-end gap-8">
             <button
               ref={prevRef}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-[#2d2f6b] text-[#2d2f6b] transition hover:bg-[#2d2f6b] hover:text-white"

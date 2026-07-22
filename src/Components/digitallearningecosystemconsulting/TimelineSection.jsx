@@ -48,7 +48,7 @@ export default function TimelineSection({ data }) {
                 <div
                   className="flex-1 rounded-lg border border-[#c5e82633] bg-[#ffffff0a] p-3 lg:p-6 transition-all duration-300 group-hover:border-[#D7F11E]"
                 >
-                  <div className="flex justify-between max-lg:flex-col lg:flex-row">
+                  <div className="flex justify-between max-lg:gap-4 max-lg:flex-col lg:flex-row">
 
                     <div className="max-w-[720px]">
 
@@ -74,7 +74,7 @@ export default function TimelineSection({ data }) {
                       </div>
                     </div>
 
-                    <div className="flex gap-2 h-fit max-lg:self-start">
+                    <div className="flex h-fit flex-col items-start gap-2 sm:flex-row max-lg:self-start">
                       <span
                         className="rounded-md bg-[#c8e130] text-#3a3a3a px-3 py-1 text-xs font-semibold"
                       >

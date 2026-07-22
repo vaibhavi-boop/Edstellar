@@ -24,7 +24,7 @@ export const BreadcrumbData = [
   },
   {
     label: "OD Consulting",
-    href: "https://www.edstellar.com/organizational-development-consulting",
+    href: "/organizational-development-consulting",
     title: "Click Here to View OD Consulting Page", 
   },
   {

@@ -23,7 +23,7 @@ export const BreadcrumbData = [
   },
   {
     label: "Learning & Development Consulting",
-    href: "https://www.edstellar.com/learning-development-consulting-services",
+    href: "/learning-development-consulting",
     title: "Click Here to View Learning & Development Consulting", 
   },
   {

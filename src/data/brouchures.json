@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Learning Content Design & Development",
+    "slug": "learning-content-design-development",
+    "description": "Discover how custom learning content can improve employee engagement and accelerate workforce capability development.",
+    "pdfUrl": "https://www.edstellar.com/brochures/learning-content-design-development",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a2bf0ac5a257403c2af29b1_image%20-%202026-06-12T171157.289.webp"
+  },
+  {
+    "id": 2,
+    "title": "Learning Strategy Design Consulting",
+    "slug": "learning-strategy-design-consulting",
+    "description": "Learn how to design scalable learning strategies aligned with business objectives and workforce goals.",
+    "pdfUrl": "https://www.edstellar.com/brochures/learning-strategy-design-consulting",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a2bf1e21f1f67ec7cf18552_image%20-%202026-06-12T171721.360.webp"
+  },
+  {
+    "id": 3,
+    "title": "Learning Technology Consulting Services",
+    "slug": "learning-technology-consulting-services",
+    "description": "Explore consulting services that help organizations select and implement the right learning technologies.",
+    "pdfUrl": "https://www.edstellar.com/brochures/learning-technology-consulting-services",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a2bf244ae574120f766c9f3_image%20-%202026-06-12T171900.501.webp"
+  },
+  {
+    "id": 4,
+    "title": "Learning and Development Consulting",
+    "slug": "learning-and-development-consulting",
+    "description": "See how strategic L&D consulting helps organizations improve employee performance and business outcomes.",
+    "pdfUrl": "https://www.edstellar.com/brochures/learning-and-development-consulting",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a1ea20f3b763cd90d946319_1200%20x%20600%20-%20LLM%20Observability.webp"
+  },
+  {
+    "id": 5,
+    "title": "Talent Assessment Services",
+    "slug": "talent-assessment-services",
+    "description": "Understand how talent assessments identify skill gaps and support informed workforce decisions.",
+    "pdfUrl": "https://www.edstellar.com/brochures/talent-assessment-services",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a1ea1eb6b625b4149eafa08_1200%20x%20600%20-%20Streaming%20Data%20Mesh.webp"
+  },
+  {
+    "id": 6,
+    "title": "Organizational Strategy Consulting",
+    "slug": "organizational-strategy-consulting",
+    "description": "Discover consulting solutions that align organizational strategy with workforce capability development.",
+    "pdfUrl": "https://www.edstellar.com/brochures/organizational-strategy-consulting",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a1ea1be9b3919afac901bbd_1200%20x%20600%20-%20Multi-Modal%20Vector%20Search.webp"
+  },
+  {
+    "id": 7,
+    "title": "Training Need Analysis",
+    "slug": "training-need-analysis",
+    "description": "Learn how a structured training needs analysis helps prioritize learning investments and improve performance.",
+    "pdfUrl": "https://www.edstellar.com/brochures/training-need-analysis",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a1ea190fe238033414c2f90_1200%20x%20600%20-%20PostgreSQL%20Performance%20Tuning.webp"
+  },
+  {
+    "id": 8,
+    "title": "Leadership Pipeline & Succession Planning",
+    "slug": "leadership-pipeline-succession-planning",
+    "description": "Build future-ready leadership with structured succession planning and leadership development strategies.",
+    "pdfUrl": "https://www.edstellar.com/brochures/leadership-pipeline-succession-planning",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a1d5866576cd49d34429dc5_1200%20x%20600%20-%20Platform%20Engineering.webp"
+  },
+  {
+    "id": 9,
+    "title": "Transformation & Risk Advisory",
+    "slug": "transformation-risk-advisory",
+    "description": "Explore advisory services that help organizations navigate transformation while managing operational risks.",
+    "pdfUrl": "https://www.edstellar.com/brochures/transformation-risk-advisory",
+    "category": "Brochure",
+    "buttonText": "View Brochure",
+    "date": "2026-07-14",
+    "image": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6a1d584903f5a54a1190f870_1200%20x%20600%20-%20Cloud-Native%20Java%20Performance%20Engineering%20Training.webp"
+  }
+]

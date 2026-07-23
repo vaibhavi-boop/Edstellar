@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronDown, Search } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Training Programs" },
@@ -7,17 +8,28 @@ const navItems = [
   { label: "Managed Training" },
   { label: "Consulting" },
   { label: "Company" },
-  { label: "Resources" },
-  { label: "Blog", href: "/blogleadership-training-companies-saudi-arabia" },
+  { label: "Resources", href: "/resources" },
+  { label: "Blog", href: "/blog" },
+  {
+    label: "Course",
+    href: "/corporate-training/artificial-intelligence/ml-model-monitoring",
+  },
 ];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="container px-6 flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 px-6 bg-white border-b border-gray-100 shadow-sm">
+      <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="shrink-0">
-          <img src="/Images/logo.webp" alt="Edstellar" className="h-8" />
+          <Image
+            src="/Images/logo.webp"
+            width={139}
+            height={32}
+            alt="Edstellar"
+            className="h-8 object-contain"
+            fetchPriority="high"
+          />
         </Link>
 
         {/* Nav */}
@@ -183,7 +195,10 @@ export default function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button className="p-2 text-gray-500 hover:text-blue-600 transition-colors rounded-md hover:bg-gray-50">
+          <button
+            className="p-2 text-gray-500 hover:text-blue-600 transition-colors rounded-md hover:bg-gray-50"
+            aria-label="Open navigation menu"
+          >
             <Search size={18} />
           </button>
 

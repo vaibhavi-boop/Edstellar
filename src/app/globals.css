@@ -129,16 +129,21 @@ canvas {
 section {
   padding: 60px 40px;
 }
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+}
 .container {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
 }
 
-@media(max-width:478px){
+@media (max-width: 478px) {
   section {
-  padding: 40px 20px;
- }
+    padding: 40px 20px;
+  }
 }
 
 .container-narrow {
@@ -203,9 +208,3 @@ section {
 .animate-marquee-reverse {
   animation: marqueeReverse 100s linear infinite;
 }
-
-/* Pause on hover 
-.animate-marquee:hover,
-.animate-marquee-reverse:hover {
-  animation-play-state: paused;
-} */

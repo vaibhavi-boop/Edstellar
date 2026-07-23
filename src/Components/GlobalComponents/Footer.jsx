@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 import {
   FaLinkedinIn,
@@ -49,15 +50,17 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_1fr]">
           <div>
-            <img
+            <Image
               src="/Images/logo.webp"
-              className="h-10 mb-4"
+              alt="Edstellar"
+              width={139}
+              height={40}
+              className="mb-4"
               style={{
                 filter: "grayscale(1) invert(1) brightness(10)",
                 mixBlendMode: "screen",
                 opacity: 0.85,
               }}
-              alt="Edstellar"
             />
 
             <p className="max-w-xs text-sm leading-6 text-white/80">
@@ -71,19 +74,38 @@ export default function Footer() {
             </h3>
 
             <div className="flex gap-2">
-              <SocialIcon>
+              <SocialIcon
+                label="Visit Edstellar on LinkedIn"
+                href="https://www.linkedin.com/company/edstellar/"
+              >
                 <FaLinkedinIn />
               </SocialIcon>
-              <SocialIcon>
+
+              <SocialIcon
+                label="Visit Edstellar on Facebook"
+                href="https://www.facebook.com/edstellar"
+              >
                 <FaFacebookF />
               </SocialIcon>
-              <SocialIcon>
+
+              <SocialIcon
+                label="Visit Edstellar on X"
+                href="https://x.com/edstellar"
+              >
                 <FaXTwitter />
               </SocialIcon>
-              <SocialIcon>
+
+              <SocialIcon
+                label="Visit Edstellar on Instagram"
+                href="https://www.instagram.com/edstellar/"
+              >
                 <FaInstagram />
               </SocialIcon>
-              <SocialIcon>
+
+              <SocialIcon
+                label="Visit Edstellar on YouTube"
+                href="https://www.youtube.com/@edstellar"
+              >
                 <FaYoutube />
               </SocialIcon>
             </div>
@@ -243,10 +265,14 @@ function FooterColumn({ title, links }) {
   );
 }
 
-function SocialIcon({ children }) {
+function SocialIcon({ children, label, href }) {
   return (
     <a
-      href="#"
+      href={href}
+      aria-label={label}
+      title={label}
+      target="_blank"
+      rel="noopener noreferrer"
       className="flex h-9 w-9 items-center justify-center rounded-md border border-white/20 text-sm transition hover:bg-white/10"
     >
       {children}

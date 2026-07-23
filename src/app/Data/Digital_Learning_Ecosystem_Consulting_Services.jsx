@@ -18,7 +18,7 @@ import {
 export const BreadcrumbData = [
   {
     label: "Home",
-    href: "https://www.edstellar.com/",
+    href: "https://www.edstellar.com",
     title: "Click Here to View Home Page",
   },
   {

@@ -1,0 +1,1205 @@
+{
+  "BreadcrumbData": [
+    {
+      "label": "Home",
+      "href": "https://www.edstellar.com/",
+      "title": "Click Here to View Home Page"
+    },
+    {
+      "label": "Talent Assessment",
+      "href": "/talent-assessment-services",
+      "title": "Click Here to View Talent Assessment"
+    },
+    {
+      "label": "Assessment and Development Center Consulting"
+    }
+  ],
+  "HeroSectionData": {
+    "heading": "Digital Learning Ecosystem Consulting",
+    "headingHighlight": "Digital Learning Ecosystem",
+    "description": "Fragmented learning tools create fragmented learner experiences. Edstellar's digital learning ecosystem consulting helps enterprises design, integrate, and optimize a connected technology ecosystem by linking your LMS, LXP, content libraries, analytics, and performance support tools seamlessly. Our vendor-neutral approach ensures every platform decision serves your business goals, not vendor relationships.",
+    "features": [
+      "Vendor-neutral advisory across 30+ learning platforms",
+      "End-to-end ecosystem design from strategy through implementation and optimization",
+      "Proven integration frameworks using xAPI, LTI, and SCORM standards"
+    ],
+    "buttons": [
+      {
+        "text": "Talk to an Assessment Center Consultant",
+        "href": "https://www.edstellar.com/",
+        "title": "Click Here to Talk to an Assessment Center Consultant"
+      }
+    ],
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7481a209566c18083f23_Assessment%20and%20Development%20CenterConsulting%20(1).webp",
+      "alt": "Assessment and Development Center Consulting"
+    },
+    "title": "Assessment and Development Center Consulting"
+  },
+  "ParagraphSectionData": {
+    "heading": "What Are Assessment and Development Centers?",
+    "highlightParagraph": "Assessment and development centers are structured, multi-method evaluation processes that use realistic job simulations, behavioral exercises, psychometric assessments, and trained assessor observation to objectively measure an individual's competencies, leadership potential, and readiness for current or future roles. An assessment center evaluates candidates against validated competency models through exercises mirroring real workplace challenges including in-basket tasks, group discussions, role-plays, fact-finding, case analyses, and presentations.",
+    "paragraph": "A development center uses the same methodology to generate developmental feedback, identify competency gaps, and produce individualized plans that accelerate leadership readiness. Together, they create a closed-loop system where evaluation informs development, and outcomes are validated through subsequent assessment. Refined over five decades of IO psychology research, this approach remains the gold standard, with a predictive validity of r = 0.51 outperforming interviews (r = 0.20), resume screening (r = 0.18), and reference checks (r = 0.26). Organizations turn to this methodology because it replaces subjective opinion with behavioral science."
+  },
+  "VerticleIconSectionData": {
+    "heading": "Why Organizations Make the Wrong Talent Bets",
+    "subheading": "Most enterprises invest heavily in leadership pipelines yet continue to make talent decisions based on gut instinct, past performance in unrelated roles, and subjective manager opinions. Without structured assessment center methodology, organizations promote high performers into roles where they underperform, overlook hidden high-potential talent, and build leadership benches that lack the capabilities required for future business challenges. A qualified assessment center consulting company can diagnose and eliminate these costly patterns.",
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc77dd6ca961a76364c909_Why%20Organizations%20Make%20the%20Wrong%20Talent%20Bets%20(1).webp",
+      "alt": "Why Organizations Make the Wrong Talent Bets",
+      "title": "Why Organizations Make the Wrong Talent Bets"
+    },
+    "items": [
+      {
+        "id": 1,
+        "icon": "CircleDot",
+        "title": "Gut-Feel Promotion Decisions",
+        "description": "Promotion decisions are made based on tenure, personal relationships, or performance in the current role rather than objective evaluation of readiness for the next role. The result is a leadership pipeline filled with technically skilled individuals who lack the strategic thinking, people leadership, and change management capabilities the organization needs.",
+        "stat": "60% of new managers fail within the first 24 months of promotion"
+      },
+      {
+        "id": 2,
+        "icon": "EyeOff",
+        "title": "Hidden High-Potential Talent Goes Unrecognized",
+        "description": "Without structured high-potential identification processes, organizations default to visibility bias. Employees who are vocal, politically savvy, or based at headquarters get recognized, while equally capable but less visible talent in regional offices, operational roles, or underrepresented groups gets overlooked.",
+        "stat": "Only 1 in 7 high-potential employees is correctly identified without structured assessment"
+      },
+      {
+        "id": 3,
+        "icon": "ChartColumnIncreasing",
+        "title": "No Objective Baseline for Development Investment",
+        "description": "Organizations spend millions on leadership development programs without first assessing where each leader actually stands. Development becomes a one-size-fits-all curriculum rather than a targeted intervention addressing each individual's specific competency gaps and growth opportunities.",
+        "stat": "Companies waste an estimated 40% of leadership development spend on misaligned programs"
+      },
+      {
+        "id": 4,
+        "icon": "GitCompareArrows",
+        "title": "Succession Plans Built on Assumptions, Not Evidence",
+        "description": "Succession plans list names without validated readiness data. When a critical role opens unexpectedly, the organization discovers that its 'ready now' successors lack the competencies the role demands, forcing expensive external hires that carry their own integration risks.",
+        "stat": "65% of companies report their succession plans are ineffective"
+      },
+      {
+        "id": 5,
+        "icon": "ArrowLeftRight",
+        "title": "Inconsistent Assessment Standards Across Business Units",
+        "description": "Different hiring managers, different business units, and different geographies apply different standards when evaluating talent. Without a common competency framework and standardized assessment methodology, the same candidate could be rated 'outstanding' in one division and 'developing' in another.",
+        "stat": "Organizations without standardized assessment see 3x more inconsistency in talent ratings"
+      },
+      {
+        "id": 6,
+        "icon": "UserRoundSearch",
+        "title": "Bias Undermines Diversity in Leadership Pipelines",
+        "description": "Unstructured talent decisions amplify unconscious bias. Gender, ethnicity, communication style, and educational background disproportionately influence subjective evaluations. The result is leadership pipelines that fail to reflect the diversity of the talent pool and the markets the organization serves.",
+        "stat": "Structured assessments reduce adverse impact by up to 50% compared to unstructured methods"
+      }
+    ],
+    "cta": {
+      "heading": "Stop guessing who your next leaders are. Start assessing with science.",
+      "button": {
+        "text": "Talk to an Assessment Center Consultant",
+        "href": "#",
+        "title": "Click Here to Talk to an Assessment Center Consultant"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "$10.7B",
+      "label": "Global talent assessment services market in 2026, growing at 9.4% CAGR"
+    },
+    {
+      "value": "0.51",
+      "label": "Predictive validity coefficient for assessment centers, the highest among multi-method evaluation approaches"
+    },
+    {
+      "value": "54%",
+      "label": "ROI achieved from objective assessment tools, the strongest return among all leadership development approaches"
+    },
+    {
+      "value": "78%",
+      "label": "of HR professionals report that structured assessments have improved the quality of their hires"
+    }
+  ],
+  "StaticCardSectionData": {
+    "variant": "green",
+    "heading": "Design. Deploy. Develop. The Three Pillars of Assessment Excellence.",
+    "subheading": "Effective talent assessment is not a single event but an integrated system. Edstellar's assessment and development center consulting practice connects three pillars: rigorous design that ensures every exercise measures what matters, seamless deployment that delivers a world-class participant experience, and developmental integration that transforms assessment data into accelerated leadership growth.",
+    "items": [
+      {
+        "id": 1,
+        "icon": "Rocket",
+        "iconSize": 18,
+        "title": "Design",
+        "description": "Build the assessment architecture from the ground up. We design competency frameworks mapped to role-specific success profiles, create behaviorally anchored simulation exercises, select and validate psychometric instruments, develop assessor rating guides, and engineer the scoring methodology that produces reliable, defensible talent data."
+      },
+      {
+        "id": 2,
+        "icon": "Rocket",
+        "iconSize": 18,
+        "title": "Deploy",
+        "description": "Execute assessment and development centers with precision. We manage end-to-end logistics, deliver in-person, virtual, or hybrid assessment experiences, coordinate certified assessor panels, facilitate simulation exercises, and produce same-day participant feedback and organizational talent reports."
+      },
+      {
+        "id": 3,
+        "icon": "TrendingUp",
+        "iconSize": 18,
+        "title": "Develop",
+        "description": "Connect assessment insights to development action. We translate competency scores into individualized development plans, design targeted learning interventions for identified gaps, integrate assessment data with succession planning, and build internal assessor capability so your organization sustains the practice independently."
+      }
+    ]
+  },
+  "TabsSectionData": {
+    "heading": "Our Assessment and Development Center Consulting Services",
+    "showDescription": false,
+    "description": "From ecosystem strategy and architecture through platform selection, AI-powered experience design, analytics, content governance, and change management, Edstellar delivers end-to-end digital learning ecosystem consulting services that connect your technology investments to business outcomes.",
+    "tabs": [
+      {
+        "id": 1,
+        "button": "Competency Framework and Assessment Design",
+        "number": "01",
+        "title": "Competency Framework and Assessment Design",
+        "description": "Architect the competency models, behavioral indicators, simulation exercises, and scoring systems that form the foundation of every assessment and development center. Every framework is validated against role-specific success profiles and organizational strategy. This competency-based assessment consulting service is where every engagement begins.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7c657f588cc446de2e67_Competency%20Framework%20and%20Assessment%20Design.webp",
+          "alt": "Competency Framework and Assessment Design"
+        },
+        "points": [
+          "Competency modeling",
+          "Behavioral anchor design",
+          "Exercise development",
+          "Scoring methodology"
+        ]
+      },
+      {
+        "id": 2,
+        "button": "Leadership Assessment Centers",
+        "number": "02",
+        "title": "Leadership Assessment Centers",
+        "description": "Deploy structured, multi-method assessment centers that evaluate senior and emerging leaders against validated competency frameworks. Behavioral simulations, psychometric instruments, and expert assessor panels produce objective readiness data for hiring, promotion, and succession decisions.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7c34402fa9501761bddd_Leadership%20Assessment%20Centers.webp",
+          "alt": "Leadership Assessment Centers"
+        },
+        "points": [
+          "Multi-exercise simulation design",
+          "Assessor panel coordination",
+          "Competency-based scoring",
+          "Leadership readiness reports"
+        ]
+      },
+      {
+        "id": 3,
+        "button": "High-Potential Identification Centers",
+        "number": "03",
+        "title": "High-Potential Identification Centers",
+        "description": "Design and execute assessment programs that objectively identify high-potential talent across your organization. Move beyond manager nominations and performance ratings to a structured, bias-reduced process that evaluates learning agility, cognitive capacity, leadership motivation, and adaptability.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7b71e837c6f80cac5d61_High-Potential%20Identification%20Centers%20(1).webp",
+          "alt": "High-Potential Identification Centers"
+        },
+        "points": [
+          "HiPo assessment criteria design",
+          "Nine-box talent mapping",
+          "Bench-strength analysis",
+          "Potential vs. performance calibration"
+        ]
+      },
+      {
+        "id": 4,
+        "button": "Development Centers",
+        "number": "04",
+        "title": "Development Centers",
+        "description": "Shift the lens from selection to growth. Our development center consulting services use the same simulation-based methodology as assessment centers but focus on generating rich developmental feedback, identifying competency gaps, and producing actionable individualized development plans that accelerate leadership readiness.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7aa3720a714b39ef693d_Development%20Centers%20(1).webp",
+          "alt": "Development Centers"
+        },
+        "points": [
+          "Developmental feedback design",
+          "IDP creation",
+          "Coaching integration",
+          "Growth trajectory mapping"
+        ]
+      },
+      {
+        "id": 5,
+        "button": "Virtual and Hybrid Assessment Centers",
+        "number": "05",
+        "title": "Virtual and Hybrid Assessment Centers",
+        "description": "Design and deploy technology-enabled assessment centers that deliver the rigor of in-person evaluation through digital platforms. Virtual simulations, remote assessor observation, digital in-basket exercises, and video-based role-plays enable assessment at scale without geographic constraints.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7a35c57fd829671c955c_black-man-laptop-and-video-call-consulting%20(1).webp",
+          "alt": "Virtual and Hybrid Assessment Centers"
+        },
+        "points": [
+          "Digital platform design",
+          "Remote simulation delivery",
+          "Virtual assessor protocols",
+          "Hybrid experience architecture"
+        ]
+      },
+      {
+        "id": 6,
+        "button": "Assessor Training and Capability Transfer",
+        "number": "06",
+        "title": "Assessor Training and Capability Transfer",
+        "description": "Build your organization's internal assessment center capability. We train and certify your HR professionals, business leaders, and talent management teams as qualified assessors who can independently design, deploy, and evaluate assessment and development centers.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc79a694722b8bbe69a079_Assessor%20Training%20and%20Capability%20Transfer.webp",
+          "alt": "Assessor Training and Capability Transfer"
+        },
+        "points": [
+          "Assessor certification programs",
+          "Behavioral observation training",
+          "Scoring calibration workshops",
+          "Internal AC sustainability"
+        ]
+      }  
+    ]
+  },
+  "AssessmentSectionData": [
+    {
+      "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7ccebd524ce2c31300d7_Competency%20Framework%20and%20Assessment%20Design.webp",
+      "alt": "Competency Framework and Assessment Design",
+      "title": "Competency Framework and Assessment Design",
+      "description": "Every effective assessment center begins with a rigorous competency framework that defines what good looks like for each target role. Without a validated framework, exercises measure the wrong things, assessors rate against personal preferences rather than organizational standards, and talent decisions lack the defensibility that hiring and promotion processes demand. Edstellar's competency framework and assessment design services build the entire assessment architecture, from role analysis through exercise engineering, ensuring every element of your assessment center measures the capabilities that actually predict on-the-job success.",
+      "cards": [
+        {
+          "icon": "UserRound",
+          "title": "Role-Specific Success Profile Development",
+          "description": "We conduct structured job analyses and stakeholder interviews to identify the 6 to 10 competencies that differentiate high performance in each target role, defined with behavioral indicators at multiple proficiency levels."
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Competency-Exercise Mapping Matrix",
+          "description": "Each exercise is mapped to specific competencies ensuring every competency is observed in at least two different exercises, maximizing measurement reliability across in-basket, group discussion, role-play, and case study formats."
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Behavioral Anchored Rating Scales (BARS)",
+          "description": "We engineer the scoring system that converts assessor observations into reliable, defensible talent data, including BARS, competency rubrics, inter-rater reliability protocols, and decision rules."
+        }
+      ]
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7d09f6115feac80f59f1_Leadership%20Assessment%20Centers.webp",
+      "title": "Leadership Assessment Centers",
+      "description": "Selecting the right leaders is the highest-stakes talent decision any organization makes. A wrong leadership appointment costs 6 to 15 times the leader's annual salary. Yet most organizations still make leadership decisions based on interviews, resumes, and subjective opinions that carry a predictive validity of just 0.20. Edstellar's leadership assessment center consulting deploys structured, multi-method evaluation programs that assess senior and emerging leaders against validated competency frameworks, producing objective readiness data that dramatically improves the quality of hiring, promotion, and succession decisions.",
+      "cards": [
+        {
+          "icon": "TrendingUp",
+          "title": "C-Suite and Board-Level Assessment Design",
+          "description": "Full-day, high-fidelity assessment programs for senior leadership roles, including strategic planning exercises, board presentations, direct report coaching conversations, and crisis management role-plays."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Multi-Assessor Panel Coordination",
+          "description": "Expert assessor panels combining Edstellar organizational psychologists with calibrated business leaders, ensuring multiple perspectives and inter-rater reliability across all competency dimensions."
+        },
+        {
+          "icon": "Users",
+          "title": "Assessment-to-Succession Integration",
+          "description": "Individual assessment reports provide validated readiness ratings that feed directly into succession planning, including gap analysis, onboarding acceleration recommendations, and organizational talent heat maps."
+        }
+      ]
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7d425968ee0aaef82ce0_high-potential.webp",
+      "title": "High-Potential Identification Centers",
+      "description": "Every organization has talent that outperforms expectations, but performance alone does not predict potential. Research consistently shows that only 1 in 7 high performers is also a high-potential leader. Edstellar's high-potential identification consulting service designs and deploys structured assessment programs that objectively evaluate cognitive agility, leadership motivation, adaptability, and organizational awareness.",
+      "cards": [
+        {
+          "icon": "BarChart3",
+          "title": "Learning Agility Assessment",
+          "description": "Evaluating the ability to process complex, ambiguous information and learn rapidly through cognitive ability testing, learning agility exercises, and structured behavioral interviews."
+        },
+        {
+          "icon": "Users",
+          "title": "Nine-Box Talent Mapping",
+          "description": "Integrating assessment center data with performance data to produce calibrated nine-box talent maps, replacing subjective manager nominations with objective data-driven placement."
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Differentiated Development Pathways",
+          "description": "Designing stretch assignments, executive coaching, cross-functional rotations, and accelerated learning programs mapped to each high-potential's unique competency profile and growth trajectory."
+        }
+      ]
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7d6f365ba01e6a8d0ecf_Development.webp",
+      "title": "Development Centers",
+      "description": "Assessment centers tell you where talent stands. Development centers tell talent where to grow. Edstellar's development center consulting firm designs programs where every exercise, every observation, and every data point serves the participant's development rather than organizational selection, creating a psychologically safe environment that encourages risk-taking, self-reflection, and genuine behavioral experimentation.",
+      "cards": [
+        {
+          "icon": "Monitor",
+          "title": "Developmental Simulation Design",
+          "description": "Exercises specifically calibrated for developmental impact rather than evaluative precision, structured to surface learning moments and challenge habitual leadership behaviors."
+        },
+        {
+          "icon": "Video",
+          "title": "Individualized Development Plan (IDP) Creation",
+          "description": "Every participant receives a comprehensive IDP identifying 2 to 3 priority competency gaps with observable behavioral change targets, targeted development activities, and accountability mechanisms."
+        },
+        {
+          "icon": "Globe",
+          "title": "Coaching Integration and Follow-Through",
+          "description": "Designing the handoff process between assessment data and executive coaching, training coaches to leverage behavioral observation data, and structuring follow-through cadences for sustained behavioral change."
+        }
+      ]
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7d99b85b75eadb9bef4d_Virtual%20and%20Hybrid%20Assessment%20Centers.webp",
+      "title": "Virtual and Hybrid Assessment Centers",
+      "description": "The shift to distributed workforces has permanently changed how organizations assess talent. Virtual assessment centers are no longer a pandemic workaround but a strategic capability that enables organizations to evaluate talent across geographies, reduce assessment logistics costs by up to 60%, and deliver candidate experiences that consistently earn satisfaction ratings above 85%. Edstellar's virtual assessment center consulting practice designs digital-first assessment experiences that preserve the behavioral richness and predictive validity of in-person assessment while unlocking the scalability, speed, and accessibility of technology-enabled delivery.",
+      "cards": [
+        {
+          "icon": "GraduationCap",
+          "title": "Video-Based Role-Play Exercise Design",
+          "description": "Virtual simulation exercises specifically engineered for the virtual environment, accounting for differences in non-verbal communication, group dynamics, and technology interaction."
+        },
+        {
+          "icon": "Target",
+          "title": "Virtual Group Discussion Facilitation",
+          "description": "Digital in-basket exercises, timed case analyses, and virtual group discussions with real-time assessor observation through split-screen observation techniques."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Hybrid Assessment Architecture",
+          "description": "Combining the depth of in-person simulation with the reach of virtual assessment, where executive-level exercises are delivered face-to-face and broader pipeline assessments are delivered virtually."
+        }
+      ]
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7dd745a5c9afa8d687eb_Assessor%20Training%20and%20Capability%20Transfer.webp",
+      "title": "Assessor Training and Capability Transfer",
+      "description": "The quality of an assessment center is only as good as the quality of its assessors. Research consistently shows that assessor training is the single most significant factor influencing assessment center validity, with well-trained assessors producing inter-rater reliability coefficients above 0.85 compared to untrained observers who rarely exceed 0.50. Edstellar's assessor training and capability transfer service builds your organization's internal capacity to design, deploy, and evaluate assessment and development centers independently, so the practice becomes a sustainable organizational capability rather than a perpetual consulting engagement.",
+      "cards": [
+        {
+          "icon": "Users",
+          "title": "ORCE Behavioral Observation Methodology",
+          "description": "Training in the Observe, Record, Classify, Evaluate model, practicing recording behavioral evidence in real-time and calibrating ratings against master-scored exercises."
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Inter-Rater Reliability Calibration",
+          "description": "Comprehensive certification programs including supervised practice assessments, bias awareness and mitigation training, consensus discussion facilitation, and calibration exercises until reliability meets thresholds."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Annual Recertification and Quality Audit",
+          "description": "Establishing annual recertification protocols, calibration exercise libraries, quality audit frameworks, and assessor performance feedback systems that maintain assessment integrity over time."
+        }
+      ]
+    }
+  ],
+  "TimelineSectionData": {
+    "heading": "Our Approach to Assessment and Development Center Consulting",
+    "subheading": "Edstellar follows a proven five-phase methodology that takes organizations from ad hoc talent evaluation to a structured, validated assessment and development center capability. Each phase builds on the previous one, delivering measurable value at every stage while creating the infrastructure for sustained assessment excellence.",
+    "timeline": [
+      {
+        "id": 1,
+        "number": "01",
+        "title": "Discover",
+        "description": "We audit your current talent assessment practices, map the critical roles that require structured assessment, interview key stakeholders to understand decision-making needs, and benchmark your assessment maturity against industry best practices.",
+        "duration": "2-3 Weeks",
+        "type": "Stakeholder interviews + role analysis + audit",
+        "tags": [
+          "Current-state talent assessment maturity audit",
+          "Critical role identification and prioritization",
+          "Stakeholder needs analysis",
+          "Existing competency framework review",
+          "Assessment center readiness assessment"
+        ]
+      },
+      {
+        "id": 2,
+        "number": "02",
+        "title": "Design",
+        "description": "We design the competency frameworks, simulation exercises, psychometric instrument suite, scoring methodology, and assessor guides that form the architecture of your assessment and development centers.",
+        "duration": "4-6 Weeks",
+        "type": "Competency workshops + exercise development",
+        "tags": [
+          "Competency framework development",
+          "Simulation exercise design",
+          "Psychometric instrument selection",
+          "Assessor rating guides development",
+          "Pilot program design and scheduling"
+        ]
+      },
+      {
+        "id": 3,
+        "number": "03",
+        "title": "Pilot",
+        "description": "We run a live pilot assessment center with a cohort of participants, calibrate assessor ratings, validate exercise measurement properties, refine scoring systems based on real data, and optimize the participant experience.",
+        "duration": "3-4 Weeks",
+        "type": "Live pilot AC + calibration + refinement",
+        "tags": [
+          "Pilot AC execution with live participants",
+          "Assessor calibration and reliability analysis",
+          "Exercise measurement validation",
+          "Participant experience optimization",
+          "Scoring system refinement"
+        ]
+      },
+      {
+        "id": 4,
+        "number": "04",
+        "title": "Diploy",
+        "description": "We deploy assessment and development centers at scale across the organization, managing logistics, coordinating assessor panels, facilitating exercises, producing individual and organizational reports, and integrating assessment data with succession and development systems.",
+        "duration": "4-8 Weeks",
+        "type": "Full-scale assessment center rollout",
+        "tags": [
+          "Full-scale rollout across target populations",
+          "Individual assessment reports and debriefs",
+          "Organizational talent mapping",
+          "Assessor panel coordination",
+          "HRIS and succession system integration"
+        ]
+      },
+      {
+        "id": 5,
+        "number": "05",
+        "title": "Sustain",
+        "description": "We transfer assessment center capability to your internal team, establish ongoing quality assurance protocols, train and certify internal assessors, and provide advisory support to ensure the program delivers value year after year.",
+        "duration": "Ongoing",
+        "type": "Capability transfer + quality assurance",
+        "tags": [
+          "Internal assessor training and certification",
+          "AC administration playbook handoff",
+          "Annual exercise refresh and framework review",
+          "Assessor recalibration and quality audit",
+          "Ongoing advisory and continuous improvement"
+        ]
+      }
+    ]
+  },
+  "TabsSectionDataSub": {
+    "heading": "What You'll Walk Away With",
+    "showDescription": true,
+    "subheading": "Each engagement delivers tangible, reusable assets that your organization owns and operates independently. These are the concrete deliverables your talent team retains and uses to make better talent decisions every day.",
+    "tabs": [
+      {
+        "id": 1,
+        "button": "Competency Framework",
+        "number": "01",
+        "title": "Competency Framework & Success Profiles",
+        "description": "A validated competency framework for each target role, including competency definitions, behavioral indicators at multiple proficiency levels, assessment criteria, and the competency-exercise mapping matrix. These become the foundation for all future assessment, development, and succession decisions.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7e99541e9e63ca0ce9ba_Competency%20Framework%20-%20Success%20Profiles.webp",
+          "alt": "Competency Framework - Success Profiles"
+        },
+        "points": [
+          "Role-specific competency definitions with behavioral indicators",
+          "Multi-level proficiency scales for each competency",
+          "Competency-exercise mapping matrix",
+          "Success profile documentation per target role"
+        ]
+      },
+      {
+        "id": 2,
+        "button": "Simulation Exercise Library",
+        "number": "02",
+        "title": "Simulation Exercise Library",
+        "description": "A complete library of custom-designed simulation exercises, including in-basket tasks, group discussions, role-plays, case studies, fact-finding exercises, and presentations. Each exercise includes facilitator guides, participant materials, assessor observation forms, and scoring rubrics.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7ec77ee6e7debc0125e2_Simulation%20Exercise%20Library.webp",
+          "alt": "Simulation Exercise Library"
+        },
+        "points": [
+          "Custom simulation exercises mapped to competencies",
+          "Facilitator guides and participant materials",
+          "Assessor observation forms and scoring rubrics"
+        ]
+      },
+      {
+        "id": 3,
+        "button": "Assessor Guides & Scoring",
+        "number": "03",
+        "title": "Assessor Guides & Scoring System",
+        "description": "Comprehensive assessor documentation including behavioral anchored rating scales, competency scoring rubrics, observation recording templates, consensus discussion protocols, and data integration algorithms. Everything assessors need to produce reliable, defensible ratings.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7f002bc92f81f0b85816_Assessor%20Guides%20-%20Scoring%20System.webp",
+          "alt": "Assessor Guides - Scoring System"
+        },
+        "points": [
+          "Behavioral anchored rating scales (BARS)",
+          "Consensus discussion protocols",
+          "Data integration and scoring algorithms"
+        ]
+      },
+      {
+        "id": 4,
+        "button": "Assessment Reports",
+        "number": "04",
+        "title": "Individual Assessment Reports",
+        "description": "Detailed participant reports covering competency scores, behavioral evidence summaries, strengths and development areas, readiness ratings, and individualized development recommendations. Reports are designed for three audiences: the participant, the hiring manager, and the organization.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7f3f846c883359d24713_Individual%20Assessment%20Reports.webp",
+          "alt": "Individual Assessment Reports"
+        },
+        "points": [
+          "Competency radar chart and development priority matrix",
+          "Behavioral evidence summaries per competency",
+          "Readiness ratings and gap analysis",
+          "Individualized development recommendations"
+        ]
+      },
+      {
+        "id": 5,
+        "button": "Organizational Talent Maps",
+        "number": "05",
+        "title": "Organizational Talent Maps",
+        "description": "Aggregated assessment data visualized as organizational talent maps, including nine-box performance-potential grids, bench-strength analysis by role and level, succession readiness heat maps, and development investment priority matrices.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7f7e6b419c04337164e2_Organizational%20Talent%20Maps.webp",
+          "alt": "Organizational Talent Maps"
+        },
+        "points": [
+          "Nine-box performance-potential grids",
+          "Bench-strength analysis by role and level",
+          "Development investment priority matrices"
+        ]
+      },
+      {
+        "id": 6,
+        "button": "Assessor Certification",
+        "number": "06",
+        "title": "Assessor Certification & Playbooks",
+        "description": "Complete assessor training materials, certification protocols, calibration exercise libraries, and assessment center administration playbooks. These assets enable your internal team to design, deploy, and evaluate assessment centers independently after Edstellar's engagement.",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7e572dbb7dd2c8f9f5a8_Assessor%20Certification%20%26%20Playbooks%20(1).webp",
+          "alt": "Assessor Certification & Playbooks"
+        },
+        "points": [
+          "Assessor certification program materials",
+          "Calibration exercise library",
+          "AC administration playbooks",
+          "Annual recertification protocols"
+        ]
+      }
+    ]
+  },
+  "IndustryTabsSectionData": {
+    "heading": "Assessment and Development Centers Across Industries",
+    "subheading": "Every industry has unique leadership challenges, regulatory requirements, and competency demands that shape how assessment and development centers must be designed. Edstellar adapts our assessment center methodology to your industry's talent landscape.",
+    "industries": [
+      {
+        "id": 1,
+        "iconName": "Landmark",
+        "iconSize": 16,
+        "name": "Financial Services",
+        "title": "Financial Services & Banking",
+        "description": "Regulatory scrutiny, risk management acumen, and client relationship excellence define leadership in financial services. We design assessment centers that evaluate regulatory awareness, ethical decision-making, risk appetite calibration, and commercial judgment.",
+        "points": [
+          "Regulatory and compliance leadership assessment",
+          "Risk management competency evaluation",
+          "Client advisory leadership simulation",
+          "Ethical decision-making exercises"
+        ],
+        "stats": [
+          {
+            "value": "420",
+            "suffix": "+",
+            "title": "Leaders assessed across banking"
+          },
+          {
+            "value": "0.89",
+            "suffix": "",
+            "title": "Assessment accuracy rate"
+          },
+          {
+            "value": "38",
+            "suffix": "%",
+            "title": "Internal promotions increased"
+          },
+          {
+            "value": "92",
+            "suffix": "%",
+            "title": "Succession pipeline confidence"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "iconName": "Laptop",
+        "iconSize": 16,
+        "name": "Technology/SaaS",
+        "title": "Technology & SaaS",
+        "description": "Rapid innovation cycles and distributed teams demand leaders who combine technical depth with strategic vision and people leadership. Our assessment centers evaluate product thinking, agile leadership, cross-functional influence, and scaling ability.",
+        "points": [
+          "Product and engineering leadership AC",
+          "Agile and cross-functional influence assessment",
+          "Hypergrowth scaling simulations",
+          "Remote-first virtual assessment design"
+        ],
+        "stats": [
+          {
+            "value": "350",
+            "suffix": "+",
+            "title": "Tech leaders assessed"
+          },
+          {
+            "value": "0.86",
+            "suffix": "",
+            "title": "Predictive accuracy"
+          },
+          {
+            "value": "42",
+            "suffix": "%",
+            "title": "Internal fills for director+ roles"
+          },
+          {
+            "value": "2.8",
+            "suffix": "X",
+            "title": "Higher promotion success rate"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "iconName": "HeartPulse",
+        "iconSize": 16,
+        "name": "Healthcare",
+        "title": "Healthcare & Life Sciences",
+        "description": "Patient safety, clinical governance, and regulatory compliance create leadership competency demands unlike any other industry. We design assessment centers that evaluate clinical-operational leadership integration and patient safety culture.",
+        "points": [
+          "Clinical leadership competency assessment",
+          "Patient safety culture evaluation",
+          "Regulatory navigation simulations",
+          "Multidisciplinary team leadership exercises"
+        ],
+        "stats": [
+          {
+            "value": "280",
+            "suffix": "+",
+            "title": "Healthcare leaders assessed"
+          },
+          {
+            "value": "0.84",
+            "suffix": "",
+            "title": "Assessment validity"
+          },
+          {
+            "value": "35",
+            "suffix": "%",
+            "title": "Internal succession placements"
+          },
+          {
+            "value": "88",
+            "suffix": "%",
+            "title": "Participant satisfaction"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "iconName": "Factory",
+        "iconSize": 16,
+        "name": "Manufacturing",
+        "title": "Manufacturing & Engineering",
+        "description": "Operational excellence, safety leadership, and continuous improvement discipline define manufacturing leadership. Our assessment centers evaluate lean thinking, safety culture leadership, and technical problem-solving under pressure.",
+        "points": [
+          "Safety culture and compliance simulations",
+          "Lean and continuous improvement exercises",
+          "Multi-site operational leadership evaluation",
+          "Plant and operations leadership assessment"
+        ],
+        "stats": [
+          {
+            "value": "500",
+            "suffix": "+",
+            "title": "Operational leaders assessed"
+          },
+          {
+            "value": "0.87",
+            "suffix": "",
+            "title": "Inter-rater reliability"
+          },
+          {
+            "value": "40",
+            "suffix": "%",
+            "title": "Faster time-to-performance"
+          },
+          {
+            "value": "85",
+            "suffix": "%",
+            "title": "Rated DC highly valuable"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "iconName": "Zap",
+        "iconSize": 16,
+        "name": "Energy",
+        "title": "Energy & Utilities",
+        "description": "High-consequence operational environments where leadership decisions directly impact safety, environmental compliance, and community well-being. Assessment centers evaluate crisis decision-making and energy transition leadership.",
+        "points": [
+          "Crisis and emergency leadership assessment",
+          "Stakeholder management simulations",
+          "Energy transition leadership exercises",
+          "Environmental and safety compliance evaluation"
+        ],
+        "stats": [
+          {
+            "value": "180",
+            "suffix": "+",
+            "title": "Energy leaders assessed"
+          },
+          {
+            "value": "0.85",
+            "suffix": "",
+            "title": "Assessment accuracy"
+          },
+          {
+            "value": "32",
+            "suffix": "%",
+            "title": "Internal placements increased"
+          },
+          {
+            "value": "90",
+            "suffix": "%",
+            "title": "Succession plan effectiveness"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "iconName": "Building2",
+        "iconSize": 16,
+        "name": "Government",
+        "title": "Government & Public Sector",
+        "description": "Public accountability, policy complexity, and multi-stakeholder governance create unique leadership assessment requirements. We design assessment centers that evaluate policy judgment and public communication capability.",
+        "points": [
+          "Policy judgment and stakeholder assessment",
+          "Public communication simulations",
+          "Resource-constrained leadership exercises",
+          "Multi-stakeholder governance evaluation"
+        ],
+        "stats": [
+          {
+            "value": "220",
+            "suffix": "+",
+            "title": "Public sector leaders assessed"
+          },
+          {
+            "value": "0.83",
+            "suffix": "",
+            "title": "Assessment validity"
+          },
+          {
+            "value": "28",
+            "suffix": "%",
+            "title": "Internal succession rate"
+          },
+          {
+            "value": "14",
+            "suffix": "+",
+            "title": "Government Agencies served"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "iconName": "ShoppingBag",
+        "iconSize": 16,
+        "name": "Retail",
+        "title": "Retail & Consumer Goods",
+        "description": "Customer-centricity, commercial acumen, and the ability to lead large distributed workforces define retail leadership. Our assessment centers evaluate customer experience vision and multi-site operational leadership.",
+        "points": [
+          "Customer experience leadership assessment",
+          "Commercial decision-making simulations",
+          "Multi-site operational exercises",
+          "Seasonal demand leadership evaluation"
+        ],
+        "stats": [
+          {
+            "value": "310",
+            "suffix": "+",
+            "title": "Retail leaders assessed"
+          },
+          {
+            "value": "0.82",
+            "suffix": "",
+            "title": "Assessment accuracy"
+          },
+          {
+            "value": "36",
+            "suffix": "%",
+            "title": "Internal promotions improved"
+          },
+          {
+            "value": "91",
+            "suffix": "%",
+            "title": "Manager satisfaction with reports"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "iconName": "Briefcase",
+        "iconSize": 16,
+        "name": "Professional Services",
+        "title": "Professional Services",
+        "description": "Client relationship excellence, business development capability, and the ability to lead knowledge workers define professional services leadership. Assessment centers evaluate client engagement sophistication and practice development acumen.",
+        "points": [
+          "Client engagement leadership assessment",
+          "Business development simulations",
+          "Thought leadership and practice building exercises",
+          "Knowledge worker management evaluation"
+        ],
+        "stats": [
+          {
+            "value": "260",
+            "suffix": "+",
+            "title": "Professional services leaders assessed"
+          },
+          {
+            "value": "0.88",
+            "suffix": "",
+            "title": "Assessment validity"
+          },
+          {
+            "value": "44",
+            "suffix": "%",
+            "title": "Partner pipeline filled internally"
+          },
+          {
+            "value": "3.1",
+            "suffix": "X",
+            "title": "Higher success rate in promoted roles"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "iconName": "Activity",
+        "iconSize": 16,
+        "name": "Telecom",
+        "title": "Telecommunications",
+        "description": "Technology convergence, regulatory evolution, and customer experience transformation create complex leadership demands. Our assessment centers evaluate digital transformation leadership and competitive strategy under market disruption.",
+        "points": [
+          "Digital transformation leadership assessment",
+          "Competitive strategy simulations",
+          "Regulatory agility exercises",
+          "Customer experience transformation evaluation"
+        ],
+        "stats": [
+          {
+            "value": "190",
+            "suffix": "+",
+            "title": "Telecom leaders assessed"
+          },
+          {
+            "value": "0.84",
+            "suffix": "",
+            "title": "Assessment accuracy"
+          },
+          {
+            "value": "33",
+            "suffix": "%",
+            "title": "Internal fills for critical roles"
+          },
+          {
+            "value": "87",
+            "suffix": "%",
+            "title": "Assessment participant satisfaction"
+          }
+        ]
+      }
+    ]
+  },
+  "VerticleLineSectionData": {
+    "heading": "Why Choose Edstellar for Assessment and Development Center Consulting?",
+    "subheading": "",
+    "description": "Most competitors deploy standardized exercises from generic libraries. Edstellar designs every element around your organization's specific roles, strategic context, and cultural values.",
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc7fd11c4c0943e1ed58b5_Why%20Choose%20Edstellar%20for%20Coaching%20Services%20Consulting.webp",
+      "alt": "Why Choose Edstellar for Assessment and Development Center Consulting?",
+      "title": "Why Choose Edstellar for Assessment and Development Center Consulting?"
+    },
+    "features": [
+      {
+        "id": 1,
+        "title": "Integrated Assessment-to-Development Continuum",
+        "description": "Most assessment center providers stop at the report. Edstellar integrates assessment data with development planning, coaching design, and succession system integration, creating a closed-loop talent system where evaluation directly informs and accelerates leadership growth.",
+        "color": "#2d2f6b"
+      },
+      {
+        "id": 2,
+        "title": "Custom-Designed, Not Off-the-Shelf",
+        "description": "While competitors deploy standardized exercises from generic libraries, Edstellar designs every competency framework, simulation exercise, and scoring system around your organization's specific roles, strategic context, industry challenges, and cultural values.",
+        "color": "#c8e130"
+      },
+      {
+        "id": 3,
+        "title": "Bias-Mitigated Assessment Design",
+        "description": "Fairness is engineered into every element of our assessment centers. Adverse impact analysis, cultural fairness validation, multiple assessor perspectives, structured behavioral anchors, and bias awareness training ensure assessment centers expand rather than narrow the diversity of your leadership pipeline.",
+        "color": "#2d2f6b"
+      },
+      {
+        "id": 4,
+        "title": "Virtual-First Architecture with Global Reach",
+        "description": "Our virtual and hybrid assessment center designs deliver the behavioral richness of in-person evaluation through digital platforms, enabling you to assess talent across geographies, reduce logistics costs by up to 60%, and maintain quality regardless of participant location.",
+        "color": "#c8e130"
+      },
+      {
+        "id": 5,
+        "title": "Science-Backed Methodology with Proven Validity",
+        "description": "Every assessment center we design is grounded in 50+ years of industrial-organizational psychology research. Competency frameworks are validated, exercises are measurement-tested, scoring systems are reliability-calibrated, and validity evidence is documented.",
+        "color": "#2d2f6b"
+      }
+    ]
+  },
+  "SlidesStatsSectionData": {
+    "heading": "Assessment Center Consulting Success Stories",
+    "slides": [
+      {
+        "id": 1,
+        "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc80697bc4589d2ecf4a7f_Why%20Choose%20Edstellar%20for%20Assessment%20and%20Development%20Center%20Consulting.webp",
+        "quote": "A multinational bank needed to identify succession-ready leaders for 45 critical senior leadership roles across 12 countries. Existing succession plans were based on manager nominations with no objective assessment data. Two recent C-suite appointments had failed within 18 months. Edstellar designed a leadership assessment center program across 8 locations (4 in-person, 4 virtual), evaluating 180 senior leaders using behavioral simulations.",
+        "company": "Global Financial Services Group",
+        "title": "Global Financial Services Group",
+        "stats": [
+          {
+            "value": "38",
+            "suffix": "",
+            "title": "Succession-ready leaders identified (vs. 12 originally nominated)"
+          },
+          {
+            "value": "42",
+            "suffix": "%",
+            "title": "Reduction in external senior hiring"
+          },
+          {
+            "value": "3.2",
+            "suffix": "X",
+            "title": "Higher performance ratings for assessed successors"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc80ac535c3e8722f2ca39_Why%20Choose%20Edstellar%20for%20Assessment%20and%20Development%20Center%20Consulting.webp",
+        "quote": "A Fortune 500 manufacturing company needed to assess 250+ plant managers across 60 facilities for digital transformation readiness. Leadership decisions were decentralized with no common competency framework. Edstellar built a unified competency framework, designed a hybrid assessment-development center model, and trained 24 internal HR professionals as certified assessors.",
+        "company": "Global Manufacturing Corporation",
+        "title": "Global Manufacturing Corporation",
+        "stats": [
+          {
+            "value": "60",
+            "suffix": "",
+            "title": "Facilities with common leadership standard"
+          },
+          {
+            "value": "0.87",
+            "suffix": "",
+            "title": "Inter-rater reliability by internal assessors"
+          },
+          {
+            "value": "40",
+            "suffix": "%",
+            "title": "Faster time-to-performance for promoted leaders"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "image": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/69dc80e44698ed300313ee64_Why%20Choose%20Edstellar%20for%20Assessment%20and%20Development%20Center%20Consulting.webp",
+        "quote": "A Series D technology company scaling from 800 to 3,000 employees needed a leadership pipeline for 35 new director and VP roles within 24 months. Edstellar designed a high-potential identification center evaluating 120 senior individual contributors and managers, then built a development center program for the top 40 identified high-potentials.",
+        "company": "High-Growth Technology Company",
+        "title": "High-Growth Technology Company",
+        "stats": [
+          {
+            "value": "22/35",
+            "suffix": "",
+            "title": "Target roles filled internally within 18 months"
+          },
+          {
+            "value": "$4.4",
+            "suffix": "M",
+            "title": "Saved in external recruitment fees"
+          },
+          {
+            "value": "2.8",
+            "suffix": "X",
+            "title": "Higher promotion rate for HiPo cohort"
+          }
+        ]
+      }
+    ]
+  },
+  "LogoSectionData": {
+    "heading": "Organizations That Trust Edstellar for Assessment and Development Centers",
+    "description": "Leading organizations across industries trust Edstellar for assessment and development center consulting. Our competency frameworks, behavioral simulations, and assessor training programs operate inside Fortune 500 enterprises, government agencies, and high-growth technology companies worldwide.",
+    "topRow": [
+      { "image": "/Images/StrategicWorkflow/Abb.webp", "alt": "Abb", "title": "Abb" },
+      { "image": "/Images/StrategicWorkflow/Aditya Birla Group.webp", "alt": "Aditya Birla Group", "title": "Aditya Birla Group" },
+      { "image": "/Images/StrategicWorkflow/Adobe.webp", "alt": "Adobe", "title": "Adobe" },
+      { "image": "/Images/StrategicWorkflow/Amazon.webp", "alt": "Amazon", "title": "Amazon" },
+      { "image": "/Images/StrategicWorkflow/AutoDesk.webp", "alt": "AutoDesk", "title": "AutoDesk" },
+      { "image": "/Images/StrategicWorkflow/Emerson.webp", "alt": "Emerson", "title": "Emerson" },
+      { "image": "/Images/StrategicWorkflow/godrej.webp", "alt": "godrej", "title": "godrej" },
+      { "image": "/Images/StrategicWorkflow/Intel.webp", "alt": "Intel", "title": "Intel" },
+      { "image": "/Images/StrategicWorkflow/Johnson&Johnson.webp", "alt": "Johnson&Johnson", "title": "Johnson&Johnson" },
+      { "image": "/Images/StrategicWorkflow/MediaTek.webp", "alt": "MediaTek", "title": "MediaTek" },
+      { "image": "/Images/StrategicWorkflow/Microsoft.webp", "alt": "Microsoft", "title": "Microsoft" },
+      { "image": "/Images/StrategicWorkflow/nrsc.webp", "alt": "nrsc", "title": "nrsc" },
+      { "image": "/Images/StrategicWorkflow/Sportskeeda.webp", "alt": "Sportskeeda", "title": "Sportskeeda" },
+      { "image": "/Images/StrategicWorkflow/Tata_Chemicals.webp", "alt": "Tata_Chemicals", "title": "Tata_Chemicals" },
+      { "image": "/Images/StrategicWorkflow/Total.webp", "alt": "Total", "title": "Total" },
+      { "image": "/Images/StrategicWorkflow/Visa.webp", "alt": "Visa", "title": "Visa" }
+    ],
+    "bottomRow": [
+      { "image": "/Images/StrategicWorkflow/Visa.webp", "alt": "Visa", "title": "Visa" },
+      { "image": "/Images/StrategicWorkflow/Total.webp", "alt": "Total", "title": "Total" },
+      { "image": "/Images/StrategicWorkflow/Tata_Chemicals.webp", "alt": "Tata_Chemicals", "title": "Tata_Chemicals" },
+      { "image": "/Images/StrategicWorkflow/Sportskeeda.webp", "alt": "Sportskeeda", "title": "Sportskeeda" },
+      { "image": "/Images/StrategicWorkflow/nrsc.webp", "alt": "nrsc", "title": "nrsc" },
+      { "image": "/Images/StrategicWorkflow/Microsoft.webp", "alt": "Microsoft", "title": "Microsoft" },
+      { "image": "/Images/StrategicWorkflow/MediaTek.webp", "alt": "MediaTek", "title": "MediaTek" },
+      { "image": "/Images/StrategicWorkflow/Johnson&Johnson.webp", "alt": "Johnson&Johnson", "title": "Johnson&Johnson" },
+      { "image": "/Images/StrategicWorkflow/Intel.webp", "alt": "Intel", "title": "Intel" },
+      { "image": "/Images/StrategicWorkflow/godrej.webp", "alt": "godrej", "title": "godrej" },
+      { "image": "/Images/StrategicWorkflow/Emerson.webp", "alt": "Emerson", "title": "Emerson" },
+      { "image": "/Images/StrategicWorkflow/AutoDesk.webp", "alt": "AutoDesk", "title": "AutoDesk" },
+      { "image": "/Images/StrategicWorkflow/Amazon.webp", "alt": "Amazon", "title": "Amazon" },
+      { "image": "/Images/StrategicWorkflow/Adobe.webp", "alt": "Adobe", "title": "Adobe" },
+      { "image": "/Images/StrategicWorkflow/Aditya Birla Group.webp", "alt": "Aditya Birla Group", "title": "Aditya Birla Group" },
+      { "image": "/Images/StrategicWorkflow/Abb.webp", "alt": "Abb", "title": "Abb" }
+    ]
+  },
+  "SlidesSectionData": {
+    "heading": "The outcome,\nin our client's words",
+    "description": "Enterprise organizations trust Edstellar's strategic workforce planning consulting to close the gap between where their talent is today and where their business strategy demands it to be.",
+    "slides": [
+      {
+        "id": 1,
+        "quote": "Before Edstellar, our succession plans were essentially a list of names that senior leaders felt good about. The assessment center program gave us objective data for the first time. We discovered high-potential leaders we had completely overlooked and identified succession risks we didn't know we had. It fundamentally changed how we make talent decisions.",
+        "avatar": "/StrategicWorkspacePlanningAssets/Rohit Sharma.webp",
+        "name": "CHRO",
+        "company": "Multinational Financial Services Group"
+      },
+      {
+        "id": 2,
+        "quote": "What sets Edstellar apart is the capability transfer. They didn't just run assessment centers for us and leave. They trained 24 of our HR professionals as certified assessors, handed us the exercise library and scoring systems, and our team independently ran the entire second-year program. That's the definition of sustainable consulting.",
+        "avatar": "/StrategicWorkspacePlanningAssets/Rohit Sharma.webp",
+        "name": "VP Talent Management",
+        "company": "Global Manufacturing Corporation"
+      },
+      {
+        "id": 3,
+        "quote": "The development center program was a career-defining experience for our high-potential leaders. The behavioral feedback was so specific and actionable that every participant walked away with a clear development plan. Six months later, their managers were reporting observable behavior change. That's the impact of assessment done right.",
+        "avatar": "/StrategicWorkspacePlanningAssets/Rohit Sharma.webp",
+        "name": "Chief People Officer",
+        "company": "High-Growth Technology Company"
+      },
+      {
+        "id": 4,
+        "quote": "We evaluated three global assessment center providers before choosing Edstellar. The difference was customization. The other firms offered standardized exercise libraries. Edstellar designed every exercise around our actual leadership challenges, our industry context, and the competencies that matter for our strategy. The result was assessment data our leaders actually trusted and acted on.",
+        "avatar": "/StrategicWorkspacePlanningAssets/Rohit Sharma.webp",
+        "name": "Global Head of Leadership Development",
+        "company": "Energy Corporation"
+      }
+    ]
+  },
+  "CTASectionData": {
+    "heading": "Ready to Build an Assessment Center That Actually Predicts Leadership Success?",
+    "subheading": "Stop relying on gut instinct and subjective opinions for your most critical talent decisions. Partner with Edstellar's assessment center consulting team to design, deploy, and sustain competency-based assessment and development centers that deliver objective, defensible, and actionable talent intelligence.",
+    "button": {
+      "text": "Schedule Your Assessment Center Consultation",
+      "href": "https://www.edstellar.com/",
+      "title": "Click Here to Schedule Your Assessment Center Consultation"
+    }
+  },
+  "FAQSectionData": {
+    "heading": "Frequently Asked Questions About Assessment and Development Centers",
+    "subheading": "Everything you need to know about assessment and development center consulting with Edstellar",
+    "items": [
+      {
+        "id": 1,
+        "question": "What is the difference between an assessment center and a development center?",
+        "answer": "An assessment center and a development center use the same core methodology, including behavioral simulation exercises, trained assessors, and competency-based observation, but they serve fundamentally different purposes. An assessment center is designed for organizational decision-making: it produces objective evaluation data that informs hiring, promotion, succession planning, and talent classification decisions. A development center, by contrast, is designed for individual growth: it uses simulation exercises to generate rich, behaviorally specific feedback that helps participants understand their strengths, identify competency gaps, and create actionable development plans. Many organizations use both: assessment centers for talent decisions and development centers for accelerating the growth of identified talent."
+      },
+      {
+        "id": 2,
+        "question": "How long does a typical assessment center take to design and deploy?",
+        "answer": "A standard assessment center for a single leadership level typically takes 10 to 14 weeks from kickoff to first deployment: 2 to 3 weeks for discovery and role analysis, 4 to 6 weeks for competency framework development and exercise design, 3 to 4 weeks for pilot testing and refinement, and 1 week for full deployment. Programs covering multiple leadership levels, geographies, or requiring virtual platform configuration may take 16 to 20 weeks. Once designed, each subsequent deployment cycle takes 4 to 6 weeks to execute."
+      },
+      {
+        "id": 3,
+        "question": "What types of exercises are used in an assessment center?",
+        "answer": "Assessment centers use multiple exercise types including: in-basket or inbox exercises (prioritizing requests under time pressure), leaderless group discussions (collaborative problem-solving with peers), one-on-one role-plays (coaching, negotiating, or influencing), fact-finding exercises (gathering information to diagnose a problem), case study analyses (analyzing data and presenting recommendations), and integrated simulations (navigating interconnected challenges over a half-day or full-day period). Each exercise is designed to elicit specific competencies, and the competency-exercise matrix ensures every target competency is observed in at least two different exercises."
+      },
+      {
+        "id": 4,
+        "question": "How do you ensure assessment centers are fair and free from bias?",
+        "answer": "Fairness is engineered into every element. At the design level, we conduct adverse impact analyses on all exercises and psychometric instruments. Competency frameworks are validated across diverse populations. At the delivery level, we use multiple assessors per participant (typically 2 to 3), employ behaviorally anchored rating scales that force assessors to cite specific observed behaviors, and conduct structured consensus discussions where ratings must be supported by behavioral evidence. Assessor training includes dedicated modules on unconscious bias awareness. Well-designed assessment centers show lower adverse impact than unstructured interviews and manager nominations."
+      },
+      {
+        "id": 5,
+        "question": "Can assessment centers be conducted virtually?",
+        "answer": "Yes. Modern virtual assessment centers deliver simulation exercises through video conferencing and digital collaboration platforms, including video-based role-plays, virtual group discussions, digital in-basket exercises, and online case analyses. Research shows that well-designed virtual assessment centers produce validity and reliability coefficients comparable to in-person delivery. Key advantages include the ability to assess talent across geographies without travel costs (up to 60% cost reduction), faster scheduling, and consistently high participant satisfaction ratings. The critical success factor is purposeful design for the virtual medium rather than simply replicating in-person exercises through video."
+      },
+      {
+        "id": 6,
+        "question": "How do assessment center results integrate with succession planning and development programs?",
+        "answer": "Assessment center data becomes the evidence base for multiple talent management processes. For succession planning, individual assessment reports provide validated readiness ratings that replace subjective opinions. Aggregated organizational talent maps reveal bench-strength gaps by role, level, function, and geography. Nine-box talent grids are populated with objective performance-potential data. For development, individual competency profiles drive personalized development plans, coaching focus areas, and stretch assignment recommendations. Assessment data can be integrated with HRIS and talent management platforms through standard data feeds."
+      }
+    ]
+  },
+  "ServiceSlidesSectionData": {
+    "heading": "Explore Related Consulting Services",
+    "cards": [
+      {
+        "id": 1,
+        "icon": "WalletCards",
+        "iconSize": 22,
+        "category": "Consulting",
+        "title": "Talent Assessment Services",
+        "description": "Our parent practice covering psychometric assessment, 360-degree feedback, and talent analytics beyond assessment centers.",
+        "link": "https://www.edstellar.com/talent-assessment-services",
+        "buttonText": "Explore Talent Assessment Services"
+      },
+      {
+        "id": 2,
+        "icon": "Users",
+        "iconSize": 22,
+        "category": "Consulting",
+        "title": "Succession Planning Consulting",
+        "description": "Integrate assessment center data directly into succession planning, building evidence-based leadership pipelines.",
+        "link": "https://www.edstellar.com/leadership-succession-planning-consulting",
+        "buttonText": "Explore Succession Planning"
+      },
+      {
+        "id": 3,
+        "icon": "BadgeCheck",
+        "iconSize": 22,
+        "category": "Consulting",
+        "title": "Leadership Development Consulting",
+        "description": "Convert assessment insights into targeted leadership development programs that accelerate the growth of identified talent.",
+        "link": "https://www.edstellar.com/leadership-excellence-programs",
+        "buttonText": "Explore Leadership Development"
+      },
+      {
+        "id": 4,
+        "icon": "Building2",
+        "iconSize": 22,
+        "category": "Consulting",
+        "title": "Executive Coaching",
+        "description": "Connect assessment center feedback to one-on-one executive coaching engagements that drive sustained behavioral change.",
+        "link": "https://www.edstellar.com/excellence-programs",
+        "buttonText": "Explore Executive Coaching"
+      },
+      {
+        "id": 5,
+        "icon": "Building2",
+        "iconSize": 22,
+        "category": "Consulting",
+        "title": "Competency Framework Consulting",
+        "description": "Build the competency architecture that underpins assessment centers, performance management, and career pathing.",
+        "link": "https://www.edstellar.com/skill-gap-competency-assessment",
+        "buttonText": "Explore Competency Frameworks"
+      }
+    ]
+  }
+}

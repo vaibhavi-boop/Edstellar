@@ -62,11 +62,11 @@ export default function HeroSection({ data, breadcrumbs }) {
 
           {/* Right Image */}
           <div className="order-1 lg:order-2">
-            <img 
-              src={data.image}
-              alt={data.imageAlt}
+            <img
+              src={data.image?.src}
+              alt={data.image?.alt}
               title={data.title}
-              className="object-cover w-full rounded-lg"
+              className="w-full rounded-lg object-cover"
             />
           </div>
         </div>

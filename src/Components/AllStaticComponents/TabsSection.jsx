@@ -6,10 +6,11 @@ import { CheckCircle2 } from "lucide-react";
 export default function TabsSection({
   data,
   centered = false,
-
 }) {
   const [activeTab, setActiveTab] = useState(0);
+
   if (!data || !data.tabs?.length) return null;
+
   const service = data.tabs[activeTab];
 
   return (
@@ -24,13 +25,13 @@ export default function TabsSection({
               : "mb-8"
           }`}
         >
-          <h2 className="text-[30px] font-bold leading-[1.2] text-[#3a3a3a] lg:text-[36px]">
+          <h2 className="text-[30px] font-semibold leading-[1.2] text-[#3a3a3a] lg:text-[36px]">
             {data.heading}
           </h2>
 
-          {data.showDescription && (
+          {data.subheading && (
             <p className="mt-5 max-w-[780px] text-[16px] leading-7 text-[#3a3a3a]">
-              {data.description}
+              {data.subheading}
             </p>
           )}
         </div>
@@ -41,7 +42,7 @@ export default function TabsSection({
             <button
               key={tab.id}
               onClick={() => setActiveTab(index)}
-              className={`rounded-full border px-5 py-3 text-[14px] font-semibold transition-all duration-300 sm:px-6 sm:text-[15px] ${
+              className={`rounded-full border px-5 py-3 text-[16px] font-bold transition-all duration-300 sm:px-6 ${
                 activeTab === index
                   ? "border-[#2A2F68] bg-[#2A2F68] text-white"
                   : "border-[#D6D8E6] bg-white text-[#5c5e6e] hover:border-[#2d2f6b] hover:text-[#2d2f6b]"
@@ -67,12 +68,9 @@ export default function TabsSection({
                 {service.title}
               </h3>
 
+              {/* Changed only this */}
               <p className="mt-4 text-[16px] leading-7 text-[#555]">
-                {service.description1}
-              </p>
-
-              <p className="mt-4 text-[16px] leading-7 text-[#555]">
-                {service.description2}
+                {service.description}
               </p>
 
               <div className="mt-6">
@@ -98,9 +96,10 @@ export default function TabsSection({
 
             {/* Right */}
             <div className="bg-[#2A2F68] p-5 lg:p-8">
+              {/* Changed only this */}
               <img
-                src={service.image}
-                alt={service.alt}
+                src={service.image?.src}
+                alt={service.image?.alt}
                 title={service.title}
                 className="w-full rounded-lg object-cover"
               />

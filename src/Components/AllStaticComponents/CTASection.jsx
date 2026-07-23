@@ -15,7 +15,7 @@ export default function CTASection({ data }) {
 
           {/* Description */}
           <p className="mb-8 text-[16px] leading-7 text-white/90">
-            {data.description}
+            {data.subheading}
           </p>
 
           {/* Buttons */}

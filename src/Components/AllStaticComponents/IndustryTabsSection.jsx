@@ -83,7 +83,7 @@ export default function IndustryTabsSection({ data }) {
           <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#3A3A3A] lg:text-[36px]">
             {data.heading}
           </h2>
-          <p className="mx-auto max-w-[900px] text-[16px] leading-7 text-[#3a3a3a]">{data.description}</p>
+          <p className="mx-auto max-w-[900px] text-[16px] leading-7 text-[#3a3a3a]">{data.subheading}</p>
         </div>
 
         {/* Tabs */}
@@ -95,7 +95,7 @@ export default function IndustryTabsSection({ data }) {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 rounded-full border-[1.5px] px-5 py-2.5 text-[16px] font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-2 rounded-full border-[1.5px] px-5 py-2.5 text-[16px] font-bold transition-all duration-300 ${
                     activeTab === index
                     ? "border-[#2E316F] bg-[#2E316F] text-white"
                     : "border-[#DCDEE5] bg-[#FCFCFC] text-[#596074] hover:border-[#DCDEE5] hover:bg-[#F1F1F1]"

@@ -1,61 +1,43 @@
-import HeroSection from "@/Components/StrategicWorkforcePlanning/HeroSection";
-import ParagraphSection from "@/Components/assessmentdevelopmentcenters/ParagraphSection";
-import VerticleIconSection from "@/Components/digitallearningecosystemconsulting/VerticleIconSection";
-import StatsSection from "@/Components/StrategicWorkforcePlanning/StatsSection";
-import StaticCardSection from "@/Components/StrategicWorkforcePlanning/StaticCardSection";
-import AssessmentSection from "@/Components/assessmentdevelopmentcenters/AssessmentSection";
-import TimelineSection from "@/Components/digitallearningecosystemconsulting/TimelineSection";
-import TabsSection from "@/Components/StrategicWorkforcePlanning/TabsSection";
-import IndustryTabsSection from "@/Components/assessmentdevelopmentcenters/IndustryTabsSection";
-import VerticleLineSection from "@/Components/StrategicWorkforcePlanning/VerticleLineSection";
-import SlidesStatsSection from "@/Components/assessmentdevelopmentcenters/SlidesStatsSection";
-import LogoSection from "@/Components/StrategicWorkforcePlanning/LogoSection";
-import SlidesSection from "@/Components/StrategicWorkforcePlanning/SlidesSection";
-import CTASection from "@/Components/StrategicWorkforcePlanning/CTASection";
-import FaqSection from "@/Components/StrategicWorkforcePlanning/FaqSection";
-import ServiceSlidesSection from "@/Components/StrategicWorkforcePlanning/ServiceSlidesSection";
+import HeroSection from "@/Components/AllStaticComponents/HeroSection";
+import ParagraphSection from "@/Components/AllStaticComponents/ParagraphSection";
+import VerticleIconSection from "@/Components/AllStaticComponents/VerticleIconSection";
+import StatsSection from "@/Components/AllStaticComponents/StatsSection";
+import StaticCardSection from "@/Components/AllStaticComponents/StaticCardSection";
+import AssessmentSection from "@/Components/AllStaticComponents/AssessmentSection";
+import TimelineSection from "@/Components/AllStaticComponents/TimelineSection";
+import TabsSection from "@/Components/AllStaticComponents/TabsSection";
+import IndustryTabsSection from "@/Components/AllStaticComponents/IndustryTabsSection";
+import VerticleLineSection from "@/Components/AllStaticComponents/VerticleLineSection";
+import SlidesStatsSection from "@/Components/AllStaticComponents/SlidesStatsSection";
+import LogoSection from "@/Components/AllStaticComponents/LogoSection";
+import SlidesSection from "@/Components/AllStaticComponents/SlidesSection";
+import CTASection from "@/Components/AllStaticComponents/CTASection";
+import FaqSection from "@/Components/AllStaticComponents/FaqSection";
+import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
 
-import {
-  HeroSectionData,
-  BreadcrumbData,
-  ParagraphSectionData,
-  VerticleIconSectionData,
-  StatsData,
-  StaticCardSectionData,
-  TabsSectionData,
-  AssessmentSectionData,
-  TimelineSectionData,
-  TabsSectionDataSub,
-  IndustryTabsSectionData,
-  VerticleLineSectionData,
-  SlidesStatsSectionData,
-  LogoSectionData,
-  SlidesSectionData,
-  CTASectionData,
-  FAQSectionData,
-  ServiceSlidesSectionData,
-} from "@/app/Data/Assessment_Development_Centers";
+// Import JSON data
+import pageData from "@/data/AssessmentDevelopmentCenters.json";
 
 export default function Home() {
   return (
     <>
-      <HeroSection data={HeroSectionData} breadcrumbs={BreadcrumbData} />
-      <ParagraphSection data={ParagraphSectionData} />
-      <VerticleIconSection data={VerticleIconSectionData}/>
-      <StatsSection items={StatsData} />
-      <StaticCardSection data={StaticCardSectionData} />
-      <TabsSection data={TabsSectionData} />
-      <AssessmentSection data={AssessmentSectionData} />
-      <TimelineSection data={TimelineSectionData} />
-      <TabsSection data={TabsSectionDataSub} />
-      <IndustryTabsSection data={IndustryTabsSectionData} />
-      <VerticleLineSection data={VerticleLineSectionData} />
-      <SlidesStatsSection data={SlidesStatsSectionData} />
-      <LogoSection data={LogoSectionData} />
-      <SlidesSection data={SlidesSectionData} />
-      <CTASection data={CTASectionData} />
-      <FaqSection data={FAQSectionData} />
-      <ServiceSlidesSection data={ServiceSlidesSectionData} />
+      <HeroSection data={pageData.HeroSectionData} breadcrumbs={pageData.BreadcrumbData} />
+      <ParagraphSection data={pageData.ParagraphSectionData} />
+      <VerticleIconSection data={pageData.VerticleIconSectionData} />
+      <StatsSection items={pageData.stats} />
+      <StaticCardSection data={pageData.StaticCardSectionData} />
+      <TabsSection data={pageData.TabsSectionData} />
+      <AssessmentSection data={pageData.AssessmentSectionData} />
+      <TimelineSection data={pageData.TimelineSectionData} />
+      <TabsSection data={pageData.TabsSectionDataSub} />
+      <IndustryTabsSection data={pageData.IndustryTabsSectionData} />
+      <VerticleLineSection data={pageData.VerticleLineSectionData} />
+      <SlidesStatsSection data={pageData.SlidesStatsSectionData} />
+      <LogoSection data={pageData.LogoSectionData} />
+      <SlidesSection data={pageData.SlidesSectionData} />
+      <CTASection data={pageData.CTASectionData} />
+      <FaqSection data={pageData.FAQSectionData} />
+      <ServiceSlidesSection data={pageData.ServiceSlidesSectionData} />
     </>
   );
 }

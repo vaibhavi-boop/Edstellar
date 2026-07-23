@@ -2,13 +2,28 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  WalletCards,
+  Users,
+  BadgeCheck,
+  Building2,
+} from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+
+const iconMap = {
+  WalletCards,
+  Users,
+  BadgeCheck,
+  Building2,
+};
 
 export default function ServiceSlides({ data }) {
   const prevRef = useRef(null);
@@ -76,48 +91,52 @@ export default function ServiceSlides({ data }) {
             },
           }}
         >
-          {data.cards.map((card, index) => (
-            <SwiperSlide key={index}>
-              <div className="group flex h-full min-h-[380px] flex-col rounded-[8px] border border-white/10 bg-[#2E3054] p-5 transition-all duration-300 hover:border-lime-400 hover:bg-[#3A3C7E]">
-                {/* Top */}
-                <div className="mb-4 flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#454A80] text-[#D9FF34] transition-all duration-300 group-hover:bg-[#D9FF34] group-hover:text-[#31346F]">
-                    {card.icon}
+          {data.cards.map((card, index) => {
+            const Icon = iconMap[card.icon];
+
+            return (
+              <SwiperSlide key={index}>
+                <div className="group flex h-full min-h-[380px] flex-col rounded-[8px] border border-white/10 bg-[#2E3054] p-5 transition-all duration-300 hover:border-lime-400 hover:bg-[#3A3C7E]">
+                  {/* Top */}
+                  <div className="mb-4 flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#454A80] text-[#D9FF34] transition-all duration-300 group-hover:bg-[#D9FF34] group-hover:text-[#31346F]">
+                      {Icon && <Icon size={24} strokeWidth={2} />}
+                    </div>
+
+                    <span className="rounded-lg bg-[#454A80] px-4 py-2 text-sm font-semibold text-[#D9FF34]">
+                      {card.category}
+                    </span>
                   </div>
 
-                  <span className="rounded-lg bg-[#454A80] px-4 py-2 text-sm font-semibold text-[#D9FF34]">
-                    {card.category}
-                  </span>
+                  {/* Title */}
+                  <h3 className="mb-3 text-[20px] font-bold leading-[28px] text-white">
+                    {card.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mb-6 flex-grow text-[16px] leading-7 text-white/90">
+                    {card.description}
+                  </p>
+
+                  {/* Divider */}
+                  <div className="mb-5 h-px bg-white/20" />
+
+                  {/* Link */}
+                  <Link
+                    href={card.link}
+                    className="group inline-flex items-center gap-3 text-[16px] font-semibold text-[#D9FF34] lg:text-[18px]"
+                  >
+                    Learn More
+
+                    <ArrowRight
+                      size={20}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </Link>
                 </div>
-
-                {/* Title */}
-                <h3 className="mb-3 text-[20px] font-bold leading-[28px] text-white">
-                  {card.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mb-6 flex-grow text-[16px] leading-7 text-white/90">
-                  {card.description}
-                </p>
-
-                {/* Divider */}
-                <div className="mb-5 h-px bg-white/20" />
-
-                {/* Link */}
-                <Link
-                  href={card.link}
-                  className="group inline-flex items-center gap-3 text-[16px] font-semibold text-[#D9FF34] lg:text-[18px]"
-                >
-                  {card.buttonText}
-
-                  <ArrowRight
-                    size={20}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  />
-                </Link>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         {/* Mobile Navigation */}

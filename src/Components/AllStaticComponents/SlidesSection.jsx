@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export default function SlidesSection({ data }) {
-  const { heading, description } = data;
+  const { heading, subheading } = data;
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -43,7 +43,7 @@ export default function SlidesSection({ data }) {
               </h2>
 
               <p className="text-[16px] leading-7 text-[#3a3a3a]">
-                {description}
+                {subheading}
               </p>
             </div>
 

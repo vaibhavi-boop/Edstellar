@@ -126,7 +126,7 @@ export default function ServiceSlides({ data }) {
                     href={card.link}
                     className="group inline-flex items-center gap-3 text-[16px] font-semibold text-[#D9FF34] lg:text-[18px]"
                   >
-                    Learn More
+                   {card.buttonText}
 
                     <ArrowRight
                       size={20}

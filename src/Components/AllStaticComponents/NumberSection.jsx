@@ -1,17 +1,21 @@
 "use client";
 
+import { CheckCircle2 } from "lucide-react";
+
 export default function NumberSection({ data }) {
+  const totalSteps = data.steps?.length || 0;
+
   return (
     <section className="bg-white">
       <div className="container">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-[800px] text-center">
-          <h2 className="mb-4 font-bold leading-[1.2] text-[#2A2A2A] text-[30px] lg:text-[36px]">
+          <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#2A2A2A] lg:text-[36px]">
             {data.heading}
           </h2>
 
           <p className="text-[16px] leading-7 text-[#454545]">
-            {data.description}
+            {data.subheading}
           </p>
         </div>
 
@@ -22,66 +26,128 @@ export default function NumberSection({ data }) {
             {/* Horizontal Line */}
             <div className="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-[#03307d80]" />
 
-            {/* Small Dots (Desktop Only) */}
-            <span className="absolute left-[20%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
-
-            <span className="absolute left-[40%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
-
-            <span className="absolute left-[60%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
-
-            <span className="absolute left-[80%] top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]" />
+            {/* Dots */}
+            {Array.from({ length: Math.max(totalSteps - 1, 0) }).map(
+              (_, index) => (
+                <span
+                  key={index}
+                  className="absolute top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B7C5E9]"
+                  style={{
+                    left: `${((index + 1) * 100) / totalSteps}%`,
+                  }}
+                />
+              )
+            )}
           </div>
 
           {/* ================= Mobile Timeline ================= */}
-          <div className="absolute bottom-0 left-[18px] lg:left-[26px] top-0 w-[2px] bg-[#03307d80] lg:hidden" />
+          <div className="absolute bottom-0 left-[18px] top-0 w-[2px] bg-[#03307d80] lg:hidden" />
 
           {/* Steps */}
-          <div className="grid gap-4 lg:grid-cols-5 lg:gap-6">
-            {data.steps.map((step) => (
-              <div
-                key={step.number}
-                className="relative flex items-start gap-4 lg:block"
-              >
-                {/* Circle */}
-                <div className="relative z-10 flex w-9 h-9 lg:w-12 lg:h-12 flex-shrink-0 items-center justify-center rounded-full bg-[#2A2F68] text-[22px] font-bold text-white lg:mx-auto">
-                  {step.number}
-                </div>
+          <div
+            className="grid gap-4 lg:gap-6"
+            style={{
+              gridTemplateColumns: `repeat(${totalSteps}, minmax(0,1fr))`,
+            }}
+          >
+            {data.steps.map((step) => {
+              const week = step.week?.trim();
+              const badge = step.badge?.trim();
+              const points =
+                step.points?.filter((point) => point?.trim()) || [];
 
-                {/* Content */}
-                <div className="flex-1 lg:mt-4">
-                  <h3 className="mb-2 text-[20px] font-bold text-[#3a3a3a] lg:text-center lg:text-[20px]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mb-4 text-[16px] leading-7 text-[#333] lg:text-center">
-                    {step.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="mb-2.5 flex flex-wrap gap-2 lg:justify-center">
-                    <span className="rounded bg-[#215aff1a] px-3 py-1 text-[12px] font-semibold text-[#3a3a3a]">
-                      {step.week}
-                    </span>
-
-                    <span className="rounded border border-[#5167E8] px-3 py-1 text-[12px] font-semibold text-[#3a3a3a]">
-                      {step.badge}
-                    </span>
+              return (
+                <div
+                  key={step.number}
+                  className="group relative flex items-start gap-4 lg:block"
+                >
+                  {/* Circle */}
+                  <div
+                    className="
+                      relative z-10
+                      flex h-9 w-9 flex-shrink-0 items-center justify-center
+                      rounded-full
+                      bg-[#2A2F68]
+                      text-[22px] font-bold text-white
+                      transition-all duration-300 ease-in-out
+                      group-hover:bg-[#D3E41B]
+                      group-hover:text-[#2A2F68]
+                      lg:mx-auto lg:h-14 lg:w-14
+                    "
+                  >
+                    {step.number}
                   </div>
 
-                  {/* Points */}
-                  <ul className="mt-4 space-y-2 text-[14px] leading-6 text-[#000]">
-                    {step.points.map((point, index) => (
-                      <li key={index} className="mb-1 flex items-start gap-2">
-                        <span className="text-xl leading-none">•</span>
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Content */}
+                  <div className="flex-1 lg:mt-5">
+                    <h3 className="mb-2 text-[20px] font-bold text-[#3A3A3A] lg:text-center">
+                      {step.title}
+                    </h3>
+
+                    <p className="mb-4 text-[16px] leading-7 text-[#333] lg:text-center">
+                      {step.description}
+                    </p>
+
+                    {(week || badge) && (
+                      <div className="mb-2.5 flex flex-wrap gap-2 lg:justify-center">
+                        {week && (
+                          <span className="rounded bg-[#215AFF1A] px-3 py-1 text-[12px] font-semibold text-[#3A3A3A]">
+                            {week}
+                          </span>
+                        )}
+
+                        {badge && (
+                          <span className="rounded border border-[#5167E8] px-3 py-1 text-[12px] font-semibold text-[#3A3A3A]">
+                            {badge}
+                          </span>
+                        )}
+                      </div>
+                    )}
+
+                    {points.length > 0 && (
+                      <ul className="mt-4 space-y-2 text-[14px] leading-6 text-[#000]">
+                        {points.map((point, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start gap-2"
+                          >
+                            <span className="text-xl leading-none">•</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
+
+        {/* CTA */}
+        {data.highlight && (
+          <div className="mx-auto mt-10 max-w-[900px] rounded-xl bg-[#2A2F68] p-5 lg:p-6">
+            <div className="flex items-start gap-5">
+              {/* Icon */}
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#49507F]">
+                <CheckCircle2
+                  className="h-6 w-6 text-[#D3E41B]"
+                  strokeWidth={2.2}
+                />
+              </div>
+
+              {/* Text */}
+              <div>
+                <p className="text-[16px] leading-8 text-white">
+                  <span className="font-bold">
+                    {data.highlight.title}{" "}
+                  </span>
+                  {data.highlight.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

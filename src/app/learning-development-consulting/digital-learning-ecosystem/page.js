@@ -6,8 +6,9 @@ import TimelineSection from "@/Components/AllStaticComponents/TimelineSection";
 import VerticleLineSection from "@/Components/AllStaticComponents/VerticleLineSection";
 import GridCardSection from "@/Components/AllStaticComponents/GridCardSection";
 import CTASection from "@/Components/AllStaticComponents/CTASection";
-import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
 import FaqSection from "@/Components/AllStaticComponents/FaqSection";
+import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
+import BlogSection from "@/Components/AllStaticComponents/BlogSection";
 
 import pageData from "@/data/DigitalLearningEcosystem.json";
 
@@ -28,6 +29,7 @@ export default function Home() {
       <CTASection data={pageData.ctaSection} />
       <FaqSection data={pageData.faqSection} />
       <ServiceSlidesSection data={pageData.serviceSlidesSection} />
+      <BlogSection data={pageData.BlogSectionData} />
     </>
   );
 }

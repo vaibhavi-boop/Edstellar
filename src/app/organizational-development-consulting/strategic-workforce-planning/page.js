@@ -10,42 +10,34 @@ import SlidesSection from "@/Components/AllStaticComponents/SlidesSection";
 import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
 import FaqSection from "@/Components/AllStaticComponents/FaqSection";
 import CTASection from "@/Components/AllStaticComponents/CTASection";
+import BlogSection from "@/Components/AllStaticComponents/BlogSection";
 
-import {
-  HeroSectionData,
-  BreadcrumbData,
-  StatsData,
-  LogoSectionData,
-  StaticCardSectionData,
-  GridCardSectionData,
-  TabsSectionData,
-  NumberSectionData,
-  VerticleLineSectionData,
-  SlidesSectionData,
-  ServiceSlidesSectionData,
-  FAQSectionData,
-  CTASectionData,
-} from "@/app/Data/Strategic_Workflow_Planning_Data";
+// Import JSON data
+import pageData from "@/data/StrategicWorkflowPlanning.json";
 
 export default function Home() {
   return (
     <>
-      <HeroSection data={HeroSectionData} breadcrumbs={BreadcrumbData} />
-      <StatsSection items={StatsData} />
-      <LogoSection data={LogoSectionData} />
-      <StaticCardSection data={StaticCardSectionData} />
-      <GridCardSection data={GridCardSectionData} />
-      <TabsSection
-          data={TabsSectionData}
-          centered={false}
-          showDescription={false}
+      <HeroSection 
+        data={pageData.HeroSectionData} 
+        breadcrumbs={pageData.BreadcrumbData} 
       />
-      <NumberSection data={NumberSectionData} />
-      <VerticleLineSection data={VerticleLineSectionData} />
-      <SlidesSection data={SlidesSectionData} />
-      <ServiceSlidesSection data={ServiceSlidesSectionData} />
-      <FaqSection data={FAQSectionData} />
-      <CTASection data={CTASectionData} />
+      <StatsSection items={pageData.stats} />
+      <LogoSection data={pageData.LogoSectionData} />
+      <StaticCardSection data={pageData.StaticCardSectionData} />
+      <GridCardSection data={pageData.GridCardSectionData} />
+      <TabsSection
+        data={pageData.TabsSectionData}
+        centered={false}
+        showDescription={false}
+      />
+      <NumberSection data={pageData.NumberSectionData} />
+      <VerticleLineSection data={pageData.VerticleLineSectionData} />
+      <SlidesSection data={pageData.SlidesSectionData} />
+      <ServiceSlidesSection data={pageData.ServiceSlidesSectionData} />
+      <FaqSection data={pageData.FAQSectionData} />
+      <CTASection data={pageData.CTASectionData} />
+      <BlogSection data={pageData.BlogSectionData} />
     </>
   );
 }

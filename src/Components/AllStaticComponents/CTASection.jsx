@@ -20,17 +20,18 @@ export default function CTASection({ data }) {
 
           {/* Buttons */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            {data.button?.text && (
+            {data.primaryButton?.text && (
               <PrimaryButton
-                text={data.button.text}
-                href={data.button.href}
-                title={data.button.title}
+                text={data.primaryButton.text}
+                href={data.primaryButton.link}
+                title={data.primaryButton.text}
               />
             )}
 
             {data.secondaryButton?.text && (
               <Link
                 href={data.secondaryButton.link}
+                title={data.secondaryButton.title}
                 className="inline-flex w-full items-center justify-center rounded-lg border border-white px-6 py-3 text-[16px] font-semibold text-white transition hover:bg-white hover:text-[#31346F] sm:w-auto"
               >
                 {data.secondaryButton.text}

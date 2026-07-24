@@ -31,6 +31,10 @@ import {
   ShoppingBag,
   Briefcase,
   Activity,
+  BriefcaseBusiness, 
+  ClipboardCheck, 
+  UserCheck, 
+  RefreshCw,
 } from "lucide-react";
 
 const iconMap = {
@@ -66,6 +70,10 @@ const iconMap = {
   ShoppingBag,
   Briefcase,
   Activity,
+  BriefcaseBusiness, 
+  ClipboardCheck, 
+  UserCheck, 
+  RefreshCw,
 };
 
 export default function AssessmentSection({ data }) {

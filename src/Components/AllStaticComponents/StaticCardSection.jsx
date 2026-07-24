@@ -1,12 +1,40 @@
 "use client";
 
-import PrimaryButton from "../../app/Buttons/PrimaryButton";
-import { Rocket, TrendingUp } from "lucide-react";
+import {
+  Target,
+  Clock3,
+  Cpu,
+  Briefcase,
+  Database,
+  Users,
+  Image,
+  CircleDollarSign,
+  Globe,
+  WalletCards,
+  BadgeCheck,
+  Building2,
+  GraduationCap,
+  Network,
+} from "lucide-react";
 
 const iconMap = {
-  Rocket,
-  TrendingUp,
+  Target,
+  Clock3,
+  Cpu,
+  Briefcase,
+  Database,
+  Users,
+  Image,
+  CircleDollarSign,
+  Globe,
+  WalletCards,
+  BadgeCheck,
+  Building2,
+  GraduationCap,
+  Network,
 };
+
+import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function StaticCardSection({ data }) {
   const isGreen = data.variant === "green";

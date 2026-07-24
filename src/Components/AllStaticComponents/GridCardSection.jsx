@@ -3,28 +3,77 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-function GridCard({ value, description }) {
+import {
+  Clock3,
+  Image,
+  CircleDollarSign,
+  Globe,
+} from "lucide-react";
+
+const iconMap = {
+  Clock3,
+  Image,
+  CircleDollarSign,
+  Globe,
+};
+
+function GridCard({ icon, value, description, showIcon }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
 
-  // Extract number, prefix and suffix
   const numericValue = parseFloat(value.replace(/[^0-9.]/g, ""));
   const prefix = value.startsWith("$") ? "$" : "";
   const suffix = value.replace(/[0-9.$]/g, "");
+
+  const Icon = iconMap[icon];
 
   return (
     <div
       ref={ref}
       className="rounded-lg bg-[#2E316F] p-5 transition-all duration-300 hover:-translate-y-[3px]"
     >
-      <div className="flex flex-col gap-6">
-        {/* Top Green Line */}
-        <div className="h-[3px] w-10 bg-[#D9F227]"></div>
+      {showIcon ? (
+        <div className="flex items-start gap-4">
+          {/* Icon */}
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#6E7B54] text-[#D9F227]">
+            {Icon && <Icon size={22} />}
+          </div>
 
-        {/* Content */}
-        <div>
+          {/* Right Content */}
+          <div className="flex-1">
+            {/* Value */}
+            <h3 className="text-[36px] font-bold leading-none lg:text-[42px]">
+              <span className="text-[#D9F227]">{prefix}</span>
+
+              <span className="text-white">
+                {inView ? (
+                  <CountUp
+                    end={numericValue}
+                    duration={2}
+                    decimals={String(numericValue).includes(".") ? 1 : 0}
+                  />
+                ) : (
+                  0
+                )}
+              </span>
+
+              <span className="text-[#D9F227]">{suffix}</span>
+            </h3>
+
+            {/* Description */}
+            <p className="mt-3 text-[16px] leading-[26px] text-white">
+              {description}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <>
+          {/* Green Line */}
+          <div className="mb-6 h-[3px] w-10 bg-[#D9F227]" />
+
+          {/* Value */}
           <h3 className="text-[36px] font-bold leading-none lg:text-[42px]">
             <span className="text-[#D9F227]">{prefix}</span>
 
@@ -43,17 +92,24 @@ function GridCard({ value, description }) {
             <span className="text-[#D9F227]">{suffix}</span>
           </h3>
 
-          <p className="mt-2 text-[16px] leading-[26px] text-white">
+          {/* Description */}
+          <p className="mt-3 text-[16px] leading-[26px] text-white">
             {description}
           </p>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 }
 
 export default function GridCardSection({ data }) {
-  const { heading, subheading, description, items } = data;
+  const {
+    heading,
+    description,
+    subheading,
+    items,
+    showIcon = false,
+  } = data;
 
   return (
     <section className="bg-white">
@@ -75,8 +131,10 @@ export default function GridCardSection({ data }) {
             {items.map((item, index) => (
               <GridCard
                 key={index}
+                icon={item.icon}
                 value={item.value}
                 description={item.description}
+                showIcon={showIcon}
               />
             ))}
           </div>

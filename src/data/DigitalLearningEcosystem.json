@@ -279,6 +279,7 @@
   "gridCardSection": {
     "heading": "The Numbers Behind Learning Ecosystem Transformation",
     "subheading": "The data is clear: organizations that invest in connected learning ecosystems see measurable improvements in learner adoption, skills development velocity, and technology cost efficiency while reducing content redundancy and platform sprawl.",
+    "showIcon": false,
     "items": [
       {
         "id": 1,
@@ -309,10 +310,9 @@
   "ctaSection": {
     "heading": "Ready to Transform Your Learning Ecosystem?",
     "subheading": "Schedule a consultation with Edstellar's learning ecosystem consultants. We will assess your technology landscape, identify quick wins and strategic opportunities, and chart a roadmap for a connected, high-performing learning ecosystem.",
-    "button": {
+    "primaryButton": {
       "text": "Schedule a Consultation",
-      "href": "https://www.edstellar.com/",
-      "title": "Click Here to Schedule a Consultation"
+      "link": "https://www.edstellar.com/"
     }
   },
   "faqSection": {
@@ -355,7 +355,8 @@
         "category": "Content Services",
         "title": "Learning Content Design and Development",
         "description": "Create engaging microlearning modules, interactive courses, and multimedia content that populates your learning ecosystem with high-quality, governed resources.",
-        "link": "https://www.edstellar.com/learning-content-development-services"
+        "link": "https://www.edstellar.com/learning-content-development-services",
+        "buttonText": "Explore Service"
       },
       {
         "id": 2,
@@ -363,7 +364,8 @@
         "category": "Needs Analysis",
         "title": "Training Needs Analysis",
         "description": "Conduct comprehensive training needs analysis to identify skills gaps, learning priorities, and technology requirements that inform your ecosystem strategy.",
-        "link": "https://www.edstellar.com/training-needs-analysis-solutions"
+        "link": "https://www.edstellar.com/training-needs-analysis-solutions",
+        "buttonText": "Explore Service"
       },
       {
         "id": 3,
@@ -371,7 +373,8 @@
         "category": "Performance Support",
         "title": "Employee Performance Support",
         "description": "Embed expert guidance, decision tools, and contextual help directly into the flow of work as a critical component of your connected learning ecosystem.",
-        "link": "https://www.edstellar.com/employee-performance-support"
+        "link": "https://www.edstellar.com/employee-performance-support",
+        "buttonText": "Explore Service"
       },
       {
         "id": 4,
@@ -379,7 +382,49 @@
         "category": "Skills & Competency",
         "title": "Skills Assessment and Competency Mapping",
         "description": "Map skills taxonomies and competency frameworks that feed directly into your learning ecosystem, enabling personalized learning pathways and skills intelligence.",
-        "link": "https://www.edstellar.com/assessment-development-centers-consulting"
+        "link": "https://www.edstellar.com/assessment-development-centers-consulting",
+        "buttonText": "Explore Service"
+      }
+    ]
+  },
+  "BlogSectionData": {
+    "id": "resources",
+    "heading": "Edstellar",
+    "highlight": "Resources",
+    "subheading": "Deep dive into industry trends, expert insights, success stories and innovative training practices",
+    "items": [
+      {
+        "type": "BLOG",
+        "category": "In-Demand Skills",
+        "title": "10 Most In-Demand Skills in Nigeria for 2026",
+        "date": "July 8, 2026",
+        "url": "/blog/skills-in-demand-in-nigeria",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/67c6efcda4f9b532957937ba_In-Demand%20Skills%20in%20Nigeria%20-%201200x600.webp",
+          "alt": "10 Most In-Demand Skills in Nigeria for 2026"
+        }
+      },
+      {
+        "type": "BLOG",
+        "category": "In-Demand Skills",
+        "title": "10 Most In-Demand Skills in Mexico for 2026",
+        "date": "July 24, 2026",
+        "url": "/blog/skills-in-demand-in-mexico",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/67c1badbdfad8e223c0536bd_1200%20x%20600%20Most%20In-Demand%20Skills%20in%20Mexico%20for%202025.webp",
+          "alt": "10 Most In-Demand Skills in Mexico for 2026"
+        }
+      },
+      {
+        "type": "BLOG",
+        "category": "Popular Training Providers",
+        "title": "14 Best Finance Training Companies for 2026",
+        "date": "July 10, 2026",
+        "url": "/blog/finance-training-companies",
+        "image": {
+          "src": "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/6810a7fd624d6658e2fe4b17_Top%20Finance%20Management%20Training%20Companies%201200x600%20(1).webp",
+          "alt": "14 Best Finance Training Companies for 2026"
+        }
       }
     ]
   }

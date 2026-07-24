@@ -68,10 +68,19 @@ export default function TabsSection({
                 {service.title}
               </h3>
 
-              {/* Changed only this */}
-              <p className="mt-4 text-[16px] leading-7 text-[#555]">
-                {service.description}
-              </p>
+              {/* Description */}
+              {service.description && (
+                <p className="mt-4 text-[16px] leading-7 text-[#555]">
+                  {service.description}
+                </p>
+              )}
+
+              {/* Description 2 */}
+              {service.description1 && (
+                <p className="mt-4 text-[16px] leading-7 text-[#555]">
+                  {service.description1}
+                </p>
+              )}
 
               <div className="mt-6">
                 {service.points.map((point, index) => (
@@ -96,7 +105,6 @@ export default function TabsSection({
 
             {/* Right */}
             <div className="bg-[#2A2F68] p-5 lg:p-8">
-              {/* Changed only this */}
               <img
                 src={service.image?.src}
                 alt={service.image?.alt}

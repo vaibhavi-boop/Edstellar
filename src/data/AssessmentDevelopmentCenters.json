@@ -1105,7 +1105,7 @@
   "CTASectionData": {
     "heading": "Ready to Build an Assessment Center That Actually Predicts Leadership Success?",
     "subheading": "Stop relying on gut instinct and subjective opinions for your most critical talent decisions. Partner with Edstellar's assessment center consulting team to design, deploy, and sustain competency-based assessment and development centers that deliver objective, defensible, and actionable talent intelligence.",
-    "button": {
+    "primaryButton": {
       "text": "Schedule Your Assessment Center Consultation",
       "href": "https://www.edstellar.com/",
       "title": "Click Here to Schedule Your Assessment Center Consultation"

@@ -15,6 +15,7 @@ import CTASection from "@/Components/AllStaticComponents/CTASection";
 import FaqSection from "@/Components/AllStaticComponents/FaqSection";
 import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
 
+
 // Import JSON data
 import pageData from "@/data/AssessmentDevelopmentCenters.json";
 
@@ -38,6 +39,7 @@ export default function Home() {
       <CTASection data={pageData.CTASectionData} />
       <FaqSection data={pageData.FAQSectionData} />
       <ServiceSlidesSection data={pageData.ServiceSlidesSectionData} />
+      
     </>
   );
 }

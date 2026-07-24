@@ -1,51 +1,43 @@
-import HeroSection from "@/Components/StrategicWorkforcePlanning/HeroSection";
-import StatsSection from "@/Components/StrategicWorkforcePlanning/StatsSection";
-import LogoSection from "@/Components/StrategicWorkforcePlanning/LogoSection";
-import StaticCardSection from "@/Components/StrategicWorkforcePlanning/StaticCardSection";
-import GridCardSection from "@/Components/StrategicWorkforcePlanning/GridCardSection";
-import TabsSection from "@/Components/StrategicWorkforcePlanning/TabsSection";
-import NumberSection from "@/Components/StrategicWorkforcePlanning/NumberSection";
-import VerticleLineSection from "@/Components/StrategicWorkforcePlanning/VerticleLineSection";
-import SlidesSection from "@/Components/StrategicWorkforcePlanning/SlidesSection";
-import ServiceSlidesSection from "@/Components/StrategicWorkforcePlanning/ServiceSlidesSection";
-import FaqSection from "@/Components/StrategicWorkforcePlanning/FaqSection";
-import CTASection from "@/Components/StrategicWorkforcePlanning/CTASection";
+import HeroSection from "@/Components/AllStaticComponents/HeroSection";
+import StatsSection from "@/Components/AllStaticComponents/StatsSection";
+import LogoSection from "@/Components/AllStaticComponents/LogoSection";
+import StaticCardSection from "@/Components/AllStaticComponents/StaticCardSection";
+import GridCardSection from "@/Components/AllStaticComponents/GridCardSection";
+import TabsSection from "@/Components/AllStaticComponents/TabsSection";
+import NumberSection from "@/Components/AllStaticComponents/NumberSection";
+import VerticleLineSection from "@/Components/AllStaticComponents/VerticleLineSection";
+import SlidesSection from "@/Components/AllStaticComponents/SlidesSection";
+import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
+import FaqSection from "@/Components/AllStaticComponents/FaqSection";
+import CTASection from "@/Components/AllStaticComponents/CTASection";
+import BlogSection from "@/Components/AllStaticComponents/BlogSection";
 
-import {
-  HeroSectionData,
-  BreadcrumbData,
-  StatsData,
-  LogoSectionData,
-  StaticCardSectionData,
-  GridCardSectionData,
-  TabsSectionData,
-  NumberSectionData,
-  VerticleLineSectionData,
-  SlidesSectionData,
-  ServiceSlidesSectionData,
-  FAQSectionData,
-  CTASectionData,
-} from "@/app/Data/Strategic_Workflow_Planning_Data";
+// Import JSON data
+import pageData from "@/data/StrategicWorkflowPlanning.json";
 
 export default function Home() {
   return (
     <>
-      <HeroSection data={HeroSectionData} breadcrumbs={BreadcrumbData} />
-      <StatsSection items={StatsData} />
-      <LogoSection data={LogoSectionData} />
-      <StaticCardSection data={StaticCardSectionData} />
-      <GridCardSection data={GridCardSectionData} />
-      <TabsSection
-          data={TabsSectionData}
-          centered={false}
-          showDescription={false}
+      <HeroSection 
+        data={pageData.HeroSectionData} 
+        breadcrumbs={pageData.BreadcrumbData} 
       />
-      <NumberSection data={NumberSectionData} />
-      <VerticleLineSection data={VerticleLineSectionData} />
-      <SlidesSection data={SlidesSectionData} />
-      <ServiceSlidesSection data={ServiceSlidesSectionData} />
-      <FaqSection data={FAQSectionData} />
-      <CTASection data={CTASectionData} />
+      <StatsSection items={pageData.stats} />
+      <LogoSection data={pageData.LogoSectionData} />
+      <StaticCardSection data={pageData.StaticCardSectionData} />
+      <GridCardSection data={pageData.GridCardSectionData} />
+      <TabsSection
+        data={pageData.TabsSectionData}
+        centered={false}
+        showDescription={false}
+      />
+      <NumberSection data={pageData.NumberSectionData} />
+      <VerticleLineSection data={pageData.VerticleLineSectionData} />
+      <SlidesSection data={pageData.SlidesSectionData} />
+      <ServiceSlidesSection data={pageData.ServiceSlidesSectionData} />
+      <FaqSection data={pageData.FAQSectionData} />
+      <CTASection data={pageData.CTASectionData} />
+      <BlogSection data={pageData.BlogSectionData} />
     </>
   );
 }

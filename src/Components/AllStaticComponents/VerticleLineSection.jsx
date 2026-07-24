@@ -1,11 +1,9 @@
 "use client";
 
-import Image from "next/image";
-
 export default function VerticleLineSection({ data }) {
   const {
-    title,
-    subtitle,
+    heading,
+    subheading,
     description,
     image,
     features,
@@ -18,12 +16,12 @@ export default function VerticleLineSection({ data }) {
           {/* Left */}
           <div>
             <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#3a3a3a] lg:text-[36px]">
-              {title}
+              {heading}
             </h2>
 
-            {subtitle ? (
+            {subheading ? (
               <p className="mb-5 text-[18px] font-semibold text-[#2B2B2B] lg:text-[20px]">
-              {subtitle}
+              {subheading}
               </p>
             ) : null}
 
@@ -33,11 +31,10 @@ export default function VerticleLineSection({ data }) {
 
             <div className="relative h-[260px] overflow-hidden rounded-xl sm:h-[360px] lg:h-[420px]">
               <img
-                src={image}
-                alt={title}
-                title={title}
-                fill
-                className="object-cover w-full rounded-lg"
+                src={image?.src}
+                alt={image?.alt}
+                title={heading}
+                className="w-full rounded-lg object-cover"
               />
             </div>
           </div>
@@ -55,7 +52,8 @@ export default function VerticleLineSection({ data }) {
               >
                 {/* Left Color Bar */}
                 <span
-                  className={`absolute left-0 top-1 h-12 w-1 rounded-full ${item.color}`}
+                  className="absolute left-0 top-1 h-12 w-1 rounded-full"
+                  style={{ backgroundColor: item.color }}
                 />
 
                 {/* Content */}

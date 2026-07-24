@@ -21,7 +21,7 @@ export default function FaqSection({ data }) {
 
         {/* Description */}
         <p className="mb-6 text-[16px] leading-7 text-[#3d3d3d]">
-          {data.description}
+          {data.subheading}
         </p>
 
         {/* FAQ Items */}

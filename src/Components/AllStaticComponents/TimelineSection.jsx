@@ -1,19 +1,19 @@
 "use client";
 
 export default function TimelineSection({ data }) {
-  const { heading, description, timeline } = data;
+  const { heading, subheading, timeline } = data;
 
   return (
     <section className="bg-[#353772]">
       <div className="container">
 
         <div className="mb-10">
-          <h2 className="text-white text-[30px] lg:text-[36px] font-bold leading-tight mb-4">
+          <h2 className="text-white text-[30px] lg:text-[36px] font-semibold leading-tight mb-4">
             {heading}
           </h2>
 
           <p className="max-w-5xl text-[#E5E7EB] leading-7">
-            {description}
+            {subheading}
           </p>
         </div>
 

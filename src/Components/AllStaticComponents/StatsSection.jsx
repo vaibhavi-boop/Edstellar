@@ -9,9 +9,13 @@ function StatCard({ value, title }) {
     threshold: 0.3,
   });
 
-  const hasPlus = value.includes("+");
-  const isNumeric = /^\d+\+?$/.test(value);
-  const numericValue = isNumeric ? parseInt(value, 10) : 0;
+  const numericValue = parseFloat(value);
+
+  const hasPlus = value.endsWith("+");
+  const hasPercent = value.endsWith("%");
+  const hasX = value.toLowerCase().endsWith("x");
+
+  const isNumeric = !isNaN(numericValue);
 
   return (
     <div
@@ -33,7 +37,10 @@ function StatCard({ value, title }) {
             ) : (
               0
             )}
+
             {hasPlus && <span className="text-[#D7F11E]">+</span>}
+            {hasPercent && <span className="text-[#D7F11E]">%</span>}
+            {hasX && <span className="text-[#D7F11E]">x</span>}
           </>
         ) : (
           value
@@ -56,7 +63,7 @@ export default function StatsSection({ items }) {
             <StatCard
               key={index}
               value={item.value}
-              title={item.title}
+              title={item.label}
             />
           ))}
         </div>

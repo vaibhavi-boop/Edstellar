@@ -1,5 +1,39 @@
 "use client";
 
+import {
+  Target,
+  Clock3,
+  Cpu,
+  Briefcase,
+  Database,
+  Users,
+  Image,
+  CircleDollarSign,
+  Globe,
+  WalletCards,
+  BadgeCheck,
+  Building2,
+  GraduationCap,
+  Network,
+} from "lucide-react";
+
+const iconMap = {
+  Target,
+  Clock3,
+  Cpu,
+  Briefcase,
+  Database,
+  Users,
+  Image,
+  CircleDollarSign,
+  Globe,
+  WalletCards,
+  BadgeCheck,
+  Building2,
+  GraduationCap,
+  Network,
+};
+
 import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
 export default function StaticCardSection({ data }) {
@@ -16,7 +50,7 @@ export default function StaticCardSection({ data }) {
           />
 
           <p className="max-w-[850px] mt-5 text-[16px] leading-7 text-[#5F6368]">
-            {data.description}
+            {data.subheading}
           </p>
         </div>
 
@@ -47,18 +81,24 @@ export default function StaticCardSection({ data }) {
               `}
             >
               {/* Icon */}
-              <div
-                className={`
-                  mb-5 flex h-10 w-10 items-center justify-center rounded-md
-                  ${
-                    isGreen
-                      ? "bg-[#F5F6F8] text-[#3A3A3A]"
-                      : "bg-[#FFF2F2] text-[#D94848]"
-                  }
-                `}
-              >
-                {item.icon}
-              </div>
+              {/* Icon */}
+                <div
+                  className={`
+                    mb-5 flex h-12 w-12 items-center justify-center rounded-md
+                    ${
+                      isGreen
+                        ? "bg-[#F5F6F8] text-[#3A3A3A]"
+                        : "bg-[#FFF2F2] text-[#D94848]"
+                    }
+                  `}
+                >
+                  {(() => {
+                    const Icon = iconMap[item.icon];
+                    return Icon ? (
+                      <Icon size={item.iconSize || 18} strokeWidth={2} />
+                    ) : null;
+                  })()}
+                </div>
 
               {/* Title */}
               <h3 className="mb-3 text-[18px] font-semibold leading-[1.3] text-[#1C1C1C]">

@@ -6,13 +6,35 @@ import {
   Users,
   ShieldCheck,
   BarChart3,
-  TrendingUp,
   FileText,
   Monitor,
   Video,
   Globe,
   GraduationCap,
   Target,
+  WalletCards,
+  BadgeCheck,
+  CircleDot,
+  Building2,
+  EyeOff,
+  ChartColumnIncreasing,
+  GitCompareArrows,
+  ArrowLeftRight,
+  UserRoundSearch,
+  Rocket,
+  TrendingUp,
+  Landmark,
+  Laptop,
+  HeartPulse,
+  Factory,
+  Zap,
+  ShoppingBag,
+  Briefcase,
+  Activity,
+  BriefcaseBusiness, 
+  ClipboardCheck, 
+  UserCheck, 
+  RefreshCw,
 } from "lucide-react";
 
 const iconMap = {
@@ -23,13 +45,35 @@ const iconMap = {
   Users,
   ShieldCheck,
   BarChart3,
-  TrendingUp,
   FileText,
   Monitor,
   Video,
   Globe,
   GraduationCap,
   Target,
+  WalletCards,
+  BadgeCheck,
+  CircleDot,
+  Building2,
+  EyeOff,
+  ChartColumnIncreasing,
+  GitCompareArrows,
+  ArrowLeftRight,
+  UserRoundSearch,
+  Rocket,
+  TrendingUp,
+  Landmark,
+  Laptop,
+  HeartPulse,
+  Factory,
+  Zap,
+  ShoppingBag,
+  Briefcase,
+  Activity,
+  BriefcaseBusiness, 
+  ClipboardCheck, 
+  UserCheck, 
+  RefreshCw,
 };
 
 export default function AssessmentSection({ data }) {
@@ -50,7 +94,8 @@ export default function AssessmentSection({ data }) {
               {/* Image */}
               <img
                 src={section.image}
-                alt={section.title}
+                alt={section.alt}
+                title={section.title}
                 className="h-full w-full object-cover"
               />
 

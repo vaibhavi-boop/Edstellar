@@ -286,9 +286,9 @@
       }
     ]
   },
-  "corporateTalentAssessmentServices": {
-    "title": "Corporate Talent Assessment Services",
-    "description": "Validated, practitioner-led assessment services across behavioral profiling, skills validation, and organisational alignment.",
+  "TalentAssessmentCardData": {
+    "heading": "Corporate Talent Assessment Services",
+    "subheading": "Validated, practitioner-led assessment services across behavioral profiling, skills validation, and organisational alignment.",
     "services": [
       {
         "id": 1,
@@ -506,7 +506,84 @@
     }
   ]
 },
-"SlidesSectionData": {
+"IndustryData": {
+    "heading": "Talent Assessment Services Across Key Industries",
+    "subheading": "Assessment challenges are universal, but the context, constraints, and critical capability gaps differ by industry.",
+    "industries": [
+      {
+        "id": 1,
+        "title": "Manufacturing & Industrial",
+        "description": "Volume hiring assessments, safety and reliability profiling, operator and supervisor readiness.",
+        "icon": "Factory"
+      },
+      {
+        "id": 2,
+        "title": "Engineering & Technology",
+        "description": "Technical skill validation, coding assessments, digital readiness for transformation roles.",
+        "icon": "Cpu"
+      },
+      {
+        "id": 3,
+        "title": "Financial Services & Banking",
+        "description": "Risk and compliance profiling, leadership succession for regulated environments.",
+        "icon": "Landmark"
+      },
+      {
+        "id": 4,
+        "title": "Healthcare & Life Sciences",
+        "description": "Clinical competency validation, leadership under pressure, multi-site team alignment.",
+        "icon": "Stethoscope"
+      },
+      {
+        "id": 5,
+        "title": "Consumer & Retail",
+        "description": "Volume hiring, customer service profiling, high-potential identification for head office.",
+        "icon": "ShoppingCart"
+      },
+      {
+        "id": 6,
+        "title": "Aviation & Maritime",
+        "description": "Flight crew, cabin crew, chief engineer, and captain competency assessments. IMC-aligned.",
+        "icon": "Plane"
+      },
+      {
+        "id": 7,
+        "title": "Professional Services",
+        "description": "Partner and director succession, billable-hour performance profiling, culture diagnostics.",
+        "icon": "BriefcaseBusiness"
+      },
+      {
+        "id": 8,
+        "title": "Early Careers & Graduates",
+        "description": "Entry-level aptitude, learning agility, graduate potential programmes.",
+        "icon": "GraduationCap"
+      },
+      {
+        "id": 9,
+        "title": "Public Sector & Government",
+        "description": "Civil service competency frameworks, leadership potential, policy capability assessments.",
+        "icon": "Building2"
+      }
+    ]
+  },
+  "ToolsCardData": {
+    "heading": "Not sure where your assessment practice stands?",
+    "subheading": "Before choosing an assessment type or a provider, it helps to know where your current capability sits. Most organisations overestimate their assessment maturity and underestimate the gaps that limit what their data can actually tell them. Answer 9 questions and get an instant readiness score, your top diagnostic gaps, and a recommended next step.",
+    "image": {
+      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a0be9ba9e67e2b3b01b458a_assessment%20practice%20stands%20%20(1).webp",
+      "alt": "assessment practice stands",
+      "title": "Not sure where your assessment practice stands?"
+    },
+    "buttons": [
+      {
+        "text": "Check your assessment readiness",
+        "href": "https://www.edstellar.com/tool/talent-assessment-services",
+        "title": "Click Here to Check your assessment readiness"
+      }
+    ],
+    "footerText": "3 minutes · Instant score · No commitment"
+  },
+  "SlidesSectionData": {
     "heading": "Talent assessment services that deliver measurable results",
     "subheading": "Enterprise organisations trust Edstellar to deliver objective, validated capability data that drives better talent decisions.",
     "slides": [
@@ -523,6 +600,42 @@
         "avatar": "/StrategicWorkspacePlanningAssets/Rohit Sharma.webp",
         "name": "CHRO",
         "company": "Fortune 500 Manufacturing Company"
+      }
+    ]
+  },
+  "GridCardsData": {
+    "heading": "Built for CHROs Who Demand Evidence",
+    "description": "The following outcomes are aggregated across enterprise diagnostic engagements.",
+    "items": [
+      {
+        "icon": "Clock3",
+        "value": "42%",
+        "description": "Improvement in quality of hire after diagnostics"
+      },
+      {  
+        "icon": "Image",
+        "value": "3.2X",
+        "description": "Training return on investment after diagnostics"
+      },
+      {
+        "icon": "CircleDollarSign",
+        "value": "67%",
+        "description": "Faster time-to-productivity following diagnostics"
+      },
+      {
+        "icon": "Globe",
+        "value": "58%",
+        "description": "Improvement in bench strength and succession readiness"
+      },
+      {
+        "icon": "Clock3",
+        "value": "13,650+",
+        "description": "Assessments delivered globally"
+      },
+      {
+        "icon": "Clock3",
+        "value": "100%",
+        "description": "Global delivery locations"
       }
     ]
   },
@@ -601,83 +714,6 @@
       }
     ]
   },
-
-  "industryAssessmentServices": {
-    "title": "Talent Assessment Services Across Key Industries",
-    "description": "Assessment challenges are universal, but the context, constraints, and critical capability gaps differ by industry.",
-    "industries": [
-      {
-        "id": 1,
-        "title": "Manufacturing & Industrial",
-        "description": "Volume hiring assessments, safety and reliability profiling, operator and supervisor readiness.",
-        "icon": "manufacturing"
-      },
-      {
-        "id": 2,
-        "title": "Engineering & Technology",
-        "description": "Technical skill validation, coding assessments, digital readiness for transformation roles.",
-        "icon": "engineering"
-      },
-      {
-        "id": 3,
-        "title": "Financial Services & Banking",
-        "description": "Risk and compliance profiling, leadership succession for regulated environments.",
-        "icon": "financial-services"
-      },
-      {
-        "id": 4,
-        "title": "Healthcare & Life Sciences",
-        "description": "Clinical competency validation, leadership under pressure, multi-site team alignment.",
-        "icon": "healthcare"
-      },
-      {
-        "id": 5,
-        "title": "Consumer & Retail",
-        "description": "Volume hiring, customer service profiling, high-potential identification for head office.",
-        "icon": "retail"
-      },
-      {
-        "id": 6,
-        "title": "Aviation & Maritime",
-        "description": "Flight crew, cabin crew, chief engineer, and captain competency assessments. IMC-aligned.",
-        "icon": "aviation"
-      },
-      {
-        "id": 7,
-        "title": "Professional Services",
-        "description": "Partner and director succession, billable-hour performance profiling, culture diagnostics.",
-        "icon": "professional-services"
-      },
-      {
-        "id": 8,
-        "title": "Early Careers & Graduates",
-        "description": "Entry-level aptitude, learning agility, graduate potential programmes.",
-        "icon": "graduates"
-      },
-      {
-        "id": 9,
-        "title": "Public Sector & Government",
-        "description": "Civil service competency frameworks, leadership potential, policy capability assessments.",
-        "icon": "government"
-      }
-    ]
-  },
-  "assessmentReadiness": {
-    "title": "Not sure where your assessment practice stands?",
-    "description": "Before choosing an assessment type or a provider, it helps to know where your current capability sits. Most organisations overestimate their assessment maturity and underestimate the gaps that limit what their data can actually tell them. Answer 9 questions and get an instant readiness score, your top diagnostic gaps, and a recommended next step.",
-    "image": {
-      "src": "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a0be9ba9e67e2b3b01b458a_assessment%20practice%20stands%20%20(1).webp",
-      "alt": "assessment practice stands",
-      "title": "Not sure where your assessment practice stands?"
-    },
-    "cta": {
-      "label": "Check your assessment readiness →",
-      "url": "https://www.edstellar.com/tool/talent-assessment-services",
-      "target": "_blank",
-      "title": "Click Here to Check your assessment readiness"
-    },
-    "footerText": "3 minutes · Instant score · No commitment"
-  },
   "testimonials": {
     "title": {
       "highlight": "Talent assessment services",
@@ -708,48 +744,6 @@
             "alt": "The impact, in our clients' words"
           }
         }
-      }
-    ]
-  },
-  "results": {
-    "title": "Built for CHROs Who Demand Evidence",
-    "description": "The following outcomes are aggregated across enterprise diagnostic engagements.",
-    "metrics": [
-      {
-        "id": 1,
-        "value": "42",
-        "suffix": "%",
-        "title": "Improvement in quality of hire after diagnostics"
-      },
-      {
-        "id": 2,
-        "value": "3.2",
-        "suffix": "x",
-        "title": "Training return on investment after diagnostics"
-      },
-      {
-        "id": 3,
-        "value": "67",
-        "suffix": "%",
-        "title": "Faster time-to-productivity following diagnostics"
-      },
-      {
-        "id": 4,
-        "value": "58",
-        "suffix": "%",
-        "title": "Improvement in bench strength and succession readiness"
-      },
-      {
-        "id": 5,
-        "value": "13,650",
-        "suffix": "+",
-        "title": "Assessments delivered globally"
-      },
-      {
-        "id": 6,
-        "value": "100",
-        "suffix": "+",
-        "title": "Global delivery locations"
       }
     ]
   },

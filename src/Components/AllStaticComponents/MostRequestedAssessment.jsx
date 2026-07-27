@@ -14,11 +14,11 @@ export default function MostRequestedAssessment({ data }) {
     "text-[22px] font-semibold text-white transition-colors duration-300 group-hover:text-[#D5EF25]";
 
   return (
-    <section className="bg-[#32356D] py-20">
+    <section className="bg-[#32356D]">
       <div className="container mx-auto max-w-[960px]">
         {/* Heading */}
         <div className="mb-10">
-          <h2 className="mb-2 text-[36px] font-semibold leading-[44px] text-white lg:text-[40px] lg:leading-[48px]">
+          <h2 className="mb-2 text-[30px] font-semibold leading-[44px] text-white lg:text-[40px] lg:leading-[36px]">
             {data.heading}
           </h2>
 
@@ -40,7 +40,7 @@ export default function MostRequestedAssessment({ data }) {
                   <div className="flex-1">
                     <h3 className={titleClass}>{item.title}</h3>
 
-                    <p className="text-[15px] leading-6 text-white/70">
+                    <p className="text-[16px] leading-6 text-white/70">
                       {item.description}
                     </p>
                   </div>

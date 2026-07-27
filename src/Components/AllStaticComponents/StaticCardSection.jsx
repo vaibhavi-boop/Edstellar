@@ -1,38 +1,6 @@
 "use client";
 
-import {
-  Target,
-  Clock3,
-  Cpu,
-  Briefcase,
-  Database,
-  Users,
-  Image,
-  CircleDollarSign,
-  Globe,
-  WalletCards,
-  BadgeCheck,
-  Building2,
-  GraduationCap,
-  Network,
-} from "lucide-react";
-
-const iconMap = {
-  Target,
-  Clock3,
-  Cpu,
-  Briefcase,
-  Database,
-  Users,
-  Image,
-  CircleDollarSign,
-  Globe,
-  WalletCards,
-  BadgeCheck,
-  Building2,
-  GraduationCap,
-  Network,
-};
+import * as Icons from "lucide-react";
 
 import PrimaryButton from "../../app/Buttons/PrimaryButton";
 
@@ -81,7 +49,6 @@ export default function StaticCardSection({ data }) {
               `}
             >
               {/* Icon */}
-              {/* Icon */}
                 <div
                   className={`
                     mb-5 flex h-12 w-12 items-center justify-center rounded-md
@@ -93,11 +60,20 @@ export default function StaticCardSection({ data }) {
                   `}
                 >
                   {(() => {
-                    const Icon = iconMap[item.icon];
-                    return Icon ? (
-                      <Icon size={item.iconSize || 18} strokeWidth={2} />
-                    ) : null;
-                  })()}
+  const Icon = Icons[item.icon];
+
+  return Icon ? (
+    <Icon
+      size={item.iconSize || 18}
+      strokeWidth={2}
+    />
+  ) : (
+    <Icons.Circle
+      size={item.iconSize || 18}
+      strokeWidth={2}
+    />
+  );
+})()}
                 </div>
 
               {/* Title */}

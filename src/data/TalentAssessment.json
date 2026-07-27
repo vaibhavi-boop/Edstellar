@@ -623,17 +623,17 @@
         "description": "Faster time-to-productivity following diagnostics"
       },
       {
-        "icon": "Globe",
+        "icon": "PieChart",
         "value": "58%",
         "description": "Improvement in bench strength and succession readiness"
       },
       {
-        "icon": "Clock3",
+        "icon": "FileText",
         "value": "13,650+",
         "description": "Assessments delivered globally"
       },
       {
-        "icon": "Clock3",
+        "icon": "Globe",
         "value": "100%",
         "description": "Global delivery locations"
       }

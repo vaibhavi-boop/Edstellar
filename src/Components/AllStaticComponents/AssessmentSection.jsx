@@ -1,80 +1,6 @@
-import {
-  UserRound,
-  LayoutGrid,
-  ChartColumn,
-  ClipboardList,
-  Users,
-  ShieldCheck,
-  BarChart3,
-  FileText,
-  Monitor,
-  Video,
-  Globe,
-  GraduationCap,
-  Target,
-  WalletCards,
-  BadgeCheck,
-  CircleDot,
-  Building2,
-  EyeOff,
-  ChartColumnIncreasing,
-  GitCompareArrows,
-  ArrowLeftRight,
-  UserRoundSearch,
-  Rocket,
-  TrendingUp,
-  Landmark,
-  Laptop,
-  HeartPulse,
-  Factory,
-  Zap,
-  ShoppingBag,
-  Briefcase,
-  Activity,
-  BriefcaseBusiness, 
-  ClipboardCheck, 
-  UserCheck, 
-  RefreshCw,
-} from "lucide-react";
+"use client";
 
-const iconMap = {
-  UserRound,
-  LayoutGrid,
-  ChartColumn,
-  ClipboardList,
-  Users,
-  ShieldCheck,
-  BarChart3,
-  FileText,
-  Monitor,
-  Video,
-  Globe,
-  GraduationCap,
-  Target,
-  WalletCards,
-  BadgeCheck,
-  CircleDot,
-  Building2,
-  EyeOff,
-  ChartColumnIncreasing,
-  GitCompareArrows,
-  ArrowLeftRight,
-  UserRoundSearch,
-  Rocket,
-  TrendingUp,
-  Landmark,
-  Laptop,
-  HeartPulse,
-  Factory,
-  Zap,
-  ShoppingBag,
-  Briefcase,
-  Activity,
-  BriefcaseBusiness, 
-  ClipboardCheck, 
-  UserCheck, 
-  RefreshCw,
-};
+import * as Icons from "lucide-react";
 
 export default function AssessmentSection({ data }) {
   return (
@@ -100,7 +26,7 @@ export default function AssessmentSection({ data }) {
               />
 
               {/* Content */}
-              <div className="md:p-10 p-5">
+              <div className="lg:p-10 p-5">
                 <h2 className="mb-4 text-[30px] font-semibold leading-[1.2] text-[#3A3A3A] lg:text-[36px]">
                   {section.title}
                 </h2>
@@ -114,7 +40,7 @@ export default function AssessmentSection({ data }) {
             {/* Bottom Cards */}
             <div className="grid border-t-[0.5px] border-t-[#00000021] sm:grid-cols-1 lg:grid-cols-3">
               {section.cards.map((card, index) => {
-                const Icon = iconMap[card.icon];
+                const Icon = Icons[card.icon];
 
                 return (
                   <div key={index} className="p-5">

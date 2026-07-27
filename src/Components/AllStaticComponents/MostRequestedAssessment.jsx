@@ -22,7 +22,7 @@ export default function MostRequestedAssessment({ data }) {
             {data.heading}
           </h2>
 
-          <p className="text-[15px] leading-6 text-white/70">
+          <p className="text-[16px] leading-6 text-white/70">
             {data.subheading}
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function MostRequestedAssessment({ data }) {
           {data.items.map((item) => (
             <div key={item.id} className={cardClass}>
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div className="flex flex-1 items-start gap-4">
+                <div className="flex flex-1 flex-col gap-4 md:flex-row md:items-start">
                   <div className={numberClass}>
                     {String(item.id).padStart(2, "0")}
                   </div>

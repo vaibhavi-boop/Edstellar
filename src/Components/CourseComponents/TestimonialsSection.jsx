@@ -1,53 +1,237 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import { quotes } from "@/data/mlMonitoringData";
 
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => setActive(p => (p + 1) % quotes.length), 7000);
-    return () => clearInterval(t);
+    if (!quotes || quotes.length === 0) return;
+
+    const interval = setInterval(() => {
+      setActive((current) => (current + 1) % quotes.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
   }, []);
+
+  if (!quotes || quotes.length === 0) {
+    return null;
+  }
 
   const q = quotes[active];
 
   return (
-    <section className="py-28 border-b border-[var(--rule)]">
+    <section id="testimonials" className="border-b border-[var(--rule)] py-28">
       <div className="container-narrow">
+        {/* Section Label */}
+        <div
+          className="
+            mb-8
+            flex
+            items-baseline
+            gap-3
+            text-[11px]
+            font-bold
+            uppercase
+            tracking-[0.24em]
+            text-[var(--muted)]
+            [font-family:var(--mono)]
+          "
+        >
+          <span
+            className="
+              text-[16px]
+              italic
+              text-[var(--ink)]
+              [font-family:var(--serif)]
+            "
+          >
+            X
+          </span>
 
-        <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">IX</span>
-          <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">Proof</span>
-          · From organisations we've trained
+          <span
+            className="
+              text-[16px]
+              normal-case
+              tracking-normal
+              text-[var(--ink)]
+              [font-family:var(--serif)]
+            "
+          >
+            Proof
+          </span>
+
+          <span>· What changed afterwards</span>
         </div>
 
-        <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-9 max-w-[20ch]">
-          ML monitoring training <em className="[font-family:var(--serif)] italic">results</em> from real teams.
+        {/* Heading */}
+        <h2
+          className="
+            mb-9
+            max-w-[20ch]
+            text-[clamp(30px,4vw,50px)]
+            font-bold
+            leading-[1.08]
+            tracking-[-0.03em]
+          "
+        >
+          ML monitoring training{" "}
+          <em className="[font-family:var(--serif)]">results</em> from real
+          teams.
         </h2>
 
-        <div className="min-h-[200px]">
-          <blockquote className="[font-family:var(--serif)] italic text-[clamp(19px,2.2vw,27px)] leading-[1.38] tracking-[-0.01em] mb-6 text-[var(--ink)]">
-            <span className="text-[#7c9c10]">"</span>{q.q}<span className="text-[#7c9c10]">"</span>
+        {/* Testimonial Content */}
+        <div className="min-h-[230px]">
+          {/* Quote */}
+          <blockquote
+            className="
+              mb-6
+              text-[clamp(19px,2.2vw,27px)]
+              italic
+              leading-[1.38]
+              tracking-[-0.01em]
+              text-[var(--ink)]
+              [font-family:var(--serif)]
+            "
+          >
+            <span className="text-[#7c9c10]">“</span>
+
+            {q.q}
+
+            <span className="text-[#7c9c10]">”</span>
           </blockquote>
-          <p className="[font-family:var(--mono)] text-[11px] tracking-[0.12em] uppercase text-[var(--muted)]">
-            <b className="text-[var(--ink)] font-medium">{q.w}</b> — {q.r}
-          </p>
+
+          {/* Author */}
+          <div className="flex items-center gap-3">
+            <img
+              src={q.image}
+              alt={q.w}
+              className="
+              h-[38px]
+              w-[38px]
+              flex-none
+              rounded-full
+              object-cover
+              "
+            />
+
+            {/* Name + Role */}
+            <div>
+              <p
+                className="
+                  text-[10px]
+                  font-medium
+                  uppercase
+                  tracking-[0.12em]
+                  text-[var(--ink)]
+                  [font-family:var(--mono)]
+                "
+              >
+                {q.w}
+              </p>
+
+              <p
+                className="
+                  mt-[3px]
+                  text-[8px]
+                  uppercase
+                  tracking-[0.12em]
+                  text-[var(--muted)]
+                  [font-family:var(--mono)]
+                "
+              >
+                {q.r}
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex gap-2.5 mt-8 items-center">
+        {/* Controls */}
+        <div className="mt-8 flex items-center gap-2.5">
+          {/* Dots */}
           <div className="flex gap-2.5">
-            {quotes.map((_, i) => (
+            {quotes.map((_, index) => (
               <button
-                key={i}
-                onClick={() => setActive(i)}
-                className={`h-1 rounded-full border-none cursor-pointer transition-all duration-300 ${active === i ? "w-[34px] bg-[var(--navy)]" : "w-[34px] bg-[var(--rule-strong)]"}`}
+                key={index}
+                type="button"
+                aria-label={`Show testimonial ${index + 1}`}
+                onClick={() => setActive(index)}
+                className={`
+                  h-1
+                  w-[34px]
+                  cursor-pointer
+                  rounded-full
+                  border-none
+                  p-0
+                  transition-all
+                  duration-300
+                  ${
+                    active === index
+                      ? "bg-[var(--navy)]"
+                      : "bg-[var(--rule-strong)]"
+                  }
+                `}
               />
             ))}
           </div>
+
+          {/* Arrows */}
           <div className="ml-auto flex gap-2">
-            <button onClick={() => setActive(p => (p - 1 + quotes.length) % quotes.length)} className="w-[42px] h-[42px] rounded-full border border-[var(--rule-strong)] bg-transparent cursor-pointer text-[16px] flex items-center justify-center transition-all hover:bg-[var(--navy)] hover:text-[var(--lime)] hover:border-[var(--navy)]">←</button>
-            <button onClick={() => setActive(p => (p + 1) % quotes.length)} className="w-[42px] h-[42px] rounded-full border border-[var(--rule-strong)] bg-transparent cursor-pointer text-[16px] flex items-center justify-center transition-all hover:bg-[var(--navy)] hover:text-[var(--lime)] hover:border-[var(--navy)]">→</button>
+            <button
+              type="button"
+              aria-label="Previous testimonial"
+              onClick={() =>
+                setActive(
+                  (current) => (current - 1 + quotes.length) % quotes.length,
+                )
+              }
+              className="
+                flex
+                h-[42px]
+                w-[42px]
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[var(--rule-strong)]
+                bg-transparent
+                text-[16px]
+                transition-all
+                hover:border-[var(--navy)]
+                hover:bg-[var(--navy)]
+                hover:text-[var(--lime)]
+              "
+            >
+              ←
+            </button>
+
+            <button
+              type="button"
+              aria-label="Next testimonial"
+              onClick={() =>
+                setActive((current) => (current + 1) % quotes.length)
+              }
+              className="
+                flex
+                h-[42px]
+                w-[42px]
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[var(--rule-strong)]
+                bg-transparent
+                text-[16px]
+                transition-all
+                hover:border-[var(--navy)]
+                hover:bg-[var(--navy)]
+                hover:text-[var(--lime)]
+              "
+            >
+              →
+            </button>
           </div>
         </div>
       </div>

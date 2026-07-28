@@ -1,51 +1,123 @@
-import { related, applyCards } from "@/data/mlMonitoringData";
+import { related, learningPath } from "@/data/mlMonitoringData";
+import { learningPathSvgs } from "@/data/mlmonitoring-learningpathsvgs";
 
 export default function RelatedApplySection() {
   return (
-    <section id="apply" className="bg-[var(--paper-warm)] py-28">
+    <section className="border-b border-[var(--rule)] bg-[var(--paper-warm)] py-28">
       <div className="container">
 
-        <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">XII</span>
-          <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">Explore</span>
-          · Related AI & ML training
+        {/* Label */}
+        <div className="mb-8 flex items-baseline gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
+          <span className="text-[16px] italic text-[var(--ink)] [font-family:var(--serif)]">
+            XIV
+          </span>
+
+          <span className="text-[16px] normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
+            Explore
+          </span>
+
+          <span>· Adjacent programs</span>
         </div>
 
-        <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-9 max-w-[20ch]">
-          Related machine learning & <em className="[font-family:var(--serif)] italic">MLOps training</em> courses.
+        {/* Heading */}
+        <h2 className="mb-3 max-w-[22ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em]">
+          Where this fits in your team&apos;s{" "}
+          <em className="[font-family:var(--serif)]">
+            learning path.
+          </em>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-14">
-          {related.map((r, i) => (
-            <div key={i} className="bg-white border border-[var(--rule)] rounded-[14px] p-[22px] flex flex-col gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_42px_-26px_rgba(10,22,40,0.5)] hover:border-[var(--rule-strong)] cursor-pointer">
-              <h4 className="font-semibold text-[16px] tracking-[-0.01em] leading-[1.3]">{r.t}</h4>
-              <div className="[font-family:var(--mono)] text-[10.5px] tracking-[0.08em] uppercase text-[var(--muted-soft)] flex gap-4 mt-auto flex-wrap">
-                <span>{r.d}</span><span>Instructor-led</span>
+        {/* Description */}
+        <p className="mb-8 max-w-[72ch] text-[15px] leading-[1.7] text-[var(--muted)]">
+          In the standard ML lifecycle, monitoring sits after deployment, not
+          after model building. You ship a model, keep it healthy in
+          production, turn what monitoring tells you into managed risk, then
+          extend the same discipline as your systems change.
+        </p>
+
+        {/* Learning Path */}
+        <div className="mb-9 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {learningPath.map((item, i) => (
+            <div key={i} className="flex items-center gap-4">
+
+              {/* Course Card */}
+              <div
+                className={`flex min-h-[260px] flex-1 flex-col rounded-[14px] border p-[14px] ${
+                  item.active
+                    ? "border-[var(--navy)] bg-[var(--navy)] text-white"
+                    : "border-[var(--rule)] bg-white"
+                }`}
+              >
+
+                {/* SVG */}
+                <div className="mb-4 h-[78px] w-full overflow-hidden rounded-[10px]">
+                  {learningPathSvgs[item.image]}
+                </div>
+
+                {/* Label */}
+                <p className="mb-2 text-[9px] uppercase tracking-[0.16em] [font-family:var(--mono)]">
+                  {item.label}
+                </p>
+
+                {/* Title */}
+                <h4 className="mb-2 text-[14px] font-semibold leading-[1.2]">
+                  {item.title}
+                </h4>
+
+                {/* Description */}
+                <p
+                  className={`text-[11px] leading-[1.55] ${
+                    item.active
+                      ? "text-white/65"
+                      : "text-[var(--muted)]"
+                  }`}
+                >
+                  {item.text}
+                </p>
+
+                {/* Duration */}
+                <p className="mt-auto pt-5 text-[9px] uppercase tracking-[0.14em] [font-family:var(--mono)]">
+                  ◷ {item.duration}
+                </p>
               </div>
-              <span className="[font-family:var(--mono)] text-[11px] tracking-[0.12em] uppercase text-[#6f8c0f]">View course →</span>
+
+              {/* Arrow */}
+              {i < learningPath.length - 1 && (
+                <span className="hidden h-[20px] w-[20px] flex-none items-center justify-center rounded-full border border-[var(--rule)] bg-white text-[11px] lg:flex">
+                  →
+                </span>
+              )}
             </div>
           ))}
         </div>
 
-        <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-6 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">Apply</span>
-          · Start the conversation
-        </div>
+        {/* Related Courses */}
+        <h3 className="mb-5 text-[18px] font-semibold">
+          More related courses
+        </h3>
 
-        <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-8 max-w-[20ch]">
-          Request <em className="[font-family:var(--serif)] italic">ML Model Monitoring</em> training for your team.
-        </h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {related.map((course, i) => (
+            <div
+              key={i}
+              className="rounded-[12px] border border-[var(--rule)] bg-white p-[18px]"
+            >
+              <h4 className="text-[14px] font-semibold leading-[1.25]">
+                {course.t}
+              </h4>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
-          {applyCards.map((c, i) => (
-            <div key={i} className="bg-white border border-[var(--rule)] rounded-[18px] p-[30px] cursor-pointer transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0_24px_50px_-28px_rgba(10,22,40,0.5)]">
-              <p className="[font-family:var(--mono)] text-[11px] tracking-[0.18em] text-[#6f8c0f] mb-5">{c.n}</p>
-              <h4 className="font-semibold text-[20px] tracking-[-0.02em] mb-2.5">{c.h}</h4>
-              <p className="text-[14px] leading-[1.6] text-[var(--muted)] mb-5">{c.d}</p>
-              <span className="[font-family:var(--mono)] text-[11px] tracking-[0.14em] uppercase text-[var(--ink)] inline-flex gap-2 items-center">{c.go}</span>
+              <div className="mt-3 flex gap-4 text-[9px] uppercase tracking-[0.12em] text-[var(--muted-soft)] [font-family:var(--mono)]">
+                <span>{course.d}</span>
+                <span>Instructor-led</span>
+              </div>
+
+              <span className="mt-4 block text-[10px] uppercase tracking-[0.12em] text-[#6f8c0f] [font-family:var(--mono)]">
+                View course →
+              </span>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

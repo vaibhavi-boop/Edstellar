@@ -16,6 +16,8 @@ import CertificateSection from "@/Components/CourseComponents/CertificateSection
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import RelatedApplySection from "@/Components/CourseComponents/RelatedApplySection";
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
+import CapabilitySection from "@/Components/CourseComponents/CapabilitySection";
+import TrainersSection from "@/Components/CourseComponents/TrainersSection";
 
 export default async function CoursePage({ params }) {
   const { category, slug } = await params;
@@ -54,8 +56,10 @@ export default async function CoursePage({ params }) {
       <CurriculumSection />
       <AudienceSection />
       <ModesSection />
+      <CapabilitySection />
       <WhyEdstellarSection />
       <TestimonialsSection />
+       <TrainersSection />
       <CertificateSection />
       <CourseFAQSection />
       <RelatedApplySection />

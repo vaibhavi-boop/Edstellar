@@ -20,9 +20,9 @@ export default function OutcomesSection() {
   return (
     <section
       id="outcomes"
-      className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)]"
+      className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)] "
     >
-      <div className="container">
+      <div className="container pr-[466px]">
         <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">
             IV
@@ -43,7 +43,7 @@ export default function OutcomesSection() {
           and KPIs around.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 gap-8  items-start">
           <div className="flex flex-col gap-3">
             {outcomes.map((o, i) => {
               const isDone = done.has(i);

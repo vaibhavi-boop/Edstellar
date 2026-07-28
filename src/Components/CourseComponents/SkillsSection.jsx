@@ -12,10 +12,11 @@ export default function SkillsSection() {
       return next;
     });
   };
+  ("");
 
   return (
     <section id="skills">
-      <div className="container">
+      <div className="container pr-[466px]">
         <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">
             III

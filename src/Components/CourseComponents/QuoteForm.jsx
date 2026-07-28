@@ -1,16 +1,16 @@
 export default function QuoteForm() {
   return (
-    <div className="mx-auto w-full max-w-[440px] overflow-hidden rounded-[20px] border border-[#D9D9D9] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
-      {/* Header */}
-      <div className="border-b border-[#D9D9D9] bg-[#F5F2EA] px-6 py-5">
+    <div
+      className="sticky top-[92px] ml-auto  w-[410px] overflow-hidden rounded-[20px] border border-[#D9D9D9] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08) ] pointer-events-auto
+    "
+    >
+      <div className="border-b border-[#D9D9D9] bg-[#F5F2EA] px-6 py-5 relative">
         <h2 className="text-center text-[24px] font-bold text-[#101828]">
           Request a training quote
         </h2>
       </div>
 
-      {/* Form */}
       <form className="space-y-4 p-6">
-        {/* Name & Job Title */}
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[1px] text-[#667085]">
@@ -35,7 +35,6 @@ export default function QuoteForm() {
           </div>
         </div>
 
-        {/* Email */}
         <div>
           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[1px] text-[#667085]">
             Work Email <span className="text-red-500">*</span>

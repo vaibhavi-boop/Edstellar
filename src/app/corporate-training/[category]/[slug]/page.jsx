@@ -1,7 +1,6 @@
 import { courses } from "@/data/mlMonitoringData";
 import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";
-import CourseSideNav from "@/Components/CourseComponents/CourseSideNav";
 import CourseHero from "@/Components/CourseComponents/CourseHero";
 import WhatIsSection from "@/Components/CourseComponents/WhatIsSection";
 import LifecycleSection from "@/Components/CourseComponents/LifecycleSection";
@@ -16,6 +15,7 @@ import CertificateSection from "@/Components/CourseComponents/CertificateSection
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import RelatedApplySection from "@/Components/CourseComponents/RelatedApplySection";
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
+import QuoteForm from "@/Components/CourseComponents/QuoteForm";
 
 export default async function CoursePage({ params }) {
   const { category, slug } = await params;
@@ -45,11 +45,21 @@ export default async function CoursePage({ params }) {
 
   return (
     <main>
-      <CourseSideNav />
       {course.hero && <CourseHero {...course.hero} />}
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
       <LifecycleSection />
-      <SkillsSection />
+      <div className="container">
+        <div className="relative grid grid-cols-[1fr_466px] gap-6">
+          <div>
+            <SkillsSection />
+          </div>
+          <div>
+            <div className="sticky top-[100px]">
+              <QuoteForm />
+            </div>
+          </div>
+        </div>
+      </div>
       <OutcomesSection />
       <CurriculumSection />
       <AudienceSection />

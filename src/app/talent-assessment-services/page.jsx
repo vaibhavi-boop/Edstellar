@@ -11,6 +11,7 @@ import IndustrySection from "@/Components/AllStaticComponents/IndustrySection";
 import ToolsCardSection from "@/Components/AllStaticComponents/ToolsCardSection";
 import SlidesSection from "@/Components/AllStaticComponents/SlidesSection";
 import GridCards from "@/Components/AllStaticComponents/GridCards";
+import ServiceSlidesSection from "@/Components/AllStaticComponents/ServiceSlidesSection";
 import FaqSection from "@/Components/AllStaticComponents/FaqSection";
 import BlogSection from "@/Components/AllStaticComponents/BlogSection";
 
@@ -34,6 +35,7 @@ export default function Home() {
       <SlidesSection data={pageData.SlidesSectionData} />
       <GridCards data={pageData.GridCardsData} />
       <FaqSection data={pageData.FAQSectionData} />
+      <ServiceSlidesSection data={pageData.ServiceSlidesSectionData} />
       <BlogSection data={pageData.BlogSectionData} />
     </>
   );

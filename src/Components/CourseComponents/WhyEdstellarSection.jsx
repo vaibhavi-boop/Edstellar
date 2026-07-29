@@ -121,9 +121,10 @@ export default function WhyEdstellarSection() {
               key={`${stat.value}-${index}`}
               className={`
                 border-b border-[var(--rule)] px-[22px] py-[18px]
+                last:border-b-0
                 sm:border-r
-                sm:last:border-b-0
-                sm:nth-child-2:border-r-0
+                sm:[&:nth-child(2n)]:border-r-0
+                sm:[&:nth-child(n+3)]:border-b-0
                 lg:border-b-0
                 lg:last:border-r-0
               `}

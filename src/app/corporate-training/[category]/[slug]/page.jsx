@@ -18,6 +18,7 @@ import RelatedApplySection from "@/Components/CourseComponents/RelatedApplySecti
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
 import CapabilitySection from "@/Components/CourseComponents/CapabilitySection";
 import TrainersSection from "@/Components/CourseComponents/TrainersSection";
+import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 
 export default async function CoursePage({ params }) {
   const { category, slug } = await params;
@@ -64,6 +65,7 @@ export default async function CoursePage({ params }) {
       <CourseFAQSection />
       <RelatedApplySection />
       <ContactFormSection />
+      <StickyFooter />
     </main>
   );
 }

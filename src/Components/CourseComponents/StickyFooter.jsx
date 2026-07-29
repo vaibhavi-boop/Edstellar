@@ -188,8 +188,8 @@ export default function StickyFooter() {
         show ? "translate-y-0" : "translate-y-[110%]"
       }`}
     >
-      <div className="container flex h-[62px] items-center gap-[22px] max-[860px]:h-auto max-[860px]:flex-wrap max-[860px]:gap-[10px] max-[860px]:py-[11px]">
-        <div className="relative h-[18px] min-w-0 flex-1 max-[860px]:order-2 max-[860px]:h-[16px] max-[860px]:basis-full max-[860px]:flex-none">
+      <div className="container relative flex h-[62px] items-center gap-[22px] max-[860px]:h-auto max-[860px]:flex-wrap max-[860px]:gap-[10px] max-[860px]:py-[11px] max-[620px]:flex-col max-[620px]:flex-nowrap max-[620px]:items-stretch max-[620px]:gap-[9px] max-[620px]:py-[12px]">
+        <div className="relative h-[18px] min-w-0 flex-1 max-[860px]:order-2 max-[860px]:h-[16px] max-[860px]:basis-full max-[860px]:flex-none max-[620px]:order-2 max-[620px]:h-[15px] max-[620px]:w-full">
           {rotation.previous && (
             <MessageLine
               key={rotation.previous.key}
@@ -204,11 +204,11 @@ export default function StickyFooter() {
           />
         </div>
 
-        <div className="flex flex-none items-center gap-3 max-[860px]:w-full max-[860px]:justify-between">
+        <div className="flex flex-none items-center gap-3 max-[860px]:w-full max-[860px]:justify-between max-[620px]:order-1 max-[620px]:w-full max-[620px]:justify-center max-[620px]:gap-0">
           <button
             type="button"
             onClick={handleCta}
-            className="whitespace-nowrap rounded-full bg-[var(--lime)] px-[23px] py-[11px] text-[14px] font-semibold text-[var(--navy)] transition-all duration-200 hover:-translate-y-[2px] hover:bg-[#d3f752] hover:shadow-[0_14px_28px_-14px_rgba(200,241,53,.65)] active:translate-y-0 max-[860px]:px-[18px] max-[860px]:py-[10px] max-[860px]:text-[13px]"
+            className="whitespace-nowrap rounded-full bg-[var(--lime)] px-[23px] py-[11px] text-[14px] font-semibold text-[var(--navy)] transition-all duration-200 hover:-translate-y-[2px] hover:bg-[#d3f752] hover:shadow-[0_14px_28px_-14px_rgba(200,241,53,.65)] active:translate-y-0 max-[860px]:px-[18px] max-[860px]:py-[10px] max-[860px]:text-[13px] max-[620px]:w-full max-[620px]:max-w-[290px] max-[620px]:text-center"
           >
             Request a Training Quote
           </button>
@@ -217,7 +217,7 @@ export default function StickyFooter() {
             type="button"
             aria-label="Dismiss this bar"
             onClick={handleDismiss}
-            className="px-[3px] py-[5px] text-[19px] leading-none text-white/45 transition-colors duration-200 hover:text-[var(--paper)]"
+            className="px-[3px] py-[5px] text-[19px] leading-none text-white/45 transition-colors duration-200 hover:text-[var(--paper)] max-[620px]:absolute max-[620px]:right-0 max-[620px]:top-[10px] max-[620px]:px-[2px] max-[620px]:py-[8px]"
           >
             &times;
           </button>

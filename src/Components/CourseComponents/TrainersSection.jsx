@@ -5,17 +5,17 @@ export default function TrainersSection() {
     <section id="trainers" className="border-b border-[var(--rule)] bg-[var(--paper-warm)] py-28">
       <div className="container">
 
-        <div className="mb-8 flex items-baseline gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
-          <span className="text-[16px] italic text-[var(--ink)] [font-family:var(--serif)]">XI</span>
-          <span className="text-[16px] normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">Trainers</span>
+        <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
+          <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">XI</span>
+          <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">Trainers</span>
           <span>· Vetted, matched, confirmed</span>
         </div>
 
-        <h2 className="max-w-[22ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em]">
+        <h2 className="mb-[26px] max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em]">
           Learn from <em className="[font-family:var(--serif)]">world-class</em> ML monitoring practitioners.
         </h2>
 
-        <p className="mt-7 max-w-[64ch] text-[15px] leading-[1.7] text-[var(--muted)]">
+        <p className="max-w-[64ch] text-[15px] leading-[1.7] text-[var(--muted)]">
           Every session is led by a top-rated practitioner who has run monitoring for models in production, not a generalist working from slides.
         </p>
 
@@ -23,13 +23,13 @@ export default function TrainersSection() {
           {trainers.map((trainer) => (
             <div
               key={trainer.name}
-              className="flex min-h-[335px] flex-col rounded-[16px] border border-[var(--rule)] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-28px_rgba(10,22,40,0.45)]"
+              className="group flex min-h-[335px] flex-col rounded-[16px] border border-[var(--rule)] bg-white px-[22px] py-[24px] transition-all duration-300 hover:-translate-y-[5px] hover:border-[var(--rule-strong)] hover:shadow-[0_28px_58px_-34px_rgba(10,22,40,.5)]"
             >
 
               <img
                 src={trainer.image}
                 alt={trainer.name}
-                className="mb-4 h-[50px] w-[50px] rounded-[16px] object-cover"
+                className="mb-4 h-[64px] w-[64px] flex-none rounded-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"
               />
 
               <h3 className="text-[14px] font-bold tracking-[-0.02em] text-[var(--ink)]">
@@ -78,7 +78,7 @@ export default function TrainersSection() {
               <div className="mt-auto pt-5">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-center rounded-full border border-[var(--rule-strong)] bg-transparent px-4 py-2.5 text-[10px] font-semibold text-[var(--ink)] transition-all duration-300 hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)]"
+                  className="flex w-full items-center justify-center rounded-full border border-[var(--rule-strong)] bg-transparent px-4 py-2.5 text-[10px] font-semibold text-[var(--ink)] transition-all duration-200 hover:-translate-y-[2px] hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)] active:translate-y-0"
                 >
                   View trainer profile →
                 </button>

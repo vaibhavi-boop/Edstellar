@@ -33,7 +33,6 @@ export default function TestimonialsSection() {
             items-baseline
             gap-3
             text-[11px]
-            font-bold
             uppercase
             tracking-[0.24em]
             text-[var(--muted)]

@@ -10,12 +10,12 @@ export default function CourseFAQSection() {
     <section id="faq" className="border-b border-[var(--rule)] py-28">
       <div className="container-narrow">
 
-        <div className="mb-8 flex items-baseline gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
-          <span className="text-[16px] italic text-[var(--ink)] [font-family:var(--serif)]">
+        <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
+          <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">
             XIII
           </span>
 
-          <span className="text-[16px] normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
+          <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
             Questions
           </span>
 

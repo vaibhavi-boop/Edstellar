@@ -21,8 +21,8 @@ export default function OutcomesSection() {
     <section id="outcomes" className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)]">
       <div className="container">
 
-        <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">IV</span>
+        <div className="text-[11px] tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
+          <span className="[font-family:var(--serif)] text-[16px] text-[var(--ink)]">IV</span>
           <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">Outcomes</span>
           · What your team will achieve
         </div>

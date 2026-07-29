@@ -74,8 +74,8 @@ export default function WhyEdstellarSection() {
           {/* Left Content */}
 
           <div>
-            <div className="mb-7 flex items-baseline gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
-              <span className="text-[16px] italic text-[var(--ink)] [font-family:var(--serif)]">
+            <div className="mb-7 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
+              <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">
                 IX
               </span>
 
@@ -114,13 +114,13 @@ export default function WhyEdstellarSection() {
             STATS
         ===================================== */}
 
-        <div className="mb-3 grid grid-cols-1 overflow-hidden rounded-[10px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-3 grid grid-cols-1 overflow-hidden rounded-[14px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-4">
 
           {whyStats.map((stat, index) => (
             <div
               key={`${stat.value}-${index}`}
               className={`
-                border-b border-[var(--rule)] p-5
+                border-b border-[var(--rule)] px-[22px] py-[18px]
                 sm:border-r
                 sm:last:border-b-0
                 sm:nth-child-2:border-r-0
@@ -129,7 +129,15 @@ export default function WhyEdstellarSection() {
               `}
             >
               <strong className="block text-[clamp(20px,2vw,26px)] font-bold leading-none tracking-[-0.03em] text-[var(--ink)]">
-                {stat.value}
+                {stat.value.includes(" & ") ? (
+                  <>
+                    {stat.value.split(" & ")[0]}
+                    <span className="mx-[1px] text-[0.4em] font-normal text-[var(--muted)]"> & </span>
+                    {stat.value.split(" & ")[1]}
+                  </>
+                ) : (
+                  stat.value
+                )}
               </strong>
 
               <span className="mt-3 block text-[9px] font-bold uppercase tracking-[0.16em] text-[var(--muted)] [font-family:var(--mono)]">
@@ -145,17 +153,17 @@ export default function WhyEdstellarSection() {
             WHY EDSTELLAR CARDS
         ===================================== */}
 
-        <div className="grid grid-cols-1 gap-[10px] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
 
           {why.map((item, index) => (
             <article
               key={`${item.t}-${index}`}
-              className="group rounded-[12px] border border-[var(--rule)] bg-white p-6 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_18px_40px_-28px_rgba(10,22,40,0.45)]"
+              className="group rounded-[16px] border border-[var(--rule)] bg-white p-[28px] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_22px_46px_-28px_rgba(10,22,40,.5)]"
             >
 
               {/* Icon */}
 
-              <div className="mb-5 flex h-[36px] w-[36px] items-center justify-center rounded-[8px] bg-[var(--lime)]/20 text-[16px] transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-4 flex h-[42px] w-[42px] items-center justify-center rounded-[11px] bg-[rgba(200,241,53,.18)] text-[20px] transition-transform duration-300 group-hover:scale-105">
                 <span aria-hidden="true">
                   {item.ic}
                 </span>
@@ -164,14 +172,14 @@ export default function WhyEdstellarSection() {
 
               {/* Title */}
 
-              <h3 className="mb-2 text-[14px] font-bold tracking-[-0.02em] text-[var(--ink)]">
+              <h3 className="mb-2 text-[18px] font-semibold tracking-[-0.02em] text-[var(--ink)]">
                 {item.t}
               </h3>
 
 
               {/* Description */}
 
-              <p className="text-[11px] leading-[1.55] text-[var(--muted)]">
+              <p className="text-[14px] leading-[1.6] text-[var(--muted)]">
                 {item.d}
               </p>
 
@@ -192,22 +200,22 @@ export default function WhyEdstellarSection() {
           </span>
 
 
-          <div className="grid grid-cols-1 overflow-hidden rounded-[10px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 overflow-hidden rounded-[14px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-3">
 
             {alsoFromEdstellar.map((item, index) => (
               <a
                 key={`${item.title}-${index}`}
                 href={item.href}
-                className="group relative border-b border-[var(--rule)] p-5 transition-colors duration-200 hover:bg-[var(--paper-warm)]"
+                className="group flex items-start gap-[13px] border-b border-r-0 border-[var(--rule)] px-5 py-4 transition-colors duration-200 last:border-b-0 hover:bg-[var(--paper-warm)] sm:border-r sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-child(n+5)]:border-b-0 lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(n+4)]:border-b-0"
               >
 
-                <div className="pr-8">
+                <div className="min-w-0 flex-1">
 
-                  <span className="block text-[11px] font-semibold text-[var(--ink)]">
+                  <span className="block text-[14px] font-semibold text-[var(--ink)] transition-colors duration-200 group-hover:text-[#6f8c0f]">
                     {item.title}
                   </span>
 
-                  <span className="mt-2 block max-w-[30ch] text-[9px] leading-[1.5] text-[var(--muted)]">
+                  <span className="mt-1 block max-w-[30ch] text-[12px] leading-[1.5] text-[var(--muted)]">
                     {item.description}
                   </span>
 
@@ -218,7 +226,7 @@ export default function WhyEdstellarSection() {
 
                 <span
                   aria-hidden="true"
-                  className="absolute right-5 top-5 text-[11px] text-[var(--muted)] transition-transform duration-200 group-hover:translate-x-1"
+                  className="flex-none pt-1 text-[13px] text-[var(--muted-soft)] transition-all duration-200 group-hover:translate-x-1 group-hover:text-[#6f8c0f]"
                 >
                   →
                 </span>

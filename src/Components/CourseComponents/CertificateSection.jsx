@@ -1,21 +1,39 @@
+"use client";
+import { useRef } from "react";
+
 export default function CertificateSection() {
+  const cardRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+  };
+
+  const handleMouseLeave = () => {
+    if (cardRef.current) cardRef.current.style.transform = "none";
+  };
+
   return (
     <section className="border-b border-[var(--rule)] bg-[var(--paper)] py-28">
       <div className="container">
 
         {/* Label */}
-        <div className="mb-8 flex items-baseline gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
-          <span className="text-[16px] italic text-[var(--ink)] [font-family:var(--serif)]">
+        <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
+          <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">
             XII
           </span>
-          <span className="text-[16px] normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
+          <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
             Certificate
           </span>
           <span>· What learners receive</span>
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12">
 
           {/* Left */}
           <div>
@@ -42,8 +60,12 @@ export default function CertificateSection() {
           </div>
 
           {/* Certificate */}
-          <div className="relative flex aspect-[1.4/1] items-center justify-center overflow-hidden rounded-[18px] border border-white/10 bg-gradient-to-br from-[var(--navy-soft)] to-[var(--navy-deep)] p-8 text-center transition-transform duration-300 hover:scale-[1.02]">
-            
+          <div
+            ref={cardRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="relative flex aspect-[1.4/1] items-center justify-center overflow-hidden rounded-[18px] border border-white/10 bg-gradient-to-br from-[var(--navy-soft)] to-[var(--navy-deep)] p-8 text-center transition-transform duration-300"
+          >
             <div className="pointer-events-none absolute inset-[14px] rounded-[12px] border border-[var(--lime)]/25" />
 
             <div className="relative z-10 flex flex-col items-center">

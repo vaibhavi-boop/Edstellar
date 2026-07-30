@@ -5,6 +5,7 @@ export default function ContactFormSection({
 }) {
   return (
     <section
+      id="apply"
       className="relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >

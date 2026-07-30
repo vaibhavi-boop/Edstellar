@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Info } from "lucide-react";
 
 const nodes = [
   { id: "govern", text: "⚖️", className: "left-[18px] top-[65px]", label: "Govern fairness", desc: "track bias, fairness, and compliance for responsible ML in regulated settings." },
@@ -15,111 +16,132 @@ const defaultCaption =
 
 export default function CourseHero({
   breadcrumb,
-  badge,
   headline,
   headlineEm,
   headlineSuffix,
   subtitle,
   lede,
-  chips,
+  lede1,
+  data,
 }) {
   const [active, setActive] = useState(null);
   const activeNode = nodes.find((n) => n.id === active);
 
   return (
-    <section id="top" className="bg-[#fbfbf7] py-12 lg:py-16">
-      <div className="container grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-        <div>
-          <div className="mb-6 text-[10px] font-medium uppercase tracking-[0.28em] text-slate-400">
+    <section id="top" className="relative z-10 bg-[#fff]">
+      <div className="container">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+         <div>
+          <div className="max-w-[480px] mb-6 text-[12px] leading-5 uppercase tracking-[0.28em] text-[#fff]">
             {breadcrumb}
           </div>
 
-          <div className="mb-6 inline-flex rounded-full bg-lime-100 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-lime-700">
-            {badge}
-          </div>
-
-          <h1 className="max-w-3xl font-[var(--display)] text-[clamp(30px,5vw,64px)] font-extrabold leading-[0.95] tracking-[-0.04em] text-[#07162c]">
+          <h1 className="mb-3 max-w-3xl font-[var(--display)] text-[clamp(30px,5vw,64px)] font-semibold leading-[0.95] tracking-[-0.04em] text-[#fff]">
             {headline}{" "}
-            <span className="[font-family:var(--serif)] text-[#6b8f00] italic font-normal">
+            <span className="[font-family:var(--serif)] font:semibold text-[#6b8f00] italic font-normal">
               {headlineEm}
             </span>
             <br />
             {headlineSuffix}
           </h1>
 
-          <p className="mt-5 max-w-md font-[var(--body)] text-lg md:text-xl leading-8 text-[#07162c]">
-            {subtitle}
+          <p className="mb-5 max-w-md font-[var(--body)] text-lg md:text-xl leading-8 text-[#fff] italic">
+             {subtitle} 
           </p>
 
-          <p className="mt-6 max-w-xl font-[var(--body)] text-base md:text-lg leading-7 md:leading-8 text-slate-600">
+          <p className="mb-8 max-w-xl font-[var(--body)] text-base md:text-lg leading-7 md:leading-8 text-[#fff]">
             {lede}
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#course-outline"
-              className="rounded-full bg-[#07162c] px-8 py-4  text-sm font-bold text-lime-300"
-            >
-              View course outline
-            </a>
-            <a
-              href="#enquire"
-              className="rounded-full border border-slate-300 px-8 py-4  text-sm font-bold text-[#07162c]"
-            >
-              Enquire now
-            </a>
-          </div>
+          {/* Tooltip code start */}
+          <div className="mb-8 max-w-xl font-[var(--body)] text-[14px] font-bold leading-[22px] tracking-[0.12em] text-[#fff]">
+            {lede1.map((item, index) => (
+              <span key={index} className="inline-flex items-center">
+                {index > 0 && (
+                  <span className="mx-3 h-1.5 w-1.5 rounded-full bg-lime-700" />
+                )}
 
-          <div className="mt-10 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
-            {chips.map((c, i) => (
-              <InfoCard key={i} label={c.label} value={c.value} sub={c.sub} />
+                <span className="group relative inline-flex items-center">
+                  <span>{item.text}</span>
+
+                  {item.tooltip && (
+                    <>
+                      {/* Custom Info Icon */}
+                      <span className="ml-1 flex h-4 w-4 items-center justify-center cursor-pointer">
+                        <svg
+                          className="h-4 w-4"
+                          viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          {/* Circle */}
+                          <circle cx="8" cy="8" r="7"
+                            className="fill-transparent stroke-[#fff] transition-all duration-200 group-hover:fill-[#fff] group-hover:stroke-[#000]"
+                            strokeWidth="1.2"
+                          />
+
+                          {/* Dot */}
+                          <circle cx="8" cy="4.5" r="0.8"
+                            className="fill-[#fff] transition-all duration-400 group-hover:fill-[#0a1628]"
+                          />
+
+                          {/* i */}
+                          <rect x="7.35" y="6.2"
+                            width="1.3"
+                            height="4.2"
+                            rx="0.65"
+                            className="fill-[#fff] transition-all duration-400 group-hover:fill-[#0a1628]"
+                          />
+                        </svg>
+                      </span>
+
+                      {/* Tooltip */}
+                      <div className="pointer-events-none absolute left-[30px] top-full z-50 w-[330px] rounded-[16px] bg-[#fafafa] px-3 py-1 opacity-0 shadow-[0_18px_40px_rgba(0,0,0,0.28)] transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100"
+                      >
+                        {/* Arrow */}
+                        <span className="absolute -top-[6px] left-[30px] h-3 w-3 rotate-45 bg-[#0a1628]" />
+
+                        {/* Heading */}
+                        <p className="text-[10px] font-semibold tracking-[0.28em] text-[#215aff]">
+                          {item.tooltip.title}
+                        </p>
+
+                        {/* Description */}
+                        <p className="text-[11px] font-bold leading-[18px] text-[#2a2a2a]">
+                          {item.tooltip.description}
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </span>
+              </span>
             ))}
+          </div> {/* Tooltip code end*/}
+
+          {/* Buttons*/}
+          <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#course-outline"
+                className="rounded-full bg-[#07162C] px-8 py-4 text-sm font-bold text-lime-300 transition-all duration-300 ease-out hover:-translate-y-[3px] hover:shadow-[0_12px_30px_rgba(7,22,44,0.28)]"
+              >
+                View course outline
+              </a>
+              <a
+                href="#enquire"
+                className="rounded-full border border-[#C9CDD3] bg-white px-8 py-4 text-sm font-bold text-[#07162C] transition-all duration-300 hover:border-[#07162C]"
+              >
+                Enquire now
+              </a>
           </div>
-        </div>
 
-        <div className="hidden lg:flex justify-end">
-          <div className="w-full max-w-[520px] rounded-[22px] bg-[#07162c] p-8 text-white shadow-xl">
-            <p className="mb-8  text-[10px] font-semibold uppercase tracking-[0.32em] text-lime-300">
-              The Production Monitoring Lifecycle
-            </p>
+         </div>
 
-            <div
-              onMouseLeave={() => setActive(null)}
-              className="relative mx-auto flex h-[250px] w-[250px] items-center justify-center"
-            >
-              <div className="absolute h-[220px] w-[220px] rounded-full border border-dashed border-slate-600" />
-              <div className="absolute h-[150px] w-[150px] rounded-full border border-dashed border-slate-700" />
+          <img
+            src={data.image.src}
+            alt={data.image.alt}
+            title={data.title}
+            className="absolute inset-0 z-[-2] h-full w-full object-cover object-right"
+          />
 
-              <div className="z-10 flex h-[95px] w-[95px] items-center justify-center rounded-full bg-lime-300 text-center font-[var(--display)] text-sm font-extrabold leading-4 text-[#07162c]">
-                Model
-                <br />
-                health
-              </div>
-
-              {nodes.map((n) => (
-                <CircleIcon
-                  key={n.id}
-                  className={n.className}
-                  text={n.text}
-                  active={active === n.id}
-                  onMouseEnter={() => setActive(n.id)}
-                />
-              ))}
-            </div>
-
-            <p className="mt-6 max-w-md  text-sm leading-6 text-slate-300">
-              {activeNode ? (
-                <>
-                  <b className="text-lime-300 font-semibold">
-                    {activeNode.label}
-                  </b>{" "}
-                  — {activeNode.desc}
-                </>
-              ) : (
-                defaultCaption
-              )}
-            </p>
-          </div>
         </div>
       </div>
     </section>

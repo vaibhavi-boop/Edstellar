@@ -2,6 +2,9 @@ import { courses } from "@/data/mlMonitoringData";
 import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";
 import CourseHero from "@/Components/CourseComponents/CourseHero";
+import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
+import ClientsLogosSection from "@/Components/CourseComponents/ClientsLogosSection";
+import StickyCourseTabs from "@/Components/CourseComponents/StickyTabsSection";
 import WhatIsSection from "@/Components/CourseComponents/WhatIsSection";
 import LifecycleSection from "@/Components/CourseComponents/LifecycleSection";
 import SkillsSection from "@/Components/CourseComponents/SkillsSection";
@@ -15,6 +18,9 @@ import CertificateSection from "@/Components/CourseComponents/CertificateSection
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import RelatedApplySection from "@/Components/CourseComponents/RelatedApplySection";
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
+import CapabilitySection from "@/Components/CourseComponents/CapabilitySection";
+import TrainersSection from "@/Components/CourseComponents/TrainersSection";
+import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import QuoteForm from "@/Components/CourseComponents/QuoteForm";
 
 export default async function CoursePage({ params }) {
@@ -46,6 +52,9 @@ export default async function CoursePage({ params }) {
   return (
     <main>
       {course.hero && <CourseHero {...course.hero} />}
+      <CourseInfoBar data={course.courseInfoBardata} />
+      <ClientsLogosSection data={course.ClientsLogosSectionData} />
+      <StickyCourseTabs data={course.StickyCourseTabsData} />
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
       <LifecycleSection />
       <div className="relative z-[10]">
@@ -58,13 +67,18 @@ export default async function CoursePage({ params }) {
           <QuoteForm />
         </div>
       </div>
-
+      <CurriculumSection />
+      <AudienceSection />
+      <ModesSection />
+      <CapabilitySection />
       <WhyEdstellarSection />
       <TestimonialsSection />
+       <TrainersSection />
       <CertificateSection />
       <CourseFAQSection />
       <RelatedApplySection />
       <ContactFormSection />
+      <StickyFooter />
     </main>
   );
 }

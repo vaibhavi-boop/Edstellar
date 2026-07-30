@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { faqs } from "@/data/mlMonitoringData";
 
@@ -6,41 +7,72 @@ export default function CourseFAQSection() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section id="faq" className="py-28 border-b border-[var(--rule)]">
+    <section id="faq" className="border-b border-[var(--rule)] py-28">
       <div className="container-narrow">
 
-        <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">XI</span>
-          <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">Questions</span>
-          · Frequently asked
+        <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
+          <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">
+            XIII
+          </span>
+
+          <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
+            Questions
+          </span>
+
+          <span>· Before you commit</span>
         </div>
 
-        <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-5 max-w-[20ch]">
-          ML Model Monitoring training <em className="[font-family:var(--serif)] italic">FAQs</em>.
+        <h2 className="mb-5 max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
+          ML Model Monitoring training{" "}
+          <em className="[font-family:var(--serif)] italic">
+            FAQs
+          </em>
+          .
         </h2>
 
-        <div className="mt-5">
+        <div className="mt-8">
           {faqs.map((f, i) => {
             const isOpen = open === i;
+
             return (
               <div key={i} className="border-b border-[var(--rule)]">
                 <button
+                  type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="w-full text-left bg-none border-none cursor-pointer py-6 flex justify-between gap-6 items-center [font-family:var(--display)] font-medium text-[18px] tracking-[-0.01em] text-[var(--ink)]"
+                  aria-expanded={isOpen}
+                  className="flex w-full cursor-pointer items-center justify-between gap-6 border-none bg-transparent py-6 text-left text-[18px] font-medium tracking-[-0.01em] text-[var(--ink)] [font-family:var(--display)]"
                 >
                   <span>{f.q}</span>
-                  <span className="flex-shrink-0 w-[26px] h-[26px] relative">
-                    <span className="absolute top-[12px] left-1 w-[18px] h-[0.5px] bg-[var(--ink)]" />
-                    <span className={`absolute top-[3px] left-[12px] w-[0.5px] h-[20px] bg-[var(--ink)] transition-transform duration-300 ${isOpen ? "scale-y-0" : ""}`} />
+
+                  <span className="relative h-[26px] w-[26px] flex-shrink-0">
+                    <span className="absolute left-[4px] top-[12px] h-[1px] w-[18px] bg-[var(--ink)]" />
+
+                    <span
+                      className={`absolute left-[12px] top-[4px] h-[18px] w-[1px] bg-[var(--ink)] transition-transform duration-300 ${
+                        isOpen ? "scale-y-0" : "scale-y-100"
+                      }`}
+                    />
                   </span>
                 </button>
-                {isOpen && (
-                  <p className="text-[15px] leading-[1.7] text-[var(--muted)] pb-6">{f.a}</p>
-                )}
+
+                <div
+                  className={`grid transition-all duration-300 ${
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="max-w-[75ch] pb-6 text-[15px] leading-[1.7] text-[var(--muted)]">
+                      {f.a}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

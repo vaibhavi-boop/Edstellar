@@ -11,14 +11,234 @@ export const courses = [
       headlineEm: "Monitoring",
       headlineSuffix: "Corporate Training",
       subtitle: "Keep production ML models accurate, fair, and trusted.",
-      lede: "ML Model Monitoring corporate training equips your ML, data science, and MLOps teams to run production models with confidence, covering drift detection, performance tracking, alerting, retraining, and fairness governance. Instructor-led, fully customised, and delivered to your teams onsite or virtually worldwide.",
-      chips: [
-        { label: "Duration", value: "16–24 hrs" },
-        { label: "Delivery", value: "Instructor-led", sub: "Virtual · On-site · Off-site" },
-        { label: "Languages", value: "10", sub: "incl. EN, ES, DE, 中文" },
-        { label: "Reach", value: "100+", sub: "countries" },
+      lede: "ML Model Monitoring corporate training gives your ML, data science, and MLOps teams the confidence to run production models at scale, covering drift detection, performance tracking, alerting, retraining, and fairness governance. Customized, expert-led group training for employees, delivered onsite, live virtual, or hybrid to teams in 100+ countries.",
+      lede1: [
+        {
+          text: "Instructor-led group training",
+        },
+        {
+          text: "Virtual / on-site / off-site",
+        },
+        {
+          text: "10 languages",
+          tooltip: {
+            title: "AVAILABLE LANGUAGES",
+            description:
+              "English, Español, 普通话, Deutsch, العربية, Português, हिंदी, Français, 日本語 and Italiano",
+          },
+        },
+        {
+          text: "100+ countries",
+          tooltip: {
+            title: "WE HAVE DELIVERED IN",
+            description:
+              "United States, United Kingdom, India, Canada, Germany, France, Netherlands, UAE, Saudi Arabia, Singapore, Australia, Japan, Brazil, South Africa and 90+ more countries.",
+          },
+        },
+      ],
+      data : {
+        title: "ML Model Monitoring Corporate Training",
+        image: {
+          src: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a698481c95c6c10a05f1afe_ml-cours.webp",
+          alt: "ML Model Monitoring Corporate Training",
+        },
+      },
+    },
+    courseInfoBardata : {
+      features: [
+        "Drift detection",
+        "Performance tracking",
+        "Alerting & response",
+        "Retraining & A/B",
+        "Explainability",
+        "Fairness & compliance",
+      ],
+
+      stats: [
+        {
+          value: "24–40",
+          label: "Hours",
+        },
+        {
+          value: "10",
+          label: "Modules",
+        },
+        {
+          value: "8",
+          label: "Hands-on Labs",
+        },
+      ],
+
+      trainers: {
+        count: "4+",
+        title: "Expert trainers",
+        subtitle: "Meet them →",
+        avatar: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69c57f6097d45480150d76_avtar.svg",
+      },
+
+      rating: {
+        starIcon: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69cd1cc048aca1f700706f_star-vector.svg",
+        score: "4.8/5",
+        reviews: "47 Reviews",
+        stars: 5,
+      },
+
+      buttons: [
+        {
+          type: "preview",
+          text: "Watch preview",
+          href: "#",
+        },
+        {
+          type: "brochure",
+          text: "Download brochure",
+          href: "#",
+        },
+      ],
+
+      groupQuote: {
+        text: "Need more than one program?",
+        linkText: "Get a Group Quote →",
+        href: "#",
+      },
+    },
+    ClientsLogosSectionData : {
+      title: "TRUSTED BY TEAMS AT",
+      logos: [
+        {
+          id: 1,
+          name: "Microsoft",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b5873a89529b86f470b686_Microsoft.webp",
+          alt: "Microsoft",
+        },
+        {
+          id: 2,
+          name: "Amazona",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/698469c6a91cef644870febe_Amazon%201%20(1).webp",
+          alt: "Amazon",
+        },
+        {
+          id: 3,
+          name: "Intel",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b587b637a6028400026a71_Intel2.webp",
+          alt: "Intel",
+        },
+        {
+          id: 4,
+          name: "Adobe",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b587f256c7ca56ef383708_Adobe.webp",
+          alt: "Adobe",
+        },
+        {
+          id: 5,
+          name: "Tata_Chemicals",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b5887637a6028400031b44_Tata_Chemicals.webp",
+          alt: "Tata_Chemicals",
+        },
+        {
+          id: 6,
+          name: "Johnson&Johnson",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/69846266b0acf082e648fdb0_Johnson%26Johnson%201.webp",
+          alt: "Johnson&Johnson",
+        },
+        {
+          id: 7,
+          name: "godrej",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a94748156eb2b452d94e_godrej.webp",
+          alt: "godrej",
+        },
+        {
+          id: 8,
+          name: "nrsc",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a9601c7bda326efbe969_nrsc.webp",
+          alt: "nrsc",
+        },
+        {
+          id: 9,
+          name: "Sportskeeda",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/69846830ede4cc2aea05d48a_Sportskeeda%201.webp",
+          alt: "Sportskeeda",
+        },
+        {
+          id: 10,
+          name: "Total",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a98ed7f1555ba95a94c2_Total.webp",
+          alt: "Total",
+        },
+        {
+          id: 11,
+          name: "visa",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b9218334a6bbb7e0046a57_visa.webp",
+          alt: "visa",
+        },
+        {
+          id: 12,
+          name: "Abb",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a9c115c2a0faf78d5187_Abb.webp",
+          alt: "Abb",
+        },
+        {
+          id: 13,
+          name: "Emerson",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a9d8e0dd2f35457d1311_Emerson.webp",
+          alt: "Emerson",
+        },
+        {
+          id: 14,
+          name: "Aditya Birla Group",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6aa7c4dc52f902b965f86_Aditya%20Birla%20Group.webp",
+          alt: "Aditya Birla Group",
+        },
+        {
+          id: 15,
+          name: "AutoDesk",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6aa97d7f1555ba95b5394_AutoDesk.webp",
+          alt: "AutoDesk",
+        },
       ],
     },
+    StickyCourseTabsData: [
+    {
+      id: "about",
+      label: "About",
+    },
+    {
+      id: "why-now",
+      label: "Why now",
+    },
+    {
+      id: "lifecycle",
+      label: "Lifecycle",
+    },
+    {
+      id: "skills",
+      label: "Skills",
+    },
+    {
+      id: "outcomes",
+      label: "Outcomes",
+    },
+    {
+      id: "curriculum",
+      label: "Curriculum",
+    },
+    {
+      id: "audience",
+      label: "Audience",
+    },
+    {
+      id: "delivery",
+      label: "Delivery",
+    },
+    {
+      id: "why-edstellar",
+      label: "Why Edstellar",
+    },
+    {
+      id: "trainers",
+      label: "Trainers",
+    },
+   ],
     whatIs: {
       title: "What is ",
       titleEm: "ML model monitoring?",
@@ -165,30 +385,180 @@ export const modeLabels = [
   { lbl: "In-house", h: "On-site" },
   { lbl: "Away day", h: "Off-site" },
 ];
+export const capability = {
+  kicker: "100+ countries · 10+ languages",
 
+  title: "Get Customized Expert-led Training for Your Teams",
+
+  description:
+    "One partner for instructor-led corporate training, delivered the way your teams work.",
+
+  cta: "Request a Training Quote",
+
+  points: [
+    "Customized Training Delivery",
+    "Scale Your Training: Small to Large Teams",
+    "In-person Onsite, Live Virtual or Hybrid Training Modes",
+    "Plan from 2000+ Industry-ready Training Programs",
+    "8 Hands-On Labs on Live Infrastructure, Led by Industry Experts",
+  ],
+};
 export const why = [
   { ic:"🎓", t:"Experienced Trainers", d:"Trainers from a vetted global network bring years of industry expertise, keeping every session practical and impactful." },
   { ic:"✓", t:"Proven Quality", d:"With a strong global track record, Edstellar is known for quality and engaging delivery." },
-  { ic:"⚙️", t:"Industry-Relevant Curriculum", d:"Programmes are built by experts to match the demands of today's industry." },
-  { ic:"🧩", t:"Fully Customisable", d:"Every programme can be tailored to your organisation's goals and your production stack." },
+  { ic:"⚙️", t:"Industry-Relevant Curriculum", d:"Programs are built by experts to match the demands of today's industry." },
+  { ic:"🧩", t:"Fully Customisable", d:"Every program can be tailored to your organisation's goals and your production stack." },
   { ic:"🤝", t:"Comprehensive Support", d:"We provide pre- and post-session support for a complete learning experience." },
   { ic:"🌐", t:"Global, Multilingual Delivery", d:"We deliver across multiple locations and languages to support diverse global teams." },
 ];
 
+export const whyStats = [
+  {
+    value: "10,000+",
+    label: "Expert Trainers",
+  },
+  {
+    value: "1,000+",
+    label: "Organisations Trained",
+  },
+  {
+    value: "13+",
+    label: "Years Delivering",
+  },
+  {
+    value: "ISO 9001 & 27001",
+    label: "Certified",
+  },
+];
+
+export const alsoFromEdstellar = [
+  {
+    title: "Talent assessments",
+    description:
+      "Psychometric, behavioral, leadership and 360-degree assessments.",
+  },
+  {
+    title: "Training needs analysis",
+    description:
+      "Needs analysis, gap identification, and a training roadmap.",
+  },
+  {
+    title: "L&D consulting",
+    description:
+      "Learning strategy, content, technology and ROI measurement.",
+  },
+  {
+    title: "OD consulting",
+    description:
+      "Org design, succession planning and cultural change.",
+  },
+  {
+    title: "Managed training services",
+    description:
+      "Training outsourcing, vendor management, logistics and administration.",
+  },
+  {
+    title: "Coaching solutions",
+    description:
+      "Executive and manager coaching that keeps skills in use.",
+  },
+];
+
 export const quotes = [
-  { q:"Edstellar's virtual ML Model Monitoring training gave our ML platform team the operational discipline needed to manage production models at scale. Within 60 days, we deployed a centralised drift monitoring system across 40 production models, reduced undetected degradation incidents by 70%, and cut mean time to detect from 3 weeks to under 48 hours.", w:"Suresh Raghavan", r:"Head of ML Platform · Global Insurance Technology Company" },
-  { q:"The onsite training was exactly what our data science and engineering teams needed to operate production models responsibly. The hands-on labs with Evidently AI, Prometheus, and Grafana were directly applicable to our stack. Post-training, we built alerting and retraining pipelines that reduced model-related incidents by 55% in the first quarter.", w:"Meghna Pillai", r:"VP of AI Operations · Leading Retail Technology Enterprise" },
-  { q:"We ran our entire ML and MLOps team through Edstellar's intensive programme off-site. The coverage from drift detection to fairness monitoring and lifecycle management gave our team a unified operational playbook. Our model health dashboard now covers 100% of production models and compliance audit prep dropped by 40%.", w:"Deepa Krishnan", r:"Chief Machine Learning Officer · Multinational FinTech Group" },
-  { q:"Edstellar's IT and technical training programmes have been instrumental in strengthening our engineering teams and building future-ready capabilities. The hands-on approach and expert guidance improved technical depth, problem-solving, and execution across projects.", w:"Aditi Rao", r:"L&D Head · Global Technology Company" },
+  {
+    q: "Edstellar's virtual ML Model Monitoring training gave our ML platform team the operational discipline needed to manage production models at scale. Within 60 days, we deployed a centralised drift monitoring system across 40 production models, reduced undetected degradation incidents by 70%, and cut mean time to detect from 3 weeks to under 48 hours.",
+    w: "Suresh Raghavan",
+    r: "Head of ML Platform · Global Insurance Technology Company",
+    image: "/Images/Course/Testimonials/suresh-raghavan.jpeg",
+  },
+
+  {
+    q: "The onsite training was exactly what our data science and engineering teams needed to operate production models responsibly. The hands-on labs with Evidently AI, Prometheus, and Grafana were directly applicable to our stack. Post-training, we built alerting and retraining pipelines that reduced model-related incidents by 55% in the first quarter.",
+    w: "Meghna Pillai",
+    r: "VP of AI Operations · Leading Retail Technology Enterprise",
+    image: "/Images/Course/Testimonials/meghna-pillai.jpeg",
+  },
+
+  {
+    q: "We ran our entire ML and MLOps team through Edstellar's intensive programme off-site. The coverage from drift detection to fairness monitoring and lifecycle management gave our team a unified operational playbook. Our model health dashboard now covers 100% of production models and compliance audit prep dropped by 40%.",
+    w: "Deepa Krishnan",
+    r: "Chief Machine Learning Officer · Multinational FinTech Group",
+    image: "/Images/Course/Testimonials/deepa-krishnan.jpeg",
+  },
+
+  {
+    q: "Edstellar's IT and technical training programmes have been instrumental in strengthening our engineering teams and building future-ready capabilities. The hands-on approach and expert guidance improved technical depth, problem-solving, and execution across projects.",
+    w: "Aditi Rao",
+    r: "L&D Head · Global Technology Company",
+    image: "/Images/Course/Testimonials/aditi-rao.jpeg",
+  },
+];
+
+export const trainers = [
+  {
+    name: "Daniel Roth",
+    role: "Principal MLOps engineer",
+    experience: "12+ YEARS IN PRODUCTION ML",
+    rating: "4.9",
+    sessions: "180+",
+    image: "/Images/Course/Trainers/daniel-roth.jpeg",
+    skills: [
+      "Drift detection",
+      "Observability stack",
+      "Dashboards",
+    ],
+  },
+
+  {
+    name: "Marco Bianchi",
+    role: "Staff ML engineer, platform",
+    experience: "10+ YEARS IN PRODUCTION ML",
+    rating: "4.8",
+    sessions: "140+",
+    image: "/Images/Course/Trainers/marco-bianchi.jpeg",
+    skills: [
+      "Retraining pipelines",
+      "A/B & shadow deploys",
+      "Orchestration",
+    ],
+  },
+
+  {
+    name: "Annika Lund",
+    role: "Lead data scientist, model risk",
+    experience: "9+ YEARS IN REGULATED ML",
+    rating: "4.9",
+    sessions: "120+",
+    image: "/Images/Course/Trainers/annika-lund.jpeg",
+    skills: [
+      "Fairness monitoring",
+      "Explainability",
+      "EU AI Act",
+    ],
+  },
+
+  {
+    name: "Priya Raghavan",
+    role: "SRE lead, ML systems",
+    experience: "11+ YEARS IN RELIABILITY",
+    rating: "4.8",
+    sessions: "160+",
+    image: "/Images/Course/Trainers/priya-raghavan.jpeg",
+    skills: [
+      "Alerting design",
+      "Incident response",
+      "Tracing",
+    ],
+  },
 ];
 
 export const faqs = [
-  { q:"What is ML Model Monitoring training?", a:"It is an instructor-led corporate training programme that teaches teams how to keep production machine learning models accurate, reliable, fair, and compliant over time. It covers the full monitoring lifecycle: data and concept drift detection, performance tracking, alerting and incident response, retraining and lifecycle management, A/B testing, explainability, and fairness and compliance monitoring." },
-  { q:"How long is the training and what is the format?", a:"The programme typically runs 16 to 24 hours, instructor-led, delivered virtually, onsite, or offsite, in 10+ languages, and is fully customisable to your team's schedule, experience level, and production stack." },
-  { q:"Which tools and techniques does the course cover?", a:"Hands-on labs use real production tooling, including Evidently AI, Prometheus, and Grafana, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, SHAP for explainability, and Fairlearn and AI Fairness 360 for fairness monitoring. Platforms such as WhyLabs and Arize are also covered." },
+  { q:"What is ML Model Monitoring training?", a:"It is an instructor-led corporate training program that teaches teams how to keep production machine learning models accurate, reliable, fair, and compliant over time. It covers the full monitoring lifecycle: data and concept drift detection, performance tracking, alerting and incident response, retraining and lifecycle management, A/B testing, explainability, and fairness and compliance monitoring." },
+  { q:"How long is the training and what is the format?", a:"The program typically runs 24 to 40 hours, instructor-led, delivered virtually, onsite, or offsite, in 10+ languages, and is fully customizable to your team's schedule, experience level, and production stack." },
+  { q:"Which tools and techniques does the course cover?", a:"Hands-on labs use real real production tooling, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, attribution methods for explainability, and fairness assessment tooling. A range of ML observability platforms are also covered." },
   { q:"Who should attend?", a:"It suits ML engineers and data scientists, MLOps and DevOps engineers, AI platform and infrastructure engineers, data engineers supporting ML pipelines, AI product managers, and analytics engineers and data architects." },
   { q:"What are the prerequisites?", a:"Participants should have experience in machine learning model development and Python programming." },
-  { q:"Do participants receive a certificate?", a:"Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum, examples, and labs are fully customised to your industry, tools, and production environment, and delivered for teams onsite, offsite, or virtually worldwide." },
+  { q:"Do participants receive a certificate, and can the training be customized?", a:"Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum, examples, and labs are fully customized to your industry, tools, and production environment, and delivered for teams onsite, offsite, or virtually worldwide." },
 ];
 
 export const related = [
@@ -204,4 +574,36 @@ export const applyCards = [
   { n:"01", h:"Request a quote", d:"Tell us team size and delivery format. We scope curriculum, duration, and pricing to your needs.", go:"Get a tailored proposal →" },
   { n:"02", h:"Book a discovery call", d:"Walk us through your production ML stack and the monitoring gaps you need to close.", go:"Talk to an advisor →" },
   { n:"03", h:"Download the outline", d:"Share the full 10-module breakdown with your ML, MLOps, and L&D stakeholders.", go:"Get the curriculum →" },
+];
+
+export const learningPath = [
+  {
+    label: "Build and ship first",
+    title: "Machine Learning with Python",
+    text: "Develop models and get them serving in production. There is nothing to monitor until something is deployed.",
+    duration: "Duration on request",
+    image: "mlPython",
+  },
+  {
+    label: "",
+    title: "ML Model Monitoring",
+    text: "Detect drift, track performance, alert, retrain, and evidence fairness once the model is live.",
+    duration: "24–40 hours",
+    image: "mlMonitoring",
+    active: true,
+  },
+  {
+    label: "Then govern",
+    title: "AI Security and Risk Management",
+    text: "Turn monitoring signals into managed model risk, controls, and governance evidence.",
+    duration: "Duration on request",
+    image: "aiSecurityRisk",
+  },
+  {
+    label: "Go further",
+    title: "MLOps for LLMs",
+    text: "Carry the same drift, evaluation, and incident practice across to LLM systems.",
+    duration: "Duration on request",
+    image: "mlopsLlms",
+  },
 ];

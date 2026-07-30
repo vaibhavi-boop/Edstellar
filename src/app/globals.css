@@ -86,23 +86,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--display);
-}
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--display);
+  }
 
-p,
-li,
-a,
-button,
-input,
-textarea,
-select {
-  font-family: var(--body);
+  p,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font-family: var(--body);
+  }
 }
 
 a {
@@ -138,19 +140,34 @@ section {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-}
-
-@media (max-width: 478px) {
-  section {
-    padding: 40px 20px;
-  }
+  padding-inline: 56px;
 }
 
 .container-narrow {
   width: 100%;
   max-width: 860px;
   margin-inline: auto;
-  padding-inline: 20px;
+  padding-inline: 56px;
+}
+
+@media (max-width: 820px) {
+  .container,
+  .container-narrow {
+    padding-inline: 32px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container,
+  .container-narrow {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 478px) {
+  section {
+    padding: 40px 20px;
+  }
 }
 
 .iti {
@@ -183,11 +200,11 @@ section {
 /*Below styles for logos animation*/
 @keyframes marquee {
   from {
-    transform: translateX(0);
+    transform: translateX(-50);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
 }
 
@@ -254,4 +271,82 @@ section {
 
 .animate-rise-bar {
   animation: riseBar 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* 2nd sectons Buttons animation*/
+@keyframes iconPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.course-btn-icon {
+  animation: iconPulse 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes buttonShine {
+  0% {
+    transform: translateX(-180%);
+  }
+
+  100% {
+    transform: translateX(180%);
+  }
+}
+
+.course-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(197, 232, 38, 0.22) 50%,
+    transparent 65%
+  );
+
+  transform: translateX(-180%);
+}
+
+/* First button */
+.course-btn-preview::before {
+  animation: buttonShine 2.8s linear infinite;
+}
+
+/* Second button */
+.course-btn-brochure::before {
+  animation: buttonShine 3.6s linear infinite;
+  animation-delay: -1.8s;
+}
+
+@keyframes clientsLogoMarquee {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-clients-logo-marquee {
+  animation: clientsLogoMarquee 30s linear infinite;
+}
+
+.animate-clients-logo-marquee:hover {
+  animation-play-state: paused;
 }

@@ -10,8 +10,8 @@ export default function LifecycleSection() {
     <section id="lifecycle" className="bg-[var(--navy)] py-28 border-b border-white/10">
       <div className="container">
 
-        <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-white/60 mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] italic text-[16px] text-white">II</span>
+        <div className="text-[11px] tracking-[0.24em] uppercase text-white/60 mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
+          <span className="[font-family:var(--serif)] text-[16px] text-white">II</span>
           <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-white">Lifecycle</span>
           · What your team will operate
         </div>

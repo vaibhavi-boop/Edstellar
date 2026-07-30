@@ -48,12 +48,13 @@ export default function OutcomesSection() {
             {outcomes.map((o, i) => {
               const isDone = done.has(i);
               return (
-                <>
-                  <div className="flex gap-4 items-start rounded-[14px] border px-5 py-[18px] text-left transition-all [font-family:var(--body)] cursor-pointer bg-white border-[var(--rule)] hover:border-[var(--rule-strong)]">
-                    <span className="mt-2 h-[7px] w-[7px] flex-none rounded-full bg-lime-400"></span>
-                    <p>{o}</p>
-                  </div>
-                </>
+                <div
+                  key={i}
+                  className="flex gap-4 items-start rounded-[14px] border px-5 py-[18px] text-left transition-all [font-family:var(--body)] cursor-pointer bg-white border-[var(--rule)] hover:border-[var(--rule-strong)]"
+                >
+                  <span className="mt-2 h-[7px] w-[7px] flex-none rounded-full bg-lime-400"></span>
+                  <p>{o}</p>
+                </div>
               );
             })}
           </div>

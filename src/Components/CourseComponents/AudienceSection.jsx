@@ -35,11 +35,6 @@ export default function AudienceSection() {
           shaped for.
         </p>
 
-        <div className="text-[14px] text-[var(--muted)] bg-white border border-[var(--rule)] border-l-[3px] border-l-[var(--lime)] rounded-[10px] px-[18px] py-3.5 mb-7 max-w-[70ch] leading-[1.6]">
-          <b>Prerequisites:</b> participants should have experience in machine
-          learning model development and Python programming.
-        </div>
-
         <div className="flex gap-2.5 flex-wrap mb-7">
           {audienceFilters.map((f) => (
             <button
@@ -56,13 +51,13 @@ export default function AudienceSection() {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="block mb-8">
           {audience.map((a, i) => {
             const visible = activeGroup === "all" || a.g === activeGroup;
             return (
               <div
                 key={i}
-                className={`bg-white border rounded-[12px] px-5 py-3.5 text-[14.5px] font-medium flex items-center gap-2.5 transition-all duration-300 ${
+                className={` bg-white border rounded-[12px] px-5 py-3.5 text-[14.5px] mb-4 font-medium flex items-center gap-2.5 transition-all duration-300 ${
                   visible
                     ? "border-[rgba(124,156,16,0.5)] shadow-sm opacity-100"
                     : "opacity-20 grayscale border-[var(--rule)]"
@@ -75,6 +70,10 @@ export default function AudienceSection() {
               </div>
             );
           })}
+        </div>
+        <div className="text-[14px] text-[var(--muted)] bg-white border border-[var(--rule)] border-l-[3px] border-l-[var(--lime)] rounded-[10px] px-[18px] py-3.5 mb-7  leading-[1.6]">
+          <b>Prerequisites:</b> participants should have experience in machine
+          learning model development and Python programming.
         </div>
       </div>
     </section>

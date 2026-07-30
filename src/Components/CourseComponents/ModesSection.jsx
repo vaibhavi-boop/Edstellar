@@ -16,7 +16,7 @@ export default function ModesSection() {
           <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">
             Modes
           </span>
-          · Choose the format that fits your team
+          · How delivery works
         </div>
 
         <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-4 max-w-[20ch]">

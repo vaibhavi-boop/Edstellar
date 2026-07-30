@@ -1,13 +1,20 @@
 "use client";
 import { useState } from "react";
-import { audience, audienceFilters, audienceGroupLabels } from "@/data/mlMonitoringData";
+import {
+  audience,
+  audienceFilters,
+  audienceGroupLabels,
+} from "@/data/mlMonitoringData";
 
 export default function AudienceSection() {
   const [activeGroup, setActiveGroup] = useState("all");
 
   return (
-    <section id="audience" className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)]">
-      <div className="container">
+    <section
+      id="audience"
+      className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)]"
+    >
+      <div className="container pr-[466px]">
         <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">
             VI

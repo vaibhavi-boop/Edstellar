@@ -78,7 +78,7 @@ export default function CourseInfoBar({ data }) {
                 </div>
 
                 <div>
-                  <h4 className="text-[16px] font-semibold">
+                  <h4 className="text-[12px] font-semibold">
                     <span className="text-[#D7F11E]">
                       {data.trainers.count}
                     </span>{" "}
@@ -105,7 +105,7 @@ export default function CourseInfoBar({ data }) {
                   ))}
                 </div>
 
-                <p className="text-[12px] uppercase tracking-[0.18em] text-white/70">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
                   {data.rating.score} · {data.rating.reviews}
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function CourseInfoBar({ data }) {
                   button.type === "preview"
                     ? "course-btn course-btn-preview"
                     : "course-btn course-btn-brochure"
-                } text-[14px] group flex items-center gap-3 rounded-full border border-white/14 bg-white/5 px-5 py-2 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#C5E826] hover:bg-white/10`}
+                } text-[12px] group flex items-center gap-3 rounded-full border border-white/14 bg-white/5 px-4 py-2 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#C5E826] hover:bg-white/10`}
               >
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D7F11E]/20 transition-all duration-300 group-hover:bg-[#C5E826]">
                 {button.type === "preview" ? (

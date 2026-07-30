@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import CourseHero from "@/Components/CourseComponents/CourseHero";
 import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
 import ClientsLogosSection from "@/Components/CourseComponents/ClientsLogosSection";
-import StickyCourseTabs from "@/Components/CourseComponents/StickyTabsSection";
+import StickyTabs from "@/Components/CourseComponents/StickyTabsSection";
 import WhatIsSection from "@/Components/CourseComponents/WhatIsSection";
 import LifecycleSection from "@/Components/CourseComponents/LifecycleSection";
 import SkillsSection from "@/Components/CourseComponents/SkillsSection";
@@ -54,7 +54,7 @@ export default async function CoursePage({ params }) {
       {course.hero && <CourseHero {...course.hero} />}
       <CourseInfoBar data={course.courseInfoBardata} />
       <ClientsLogosSection data={course.ClientsLogosSectionData} />
-      <StickyCourseTabs data={course.StickyCourseTabsData} />
+      <StickyTabs data={course.StickyTabsData} />
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
       <LifecycleSection />
       <div className="relative z-[10]">

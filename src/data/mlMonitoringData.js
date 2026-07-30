@@ -197,7 +197,7 @@ export const courses = [
         },
       ],
     },
-    StickyCourseTabsData: [
+    StickyTabsData: [
     {
       id: "about",
       label: "About",

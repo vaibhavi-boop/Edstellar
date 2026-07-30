@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function StickyCourseTabs({ tabs }) {
+export default function StickyTabs({ tabs }) {
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.id || "");
 
   const handleClick = (id) => {
@@ -33,7 +33,7 @@ export default function StickyCourseTabs({ tabs }) {
               <button
                 key={tab.id}
                 onClick={() => handleClick(tab.id)}
-                className={`rounded-xl px-5 py-2 text-[15px] font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`rounded-xl px-5 py-2 text-[16px] font-medium whitespace-nowrap transition-all duration-300 ${
                   activeTab === tab.id
                     ? "bg-[#D8EE6A] text-[#1F2937]"
                     : "text-[#6B7280] hover:bg-[#F5F5F5] hover:text-[#111827]"

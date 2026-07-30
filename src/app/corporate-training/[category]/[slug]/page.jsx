@@ -18,6 +18,9 @@ import CertificateSection from "@/Components/CourseComponents/CertificateSection
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import RelatedApplySection from "@/Components/CourseComponents/RelatedApplySection";
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
+import CapabilitySection from "@/Components/CourseComponents/CapabilitySection";
+import TrainersSection from "@/Components/CourseComponents/TrainersSection";
+import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import QuoteForm from "@/Components/CourseComponents/QuoteForm";
 
 export default async function CoursePage({ params }) {
@@ -64,12 +67,15 @@ export default async function CoursePage({ params }) {
       <CurriculumSection />
       <AudienceSection />
       <ModesSection />
+      <CapabilitySection />
       <WhyEdstellarSection />
       <TestimonialsSection />
+       <TrainersSection />
       <CertificateSection />
       <CourseFAQSection />
       <RelatedApplySection />
       <ContactFormSection />
+      <StickyFooter />
     </main>
   );
 }

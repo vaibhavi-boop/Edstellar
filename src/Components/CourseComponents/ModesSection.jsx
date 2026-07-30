@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { useState } from "react";
 import { modes, modeLabels } from "@/data/mlMonitoringData";
 
@@ -7,74 +9,93 @@ export default function ModesSection() {
   const m = modes[active];
 
   return (
-    <section id="modes" className="py-28 border-b border-[var(--rule)]">
-      <div className="container pr-[466px]">
-        <div className="text-[11px] tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
+    <section id="modes" className="border-b border-[var(--rule)] py-28">
+      <div className="container xl:pr-[466px]">
+        {/* Section Label */}
+        <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] text-[16px] text-[var(--ink)]">
-            VII
+            VIII
           </span>
-          <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">
+          <span className="[font-family:var(--serif)] text-[16px] italic normal-case tracking-normal text-[var(--ink)]">
             Modes
           </span>
           · How delivery works
         </div>
 
-        <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-4 max-w-[20ch]">
+        <h2 className="mb-4 max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em]">
           Training delivery:{" "}
           <em className="[font-family:var(--serif)] italic">onsite, virtual</em>
           , and offsite.
         </h2>
-        <p className="text-[var(--muted)] text-[clamp(15px,1.2vw,17px)] leading-[1.7] mb-8 max-w-[64ch]">
+
+        <p className="mb-8 max-w-[64ch] text-[clamp(15px,1.2vw,17px)] leading-[1.7] text-[var(--muted)]">
           We design training your teams actually engage with, then deliver it
           the way that suits you, in 10+ languages through a vetted global
           trainer network.
         </p>
 
-        <div className="flex gap-2 border-b border-[var(--rule)] mb-8 flex-wrap">
+        {/* Tabs */}
+        <div className="mb-8 flex flex-wrap gap-2 border-b border-[var(--rule)]">
           {modeLabels.map((l, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`[font-family:var(--display)] font-semibold text-[16px] tracking-[-0.01em] px-1.5 pb-[14px] mr-[22px] bg-none border-none cursor-pointer relative transition-colors ${
+              className={`relative mr-[22px] border-none bg-transparent px-1.5 pb-[14px] text-[16px] font-semibold tracking-[-0.01em] transition-colors ${
                 active === i ? "text-[var(--ink)]" : "text-[var(--muted)]"
               }`}
             >
-              <span className="block [font-family:var(--mono)] text-[10px] tracking-[0.14em] uppercase text-[var(--muted-soft)] mb-1">
+              <span className="mb-1 block text-[10px] uppercase tracking-[0.14em] text-[var(--muted-soft)] [font-family:var(--mono)]">
                 {l.lbl}
               </span>
+
               {l.h}
+
               {active === i && (
-                <span className="absolute left-0 -bottom-px w-full h-[2px] bg-[var(--lime)]" />
+                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[var(--lime)]" />
               )}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+        {/* Content */}
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_340px]">
+          {/* Left */}
           <div>
-            <h3 className="[font-family:var(--display)] font-semibold text-[24px] tracking-[-0.02em] mb-3">
+            <h3 className="mb-3 text-[24px] font-semibold tracking-[-0.02em] [font-family:var(--display)]">
               {m.h}
             </h3>
-            <p className="text-[var(--muted)] text-[15px] leading-[1.6]">
+
+            <p className="text-[15px] leading-[1.7] text-[var(--muted)]">
               {m.d}
             </p>
-            <ul className="mt-4 list-none">
+
+            <ul className="mt-5">
               {m.li.map((item, i) => (
                 <li
                   key={i}
-                  className="flex gap-3 text-[14.5px] text-[var(--muted)] py-2.5 border-t border-[var(--rule)]"
+                  className="flex gap-3 border-t border-[var(--rule)] py-3 text-[14.5px] text-[var(--muted)]"
                 >
-                  <span className="text-[#6f8c0f] font-bold">→</span>
+                  <span className="font-bold text-[#6f8c0f]">→</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-[var(--paper-warm)] border border-[var(--rule)] rounded-[20px] h-[280px] flex items-center justify-center relative overflow-hidden">
-            <div className="absolute w-[120px] h-[120px] rounded-full bg-[radial-gradient(circle,rgba(200,241,53,0.55),transparent_70%)] animate-pulse" />
-            <span className="[font-family:var(--display)] font-bold text-[clamp(38px,6vw,74px)] tracking-[-0.04em] text-[var(--navy)] opacity-10">
-              {["LIVE", "HERE", "AWAY"][active]}
-            </span>
+
+          <div className="relative flex justify-center">
+            <div className="relative w-full max-w-[340px] overflow-hidden rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,.12)]">
+              <Image
+                src={m.img}
+                alt={m.alt}
+                width={340}
+                height={280}
+                className="h-[280px] w-full object-cover"
+              />
+
+              <span className="absolute bottom-4 left-4 rounded-full bg-lime-400 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-black">
+                {m.big}
+              </span>
+            </div>
           </div>
         </div>
       </div>

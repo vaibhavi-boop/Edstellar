@@ -1,18 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Check,
-  Play,
-  Download,
-} from "lucide-react";
+import { Check, Play, Download } from "lucide-react";
 
 export default function CourseInfoBar({ data }) {
   return (
     <div className="pt-4 pb-18 bg-white">
-
       <div className="container">
-
         {/* Feature Pills */}
 
         <div className="mb-6 flex flex-wrap gap-3">
@@ -22,11 +16,7 @@ export default function CourseInfoBar({ data }) {
               className="flex items-center gap-2 rounded-full border border-[#0a16281f] bg-white px-4 py-2 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md"
             >
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#D7F11E]">
-                <Check
-                  size={12}
-                  strokeWidth={3}
-                  className="text-[#242B67]"
-                />
+                <Check size={12} strokeWidth={3} className="text-[#242B67]" />
               </span>
 
               <span className="text-[14px] font-medium text-[#1F2937]">
@@ -39,13 +29,10 @@ export default function CourseInfoBar({ data }) {
         {/* Dark Card */}
 
         <div className="rounded-[20px] bg-[#0F1B2D] p-5 text-white">
-
           <div className="flex flex-wrap items-center justify-between gap-8">
-
             {/* Left Side */}
 
             <div className="flex flex-wrap items-center">
-
               {data.stats.map((item, index) => (
                 <div
                   key={item.label}
@@ -65,7 +52,7 @@ export default function CourseInfoBar({ data }) {
                 </div>
               ))}
 
-             {/* Trainers */}
+              {/* Trainers */}
               <div className="ml-4 flex items-center gap-4 border-r border-white/15 pr-4">
                 <div className="flex items-center">
                   <img
@@ -78,7 +65,7 @@ export default function CourseInfoBar({ data }) {
                 </div>
 
                 <div>
-                  <h4 className="text-[16px] font-semibold">
+                  <h4 className="text-[12px] font-semibold">
                     <span className="text-[#D7F11E]">
                       {data.trainers.count}
                     </span>{" "}
@@ -105,66 +92,62 @@ export default function CourseInfoBar({ data }) {
                   ))}
                 </div>
 
-                <p className="text-[12px] uppercase tracking-[0.18em] text-white/70">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
                   {data.rating.score} · {data.rating.reviews}
                 </p>
               </div>
-
             </div>
 
             {/* Right Side Buttons */}
-              <div className="flex flex-wrap items-center gap-4">
-                {data.buttons.map((button) => (
-                  <Link
-                key={button.text}
-                href={button.href}
-                className={`${
-                  button.type === "preview"
-                    ? "course-btn course-btn-preview"
-                    : "course-btn course-btn-brochure"
-                } text-[14px] group flex items-center gap-3 rounded-full border border-white/14 bg-white/5 px-5 py-2 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#C5E826] hover:bg-white/10`}
-              >
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D7F11E]/20 transition-all duration-300 group-hover:bg-[#C5E826]">
-                {button.type === "preview" ? (
-                  <Play
-                    size={14}
-                    fill="currentColor"
-                    className="course-btn-icon text-[#C5E826] transition-all duration-300 group-hover:text-[#0F1B2D]"
-                  />
-                ) : (
-                  <Download
-                    size={14}
-                    className="course-btn-icon text-[#C5E826] transition-all duration-300 group-hover:text-[#0F1B2D]"
-                  />
-                )}
-              </span>
+            <div className="flex flex-wrap items-center gap-4">
+              {data.buttons.map((button) => (
+                <Link
+                  key={button.text}
+                  href={button.href}
+                  className={`${
+                    button.type === "preview"
+                      ? "course-btn course-btn-preview"
+                      : "course-btn course-btn-brochure"
+                  } text-[12px] group flex items-center gap-3 rounded-full border border-white/14 bg-white/5 px-4 py-2 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#C5E826] hover:bg-white/10`}
+                >
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D7F11E]/20 transition-all duration-300 group-hover:bg-[#C5E826]">
+                    {button.type === "preview" ? (
+                      <Play
+                        size={14}
+                        fill="currentColor"
+                        className="course-btn-icon text-[#C5E826] transition-all duration-300 group-hover:text-[#0F1B2D]"
+                      />
+                    ) : (
+                      <Download
+                        size={14}
+                        className="course-btn-icon text-[#C5E826] transition-all duration-300 group-hover:text-[#0F1B2D]"
+                      />
+                    )}
+                  </span>
 
-              <span className="font-medium text-white">
-                {button.text}
-              </span>
-            </Link>
-          ))}
+                  <span className="font-medium text-white">{button.text}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-center">
+          <span className="text-[11px] uppercase tracking-[0.28em] text-[#7A8495]">
+            {data.groupQuote.text}
+          </span>
+
+          <Link
+            href={data.groupQuote.href}
+            className="group relative text-[10px] uppercase tracking-[0.28em] text-[#6f8c0f] transition-colors duration-300 hover:text-[#0A1628]"
+          >
+            {data.groupQuote.linkText}
+
+            <span className="absolute -bottom-[1px] left-0 h-[1px] w-full origin-left scale-x-100 bg-[#C5E826] transition-all duration-300 group-hover:bg-[#0A1628]"></span>
+          </Link>
         </div>
       </div>
     </div>
-
-    {/* Bottom CTA */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-center">
-              <span className="text-[11px] uppercase tracking-[0.28em] text-[#7A8495]">
-                {data.groupQuote.text}
-              </span>
-
-              <Link
-                href={data.groupQuote.href}
-                className="group relative text-[10px] uppercase tracking-[0.28em] text-[#6f8c0f] transition-colors duration-300 hover:text-[#0A1628]"
-              >
-                {data.groupQuote.linkText}
-
-                <span className="absolute -bottom-[1px] left-0 h-[1px] w-full origin-left scale-x-100 bg-[#C5E826] transition-all duration-300 group-hover:bg-[#0A1628]"></span>
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      );
-    }
+  );
+}

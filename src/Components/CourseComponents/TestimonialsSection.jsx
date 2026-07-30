@@ -5,16 +5,17 @@ import { quotes } from "@/data/mlMonitoringData";
 
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (!quotes || quotes.length === 0) return;
+    if (!quotes || quotes.length === 0 || paused) return;
 
     const interval = setInterval(() => {
       setActive((current) => (current + 1) % quotes.length);
     }, 7000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [paused]);
 
   if (!quotes || quotes.length === 0) {
     return null;
@@ -24,7 +25,11 @@ export default function TestimonialsSection() {
 
   return (
     <section id="testimonials" className="border-b border-[var(--rule)] py-28">
-      <div className="container-narrow">
+      <div
+        className="container-narrow"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         {/* Section Label */}
         <div
           className="
@@ -108,8 +113,10 @@ export default function TestimonialsSection() {
               src={q.image}
               alt={q.w}
               className="
-              h-[38px]
-              w-[38px]
+              h-[42px]
+              w-[42px]
+              md:h-[48px]
+              md:w-[48px]
               flex-none
               rounded-full
               object-cover
@@ -120,7 +127,7 @@ export default function TestimonialsSection() {
             <div>
               <p
                 className="
-                  text-[10px]
+                  text-[11px]
                   font-medium
                   uppercase
                   tracking-[0.12em]
@@ -134,7 +141,7 @@ export default function TestimonialsSection() {
               <p
                 className="
                   mt-[3px]
-                  text-[8px]
+                  text-[10.5px]
                   uppercase
                   tracking-[0.12em]
                   text-[var(--muted)]

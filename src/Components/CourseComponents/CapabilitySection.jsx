@@ -1,3 +1,5 @@
+"use client";
+
 import { capability } from "@/data/mlMonitoringData";
 
 export default function CapabilitySection() {
@@ -139,6 +141,14 @@ export default function CapabilitySection() {
 
             <button
               type="button"
+              onClick={() => {
+                const apply = document.getElementById("apply");
+                if (apply) {
+                  const top =
+                    apply.getBoundingClientRect().top + window.scrollY - 70;
+                  window.scrollTo({ top, behavior: "smooth" });
+                }
+              }}
               className="
                 inline-flex
                 items-center

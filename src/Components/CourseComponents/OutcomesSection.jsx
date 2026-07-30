@@ -22,15 +22,15 @@ export default function OutcomesSection() {
       id="outcomes"
       className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)] "
     >
-      <div className="container pr-[466px]">
+      <div className="container xl:pr-[466px]">
         <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">
-            IV
+            V
           </span>
           <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">
             Outcomes
           </span>
-          · What your team will achieve
+          · Pick what matters most
         </div>
 
         <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-4 max-w-[20ch]">

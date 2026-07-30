@@ -22,6 +22,8 @@ import CapabilitySection from "@/Components/CourseComponents/CapabilitySection";
 import TrainersSection from "@/Components/CourseComponents/TrainersSection";
 import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import QuoteForm from "@/Components/CourseComponents/QuoteForm";
+import GroupQuoteSection from "@/Components/CourseComponents/GroupQuoteSection";
+import WhyNowSection from "@/Components/CourseComponents/WhyNowSection";
 
 export default async function CoursePage({ params }) {
   const { category, slug } = await params;
@@ -54,8 +56,9 @@ export default async function CoursePage({ params }) {
       {course.hero && <CourseHero {...course.hero} />}
       <CourseInfoBar data={course.courseInfoBardata} />
       <ClientsLogosSection data={course.ClientsLogosSectionData} />
-      <StickyCourseTabs data={course.StickyCourseTabsData} />
+      <StickyCourseTabs data={course.StickyTabsData} />
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
+      <WhyNowSection />
       <LifecycleSection />
       <div className="relative z-[10]">
         <SkillsSection />
@@ -63,10 +66,11 @@ export default async function CoursePage({ params }) {
         <CurriculumSection />
         <AudienceSection />
         <ModesSection />
-        <div className="absolute top-8 bottom-8 left-1/2  w-full max-w-[1280px] -translate-x-1/2 pointer-events-none ">
+        <div className="absolute top-8 bottom-8 left-1/2 hidden w-full max-w-[1280px] -translate-x-1/2 pointer-events-none xl:block">
           <QuoteForm />
         </div>
       </div>
+      <GroupQuoteSection />
       <CapabilitySection />
       <WhyEdstellarSection />
       <TestimonialsSection />

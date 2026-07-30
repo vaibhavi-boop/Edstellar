@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function WhatIsSection({
-  mark = "About · Why this matters",
+  mark = "About · A two-minute primer",
   title,
   titleEm,
   intro,

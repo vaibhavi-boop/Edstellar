@@ -67,13 +67,10 @@ export default async function CoursePage({ params }) {
           <QuoteForm />
         </div>
       </div>
-      <CurriculumSection />
-      <AudienceSection />
-      <ModesSection />
       <CapabilitySection />
       <WhyEdstellarSection />
       <TestimonialsSection />
-       <TrainersSection />
+      <TrainersSection />
       <CertificateSection />
       <CourseFAQSection />
       <RelatedApplySection />

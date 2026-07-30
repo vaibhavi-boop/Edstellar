@@ -5,7 +5,26 @@ export const courses = [
     slug: "ml-model-monitoring",
     description: "Dummy description for ML Model Monitoring.",
     hero: {
-      breadcrumb: "Home / IT & Technical / Artificial Intelligence / ML Model Monitoring",
+      breadcrumb: [
+      {
+        label: "Home",
+        href: "/",
+        title: "Click Here to View Home Page",
+      },
+      {
+        label: "IT & Technical",
+        href: "/corporate-training/it-and-technical",
+        title: "Click Here to View IT & Technical Page",
+      },
+      {
+        label: "Artificial Intelligence",
+        href: "/corporate-training/artificial-intelligence",
+        title: "Click Here to View Artificial Intelligence Page",
+      },
+      {
+        label: "ML Model Monitoring",
+      },
+    ],
       badge: "Instructor-led Corporate Training · IT & Technical",
       headline: "ML Model",
       headlineEm: "Monitoring",
@@ -197,7 +216,10 @@ export const courses = [
         },
       ],
     },
-    StickyTabsData: [
+    StickyTabsData: {
+    logo: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/68b14925e3257ab4374ea01b_Edstellar.svg",
+    target: "Home",
+    tabs: [
     {
       id: "about",
       label: "About",
@@ -238,7 +260,8 @@ export const courses = [
       id: "trainers",
       label: "Trainers",
     },
-   ],
+  ],
+},
     whatIs: {
       title: "What is ",
       titleEm: "ML model monitoring?",

@@ -20,7 +20,10 @@ import pageData from "@/data/TalentAssessment.json";
 export default function Home() {
   return (
     <>
-      <HeroSection data={pageData.HeroSectionData} breadcrumbs={pageData.BreadcrumbData} />
+      <HeroSection
+        data={pageData.HeroSectionData}
+        breadcrumbs={pageData.BreadcrumbData}
+      />
       <StatsSection items={pageData.stats} />
       <MostRequestedAssessment data={pageData.MostRequestedAssessmentData} />
       <NumberSection data={pageData.NumberSectionData} />

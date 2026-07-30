@@ -1,8 +1,10 @@
 import { courses } from "@/data/mlMonitoringData";
 import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";
-import CourseSideNav from "@/Components/CourseComponents/CourseSideNav";
 import CourseHero from "@/Components/CourseComponents/CourseHero";
+import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
+import ClientsLogosSection from "@/Components/CourseComponents/ClientsLogosSection";
+import StickyCourseTabs from "@/Components/CourseComponents/StickyTabsSection";
 import WhatIsSection from "@/Components/CourseComponents/WhatIsSection";
 import LifecycleSection from "@/Components/CourseComponents/LifecycleSection";
 import SkillsSection from "@/Components/CourseComponents/SkillsSection";
@@ -19,6 +21,7 @@ import ContactFormSection from "@/Components/CourseComponents/ContactFormSection
 import CapabilitySection from "@/Components/CourseComponents/CapabilitySection";
 import TrainersSection from "@/Components/CourseComponents/TrainersSection";
 import StickyFooter from "@/Components/CourseComponents/StickyFooter";
+import QuoteForm from "@/Components/CourseComponents/QuoteForm";
 
 export default async function CoursePage({ params }) {
   const { category, slug } = await params;
@@ -48,12 +51,19 @@ export default async function CoursePage({ params }) {
 
   return (
     <main>
-      <CourseSideNav />
       {course.hero && <CourseHero {...course.hero} />}
+      <CourseInfoBar data={course.courseInfoBardata} />
+      <ClientsLogosSection data={course.ClientsLogosSectionData} />
+      <StickyCourseTabs data={course.StickyCourseTabsData} />
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
       <LifecycleSection />
-      <SkillsSection />
-      <OutcomesSection />
+      <div className="relative z-[10]">
+        <SkillsSection />
+        <OutcomesSection />
+        <div className="absolute top-10 bottom-10 left-1/2  w-full max-w-[1280px] -translate-x-1/2 pointer-events-none ">
+          <QuoteForm />
+        </div>
+      </div>
       <CurriculumSection />
       <AudienceSection />
       <ModesSection />

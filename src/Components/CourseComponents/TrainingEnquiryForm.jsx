@@ -26,7 +26,12 @@ const EMAIL_RE =
 // The Contact Us card (heading + Zoho training-enquiry form). Kept standalone so
 // it can be embedded both in the full-width banner (ContactFormSection) and in a
 // popup (QuoteModalButton).
-export default function TrainingEnquiryForm({ className = "" }) {
+export default function TrainingEnquiryForm({
+  className = "",
+  heading = "Contact Us",
+  subheading = "Submit your Training Requirements below and We'll get in touch with you shortly.",
+  submitLabel = "Submit",
+}) {
   const phoneRef = useRef(null);
   const dialCodeRef = useRef(null);
   const branchRef = useRef(null);
@@ -35,6 +40,23 @@ export default function TrainingEnquiryForm({ className = "" }) {
 
   // Country select is rendered declaratively so React owns the <option>s.
   const [selectedIso2, setSelectedIso2] = useState("us");
+  const [carry, setCarry] = useState("");
+
+  useEffect(() => {
+    const readCarry = (detail) => {
+      const text = [detail?.size, detail?.scope, detail?.freq]
+        .filter(Boolean)
+        .join(" · ");
+      if (text) setCarry(text);
+    };
+    try {
+      const stored = sessionStorage.getItem("gqCarry");
+      if (stored) readCarry(JSON.parse(stored));
+    } catch {}
+    const onComplete = (e) => readCarry(e.detail);
+    window.addEventListener("gq:complete", onComplete);
+    return () => window.removeEventListener("gq:complete", onComplete);
+  }, []);
 
   const { preferred, rest } = useMemo(() => {
     const named = allCountries.map((c) => ({
@@ -154,17 +176,22 @@ export default function TrainingEnquiryForm({ className = "" }) {
     requireField("SingleLine", "Company-error2", "Company name is required");
     requireField("SingleLine1", "Job-error2", "Job title is required");
 
-    // Validate phone (unchanged intl-tel-input logic)
+    // Phone is optional: only validate format if the visitor entered something.
     const iti = itiRef.current;
     const phone = phoneRef.current;
-    if (!phone || !phone.value.trim()) {
-      showError("Phone-error2", "Phone number is required");
-      valid = false;
-    } else if (iti && iti.isValidNumber() === false) {
+    if (phone && phone.value.trim() && iti?.isValidNumber() === false) {
       showError("Phone-error2", "Invalid phone number");
       valid = false;
     } else {
       hideError("Phone-error2");
+    }
+
+    const consent = form.elements.namedItem("consent");
+    if (consent && !consent.checked) {
+      showError("Consent-error2", "Please accept the privacy policy");
+      valid = false;
+    } else {
+      hideError("Consent-error2");
     }
 
     if (!valid) {
@@ -225,17 +252,40 @@ export default function TrainingEnquiryForm({ className = "" }) {
     if (el) el.style.display = "none";
   }
 
+  const fieldClass =
+    "w-full rounded-xl border border-[var(--rule)] bg-[var(--paper)] px-[14px] py-[13px] text-[14.5px] text-[var(--ink)] outline-none transition-colors placeholder:text-[var(--muted)] focus:border-[var(--navy)] focus:bg-white focus:shadow-[0_0_0_3px_rgba(10,22,40,0.10)]";
+  const errClass = "hidden text-[12px] leading-[1.5] text-[#b3261e]";
+
   return (
     <div
-      className={`w-full max-w-[720px] bg-white rounded-[10px] px-8 md:px-10 py-8 shadow-xl ${className}`}
+      className={`w-full overflow-hidden rounded-[22px] border border-[var(--rule)] bg-[var(--white)] shadow-[0_30px_70px_-50px_rgba(10,22,40,0.55)] ${className}`}
     >
-      <h2 className="text-[30px] font-bold text-[#1a1a2e] leading-tight">
-        Contact Us
-      </h2>
-      <p className="mt-2 mb-6 text-sm text-gray-500">
-        Submit your Training Requirements below and We&apos;ll get in touch with
-        you shortly.
-      </p>
+      <div className="px-6 py-8 sm:px-10 sm:py-11">
+        {heading && (
+          <>
+            <h2 className="[font-family:var(--display)] text-[22px] font-bold leading-tight text-[var(--ink)] sm:text-[26px]">
+              {heading}
+            </h2>
+            <p className="mt-2 mb-6 text-[13.5px] leading-[1.6] text-[var(--muted)]">
+              {subheading}
+            </p>
+          </>
+        )}
+
+        {carry && (
+          <div className="mb-6 flex flex-wrap items-center gap-2 rounded-xl border border-[var(--rule)] bg-[var(--paper-warm)] px-[18px] py-3.5 text-[13.5px] leading-[1.6] text-[var(--ink)]">
+            <b className="flex-none [font-family:var(--mono)] text-[9.5px] uppercase tracking-[0.15em] text-[var(--muted)]">
+              From your group quote
+            </b>
+            <span>{carry}</span>
+            <a
+              href="#group-quote"
+              className="ml-auto text-[12.5px] text-[var(--ink)] underline underline-offset-2"
+            >
+              Change answers
+            </a>
+          </div>
+        )}
 
       <form
         action="https://forms.zohopublic.in/arvindedst1/form/TrainingEnquiry/formperma/uB1eKs_l1E4npKVJKC49HDEQm5jBlAC3Ow4h9zLcGmA/htmlRecords/submit"
@@ -246,7 +296,7 @@ export default function TrainingEnquiryForm({ className = "" }) {
         encType="multipart/form-data"
         onSubmit={handleSubmit}
         noValidate
-        className="grid grid-cols-1 md:grid-cols-2 gap-5"
+        className="grid grid-cols-1 gap-x-[18px] gap-y-[17px] sm:grid-cols-2"
       >
         <input type="hidden" name="zf_referrer_name" value="" />
         <input
@@ -257,12 +307,19 @@ export default function TrainingEnquiryForm({ className = "" }) {
         <input type="hidden" name="zc_gad" value="" />
 
         {/* Name */}
-        <div className="relative">
+        <div className="flex flex-col gap-[7px]">
+          <label
+            htmlFor="lfName"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+          >
+            Name <span className="text-[#b3261e]">*</span>
+          </label>
           <input
+            id="lfName"
             type="text"
             name="SingleLine2"
             maxLength={255}
-            placeholder="Enter your Name*"
+            placeholder="Enter your name"
             onInput={(e) =>
               validateRequired(
                 "Name-error2",
@@ -271,38 +328,46 @@ export default function TrainingEnquiryForm({ className = "" }) {
               )
             }
             required
-            className="h-[46px] bg-white [border:1px_solid_#c1c1c1] w-full rounded-[3px] px-3 text-sm leading-[22px] outline-none focus:[border:2px_solid_#3898ec]"
+            className={fieldClass}
           />
-          <p
-            id="Name-error2"
-            className="text-red-500 text-xs absolute right-0 top-full mt-0.5 hidden"
-          />
+          <p id="Name-error2" className={errClass} />
         </div>
 
         {/* Email */}
-        <div className="relative">
+        <div className="flex flex-col gap-[7px]">
+          <label
+            htmlFor="lfEmail"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+          >
+            Work email <span className="text-[#b3261e]">*</span>
+          </label>
           <input
+            id="lfEmail"
             type="email"
             name="Email"
             maxLength={255}
-            placeholder="Enter your Work Email*"
+            placeholder="Enter your work email"
             onInput={(e) => validateEmail(e.currentTarget.value)}
             required
-            className="h-[46px] bg-white [border:1px_solid_#c1c1c1] w-full rounded-[3px] px-3 text-sm leading-[22px] outline-none focus:[border:2px_solid_#3898ec]"
+            className={fieldClass}
           />
-          <p
-            id="Email-error2"
-            className="text-red-500 text-xs absolute right-0 top-full mt-0.5 hidden"
-          />
+          <p id="Email-error2" className={errClass} />
         </div>
 
         {/* Company */}
-        <div className="relative">
+        <div className="flex flex-col gap-[7px]">
+          <label
+            htmlFor="lfCompany"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+          >
+            Company name <span className="text-[#b3261e]">*</span>
+          </label>
           <input
+            id="lfCompany"
             type="text"
             name="SingleLine"
             maxLength={255}
-            placeholder="Enter your Company Name*"
+            placeholder="Enter your company name"
             onInput={(e) =>
               validateRequired(
                 "Company-error2",
@@ -311,21 +376,25 @@ export default function TrainingEnquiryForm({ className = "" }) {
               )
             }
             required
-            className="h-[46px] bg-white [border:1px_solid_#c1c1c1] w-full rounded-[3px] px-3 text-sm leading-[22px] outline-none focus:[border:2px_solid_#3898ec]"
+            className={fieldClass}
           />
-          <p
-            id="Company-error2"
-            className="text-red-500 text-xs absolute right-0 top-full mt-0.5 hidden"
-          />
+          <p id="Company-error2" className={errClass} />
         </div>
 
         {/* Job Title */}
-        <div className="relative">
+        <div className="flex flex-col gap-[7px]">
+          <label
+            htmlFor="lfTitle"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+          >
+            Job title <span className="text-[#b3261e]">*</span>
+          </label>
           <input
+            id="lfTitle"
             type="text"
             name="SingleLine1"
             maxLength={255}
-            placeholder="Enter your Job Title*"
+            placeholder="Enter your job title"
             onInput={(e) =>
               validateRequired(
                 "Job-error2",
@@ -334,92 +403,107 @@ export default function TrainingEnquiryForm({ className = "" }) {
               )
             }
             required
-            className="h-[46px] bg-white [border:1px_solid_#c1c1c1] w-full rounded-[3px] px-3 text-sm leading-[22px] outline-none focus:[border:2px_solid_#3898ec]"
+            className={fieldClass}
           />
-          <p
-            id="Job-error2"
-            className="text-red-500 text-xs absolute right-0 top-full mt-0.5 hidden"
-          />
+          <p id="Job-error2" className={errClass} />
         </div>
 
         {/* Country Select */}
-        <div className="relative" id="select-parent">
-          <select
-            name="Dropdown"
-            id="country-select1"
-            value={selectedIso2}
-            onChange={(e) => {
-              const iso2 = e.target.value;
-              setSelectedIso2(iso2);
-              if (iso2) itiRef.current?.setSelectedCountry(iso2);
-            }}
-            style={{ colorScheme: "light" }}
-            className="h-[46px] bg-white [border:1px_solid_#c1c1c1] w-full rounded-[3px] px-3 text-sm leading-[22px] appearance-none cursor-pointer outline-none focus:[border:2px_solid_#3898ec] text-black"
+        <div className="flex flex-col gap-[7px]">
+          <label
+            htmlFor="country-select1"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
           >
-            <option value="" disabled style={optionStyle}>
-              Select Country*
-            </option>
-            {preferred.map((c) => (
-              <option key={c.iso2} value={c.iso2} style={optionStyle}>
-                {c.name}
+            Country
+          </label>
+          <div className="relative">
+            <select
+              name="Dropdown"
+              id="country-select1"
+              value={selectedIso2}
+              onChange={(e) => {
+                const iso2 = e.target.value;
+                setSelectedIso2(iso2);
+                if (iso2) itiRef.current?.setSelectedCountry(iso2);
+              }}
+              style={{ colorScheme: "light" }}
+              className={`${fieldClass} cursor-pointer appearance-none pr-9 text-[var(--ink)]`}
+            >
+              <option value="" disabled style={optionStyle}>
+                Select Country*
               </option>
-            ))}
-            <option value="" disabled style={optionStyle}>
-              ────────────
-            </option>
-            {rest.map((c) => (
-              <option key={c.iso2} value={c.iso2} style={optionStyle}>
-                {c.name}
+              {preferred.map((c) => (
+                <option key={c.iso2} value={c.iso2} style={optionStyle}>
+                  {c.name}
+                </option>
+              ))}
+              <option value="" disabled style={optionStyle}>
+                ────────────
               </option>
-            ))}
-          </select>
-          <input
-            type="hidden"
-            name="SingleLine7"
-            value={selectedCountryName}
-            readOnly
-          />
-          <svg
-            className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-[10px] h-[6px]"
-            viewBox="0 0 10 6"
-            fill="none"
-          >
-            <path
-              d="M1 1l4 4 4-4"
-              stroke="#666"
-              strokeWidth="1.5"
-              strokeLinecap="round"
+              {rest.map((c) => (
+                <option key={c.iso2} value={c.iso2} style={optionStyle}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+            <input
+              type="hidden"
+              name="SingleLine7"
+              value={selectedCountryName}
+              readOnly
             />
-          </svg>
+            <svg
+              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-[10px] h-[6px]"
+              viewBox="0 0 10 6"
+              fill="none"
+            >
+              <path
+                d="M1 1l4 4 4-4"
+                stroke="#666"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
         </div>
 
         {/* Phone */}
-        <div className="relative">
+        <div className="flex flex-col gap-[7px]">
+          <label
+            htmlFor="lfPhone"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+          >
+            Phone
+          </label>
           <input type="hidden" name="SingleLine3" ref={dialCodeRef} />
           <input
+            id="lfPhone"
             ref={phoneRef}
             type="tel"
             name="PhoneNumber_countrycode"
             maxLength={20}
-            placeholder="81234 56789"
-            required
+            placeholder="201-555-0123 (optional)"
             autoComplete="off"
-            className="h-[46px] bg-white [border:1px_solid_#c1c1c1] w-full rounded-[3px] px-3 text-sm leading-[22px] outline-none focus:[border:2px_solid_#3898ec]"
+            className={fieldClass}
           />
-          <p
-            id="Phone-error2"
-            className="text-red-500 text-xs absolute right-0 top-full mt-0.5 hidden"
-          />
+          <p id="Phone-error2" className={errClass} />
         </div>
 
         {/* Message */}
-        <div className="md:col-span-2">
+        <div className="flex flex-col gap-[7px] sm:col-span-2">
+          <label
+            htmlFor="lfMsg"
+            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+          >
+            Your training requirements
+          </label>
           <textarea
+            id="lfMsg"
             name="MultiLine"
             maxLength={65535}
-            placeholder="Tell Us about your Training Requirements"
+            placeholder="Tell us about your training requirements: team size, delivery format, your production stack, and preferred timing."
             rows={4}
-            className="[border:1px_solid_#c1c1c1] text-sm leading-[22px] w-full rounded-[3px] p-3 outline-none focus:[border:2px_solid_#3898ec] resize-none"
+            className={`${fieldClass} min-h-[104px] resize-y leading-[1.6]`}
           />
         </div>
 
@@ -438,15 +522,54 @@ export default function TrainingEnquiryForm({ className = "" }) {
           defaultValue=""
         />
 
-        <div className="md:col-span-2 flex justify-end">
+        {/* Consent */}
+        <div className="sm:col-span-2">
+          <label className="flex items-start gap-[11px]">
+            <input
+              type="checkbox"
+              name="consent"
+              required
+              onChange={(e) =>
+                e.currentTarget.checked
+                  ? hideError("Consent-error2")
+                  : showError(
+                      "Consent-error2",
+                      "Please accept the privacy policy",
+                    )
+              }
+              className="mt-0.5 h-[17px] w-[17px] flex-none accent-[var(--navy)]"
+            />
+            <span className="text-[12.5px] leading-[1.6] text-[var(--muted)]">
+              I agree that Edstellar may contact me about this training
+              request and store my details as described in the{" "}
+              <a
+                href="https://www.edstellar.com/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--ink)] underline underline-offset-2"
+              >
+                privacy policy
+              </a>
+              . <span className="text-[#b3261e]">*</span>
+            </span>
+          </label>
+          <p id="Consent-error2" className={`${errClass} ml-[28px]`} />
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-6 border-t border-[var(--rule)] pt-6 sm:col-span-2">
+          <p className="max-w-[38ch] flex-1 text-[12.5px] leading-[1.55] text-[var(--muted)]">
+            We reply within one business day with a tailored proposal, no
+            automated sales sequence.
+          </p>
           <button
             type="submit"
-            className="bg-[#1a3c6e] hover:bg-[#152e55] text-white font-semibold px-10 py-3 rounded-md cursor-pointer transition-colors text-sm"
+            className="whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-bold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)]"
           >
-            Submit
+            {submitLabel}
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 }

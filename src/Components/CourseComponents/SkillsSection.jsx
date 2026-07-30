@@ -12,19 +12,18 @@ export default function SkillsSection() {
       return next;
     });
   };
-  ("");
 
   return (
     <section id="skills">
-      <div className="container pr-[466px]">
+      <div className="container xl:pr-[466px]">
         <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">
-            III
+            IV
           </span>
           <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-[var(--ink)]">
             Skills
           </span>
-          · What your employees will gain
+          · Seven capability areas
         </div>
 
         <h2 className="font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-4 max-w-[20ch]">
@@ -34,7 +33,7 @@ export default function SkillsSection() {
         </h2>
         <p className="text-[var(--muted)] text-[clamp(15px,1.2vw,17px)] leading-[1.7] mb-14 max-w-[64ch]">
           These are the core, practical skills your team develops during the
-          programme. Tap any card to see what it means in production.
+          program. Tap any card to see what it means in production.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[18px]">

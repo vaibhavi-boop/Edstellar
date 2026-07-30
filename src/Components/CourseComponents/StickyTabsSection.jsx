@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 
-export default function StickyCourseTabs({ tabs }) {
+export default function StickyTabs({ data = {} }) {
+  const { logo, tabs } = data;
+
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.id || "");
 
   const handleClick = (id) => {
@@ -11,7 +13,36 @@ export default function StickyCourseTabs({ tabs }) {
     const section = document.getElementById(id);
 
     if (section) {
-      const offset = 90; // Sticky navbar height
+      const offset = [...document.querySelectorAll(".sticky")].reduce(
+        (sum, el) => sum + el.offsetHeight,
+        0,
+      ) || 129;
+
+      const top =
+        section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleLogoClick = () => {
+    const firstSectionId = tabs?.[0]?.id;
+
+    if (!firstSectionId) return;
+
+    setActiveTab(firstSectionId);
+
+    const section = document.getElementById(firstSectionId);
+
+    if (section) {
+      const offset = [...document.querySelectorAll(".sticky")].reduce(
+        (sum, el) => sum + el.offsetHeight,
+        0,
+      ) || 129;
+
       const top =
         section.getBoundingClientRect().top + window.pageYOffset - offset;
 
@@ -25,18 +56,40 @@ export default function StickyCourseTabs({ tabs }) {
   if (!tabs?.length) return null;
 
   return (
-    <section className="sticky top-0 z-50 border-y border-[#E5E7EB] bg-white shadow-sm">
-      <div className="container">
-        <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex min-w-max items-center gap-6 py-2">
+    <div
+      className="px-4 sm:px-6 lg:px-15 sticky top-16 z-[40] border-y border-t-[rgba(10,22,40,0.12)]
+border-b-[rgba(10,22,40,0.12)]
+bg-[rgba(250,250,247,0.94)]
+backdrop-blur-[14px]
+shadow-[0_10px_24px_-22px_rgba(10,22,40,0.5)]"
+    >
+      <div className="flex h-[52px] items-center sm:h-[60px] lg:h-[65px]">
+        {/* Logo */}
+        <button
+          onClick={handleLogoClick}
+          className="mr-3 shrink-0 cursor-pointer sm:mr-5 lg:mr-8"
+          aria-label="Go to Home"
+        >
+          <img
+            src={logo}
+            alt="Edstellar"
+            width={110}
+            height={32}
+            className="h-6 w-auto sm:h-7 lg:h-8"
+          />
+        </button>
+
+        {/* Tabs */}
+        <div className="min-w-0 flex-1 overflow-x-auto overscroll-x-contain scrollbar-hide">
+          <div className="flex min-w-max items-center gap-0.5 lg:min-w-0 lg:w-full lg:justify-between lg:gap-0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => handleClick(tab.id)}
-                className={`rounded-xl px-5 py-2 text-[15px] font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`rounded-lg px-3 py-1.5 text-[11.5px] font-medium whitespace-nowrap transition-all duration-300 sm:px-3.5 sm:py-2 sm:text-[12px] lg:px-4 ${
                   activeTab === tab.id
-                    ? "bg-[#D8EE6A] text-[#1F2937]"
-                    : "text-[#6B7280] hover:bg-[#F5F5F5] hover:text-[#111827]"
+                    ? "bg-[#E8F59A] font-medium text-[#1F2937]"
+                    : "text-[#0a162899] hover:bg-[#F2F0E8] hover:text-[#0A1628]"
                 }`}
               >
                 {tab.label}
@@ -45,6 +98,6 @@ export default function StickyCourseTabs({ tabs }) {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

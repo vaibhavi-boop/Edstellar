@@ -37,11 +37,15 @@ export default function RelatedApplySection() {
 
         {/* Learning Path */}
         <div className="mb-9 grid grid-cols-1 gap-[12px] md:grid-cols-2 lg:grid-cols-4">
-          {learningPath.map((item, i) => (
+          {learningPath.map((item, i) => {
+            const CardTag = item.active ? "div" : "a";
+            const cardProps = item.active ? {} : { href: item.href };
+            return (
             <div key={i} className="flex items-stretch gap-[12px]">
 
               {/* Course Card */}
-              <div
+              <CardTag
+                {...cardProps}
                 className={`group flex flex-1 flex-col rounded-[16px] border p-[18px] transition-all duration-300 ease-out will-change-transform ${
                   item.active
                     ? "border-[var(--navy)] bg-[var(--navy)] text-white"
@@ -100,7 +104,7 @@ export default function RelatedApplySection() {
                   </svg>
                   {item.duration}
                 </p>
-              </div>
+              </CardTag>
 
               {/* Arrow (kept in flow but invisible on the last card so every column stays the same width) */}
               <span
@@ -112,7 +116,8 @@ export default function RelatedApplySection() {
                 →
               </span>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Related Courses */}
@@ -122,8 +127,9 @@ export default function RelatedApplySection() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((course, i) => (
-            <div
+            <a
               key={i}
+              href={course.u}
               className="flex flex-col gap-[12px] rounded-[14px] border border-[var(--rule)] bg-white p-[22px] transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:border-[var(--rule-strong)] hover:shadow-[0_20px_42px_-26px_rgba(10,22,40,.5)]"
             >
               <h4 className="text-[16px] font-semibold leading-[1.3] tracking-[-0.01em]">
@@ -138,7 +144,7 @@ export default function RelatedApplySection() {
               <span className="block text-[11px] uppercase tracking-[0.12em] text-[#6f8c0f] [font-family:var(--mono)]">
                 View course →
               </span>
-            </div>
+            </a>
           ))}
         </div>
 

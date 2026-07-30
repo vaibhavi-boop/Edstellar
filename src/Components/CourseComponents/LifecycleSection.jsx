@@ -11,16 +11,16 @@ export default function LifecycleSection() {
       <div className="container">
 
         <div className="text-[11px] tracking-[0.24em] uppercase text-white/60 mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
-          <span className="[font-family:var(--serif)] text-[16px] text-white">II</span>
+          <span className="[font-family:var(--serif)] text-[16px] text-white">III</span>
           <span className="[font-family:var(--serif)] italic text-[16px] normal-case tracking-normal text-white">Lifecycle</span>
-          · What your team will operate
+          · Six stages, one loop
         </div>
 
         <h2 className="text-[var(--paper)] font-bold text-[clamp(30px,4vw,50px)] leading-[1.08] tracking-[-0.03em] mb-4 max-w-[20ch]">
           The <em className="[font-family:var(--serif)] italic">monitoring lifecycle</em> your team will run.
         </h2>
         <p className="text-white/75 text-[clamp(15px,1.2vw,17px)] leading-[1.7] mb-14 max-w-[64ch]">
-          This is the operational loop your teams will run after the training. Select a stage to see what it covers.
+          This is the operational loop your teams will run after the training. Select a stage to see what it covers and where it sits in the curriculum.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-12 items-start">

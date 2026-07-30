@@ -1,4 +1,18 @@
+"use client";
+
 import { trainers } from "@/data/mlMonitoringData";
+
+function viewProfile(trainer) {
+  if (trainer.profile) {
+    window.open(trainer.profile, "_blank", "noopener");
+    return;
+  }
+  const apply = document.getElementById("apply");
+  if (apply) {
+    const top = apply.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+}
 
 export default function TrainersSection() {
   return (
@@ -78,6 +92,7 @@ export default function TrainersSection() {
               <div className="mt-auto pt-5">
                 <button
                   type="button"
+                  onClick={() => viewProfile(trainer)}
                   className="flex w-full items-center justify-center rounded-full border border-[var(--rule-strong)] bg-transparent px-4 py-2.5 text-[10px] font-semibold text-[var(--ink)] transition-all duration-200 hover:-translate-y-[2px] hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)] active:translate-y-0"
                 >
                   View trainer profile →

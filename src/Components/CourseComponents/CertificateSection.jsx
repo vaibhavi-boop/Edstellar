@@ -44,10 +44,10 @@ export default function CertificateSection() {
 
             <p className="max-w-[52ch] text-[16px] leading-[1.75] text-[var(--muted)]">
               On successful completion, employees receive an Edstellar course
-              completion certificate, recognising their commitment to ongoing
+              completion certificate, recognizing their commitment to ongoing
               learning and professional development. It validates the skills
               they have built and motivates them to keep growing and contribute
-              to organisational success.
+              to organizational success.
             </p>
 
             <p className="mt-5 max-w-[52ch] text-[13px] leading-[1.7] text-[var(--muted)]">

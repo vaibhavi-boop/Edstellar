@@ -11,14 +11,234 @@ export const courses = [
       headlineEm: "Monitoring",
       headlineSuffix: "Corporate Training",
       subtitle: "Keep production ML models accurate, fair, and trusted.",
-      lede: "ML Model Monitoring corporate training equips your ML, data science, and MLOps teams to run production models with confidence, covering drift detection, performance tracking, alerting, retraining, and fairness governance. Instructor-led, fully customised, and delivered to your teams onsite or virtually worldwide.",
-      chips: [
-        { label: "Duration", value: "16–24 hrs" },
-        { label: "Delivery", value: "Instructor-led", sub: "Virtual · On-site · Off-site" },
-        { label: "Languages", value: "10", sub: "incl. EN, ES, DE, 中文" },
-        { label: "Reach", value: "100+", sub: "countries" },
+      lede: "ML Model Monitoring corporate training gives your ML, data science, and MLOps teams the confidence to run production models at scale, covering drift detection, performance tracking, alerting, retraining, and fairness governance. Customized, expert-led group training for employees, delivered onsite, live virtual, or hybrid to teams in 100+ countries.",
+      lede1: [
+        {
+          text: "Instructor-led group training",
+        },
+        {
+          text: "Virtual / on-site / off-site",
+        },
+        {
+          text: "10 languages",
+          tooltip: {
+            title: "AVAILABLE LANGUAGES",
+            description:
+              "English, Español, 普通话, Deutsch, العربية, Português, हिंदी, Français, 日本語 and Italiano",
+          },
+        },
+        {
+          text: "100+ countries",
+          tooltip: {
+            title: "WE HAVE DELIVERED IN",
+            description:
+              "United States, United Kingdom, India, Canada, Germany, France, Netherlands, UAE, Saudi Arabia, Singapore, Australia, Japan, Brazil, South Africa and 90+ more countries.",
+          },
+        },
+      ],
+      data : {
+        title: "ML Model Monitoring Corporate Training",
+        image: {
+          src: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a698481c95c6c10a05f1afe_ml-cours.webp",
+          alt: "ML Model Monitoring Corporate Training",
+        },
+      },
+    },
+    courseInfoBardata : {
+      features: [
+        "Drift detection",
+        "Performance tracking",
+        "Alerting & response",
+        "Retraining & A/B",
+        "Explainability",
+        "Fairness & compliance",
+      ],
+
+      stats: [
+        {
+          value: "24–40",
+          label: "Hours",
+        },
+        {
+          value: "10",
+          label: "Modules",
+        },
+        {
+          value: "8",
+          label: "Hands-on Labs",
+        },
+      ],
+
+      trainers: {
+        count: "4+",
+        title: "Expert trainers",
+        subtitle: "Meet them →",
+        avatar: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69c57f6097d45480150d76_avtar.svg",
+      },
+
+      rating: {
+        starIcon: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69cd1cc048aca1f700706f_star-vector.svg",
+        score: "4.8/5",
+        reviews: "47 Reviews",
+        stars: 5,
+      },
+
+      buttons: [
+        {
+          type: "preview",
+          text: "Watch preview",
+          href: "#",
+        },
+        {
+          type: "brochure",
+          text: "Download brochure",
+          href: "#",
+        },
+      ],
+
+      groupQuote: {
+        text: "Need more than one program?",
+        linkText: "Get a Group Quote →",
+        href: "#",
+      },
+    },
+    ClientsLogosSectionData : {
+      title: "TRUSTED BY TEAMS AT",
+      logos: [
+        {
+          id: 1,
+          name: "Microsoft",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b5873a89529b86f470b686_Microsoft.webp",
+          alt: "Microsoft",
+        },
+        {
+          id: 2,
+          name: "Amazona",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/698469c6a91cef644870febe_Amazon%201%20(1).webp",
+          alt: "Amazon",
+        },
+        {
+          id: 3,
+          name: "Intel",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b587b637a6028400026a71_Intel2.webp",
+          alt: "Intel",
+        },
+        {
+          id: 4,
+          name: "Adobe",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b587f256c7ca56ef383708_Adobe.webp",
+          alt: "Adobe",
+        },
+        {
+          id: 5,
+          name: "Tata_Chemicals",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b5887637a6028400031b44_Tata_Chemicals.webp",
+          alt: "Tata_Chemicals",
+        },
+        {
+          id: 6,
+          name: "Johnson&Johnson",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/69846266b0acf082e648fdb0_Johnson%26Johnson%201.webp",
+          alt: "Johnson&Johnson",
+        },
+        {
+          id: 7,
+          name: "godrej",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a94748156eb2b452d94e_godrej.webp",
+          alt: "godrej",
+        },
+        {
+          id: 8,
+          name: "nrsc",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a9601c7bda326efbe969_nrsc.webp",
+          alt: "nrsc",
+        },
+        {
+          id: 9,
+          name: "Sportskeeda",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/69846830ede4cc2aea05d48a_Sportskeeda%201.webp",
+          alt: "Sportskeeda",
+        },
+        {
+          id: 10,
+          name: "Total",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a98ed7f1555ba95a94c2_Total.webp",
+          alt: "Total",
+        },
+        {
+          id: 11,
+          name: "visa",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b9218334a6bbb7e0046a57_visa.webp",
+          alt: "visa",
+        },
+        {
+          id: 12,
+          name: "Abb",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a9c115c2a0faf78d5187_Abb.webp",
+          alt: "Abb",
+        },
+        {
+          id: 13,
+          name: "Emerson",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6a9d8e0dd2f35457d1311_Emerson.webp",
+          alt: "Emerson",
+        },
+        {
+          id: 14,
+          name: "Aditya Birla Group",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6aa7c4dc52f902b965f86_Aditya%20Birla%20Group.webp",
+          alt: "Aditya Birla Group",
+        },
+        {
+          id: 15,
+          name: "AutoDesk",
+          image: "https://cdn.prod.website-files.com/6484144ee6dda9d4b9ab7f57/68b6aa97d7f1555ba95b5394_AutoDesk.webp",
+          alt: "AutoDesk",
+        },
       ],
     },
+    StickyCourseTabsData: [
+    {
+      id: "about",
+      label: "About",
+    },
+    {
+      id: "why-now",
+      label: "Why now",
+    },
+    {
+      id: "lifecycle",
+      label: "Lifecycle",
+    },
+    {
+      id: "skills",
+      label: "Skills",
+    },
+    {
+      id: "outcomes",
+      label: "Outcomes",
+    },
+    {
+      id: "curriculum",
+      label: "Curriculum",
+    },
+    {
+      id: "audience",
+      label: "Audience",
+    },
+    {
+      id: "delivery",
+      label: "Delivery",
+    },
+    {
+      id: "why-edstellar",
+      label: "Why Edstellar",
+    },
+    {
+      id: "trainers",
+      label: "Trainers",
+    },
+   ],
     whatIs: {
       title: "What is ",
       titleEm: "ML model monitoring?",

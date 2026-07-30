@@ -1,7 +1,7 @@
 export default function QuoteForm() {
   return (
     <div
-      className="sticky top-[92px] ml-auto  w-[410px] overflow-hidden rounded-[20px] border border-[#D9D9D9] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08) ] pointer-events-auto
+      className="sticky top-[80px] ml-auto  w-[410px] overflow-hidden rounded-[20px] border border-[#D9D9D9] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08) ] pointer-events-auto
     "
     >
       <div className="border-b border-[#D9D9D9] bg-[#F5F2EA] px-6 py-5 relative">

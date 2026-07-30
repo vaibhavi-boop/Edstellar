@@ -60,17 +60,17 @@ export default async function CoursePage({ params }) {
       <div className="relative z-[10]">
         <SkillsSection />
         <OutcomesSection />
-        <div className="absolute top-10 bottom-10 left-1/2  w-full max-w-[1280px] -translate-x-1/2 pointer-events-none ">
+        <CurriculumSection />
+        <AudienceSection />
+        <ModesSection />
+        <div className="absolute top-8 bottom-8 left-1/2  w-full max-w-[1280px] -translate-x-1/2 pointer-events-none ">
           <QuoteForm />
         </div>
       </div>
-      <CurriculumSection />
-      <AudienceSection />
-      <ModesSection />
       <CapabilitySection />
       <WhyEdstellarSection />
       <TestimonialsSection />
-       <TrainersSection />
+      <TrainersSection />
       <CertificateSection />
       <CourseFAQSection />
       <RelatedApplySection />

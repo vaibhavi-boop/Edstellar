@@ -1,8 +1,4 @@
-import {
-  why,
-  whyStats,
-  alsoFromEdstellar,
-} from "@/data/mlMonitoringData";
+import { why, whyStats, alsoFromEdstellar } from "@/data/mlMonitoringData";
 
 /* =========================================
    EXACT DOT-GRID MAP FROM ORIGINAL HTML
@@ -10,7 +6,6 @@ import {
 
 const MAP_GRID =
   "............................#########...............................................|............................#########.....................#################.........|....#############............#######..........####.....###########################..|...####################.......####..###......#######################################|...######################......##...........######################################..|.....#....#################.............##..#################################.##....|...........##################..........###.################################...##....|............#################............###################################........|.............##############..............#################################.#........|.............############...............##...###########################..#.........|.............############...............#####...#.######################.##.........|...............########.................###############################.#...........|...............#####..##...............##############.#################.............|................####..##..............################....#############.............|..................#####..#............#################....###.#####..#.............|....................###...............#################....##...###...#.............|......................######..........################.....#....###...##............|.......................######..........##############...........###.####............|.......................########.............########............##.####.............|.......................##########...........########.............#.####.###.........|.......................###########..........########..............###....####.......|........................##########..........#######.....................###.........|........................#########............######.##.................#####........|.........................########............#####..##...............########.......|.........................#######.............#####..#...............##########......|.........................######..............#####..................##########......|.........................#####................###....................#########......|.........................####.............................................###.....##|........................####................................................#.....#.|.........................##......................................................#..|.........................##.........................................................|.........................#..........................................................";
-
 
 /* =========================================
    WORLD MAP COMPONENT
@@ -22,10 +17,7 @@ function WorldMap() {
   const rowCount = rows.length;
 
   return (
-    <div
-      className="ed-map w-full pointer-events-none"
-      aria-hidden="true"
-    >
+    <div className="ed-map w-full pointer-events-none" aria-hidden="true">
       <svg
         viewBox={`0 0 ${cols} ${rowCount}`}
         preserveAspectRatio="xMidYMid meet"
@@ -52,7 +44,6 @@ function WorldMap() {
   );
 }
 
-
 /* =========================================
    WHY EDSTELLAR SECTION
 ========================================= */
@@ -64,15 +55,7 @@ export default function WhyEdstellarSection() {
       className="block border-b border-[var(--rule)] bg-[var(--paper-warm)] py-20 md:py-28"
     >
       <div className="container">
-
-        {/* =====================================
-            SECTION HEADER
-        ===================================== */}
-
         <div className="mb-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] lg:gap-14">
-
-          {/* Left Content */}
-
           <div>
             <div className="mb-7 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
               <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">
@@ -88,9 +71,7 @@ export default function WhyEdstellarSection() {
 
             <h2 className="max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
               Why choose Edstellar for{" "}
-              <em className="[font-family:var(--serif)]">
-                ML monitoring
-              </em>{" "}
+              <em className="[font-family:var(--serif)]">ML monitoring</em>{" "}
               training.
             </h2>
 
@@ -98,24 +79,21 @@ export default function WhyEdstellarSection() {
               Edstellar is a corporate training provider delivering
               instructor-led ML Model Monitoring programs to teams of every
               size, from a single squad to an entire engineering organization,
-              on-site, virtual, or blended, with hands-on programs built and
-              led by practitioners.
+              on-site, virtual, or blended, with hands-on programs built and led
+              by practitioners.
             </p>
           </div>
 
           {/* Exact Dotted World Map */}
 
           <WorldMap />
-
         </div>
-
 
         {/* =====================================
             STATS
         ===================================== */}
 
         <div className="mb-3 grid grid-cols-1 overflow-hidden rounded-[14px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-4">
-
           {whyStats.map((stat, index) => (
             <div
               key={`${stat.value}-${index}`}
@@ -133,7 +111,10 @@ export default function WhyEdstellarSection() {
                 {stat.value.includes(" & ") ? (
                   <>
                     {stat.value.split(" & ")[0]}
-                    <span className="mx-[1px] text-[0.4em] font-normal text-[var(--muted)]"> & </span>
+                    <span className="mx-[1px] text-[0.4em] font-normal text-[var(--muted)]">
+                      {" "}
+                      &{" "}
+                    </span>
                     {stat.value.split(" & ")[1]}
                   </>
                 ) : (
@@ -146,30 +127,23 @@ export default function WhyEdstellarSection() {
               </span>
             </div>
           ))}
-
         </div>
-
 
         {/* =====================================
             WHY EDSTELLAR CARDS
         ===================================== */}
 
         <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
-
           {why.map((item, index) => (
             <article
               key={`${item.t}-${index}`}
               className="group rounded-[16px] border border-[var(--rule)] bg-white p-[28px] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_22px_46px_-28px_rgba(10,22,40,.5)]"
             >
-
               {/* Icon */}
 
               <div className="mb-4 flex h-[42px] w-[42px] items-center justify-center rounded-[11px] bg-[rgba(200,241,53,.18)] text-[20px] transition-transform duration-300 group-hover:scale-105">
-                <span aria-hidden="true">
-                  {item.ic}
-                </span>
+                <span aria-hidden="true">{item.ic}</span>
               </div>
-
 
               {/* Title */}
 
@@ -177,41 +151,32 @@ export default function WhyEdstellarSection() {
                 {item.t}
               </h3>
 
-
               {/* Description */}
 
               <p className="text-[14px] leading-[1.6] text-[var(--muted)]">
                 {item.d}
               </p>
-
             </article>
           ))}
-
         </div>
-
 
         {/* =====================================
             ALSO FROM EDSTELLAR
         ===================================== */}
 
         <div className="mt-12 border-t border-[var(--rule)] pt-8">
-
           <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.18em] text-[var(--muted)] [font-family:var(--mono)]">
             Also from Edstellar
           </span>
 
-
           <div className="grid grid-cols-1 overflow-hidden rounded-[14px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-3">
-
             {alsoFromEdstellar.map((item, index) => (
               <a
                 key={`${item.title}-${index}`}
                 href={item.href}
                 className="group flex items-start gap-[13px] border-b border-r-0 border-[var(--rule)] px-5 py-4 transition-colors duration-200 last:border-b-0 hover:bg-[var(--paper-warm)] sm:border-r sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-child(n+5)]:border-b-0 lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(n+4)]:border-b-0"
               >
-
                 <div className="min-w-0 flex-1">
-
                   <span className="block text-[14px] font-semibold text-[var(--ink)] transition-colors duration-200 group-hover:text-[#6f8c0f]">
                     {item.title}
                   </span>
@@ -219,9 +184,7 @@ export default function WhyEdstellarSection() {
                   <span className="mt-1 block max-w-[30ch] text-[12px] leading-[1.5] text-[var(--muted)]">
                     {item.description}
                   </span>
-
                 </div>
-
 
                 {/* Arrow */}
 
@@ -231,14 +194,10 @@ export default function WhyEdstellarSection() {
                 >
                   →
                 </span>
-
               </a>
             ))}
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

@@ -61,12 +61,12 @@ export default function WhatIsSection({
             )}
           </div>
 
-          <div className="[border:1.5px_solid_var(--rule)] rounded-[14px] overflow-hidden bg-[var(--white)]">
+          <div className="border border-[var(--rule)] rounded-[18px] overflow-hidden bg-[var(--white)]">
             <div className="grid grid-cols-2">
-              <div className="px-[18px] py-[14px] text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--muted)] bg-[var(--paper-warm)] border-r border-b border-[var(--rule)]">
+              <div className="px-4 sm:px-5 py-4 text-[9px] sm:text-[10px] font-bold tracking-[0.1em] sm:tracking-[0.14em] uppercase text-[var(--muted)] border-b border-[var(--rule)]">
                 {oldLabel}
               </div>
-              <div className="px-[18px] py-[14px] text-[10px] font-bold tracking-[0.1em] uppercase text-[#7a8c00] bg-[var(--lime)]/10 border-b border-[var(--rule)]">
+              <div className="px-4 sm:px-5 py-4 text-[9px] sm:text-[10px] font-bold tracking-[0.1em] sm:tracking-[0.14em] uppercase text-[#6f8c0f] bg-[rgba(200,241,53,0.1)] border-b border-[var(--rule)]">
                 {newLabel}
               </div>
             </div>
@@ -75,10 +75,10 @@ export default function WhatIsSection({
                 key={i}
                 className={`grid grid-cols-2${i < rows.length - 1 ? " border-b border-[var(--rule)]" : ""}`}
               >
-                <div className="px-[18px] py-[16px] text-[15px] leading-[1.5] text-[var(--muted)] border-r border-[var(--rule)]">
+                <div className="px-[13px] sm:px-5 py-3.5 text-[12.5px] sm:text-[13.5px] leading-[1.5] text-[var(--muted)]">
                   {r.old}
                 </div>
-                <div className="px-[18px] py-[16px] text-[15px] leading-[1.5] font-normal text-[var(--ink)] bg-[var(--lime)]/5">
+                <div className="px-[13px] sm:px-5 py-3.5 text-[12.5px] sm:text-[13.5px] leading-[1.5] font-normal text-[var(--ink)] bg-[rgba(200,241,53,0.05)]">
                   {r.new}
                 </div>
               </div>

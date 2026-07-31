@@ -226,12 +226,12 @@ export default function WhyEdstellarSection() {
             Also from Edstellar
           </span>
 
-          <div className="grid grid-cols-1 overflow-hidden rounded-[14px] border border-[var(--rule)] bg-white sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 overflow-hidden rounded-[14px] border border-[var(--rule-strong)] bg-white sm:grid-cols-2 lg:grid-cols-3">
             {alsoFromEdstellar.map((item, index) => (
               <a
                 key={`${item.title}-${index}`}
                 href={item.href}
-                className="group flex items-start gap-[13px] border-b border-r-0 border-[var(--rule)] px-5 py-4 transition-colors duration-200 last:border-b-0 hover:bg-[var(--paper-warm)] sm:border-r sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-child(n+5)]:border-b-0 lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(n+4)]:border-b-0"
+                className="group flex items-start gap-[13px] border-b border-r-0 border-[var(--rule-strong)] px-5 py-4 transition-colors duration-200 last:border-b-0 hover:bg-[var(--paper-warm)] sm:border-r [@media(min-width:640px)_and_(max-width:1023px)]:[&:nth-child(2n)]:border-r-0 sm:[&:nth-child(n+5)]:border-b-0 lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(n+4)]:border-b-0"
               >
                 <div className="min-w-0 flex-1">
                   <span className="block text-[14px] text-[var(--ink)] transition-colors duration-200 group-hover:text-[#6f8c0f]">

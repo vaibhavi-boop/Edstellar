@@ -22,7 +22,7 @@ export default function CourseHero({
           <div
             role="img"
             aria-label={data.image.alt}
-            className="pointer-events-none absolute top-[-64px] bottom-[-24px] right-0 z-0 hidden lg:block"
+            className="pointer-events-none absolute top-[-64px] bottom-[-24px] right-[-20px] right-0 z-0 hidden lg:block"
             style={{
               width: "72%",
               backgroundImage: `url(${data.image.src})`,
@@ -57,7 +57,10 @@ export default function CourseHero({
             {/* Meta row */}
             <div className="mb-5 flex flex-wrap items-center gap-x-[14px] gap-y-2.5 font-[var(--mono)] text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--ink)]">
               {lede1.map((item, index) => (
-                <span key={index} className="inline-flex items-center gap-x-[14px]">
+                <span
+                  key={index}
+                  className="inline-flex items-center gap-x-[14px]"
+                >
                   {index > 0 && (
                     <span className="h-[5px] w-[5px] rounded-full bg-[var(--lime)]" />
                   )}

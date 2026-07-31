@@ -78,7 +78,10 @@ export default function StickyTabs({ data = {} }) {
         if (!btn || !sn) return;
         const left = btn.offsetLeft;
         const right = left + btn.offsetWidth;
-        if (left < sn.scrollLeft + 16 || right > sn.scrollLeft + sn.clientWidth - 16) {
+        if (
+          left < sn.scrollLeft + 16 ||
+          right > sn.scrollLeft + sn.clientWidth - 16
+        ) {
           sn.scrollTo({ left: Math.max(0, left - 24), behavior: "smooth" });
         }
       },
@@ -99,7 +102,7 @@ bg-[rgba(250,250,247,0.94)]
 backdrop-blur-[14px]
 shadow-[0_10px_24px_-22px_rgba(10,22,40,0.5)]"
     >
-      <div className="flex h-[52px] items-center sm:h-[60px] lg:h-[65px]">
+      <div className="flex h-[50px] items-center sm:h-[60px] lg:h-[50px]">
         {/* Logo */}
         <button
           onClick={handleLogoClick}

@@ -1,6 +1,7 @@
 import { courses } from "@/data/mlMonitoringData";
 import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";
+
 import CourseHero from "@/Components/CourseComponents/CourseHero";
 import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
 import ClientsLogosSection from "@/Components/CourseComponents/ClientsLogosSection";
@@ -54,7 +55,6 @@ export default async function CoursePage({ params }) {
 
   return (
     <main>
-      <ScrollProgressBar />
       {course.hero && <CourseHero {...course.hero} />}
       <CourseInfoBar data={course.courseInfoBardata} />
       <ClientsLogosSection data={course.ClientsLogosSectionData} />

@@ -11,7 +11,7 @@ export default function ContactFormSection() {
           Apply · One business day reply
         </div>
 
-        <h2 className="mb-4 text-[var(--ink)] leading-[1.08] text-[clamp(26px,4vw,50px)] font-bold tracking-[-0.03em] [font-family:var(--display)] max-w-[24ch]">
+        <h2 className="mb-[26px] text-[var(--ink)] leading-[1.08] text-[clamp(30px,4vw,50px)] font-bold tracking-[-0.03em] [font-family:var(--display)] max-w-[20ch]">
           Request{" "}
           <em className="[font-family:var(--serif)] italic font-semibold">
             ML Model Monitoring

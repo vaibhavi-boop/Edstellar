@@ -5,7 +5,7 @@ import { Check, Play, Download } from "lucide-react";
 
 export default function CourseInfoBar({ data }) {
   return (
-    <div className="pt-4 pb-18 bg-white">
+    <section className="bg-white pt-4 pb-10 sm:pb-14 lg:pb-18">
       <div className="container">
         {/* Feature Pills */}
 
@@ -32,69 +32,73 @@ export default function CourseInfoBar({ data }) {
           <div className="flex flex-wrap items-center justify-between gap-8">
             {/* Left Side */}
 
-            <div className="flex flex-wrap items-center">
-              {data.stats.map((item, index) => (
-                <div
-                  key={item.label}
-                  className={`pr-4 ${
-                    index !== data.stats.length - 1
-                      ? "mr-4 border-r border-white/15"
-                      : ""
-                  }`}
-                >
-                  <h3 className="text-[22px] font-semibold leading-none text-[#c8f135]">
-                    {item.value}
-                  </h3>
+            <div className="flex flex-1 flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-0">
+              <div className="grid grid-cols-3 gap-2 sm:flex sm:gap-0">
+                {data.stats.map((item, index) => (
+                  <div
+                    key={item.label}
+                    className={`rounded-[10px] bg-white/5 px-2 py-3 text-center sm:rounded-none sm:bg-transparent sm:px-0 sm:py-0 sm:text-left ${
+                      index !== data.stats.length - 1
+                        ? "sm:mr-4 sm:border-r sm:border-white/15 sm:pr-4"
+                        : ""
+                    }`}
+                  >
+                    <h3 className="text-[18px] font-semibold leading-none text-[#c8f135] sm:text-[22px]">
+                      {item.value}
+                    </h3>
 
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/70">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-
-              {/* Trainers */}
-              <div className="ml-4 flex items-center gap-4 border-r border-white/15 pr-4">
-                <div className="flex items-center">
-                  <img
-                    src={data.trainers.avatar}
-                    alt="Expert Trainers"
-                    width={100}
-                    height={30}
-                    className="h-8 w-auto"
-                  />
-                </div>
-
-                <div>
-                  <h4 className="text-[12px] font-semibold">
-                    <span className="text-[#D7F11E]">
-                      {data.trainers.count}
-                    </span>{" "}
-                    {data.trainers.title}
-                  </h4>
-
-                  <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-white/60">
-                    {data.trainers.subtitle}
-                  </p>
-                </div>
+                    <p className="mt-1.5 text-[9px] uppercase leading-[1.3] tracking-[0.1em] text-white/70 sm:mt-0 sm:text-[10px] sm:tracking-[0.25em]">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
               </div>
 
-              {/* Rating */}
-              <div className="ml-3">
-                <div className="mb-2 flex items-center gap-1">
-                  {Array.from({ length: data.rating.stars }).map((_, index) => (
+              <div className="flex flex-wrap items-center gap-4 border-t border-white/15 pt-4 sm:border-t-0 sm:pt-0">
+                {/* Trainers */}
+                <div className="flex items-center gap-4 sm:ml-4 sm:border-r sm:border-white/15 sm:pr-4">
+                  <div className="flex items-center">
                     <img
-                      key={index}
-                      src={data.rating.starIcon}
-                      alt="Star"
-                      width={12}
-                      height={12}
+                      src={data.trainers.avatar}
+                      alt="Expert Trainers"
+                      width={100}
+                      height={30}
+                      className="h-8 w-auto"
                     />
-                  ))}
+                  </div>
+
+                  <div>
+                    <h4 className="text-[12px] font-semibold">
+                      <span className="text-[#D7F11E]">
+                        {data.trainers.count}
+                      </span>{" "}
+                      {data.trainers.title}
+                    </h4>
+
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-white/60">
+                      {data.trainers.subtitle}
+                    </p>
+                  </div>
                 </div>
 
-                <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
-                  {data.rating.score} · {data.rating.reviews}
-                </p>
+                {/* Rating */}
+                <div>
+                  <div className="mb-2 flex items-center gap-1">
+                    {Array.from({ length: data.rating.stars }).map((_, index) => (
+                      <img
+                        key={index}
+                        src={data.rating.starIcon}
+                        alt="Star"
+                        width={12}
+                        height={12}
+                      />
+                    ))}
+                  </div>
+
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
+                    {data.rating.score} · {data.rating.reviews}
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -148,6 +152,6 @@ export default function CourseInfoBar({ data }) {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

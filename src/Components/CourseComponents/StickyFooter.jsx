@@ -188,7 +188,7 @@ export default function StickyFooter() {
         show ? "translate-y-0" : "translate-y-[110%]"
       }`}
     >
-      <div className="container relative flex h-[62px] items-center gap-[22px] max-[860px]:h-auto max-[860px]:flex-wrap max-[860px]:gap-[10px] max-[860px]:py-[11px] max-[620px]:flex-col max-[620px]:flex-nowrap max-[620px]:items-stretch max-[620px]:gap-[9px] max-[620px]:py-[12px]">
+      <div className="container relative flex h-[62px] items-center gap-[22px] max-[860px]:h-auto max-[860px]:flex-wrap max-[860px]:gap-[10px] max-[860px]:py-[18px] max-[620px]:flex-col max-[620px]:flex-nowrap max-[620px]:items-stretch max-[620px]:gap-[9px] max-[620px]:py-[20px]">
         <div className="relative h-[18px] min-w-0 flex-1 max-[860px]:order-2 max-[860px]:h-[16px] max-[860px]:basis-full max-[860px]:flex-none max-[620px]:order-2 max-[620px]:h-[15px] max-[620px]:w-full">
           {rotation.previous && (
             <MessageLine

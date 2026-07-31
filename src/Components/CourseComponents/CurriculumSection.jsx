@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import {
   modules,
   curriculumFilters,
   curriculumMeta,
   curriculumMethod,
+  trainers,
 } from "@/data/mlMonitoringData";
 
 function formatHours(hrs) {
@@ -13,9 +14,19 @@ function formatHours(hrs) {
   return `${h}${m ? `:${String(m).padStart(2, "0")}` : ""} h`;
 }
 
+function initials(name) {
+  return name
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
 export default function CurriculumSection() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [openMod, setOpenMod] = useState(null);
+  const reviewers = trainers.slice(0, 3);
 
   return (
     <section id="curriculum" className="py-28 border-b border-[var(--rule)]">
@@ -41,7 +52,7 @@ export default function CurriculumSection() {
             detail, then build an agenda to send with your quote request.
           </p>
 
-          <div className="w-full sm:w-[330px] rounded-[14px] border border-[var(--rule)] bg-white p-[15px] transition-shadow hover:shadow-[0_16px_36px_-28px_rgba(10,22,40,0.45)]">
+          <div className="w-full sm:w-[330px] rounded-[14px] border border-[var(--rule)] bg-white px-[15px] py-[13px] transition-shadow hover:shadow-[0_16px_36px_-28px_rgba(10,22,40,0.45)]">
             <div className="mb-2 flex items-center gap-2.5">
               <span
                 aria-hidden="true"
@@ -49,9 +60,27 @@ export default function CurriculumSection() {
               >
                 ★
               </span>
-              <h4 className="min-w-0 text-[12.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-[var(--ink)]">
+              <h4 className="min-w-0 [font-family:var(--display)] text-[12.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-[var(--ink)]">
                 Designed by Edstellar and industry practitioners
               </h4>
+              <div aria-hidden="true" className="ml-auto flex flex-none">
+                {reviewers.map((t, i) => (
+                  <span
+                    key={t.name}
+                    className="h-[23px] w-[23px] flex-none rounded-full border-2 border-white bg-[var(--navy)] bg-cover bg-center text-[8.5px] text-[var(--lime)] shadow-[0_3px_9px_-3px_rgba(10,22,40,0.4)] [font-family:var(--mono)]"
+                    style={{
+                      marginLeft: i === 0 ? 0 : "-7px",
+                      backgroundImage: t.image ? `url(${t.image})` : undefined,
+                    }}
+                  >
+                    {!t.image && (
+                      <span className="flex h-full w-full items-center justify-center">
+                        {initials(t.name)}
+                      </span>
+                    )}
+                  </span>
+                ))}
+              </div>
             </div>
             <p className="text-[11.5px] leading-[1.55] text-[var(--muted)]">
               Built by engineers who run ML monitoring in production, then
@@ -60,76 +89,92 @@ export default function CurriculumSection() {
           </div>
         </div>
 
-        <div className="mb-9 rounded-[16px] border border-[var(--rule)] bg-white p-6">
-          <div className="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="mt-[6px] mb-[30px] rounded-[16px] border border-[var(--rule)] bg-white px-[28px] py-[26px]">
+          <div className="grid grid-cols-1 gap-[14px] items-start md:grid-cols-[1fr_auto_1fr_auto_1fr] md:gap-4">
             {curriculumMethod.flow.map((step, i) => (
-              <div key={step.k} className="flex items-start gap-3">
+              <Fragment key={step.k}>
                 {i > 0 && (
                   <span
                     aria-hidden="true"
-                    className="hidden sm:block text-[var(--muted-soft)] mt-1"
+                    className="hidden pt-[2px] text-[18px] text-[var(--rule-strong)] md:block"
                   >
                     →
                   </span>
                 )}
-                <div>
-                  <span className="block text-[12px] font-bold uppercase tracking-[0.12em] text-[#6f8c0f] [font-family:var(--mono)]">
+                <div className="col-span-1">
+                  <span className="mb-1.5 block [font-family:var(--display)] text-[15px] font-bold tracking-[-0.02em] text-[var(--ink)]">
                     {step.k}
                   </span>
-                  <p className="mt-1 text-[13px] leading-[1.5] text-[var(--muted)]">
+                  <p className="text-[12.5px] leading-[1.55] text-[var(--muted)]">
                     {step.p}
                   </p>
                 </div>
-              </div>
+              </Fragment>
             ))}
           </div>
 
-          <div
-            role="img"
-            aria-label={`Learn ${curriculumMethod.split.learn} percent, Practice ${curriculumMethod.split.practice} percent, Apply ${curriculumMethod.split.apply} percent`}
-            className="flex h-2 w-full overflow-hidden rounded-full bg-[var(--paper-warm)]"
-          >
-            <span
-              className="h-full bg-[#c9d6e8]"
-              style={{ width: `${curriculumMethod.split.learn}%` }}
-            />
-            <span
-              className="h-full bg-[var(--lime)]"
-              style={{ width: `${curriculumMethod.split.practice}%` }}
-            />
-            <span
-              className="h-full bg-[var(--navy)]"
-              style={{ width: `${curriculumMethod.split.apply}%` }}
-            />
+          <div className="mt-6 border-t border-[var(--rule)] pt-[22px]">
+            <div
+              role="img"
+              aria-label={`Learn ${curriculumMethod.split.learn} percent, Practice ${curriculumMethod.split.practice} percent, Apply ${curriculumMethod.split.apply} percent`}
+              className="flex h-[10px] w-full overflow-hidden rounded-full bg-[var(--paper-warm)]"
+            >
+              <span
+                className="h-full bg-[#9db668]"
+                style={{ width: `${curriculumMethod.split.learn}%` }}
+              />
+              <span
+                className="h-full bg-[var(--lime)]"
+                style={{ width: `${curriculumMethod.split.practice}%` }}
+              />
+              <span
+                className="h-full bg-[var(--navy)]"
+                style={{ width: `${curriculumMethod.split.apply}%` }}
+              />
+            </div>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 [font-family:var(--mono)] text-[10.5px] uppercase tracking-[0.08em] text-[var(--muted)]">
+              <span className="inline-flex items-center gap-[7px]">
+                <i className="h-[9px] w-[9px] rounded-[3px] bg-[#9db668]" />
+                Learn {curriculumMethod.split.learn}%
+              </span>
+              <span className="inline-flex items-center gap-[7px]">
+                <i className="h-[9px] w-[9px] rounded-[3px] bg-[var(--lime)]" />
+                Practice {curriculumMethod.split.practice}%
+              </span>
+              <span className="inline-flex items-center gap-[7px]">
+                <i className="h-[9px] w-[9px] rounded-[3px] bg-[var(--navy)]" />
+                Apply {curriculumMethod.split.apply}%
+              </span>
+            </div>
+            <p className="mt-[13px] max-w-[76ch] text-[12px] leading-[1.6] text-[var(--muted)]">
+              {curriculumMethod.splitNote}
+            </p>
           </div>
-          <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[11px] text-[var(--muted)]">
-            <span>Learn {curriculumMethod.split.learn}%</span>
-            <span>Practice {curriculumMethod.split.practice}%</span>
-            <span>Apply {curriculumMethod.split.apply}%</span>
-          </div>
-          <p className="mt-2 text-[12.5px] text-[var(--muted)]">
-            {curriculumMethod.splitNote}
-          </p>
 
-          <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-[var(--rule)] pt-4 text-[11.5px] text-[var(--muted)]">
-            <span className="font-semibold text-[var(--ink)]">
+          <div className="mt-5 flex flex-wrap items-center gap-[9px] border-t border-[var(--rule)] pt-[18px]">
+            <span className="[font-family:var(--mono)] text-[9.5px] uppercase tracking-[0.14em] text-[var(--muted)]">
               Delivered as
             </span>
             {curriculumMethod.formats.map((f) => (
               <span
                 key={f}
-                className="rounded-full bg-[var(--paper-warm)] px-3 py-1"
+                className="rounded-full bg-[var(--paper-warm)] px-[14px] py-[6px] text-[12.5px] font-medium text-[var(--ink)]"
               >
                 {f}
               </span>
             ))}
-            <span className="mx-1 h-4 w-px bg-[var(--rule)]" />
+            <span className="h-4 w-px bg-[var(--rule)]" />
             {curriculumMethod.caps.map((c) => (
-              <span key={c} className="font-medium text-[var(--ink)]">
+              <span
+                key={c}
+                className="rounded-full border border-[var(--rule-strong)] bg-white px-[14px] py-[6px] [font-family:var(--mono)] text-[11px] font-medium tracking-[0.03em] text-[var(--ink)]"
+              >
                 {c}
               </span>
             ))}
-            <span>{curriculumMethod.capsNote}</span>
+            <span className="ml-0 flex-1 basis-full text-[12px] text-[var(--muted)] md:ml-auto md:flex-none md:basis-auto">
+              {curriculumMethod.capsNote}
+            </span>
           </div>
         </div>
 
@@ -170,30 +215,30 @@ export default function CurriculumSection() {
                     <span className="[font-family:var(--display)] font-semibold text-[17px] tracking-[-0.02em]">
                       {m.t}
                     </span>
-                    <p className="text-[12.5px] text-[var(--muted)] mt-0.5">
+                    <p className="text-[12.5px] text-[var(--muted)] mt-[3px]">
                       {m.sub}
                     </p>
                     {curriculumMeta[m.no] && (
-                      <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10.5px] uppercase tracking-[0.08em] text-[var(--muted-soft)] [font-family:var(--mono)]">
+                      <div className="mt-[9px] flex flex-wrap items-center gap-[9px] text-[10px] font-normal tracking-[0.04em] text-[var(--muted)] [font-family:var(--mono)]">
                         <span
-                          className={`rounded-full px-2 py-0.5 font-bold ${
-                            curriculumMeta[m.no].band === "Learn"
-                              ? "bg-[#e5edf7] text-[#3a5a8a]"
-                              : curriculumMeta[m.no].band === "Apply"
-                                ? "bg-[var(--navy)]/10 text-[var(--navy)]"
-                                : "bg-[var(--lime)]/20 text-[#6f8c0f]"
+                          className={`rounded-[5px] px-[9px] py-[3px] text-[9px] font-semibold uppercase tracking-[0.1em] ${
+                            curriculumMeta[m.no].band === "Apply"
+                              ? "bg-[rgba(10,22,40,0.1)] text-[var(--navy)]"
+                              : curriculumMeta[m.no].band === "Learn"
+                                ? "bg-[rgba(157,182,104,0.18)] text-[#5f7320]"
+                                : "bg-[rgba(200,241,53,0.22)] text-[#5f7320]"
                           }`}
                         >
                           {curriculumMeta[m.no].band}
                         </span>
-                        <span>·</span>
+                        <span className="h-[3px] w-[3px] rounded-full bg-[var(--rule-strong)]" />
                         <span>{curriculumMeta[m.no].topics} topics</span>
-                        <span>·</span>
+                        <span className="h-[3px] w-[3px] rounded-full bg-[var(--rule-strong)]" />
                         <span>~{formatHours(curriculumMeta[m.no].hrs)}</span>
                         {curriculumMeta[m.no].lab &&
                           curriculumMeta[m.no].labKind !== "intro" && (
                             <>
-                              <span>·</span>
+                              <span className="h-[3px] w-[3px] rounded-full bg-[var(--rule-strong)]" />
                               <span>
                                 {curriculumMeta[m.no].labKind === "capstone"
                                   ? "Capstone"
@@ -214,9 +259,9 @@ export default function CurriculumSection() {
                 </div>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pl-[58px]">
+                  <div className="pt-[4px] pr-6 pb-[22px] pl-[58px]">
                     {m.groups.map((g, gi) => (
-                      <div key={gi} className="mt-4">
+                      <div key={gi} className="mt-[14px]">
                         <h5 className="[font-family:var(--display)] font-semibold text-[14px] mb-1.5">
                           {g.g}
                         </h5>
@@ -234,21 +279,42 @@ export default function CurriculumSection() {
                       </div>
                     ))}
                     {curriculumMeta[m.no]?.lab && (
-                      <div className="mt-5 rounded-[12px] border border-[var(--lime)]/40 bg-[var(--lime)]/10 p-4">
-                        <div className="mb-1.5 flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-[0.1em] text-[#6f8c0f]">
-                          <span aria-hidden="true">⚡</span>
-                          {curriculumMeta[m.no].labKind === "capstone"
-                            ? "Capstone"
+                      <div
+                        className={`mt-[18px] flex items-start gap-[14px] rounded-[12px] border px-[17px] py-[15px] ${
+                          curriculumMeta[m.no].labKind === "capstone"
+                            ? "border-[var(--rule-strong)] bg-[rgba(10,22,40,0.05)]"
                             : curriculumMeta[m.no].labKind === "intro"
-                              ? "Guided walkthrough"
-                              : "Hands-on lab"}
+                              ? "border-[var(--rule)] bg-[var(--paper-warm)]"
+                              : "border-[rgba(200,241,53,0.4)] bg-[rgba(200,241,53,0.09)]"
+                        }`}
+                      >
+                        <span
+                          aria-hidden="true"
+                          className={`mt-0.5 flex-none text-[16px] ${
+                            curriculumMeta[m.no].labKind === "capstone"
+                              ? "text-[var(--navy)]"
+                              : curriculumMeta[m.no].labKind === "intro"
+                                ? "text-[var(--muted)]"
+                                : "text-[#5f7320]"
+                          }`}
+                        >
+                          ⚡
+                        </span>
+                        <div>
+                          <div className="mb-1 text-[10.5px] font-bold uppercase tracking-[0.1em] text-[#5f7320]">
+                            {curriculumMeta[m.no].labKind === "capstone"
+                              ? "Capstone"
+                              : curriculumMeta[m.no].labKind === "intro"
+                                ? "Guided walkthrough"
+                                : "Hands-on lab"}
+                          </div>
+                          <b className="block text-[14px] text-[var(--ink)]">
+                            {curriculumMeta[m.no].lab}
+                          </b>
+                          <p className="mt-1 text-[13px] leading-[1.5] text-[var(--muted)]">
+                            {curriculumMeta[m.no].labDesc}
+                          </p>
                         </div>
-                        <b className="block text-[14px] text-[var(--ink)]">
-                          {curriculumMeta[m.no].lab}
-                        </b>
-                        <p className="mt-1 text-[13px] leading-[1.5] text-[var(--muted)]">
-                          {curriculumMeta[m.no].labDesc}
-                        </p>
                       </div>
                     )}
                   </div>

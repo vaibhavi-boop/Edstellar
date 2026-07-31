@@ -58,8 +58,8 @@ export const courses = [
       data: {
         title: "ML Model Monitoring Corporate Training",
         image: {
-          src: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a698481c95c6c10a05f1afe_ml-cours.webp",
-          alt: "ML Model Monitoring Corporate Training",
+          src: "/Images/Course/hero-photo.jpg",
+          alt: "A team reviewing production model health metrics on a shared dashboard",
         },
       },
     },
@@ -1389,5 +1389,100 @@ export const learningPath = [
     duration: "Duration on request",
     image: "mlopsLlms",
     href: "https://www.edstellar.com/course/mlops-for-llms-training",
+  },
+];
+
+export const GQ_LOCKED = "ML Model Monitoring Training";
+
+export const groupQuoteCatalog = [
+  {
+    g: "Artificial intelligence",
+    items: [
+      ["ML Model Monitoring Training", "16 - 24 hrs", true],
+      ["Machine Learning with Python Training", "40 - 48 hrs"],
+      ["Machine Learning with Scikit-Learn Training", ""],
+      ["Machine Learning with TensorFlow Training", ""],
+      ["Machine Learning with R Training", ""],
+      ["Introduction to Machine Learning Training", ""],
+      ["Generative AI (GenAI) Training", "24 - 32 hrs"],
+      ["Retrieval Augmented Generation (RAG) Training", "12 - 24 hrs"],
+      ["Agentic AI Training", "20 - 40 hrs"],
+      ["LLM Observability Training", "16 - 24 hrs"],
+      ["MLOps for LLMs Training", ""],
+      ["AI Decision Support Systems Training", "16 - 24 hrs"],
+      ["Multi-Modal Vector Search Training", "16 - 24 hrs"],
+      ["Reinforcement Learning Training", ""],
+      ["Deep Learning Training", ""],
+      ["Computer Vision Training", ""],
+      ["Natural Language Processing Training", ""],
+    ],
+  },
+  {
+    g: "AI governance and risk",
+    items: [
+      ["Artificial Intelligence (AI) Governance Training", "16 - 24 hrs"],
+      ["Responsible Generative AI Training", "20 - 40 hrs"],
+      ["AI Security and Risk Management Training", ""],
+      ["AI for Compliance Managers Training", ""],
+      ["AI for Cybersecurity Professionals Training", "20 - 40 hrs"],
+    ],
+  },
+  {
+    g: "Applied AI by function",
+    items: [
+      ["ChatGPT Prompt Engineering Training", "16 - 24 hrs"],
+      ["AI for Managers Training", ""],
+      ["AI for HR Training", ""],
+      ["AI for Accountants Training", ""],
+      ["AI in Clinical Trials Training", ""],
+      ["Artificial Intelligence for Logistics Training", ""],
+    ],
+  },
+  {
+    g: "Data and platforms",
+    items: [
+      ["Big Data Training", ""],
+      ["Database Management System Training", ""],
+      ["Advanced Networking Training", ""],
+    ],
+  },
+  {
+    g: "Other domains",
+    items: [
+      ["Cybersecurity Training", ""],
+      ["Leadership Training", ""],
+    ],
+  },
+];
+
+export const licensePackages = [
+  {
+    n: "Starter",
+    fig: "120",
+    u: "trainee licenses",
+    hrs: "64 hours of group training",
+    who: "Tailored for SMBs",
+  },
+  {
+    n: "Growth",
+    fig: "320",
+    u: "trainee licenses",
+    hrs: "160 hours of group training",
+    who: "Ideal for growing SMBs",
+    best: true,
+  },
+  {
+    n: "Enterprise",
+    fig: "800",
+    u: "trainee licenses",
+    hrs: "400 hours of group training",
+    who: "Designed for large corporations",
+  },
+  {
+    n: "Custom",
+    fig: "Unlimited",
+    u: "trainee licenses",
+    hrs: "Duration set by the rollout",
+    who: "Multi-region and multi-year",
   },
 ];

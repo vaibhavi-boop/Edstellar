@@ -36,7 +36,7 @@ export default function SkillsSection() {
           program. Tap any card to see what it means in production.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[18px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[18px]">
           {skills.map((s, i) => {
             const isFlipped = flipped.has(i);
             return (
@@ -52,7 +52,7 @@ export default function SkillsSection() {
                     <span className="[font-family:var(--mono)] text-[11px] tracking-[0.18em] text-[var(--muted-soft)]">
                       {s.n}
                     </span>
-                    <h4 className="font-semibold text-[18px] tracking-[-0.02em]">
+                    <h4 className="[font-family:var(--display)] font-semibold text-[18px] tracking-[-0.02em]">
                       {s.t}
                     </h4>
                     <span className="[font-family:var(--mono)] text-[10px] tracking-[0.14em] uppercase text-[var(--muted-soft)] flex items-center gap-1.5">
@@ -63,7 +63,7 @@ export default function SkillsSection() {
                     <span className="[font-family:var(--mono)] text-[11px] tracking-[0.18em] text-[var(--lime)]">
                       {s.n}
                     </span>
-                    <p className="text-[13px] leading-[1.55] text-white/82">
+                    <p className="text-[13px] leading-[1.55] text-[rgba(250,250,247,0.82)]">
                       {s.d}
                     </p>
                     <span className="[font-family:var(--mono)] text-[10px] tracking-[0.14em] uppercase text-white/55 flex items-center gap-1.5">

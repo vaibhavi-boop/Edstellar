@@ -33,11 +33,11 @@ export default function CertificateSection() {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12">
+        <div className="grid grid-cols-1 items-start gap-[50px] md:grid-cols-2">
 
           {/* Left */}
           <div>
-            <h2 className="mb-6 max-w-[18ch] text-[clamp(34px,4.5vw,52px)] font-bold leading-[1.05] tracking-[-0.04em] text-[var(--ink)]">
+            <h2 className="mb-5 max-w-[20ch] [font-family:var(--display)] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
               Your ML Model Monitoring{" "}
               <em className="[font-family:var(--serif)]">training certificate.</em>
             </h2>
@@ -69,7 +69,7 @@ export default function CertificateSection() {
             <div className="pointer-events-none absolute inset-[14px] rounded-[12px] border border-[var(--lime)]/25" />
 
             <div className="relative z-10 flex flex-col items-center">
-              <div className="mb-5 flex h-[74px] w-[74px] items-center justify-center rounded-full bg-gradient-to-br from-[var(--lime)] to-[var(--lime-soft)] text-[30px] text-[var(--navy-deep)]">
+              <div className="mb-[18px] flex h-[74px] w-[74px] items-center justify-center rounded-full bg-gradient-to-br from-[var(--lime)] to-[var(--lime-soft)] text-[30px] text-[var(--navy-deep)]">
                 ★
               </div>
 
@@ -77,7 +77,7 @@ export default function CertificateSection() {
                 Certificate of Completion
               </p>
 
-              <p className="text-[10px] uppercase tracking-[0.18em] text-white/60 [font-family:var(--mono)]">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[rgba(250,250,247,0.6)] [font-family:var(--mono)]">
                 ML Model Monitoring · Edstellar
               </p>
             </div>

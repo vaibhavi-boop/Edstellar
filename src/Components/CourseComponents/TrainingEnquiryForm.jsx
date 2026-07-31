@@ -260,7 +260,7 @@ export default function TrainingEnquiryForm({
     <div
       className={`w-full overflow-hidden rounded-[22px] border border-[var(--rule)] bg-[var(--white)] shadow-[0_30px_70px_-50px_rgba(10,22,40,0.55)] ${className}`}
     >
-      <div className="px-6 py-8 sm:px-10 sm:py-11">
+      <div className="px-6 py-8 sm:px-[52px] sm:py-11">
         {heading && (
           <>
             <h2 className="[font-family:var(--display)] text-[22px] font-bold leading-tight text-[var(--ink)] sm:text-[26px]">
@@ -278,12 +278,23 @@ export default function TrainingEnquiryForm({
               From your group quote
             </b>
             <span>{carry}</span>
-            <a
-              href="#group-quote"
+            <button
+              type="button"
+              onClick={() => {
+                const section = document.getElementById("group-quote");
+                if (!section) return;
+                const offset =
+                  [...document.querySelectorAll(".sticky")]
+                    .filter((el) => el.getBoundingClientRect().bottom > 0)
+                    .reduce((sum, el) => sum + el.offsetHeight, 0) || 65;
+                const top =
+                  section.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: "smooth" });
+              }}
               className="ml-auto text-[12.5px] text-[var(--ink)] underline underline-offset-2"
             >
               Change answers
-            </a>
+            </button>
           </div>
         )}
 
@@ -563,7 +574,7 @@ export default function TrainingEnquiryForm({
           </p>
           <button
             type="submit"
-            className="whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-bold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)]"
+            className="whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-semibold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)]"
           >
             {submitLabel}
           </button>

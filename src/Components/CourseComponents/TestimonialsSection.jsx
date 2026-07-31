@@ -120,6 +120,7 @@ export default function TestimonialsSection() {
               flex-none
               rounded-full
               object-cover
+              shadow-[0_6px_16px_-8px_rgba(10,22,40,0.5)]
               "
             />
 
@@ -143,7 +144,7 @@ export default function TestimonialsSection() {
                   mt-[3px]
                   text-[10.5px]
                   uppercase
-                  tracking-[0.12em]
+                  tracking-[0.1em]
                   text-[var(--muted)]
                   [font-family:var(--mono)]
                 "

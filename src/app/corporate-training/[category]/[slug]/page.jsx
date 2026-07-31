@@ -24,6 +24,7 @@ import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import QuoteForm from "@/Components/CourseComponents/QuoteForm";
 import GroupQuoteSection from "@/Components/CourseComponents/GroupQuoteSection";
 import WhyNowSection from "@/Components/CourseComponents/WhyNowSection";
+import ScrollProgressBar from "@/Components/CourseComponents/ScrollProgressBar";
 
 export default async function CoursePage({ params }) {
   const { category, slug } = await params;
@@ -53,6 +54,7 @@ export default async function CoursePage({ params }) {
 
   return (
     <main>
+      <ScrollProgressBar />
       {course.hero && <CourseHero {...course.hero} />}
       <CourseInfoBar data={course.courseInfoBardata} />
       <ClientsLogosSection data={course.ClientsLogosSectionData} />

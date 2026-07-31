@@ -35,8 +35,10 @@ export default function CapabilitySection() {
           absolute
           inset-0
           z-0
+          hidden
           overflow-hidden
           rounded-[inherit]
+          lg:block
         "
         style={{
           background: `
@@ -203,10 +205,9 @@ export default function CapabilitySection() {
                   flex
                   items-start
                   gap-[12px]
-                  text-[14px]
+                  text-[15px]
                   leading-[1.5]
                   text-[var(--paper)]
-                  md:text-[15px]
                 "
               >
 

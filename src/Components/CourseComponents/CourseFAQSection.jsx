@@ -39,7 +39,7 @@ export default function CourseFAQSection() {
           <span>· Before you commit</span>
         </div>
 
-        <h2 className="mb-5 max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
+        <h2 className="mb-[26px] max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
           ML Model Monitoring training{" "}
           <em className="[font-family:var(--serif)] italic">
             FAQs

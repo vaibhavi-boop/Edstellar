@@ -117,10 +117,10 @@ export default function AudienceSection() {
           </div>
 
           <div className="rounded-[16px] border border-[var(--rule)] bg-white p-6">
-            <h3 className="mb-2 text-[18px] font-semibold text-[var(--ink)]">
+            <h3 className="mb-2 [font-family:var(--display)] text-[16.5px] font-semibold text-[var(--ink)]">
               Skill progression: entry → exit
             </h3>
-            <p className="mb-5 text-[13px] leading-[1.6] text-[var(--muted)]">
+            <p className="mb-5 text-[12.5px] leading-[1.6] text-[var(--muted)]">
               Where a typical participant starts and where they finish. Only
               the first two lines are prerequisites. Everything below is
               taught from the ground up.

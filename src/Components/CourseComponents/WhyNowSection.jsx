@@ -15,26 +15,26 @@ export default function WhyNowSection() {
               Why now · Degradation, market, regulation
             </div>
 
-            <h2 className="mb-6 text-[var(--ink)] leading-[1.08] text-[clamp(26px,4vw,50px)] font-bold tracking-[-0.03em] [font-family:var(--display)]">
+            <h2 className="mb-6 text-[var(--ink)] leading-[1.08] text-[clamp(30px,4vw,50px)] font-bold tracking-[-0.03em] [font-family:var(--display)]">
               Why <em className="[font-family:var(--serif)] italic font-semibold">ML model monitoring</em> matters
               now.
             </h2>
 
-            <p className="text-base leading-[1.7] text-[var(--muted)]">
+            <p className="max-w-[54ch] text-[16.5px] leading-[1.75] text-[var(--muted)]">
               {whyNow.lede}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {whyNow.stats.map((s, i) => (
               <div
                 key={i}
-                className="rounded-[14px] border border-[var(--rule)] bg-white p-5"
+                className="rounded-[14px] bg-[var(--navy)] px-6 py-7"
               >
-                <b className="block text-[26px] font-bold text-[var(--ink)] [font-family:var(--display)]">
+                <b className="block text-[33px] font-bold text-[var(--lime)] [font-family:var(--display)] sm:text-[38px]">
                   {s.value}
                 </b>
-                <span className="mt-1 block text-[12.5px] leading-[1.4] text-[var(--muted)]">
+                <span className="mt-[10px] block text-[12.5px] leading-[1.4] text-[rgba(250,250,247,0.78)]">
                   {s.label}
                 </span>
               </div>
@@ -46,22 +46,22 @@ export default function WhyNowSection() {
           {whyNow.cards.map((c, i) => (
             <div
               key={i}
-              className="rounded-[16px] border border-[var(--rule)] bg-white p-6"
+              className="relative overflow-hidden rounded-[16px] border border-[var(--rule)] bg-white px-[26px] pb-[26px] pt-[30px] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:bg-[linear-gradient(90deg,var(--navy),var(--lime))] before:content-['']"
             >
-              <div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#7a8c00] [font-family:var(--mono)]">
+              <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#6f8c0f] [font-family:var(--mono)]">
                 {c.eyebrow}
               </div>
-              <div className="mt-2 mb-3 text-[24px] font-bold tracking-[-0.02em] text-[var(--ink)] [font-family:var(--display)]">
+              <div className="mt-2 mb-3 text-[28px] font-bold tracking-[-0.035em] text-[var(--ink)] [font-family:var(--display)] sm:text-[32px]">
                 {c.big}
               </div>
-              <p className="text-[14.5px] leading-[1.6] text-[var(--muted)]">
+              <p className="text-[14.5px] leading-[1.7] text-[var(--muted)]">
                 {c.p}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {c.chips.map((chip, j) => (
                   <span
                     key={j}
-                    className="rounded-full bg-[var(--paper-warm)] px-3 py-1 text-[11px] font-medium text-[var(--muted)]"
+                    className="rounded-[7px] bg-[var(--paper-warm)] px-3 py-1 text-[12px] font-medium text-[var(--ink)]"
                   >
                     {chip}
                   </span>
@@ -71,13 +71,16 @@ export default function WhyNowSection() {
           ))}
         </div>
 
-        <div className="rounded-[16px] border border-[var(--rule)] bg-white p-6">
-          <p className="mb-4 text-[14px] font-medium text-[var(--ink)]">
+        <div className="border-t border-[var(--rule)] pt-6">
+          <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--muted)] [font-family:var(--mono)]">
             {whyNow.toolsLabel}
           </p>
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-3">
             {whyNow.tools.map((t, i) => (
-              <span key={i} className="text-[13px] text-[var(--muted)]">
+              <span
+                key={i}
+                className="rounded-full border border-[var(--rule)] bg-white px-[15px] py-[9px] text-[13px] text-[var(--muted)]"
+              >
                 <b className="text-[var(--ink)]">{t.name}</b> {t.product}
               </span>
             ))}

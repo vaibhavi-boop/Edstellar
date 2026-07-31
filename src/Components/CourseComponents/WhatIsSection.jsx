@@ -23,7 +23,7 @@ export default function WhatIsSection({
           {mark}
         </div>
 
-        <h2 className="mb-9 text-[var(--ink)] leading-[1.08] text-[clamp(26px,4vw,50px)] font-bold tracking-[-0.03em] [font-family:var(--display)]">
+        <h2 className="mb-9 text-[var(--ink)] leading-[1.08] text-[clamp(30px,4vw,50px)] font-bold tracking-[-0.03em] [font-family:var(--display)]">
           {title}{" "}
           <span className="[font-family:var(--serif)] italic font-semibold text-[var(--ink)]">
             {titleEm.replace(/\?$/, "")}
@@ -33,7 +33,7 @@ export default function WhatIsSection({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
-            <p className="text-base leading-[1.7] text-[var(--muted)]">
+            <p className="text-base leading-[1.75] text-[var(--muted)]">
               {intro}
             </p>
             {more && (
@@ -44,7 +44,7 @@ export default function WhatIsSection({
                 {more.map((para, i) => (
                   <p
                     key={i}
-                    className="text-base leading-[1.7] mt-4 text-[var(--muted)]"
+                    className="text-base leading-[1.75] mt-4 text-[var(--muted)]"
                   >
                     {para}
                   </p>
@@ -54,7 +54,7 @@ export default function WhatIsSection({
             {more && (
               <button
                 onClick={() => setOpen(!open)}
-                className="inline-flex gap-1.5 mt-5 bg-transparent border-none [border-bottom:1.5px_solid_var(--navy)] pb-[3px] text-[11px] font-bold tracking-[0.14em] uppercase cursor-pointer text-[var(--navy)] [font-family:var(--mono)] outline-none"
+                className="inline-flex gap-1.5 mt-5 bg-transparent border-none [border-bottom:1px_solid_var(--rule-strong)] pb-[3px] text-[11px] tracking-[0.16em] uppercase cursor-pointer text-[var(--ink)] [font-family:var(--mono)] outline-none"
               >
                 {open ? "Show less ×" : "Read more +"}
               </button>

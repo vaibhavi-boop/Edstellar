@@ -54,19 +54,31 @@ export default function RelatedApplySection() {
               >
 
                 {/* SVG */}
-                <div className="mb-[13px] aspect-[2/1] w-full overflow-hidden rounded-[11px]">
+                <div
+                  className={`mb-[13px] aspect-[2/1] w-full overflow-hidden rounded-[11px] ${
+                    item.active ? "bg-[var(--navy-soft)]" : "bg-[var(--paper-warm)]"
+                  }`}
+                >
                   <div className="h-full w-full transition-transform duration-300 ease-out group-hover:scale-105">
                     {learningPathSvgs[item.image]}
                   </div>
                 </div>
 
                 {/* Label */}
-                <p className="mb-[7px] text-[9px] uppercase tracking-[0.14em] [font-family:var(--mono)]">
+                <p
+                  className={`mb-[7px] text-[9px] uppercase tracking-[0.14em] [font-family:var(--mono)] ${
+                    item.active ? "text-[var(--lime)]" : "text-[var(--muted)]"
+                  }`}
+                >
                   {item.label}
                 </p>
 
                 {/* Title */}
-                <h4 className="mb-[7px] min-h-[38px] text-[15px] font-semibold leading-[1.25] tracking-[-0.02em]">
+                <h4
+                  className={`mb-[7px] min-h-[38px] text-[15px] font-semibold leading-[1.25] tracking-[-0.02em] ${
+                    item.active ? "text-white" : "text-[var(--ink)]"
+                  }`}
+                >
                   {item.title}
                 </h4>
 
@@ -74,7 +86,7 @@ export default function RelatedApplySection() {
                 <p
                   className={`text-[12.5px] leading-[1.5] ${
                     item.active
-                      ? "text-white/65"
+                      ? "text-[rgba(250,250,247,0.7)]"
                       : "text-[var(--muted)]"
                   }`}
                 >
@@ -121,7 +133,7 @@ export default function RelatedApplySection() {
         </div>
 
         {/* Related Courses */}
-        <h3 className="mb-5 text-[18px] font-semibold">
+        <h3 className="mt-3 mb-[22px] [font-family:var(--display)] text-[19px] font-semibold tracking-[-0.02em] text-[var(--ink)]">
           More related courses
         </h3>
 
@@ -132,7 +144,7 @@ export default function RelatedApplySection() {
               href={course.u}
               className="flex flex-col gap-[12px] rounded-[14px] border border-[var(--rule)] bg-white p-[22px] transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:border-[var(--rule-strong)] hover:shadow-[0_20px_42px_-26px_rgba(10,22,40,.5)]"
             >
-              <h4 className="text-[16px] font-semibold leading-[1.3] tracking-[-0.01em]">
+              <h4 className="text-[16px] font-semibold leading-[1.3] tracking-[-0.01em] text-[var(--ink)]">
                 {course.t}
               </h4>
 

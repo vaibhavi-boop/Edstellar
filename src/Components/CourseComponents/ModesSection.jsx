@@ -40,7 +40,7 @@ export default function ModesSection() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`relative mr-[22px] border-none bg-transparent px-1.5 pb-[14px] text-[16px] font-semibold tracking-[-0.01em] transition-colors ${
+              className={`relative mr-[22px] border-none bg-transparent px-1.5 py-[14px] [font-family:var(--display)] text-[16px] font-semibold tracking-[-0.01em] transition-colors ${
                 active === i ? "text-[var(--ink)]" : "text-[var(--muted)]"
               }`}
             >
@@ -73,7 +73,7 @@ export default function ModesSection() {
               {m.li.map((item, i) => (
                 <li
                   key={i}
-                  className="flex gap-3 border-t border-[var(--rule)] py-3 text-[14.5px] text-[var(--muted)]"
+                  className="flex gap-3 border-t border-[var(--rule)] py-[9px] text-[14.5px] leading-[1.5] text-[var(--muted)]"
                 >
                   <span className="font-bold text-[#6f8c0f]">→</span>
                   {item}
@@ -83,7 +83,7 @@ export default function ModesSection() {
           </div>
 
           <div className="relative flex justify-center">
-            <div className="relative w-full max-w-[340px] overflow-hidden rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,.12)]">
+            <div className="relative w-full max-w-[340px] overflow-hidden rounded-[20px] border border-[var(--rule)] bg-[var(--paper-warm)]">
               <Image
                 src={m.img}
                 alt={m.alt}
@@ -92,7 +92,9 @@ export default function ModesSection() {
                 className="h-[280px] w-full object-cover"
               />
 
-              <span className="absolute bottom-4 left-4 rounded-full bg-lime-400 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-black">
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(10,22,40,0.6),rgba(10,22,40,0.05)_55%)]" />
+
+              <span className="absolute bottom-4 left-4 rounded-full bg-[var(--lime)] px-[13px] py-[6px] [font-family:var(--mono)] text-[10px] uppercase tracking-[0.18em] text-[var(--navy)]">
                 {m.big}
               </span>
             </div>

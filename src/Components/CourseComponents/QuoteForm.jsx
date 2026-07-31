@@ -100,18 +100,21 @@ export default function QuoteForm() {
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [formError, setFormError] = useState("");
 
-  const dialEntry = COUNTRIES.find(([n]) => n === fields.country) || COUNTRIES[0];
+  const dialEntry =
+    COUNTRIES.find(([n]) => n === fields.country) || COUNTRIES[0];
   const dialLabel = `${flagEmoji(dialEntry[2])} ${dialEntry[1]}`.trim();
 
   const update = (key) => (e) => {
-    const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
     setFields((f) => ({ ...f, [key]: value }));
   };
 
   const validate = () => {
     const next = {};
     if (!fields.name.trim()) next.name = "Please enter your name.";
-    if (!fields.company.trim()) next.company = "Please enter your company name.";
+    if (!fields.company.trim())
+      next.company = "Please enter your company name.";
     if (!fields.jobTitle.trim()) next.jobTitle = "Please enter your job title.";
 
     const email = fields.email.trim().toLowerCase();
@@ -154,7 +157,8 @@ export default function QuoteForm() {
       intent: "quote",
       source: "sticky_panel",
       course_name: "ML Model Monitoring Corporate Training",
-      course_url: "https://www.edstellar.com/course/ml-model-monitoring-training",
+      course_url:
+        "https://www.edstellar.com/course/ml-model-monitoring-training",
       page_url: typeof window !== "undefined" ? window.location.href : "",
       submitted_at: new Date().toISOString(),
       phone_dial_code: dialEntry[1],
@@ -185,14 +189,14 @@ export default function QuoteForm() {
 
   if (status === "sent") {
     return (
-      <div className="sticky top-[92px] ml-auto w-[366px] overflow-hidden rounded-[20px] border border-[#D9D9D9] bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.08)] pointer-events-auto">
+      <div className="sticky top-[80px] ml-auto w-[366px] overflow-hidden rounded-[20px] border border-[#D9D9D9] bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.08)] pointer-events-auto">
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-lime-300 text-xl">
           ✓
         </div>
         <h4 className="text-lg font-bold text-[#101828]">Request received.</h4>
         <p className="mt-2 text-sm text-[#667085]">
-          Thanks, a training specialist will reply within one business day
-          with a tailored proposal.
+          Thanks, a training specialist will reply within one business day with
+          a tailored proposal.
         </p>
       </div>
     );

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Search } from "lucide-react";
 import Image from "next/image";
@@ -17,8 +20,29 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const sentinel = document.getElementById("navSentinel");
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setHidden(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+      },
+      { threshold: 0 },
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 px-6 bg-white border-b border-gray-100 shadow-sm">
+    <header
+      className={`sticky top-0 z-50 px-6 bg-white border-b border-gray-100 shadow-sm transition-transform duration-300 ease-[cubic-bezier(.2,.7,.2,1)] ${
+        hidden ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100"
+      }`}
+    >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="shrink-0">

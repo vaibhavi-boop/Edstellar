@@ -1,4 +1,61 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { why, whyStats, alsoFromEdstellar } from "@/data/mlMonitoringData";
+
+/* =========================================
+   COUNT-UP STAT
+   Parses "10,000+" -> prefix "", target 10000, suffix "+", and animates
+   from 0 to target once the stat scrolls into view.
+========================================= */
+
+function CountUpStat({ value }) {
+  const match = value.match(/^([^\d]*)([\d,]+)(.*)$/);
+  const ref = useRef(null);
+  const [display, setDisplay] = useState(match ? "0" : value);
+
+  useEffect(() => {
+    if (!match || !ref.current) return;
+
+    const target = parseInt(match[2].replace(/,/g, ""), 10);
+    const prefix = match[1];
+    const suffix = match[3];
+    let animationFrame;
+    let started = false;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting || started) return;
+        started = true;
+        observer.disconnect();
+
+        const duration = 1400;
+        const start = performance.now();
+
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.round(target * eased);
+          setDisplay(`${prefix}${current.toLocaleString()}${suffix}`);
+          if (progress < 1) animationFrame = requestAnimationFrame(tick);
+        };
+
+        animationFrame = requestAnimationFrame(tick);
+      },
+      { threshold: 0.4 },
+    );
+
+    observer.observe(ref.current);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [value]);
+
+  if (!match) return <span ref={ref}>{value}</span>;
+
+  return <span ref={ref}>{display}</span>;
+}
 
 /* =========================================
    EXACT DOT-GRID MAP FROM ORIGINAL HTML
@@ -118,7 +175,7 @@ export default function WhyEdstellarSection() {
                     {stat.value.split(" & ")[1]}
                   </>
                 ) : (
-                  stat.value
+                  <CountUpStat value={stat.value} />
                 )}
               </strong>
 

@@ -46,22 +46,22 @@ export default function TrainersSection() {
                 className="mb-4 h-[64px] w-[64px] flex-none rounded-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"
               />
 
-              <h3 className="text-[14px] font-bold tracking-[-0.02em] text-[var(--ink)]">
+              <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-[var(--ink)] [font-family:var(--display)]">
                 {trainer.name}
               </h3>
 
-              <p className="mt-1 text-[11px] leading-[1.4] text-[var(--muted)]">
+              <p className="mt-1 text-[13px] leading-[1.45] text-[var(--muted)]">
                 {trainer.role}
               </p>
 
-              <p className="mt-3 text-[9px] font-medium uppercase tracking-[0.12em] text-[#7c9c10] [font-family:var(--mono)]">
+              <p className="mt-3 text-[9.5px] font-medium uppercase tracking-[0.13em] text-[#6f8c0f] [font-family:var(--mono)]">
                 {trainer.experience}
               </p>
 
-              <div className="mt-4 flex items-center rounded-[8px] bg-[var(--paper-warm)] px-3 py-2">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-[13px] text-[#b58b00]">★</span>
-                  <span className="text-[12px] font-semibold text-[var(--ink)]">
+              <div className="mt-4 flex items-center rounded-[9px] bg-[var(--paper-warm)] px-[11px] py-[9px]">
+                <div className="flex items-center gap-[5px]">
+                  <span className="text-[12.5px] text-[#b8951a]">★</span>
+                  <span className="text-[14px] font-bold tracking-[-0.01em] text-[var(--ink)] [font-family:var(--display)]">
                     {trainer.rating}
                   </span>
                 </div>
@@ -82,7 +82,7 @@ export default function TrainersSection() {
                 {trainer.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-[6px] bg-[var(--paper-warm)] px-2 py-1.5 text-[9px] leading-none text-[var(--ink)]"
+                    className="rounded-[7px] bg-[var(--paper-warm)] px-[10px] py-[5px] text-[11.5px] font-medium leading-none text-[var(--ink)]"
                   >
                     {skill}
                   </span>
@@ -93,7 +93,7 @@ export default function TrainersSection() {
                 <button
                   type="button"
                   onClick={() => viewProfile(trainer)}
-                  className="flex w-full items-center justify-center rounded-full border border-[var(--rule-strong)] bg-transparent px-4 py-2.5 text-[10px] font-semibold text-[var(--ink)] transition-all duration-200 hover:-translate-y-[2px] hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)] active:translate-y-0"
+                  className="flex w-full items-center justify-center rounded-full border border-[var(--rule-strong)] bg-transparent px-4 py-2.5 text-[12.5px] font-semibold text-[var(--ink)] transition-all duration-200 hover:-translate-y-[2px] hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)] active:translate-y-0"
                 >
                   View trainer profile →
                 </button>

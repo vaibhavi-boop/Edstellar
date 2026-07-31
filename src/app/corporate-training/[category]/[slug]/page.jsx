@@ -56,6 +56,7 @@ export default async function CoursePage({ params }) {
       {course.hero && <CourseHero {...course.hero} />}
       <CourseInfoBar data={course.courseInfoBardata} />
       <ClientsLogosSection data={course.ClientsLogosSectionData} />
+      <div id="navSentinel" aria-hidden="true" className="h-px -mb-px" />
       <StickyCourseTabs data={course.StickyTabsData} />
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
       <WhyNowSection />

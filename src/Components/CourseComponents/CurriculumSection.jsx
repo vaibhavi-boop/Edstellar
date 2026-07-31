@@ -30,7 +30,7 @@ export default function CurriculumSection() {
 
   return (
     <section id="curriculum" className="py-28 border-b border-[var(--rule)]">
-      <div className="container xl:pr-[466px]">
+      <div className="container xl:pr-[440px]">
         <div className="text-[11px] tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] text-[16px] text-[var(--ink)]">
             VI

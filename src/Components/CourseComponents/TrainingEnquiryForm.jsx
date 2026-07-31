@@ -106,17 +106,13 @@ export default function TrainingEnquiryForm({
       // Live-validate the phone on every input change: keep the error visible
       // until a valid number is entered.
       function validatePhone() {
-        const el = document.getElementById("Phone-error2");
-        if (!el) return;
         const value = phoneRef.current?.value.trim() ?? "";
         if (!value) {
-          el.textContent = "Phone number is required";
-          el.style.display = "block";
+          showError("Phone-error2", "Phone number is required");
         } else if (itiRef.current?.isValidNumber() === false) {
-          el.textContent = "Invalid phone number";
-          el.style.display = "block";
+          showError("Phone-error2", "Invalid phone number");
         } else {
-          el.style.display = "none";
+          hideError("Phone-error2");
         }
       }
 
@@ -176,10 +172,13 @@ export default function TrainingEnquiryForm({
     requireField("SingleLine", "Company-error2", "Company name is required");
     requireField("SingleLine1", "Job-error2", "Job title is required");
 
-    // Phone is optional: only validate format if the visitor entered something.
     const iti = itiRef.current;
     const phone = phoneRef.current;
-    if (phone && phone.value.trim() && iti?.isValidNumber() === false) {
+    const phoneValue = phone?.value.trim() ?? "";
+    if (!phoneValue) {
+      showError("Phone-error2", "Phone number is required");
+      valid = false;
+    } else if (iti?.isValidNumber() === false) {
       showError("Phone-error2", "Invalid phone number");
       valid = false;
     } else {
@@ -254,7 +253,8 @@ export default function TrainingEnquiryForm({
 
   const fieldClass =
     "w-full rounded-xl border border-[var(--rule)] bg-[var(--paper)] px-[14px] py-[13px] text-[14.5px] text-[var(--ink)] outline-none transition-colors placeholder:text-[var(--muted)] focus:border-[var(--navy)] focus:bg-white focus:shadow-[0_0_0_3px_rgba(10,22,40,0.10)]";
-  const errClass = "hidden text-[12px] leading-[1.5] text-[#b3261e]";
+  const errClass =
+    "absolute inset-x-0 top-full mt-1 hidden text-right text-[12px] leading-[1.5] text-[#b3261e]";
 
   return (
     <div
@@ -307,7 +307,7 @@ export default function TrainingEnquiryForm({
         encType="multipart/form-data"
         onSubmit={handleSubmit}
         noValidate
-        className="grid grid-cols-1 gap-x-[18px] gap-y-[17px] sm:grid-cols-2"
+        className="grid grid-cols-1 gap-x-[18px] gap-y-[27px] sm:grid-cols-2"
       >
         <input type="hidden" name="zf_referrer_name" value="" />
         <input
@@ -318,7 +318,7 @@ export default function TrainingEnquiryForm({
         <input type="hidden" name="zc_gad" value="" />
 
         {/* Name */}
-        <div className="flex flex-col gap-[7px]">
+        <div className="relative flex flex-col gap-[7px]">
           <label
             htmlFor="lfName"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
@@ -345,7 +345,7 @@ export default function TrainingEnquiryForm({
         </div>
 
         {/* Email */}
-        <div className="flex flex-col gap-[7px]">
+        <div className="relative flex flex-col gap-[7px]">
           <label
             htmlFor="lfEmail"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
@@ -366,7 +366,7 @@ export default function TrainingEnquiryForm({
         </div>
 
         {/* Company */}
-        <div className="flex flex-col gap-[7px]">
+        <div className="relative flex flex-col gap-[7px]">
           <label
             htmlFor="lfCompany"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
@@ -393,7 +393,7 @@ export default function TrainingEnquiryForm({
         </div>
 
         {/* Job Title */}
-        <div className="flex flex-col gap-[7px]">
+        <div className="relative flex flex-col gap-[7px]">
           <label
             htmlFor="lfTitle"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
@@ -420,7 +420,7 @@ export default function TrainingEnquiryForm({
         </div>
 
         {/* Country Select */}
-        <div className="flex flex-col gap-[7px]">
+        <div className="relative flex flex-col gap-[7px]">
           <label
             htmlFor="country-select1"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
@@ -479,12 +479,12 @@ export default function TrainingEnquiryForm({
         </div>
 
         {/* Phone */}
-        <div className="flex flex-col gap-[7px]">
+        <div className="relative flex flex-col gap-[7px]">
           <label
             htmlFor="lfPhone"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
           >
-            Phone
+            Phone <span className="text-[#b3261e]">*</span>
           </label>
           <input type="hidden" name="SingleLine3" ref={dialCodeRef} />
           <input
@@ -493,15 +493,16 @@ export default function TrainingEnquiryForm({
             type="tel"
             name="PhoneNumber_countrycode"
             maxLength={20}
-            placeholder="201-555-0123 (optional)"
+            placeholder="201-555-0123"
             autoComplete="off"
+            required
             className={fieldClass}
           />
           <p id="Phone-error2" className={errClass} />
         </div>
 
         {/* Message */}
-        <div className="flex flex-col gap-[7px] sm:col-span-2">
+        <div className="relative flex flex-col gap-[7px] sm:col-span-2">
           <label
             htmlFor="lfMsg"
             className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"

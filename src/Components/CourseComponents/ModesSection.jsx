@@ -10,7 +10,7 @@ export default function ModesSection() {
 
   return (
     <section id="modes" className="border-b border-[var(--rule)] py-28">
-      <div className="container xl:pr-[466px]">
+      <div className="container xl:pr-[440px]">
         {/* Section Label */}
         <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] text-[16px] text-[var(--ink)]">

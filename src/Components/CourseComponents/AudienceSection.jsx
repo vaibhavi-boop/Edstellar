@@ -39,16 +39,14 @@ export default function AudienceSection() {
   }, []);
 
   const firstPreIndex = skillProgression.findIndex((p) => p.pre);
-  const lastPreIndex = skillProgression
-    .map((p) => !!p.pre)
-    .lastIndexOf(true);
+  const lastPreIndex = skillProgression.map((p) => !!p.pre).lastIndexOf(true);
 
   return (
     <section
       id="audience"
       className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)]"
     >
-      <div className="container xl:pr-[466px]">
+      <div className="container xl:pr-[440px]">
         <div className="text-[11px] font-bold tracking-[0.24em] uppercase text-[var(--muted)] mb-8 flex items-baseline gap-3 [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] italic text-[16px] text-[var(--ink)]">
             VII
@@ -121,9 +119,9 @@ export default function AudienceSection() {
               Skill progression: entry → exit
             </h3>
             <p className="mb-5 text-[12.5px] leading-[1.6] text-[var(--muted)]">
-              Where a typical participant starts and where they finish. Only
-              the first two lines are prerequisites. Everything below is
-              taught from the ground up.
+              Where a typical participant starts and where they finish. Only the
+              first two lines are prerequisites. Everything below is taught from
+              the ground up.
             </p>
 
             <div ref={gridRef}>
@@ -143,7 +141,10 @@ export default function AudienceSection() {
                       </span>
                       <span className="[font-family:var(--mono)] whitespace-nowrap text-[9px] uppercase tracking-[0.06em] text-[var(--muted)]">
                         {LEVEL_ABBR[p.el]}{" "}
-                        <span aria-hidden="true" className="text-[var(--rule-strong)]">
+                        <span
+                          aria-hidden="true"
+                          className="text-[var(--rule-strong)]"
+                        >
                           →
                         </span>{" "}
                         <b className="font-semibold text-[var(--ink)]">

@@ -63,7 +63,14 @@ export default async function CategoryPage({ params }) {
         faqSection={faqSection}
       />{" "}
       <RelatedDomainsSection />
-      <ContactFormSection />
+      <ContactFormSection
+        heading={{
+          before: "Ask us about",
+          em: "AI training",
+          after: "for your teams.",
+        }}
+        paragraph="Tell us which teams you are training and what they need to be able to do. Anything you filtered in the catalog comes through with your message."
+      />
       <StickyFooter />
       <ScrollProgressBar />
     </>

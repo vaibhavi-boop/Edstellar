@@ -55,6 +55,22 @@ export const categorydata = [
           },
         },
       ],
+
+      buttons: {
+        course: {
+          text: "Browse AI Program",
+          href: "#curriculum",
+          title: "Click Here to view Browse AI Program",
+          id: "view-course-outline",
+        },
+        enquire: {
+          text: "Ask a Quation",
+          href: "#apply",
+          title: "Click Here to view Ask a Quation",
+          id: "enquire-now",
+        },
+      },
+      
       data: {
         title: "ML Model Monitoring Corporate Training",
         image: {
@@ -64,66 +80,33 @@ export const categorydata = [
       },
     },
 
-    courseInfoBardata: {
-      features: [
-        "Drift detection",
-        "Performance tracking",
-        "Alerting & response",
-        "Retraining & A/B",
-        "Explainability",
-        "Fairness & compliance",
-      ],
-
-      stats: [
+    heroStatsData: {
+      items: [
         {
-          value: "24–40",
-          label: "Hours",
+          id: 1,
+          value: "130",
+          label: "AI Programs",
         },
         {
-          value: "10",
-          label: "Modules",
+          id: 2,
+          value: "6",
+          label: "Disciplines",
         },
         {
-          value: "8",
-          label: "Hands-on Labs",
-        },
-      ],
-
-      trainers: {
-        count: "4+",
-        title: "Expert trainers",
-        subtitle: "Meet them →",
-        avatar:
-          "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69c57f6097d45480150d76_avtar.svg",
-      },
-
-      rating: {
-        starIcon:
-          "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69cd1cc048aca1f700706f_star-vector.svg",
-        score: "4.8/5",
-        reviews: "47 Reviews",
-        stars: 5,
-      },
-
-      buttons: [
-        {
-          type: "preview",
-          text: "Watch preview",
-          href: "#",
+          id: 3,
+          value: "7",
+          label: "Role Paths",
         },
         {
-          type: "brochure",
-          text: "Download brochure",
-          href: "#",
+          id: 4,
+          value: "300+",
+          label: "Vetted AI Trainers",
+          image: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/6a69c57f6097d45480150d76_avtar.svg",
+          alt: "Vetted AI Trainers",
         },
       ],
-
-      groupQuote: {
-        text: "Need more than one program?",
-        linkText: "Get a Group Quote →",
-        href: "#",
-      },
     },
+
     ClientsLogosSectionData: {
       title: "TRUSTED BY TEAMS AT",
       logos: [
@@ -281,37 +264,24 @@ export const categorydata = [
       ],
     },
 
-    whatIs: {
-      title: "What is ",
-      titleEm: "ML model monitoring?",
-      intro:
-        "ML Model Monitoring is a critical discipline for organizations that deploy machine learning models in production and need them to stay accurate, reliable, fair, and compliant over time. This corporate training covers the complete production monitoring lifecycle, so your teams can operate ML systems with confidence.",
-      more: [
-        "The program spans data and concept drift detection, performance metric tracking, alerting infrastructure, retraining pipelines, A/B testing, explainability monitoring, and fairness governance. Through hands-on labs with real production monitoring tools, incident simulations, and case-driven exercises, participants build the operational expertise to maintain robust ML monitoring systems that protect model performance and organizational trust.",
-        "Edstellar's instructor-led course is designed for ML engineering, data science, and MLOps teams, and is delivered virtually or onsite, fully tailored to your stack and your production reality.",
-      ],
-      oldLabel: "Traditional software monitoring",
-      newLabel: "ML model monitoring",
-      rows: [
-        {
-          old: "Watches uptime and errors",
-          new: "Watches accuracy, drift, and fairness",
-        },
-        {
-          old: "Fails loudly when it breaks",
-          new: "Degrades silently as data shifts",
-        },
-        {
-          old: "Fixed logic, stable over time",
-          new: "Behavior decays without code changes",
-        },
-        {
-          old: "Pass or fail checks",
-          new: "Statistical drift and threshold guardrails",
-        },
-        { old: "Redeploy to fix", new: "Retrain, A/B test, and govern" },
-      ],
-    },
+    ExpandSectionData: {
+      eyebrow: {
+        italic: "Definition",
+        text: "WHAT THIS COVERS",
+      },
+
+      title: {
+        normal: "What is corporate",
+        italic: "AI training?",
+      },
+
+      intro: "Corporate AI training is instructor-led group training that builds an organization's ability to design, deploy, and govern artificial intelligence systems. It spans two tracks: technical depth for the data, engineering, and MLOps teams who build and run models, and broad enablement for the functions who now use AI tools in daily work. Programs are scoped to an employer's stack and delivered to a closed cohort rather than sold as individual seats.",
+      more: "The distinction that matters commercially is between capability and access. Individual licenses give people tools; group training gives a team a shared baseline: the same patterns, the same evaluation habits, and the same rules for handling data. For enterprises deploying AI under regulatory obligation, that shared baseline is what an auditor can be shown.\nPrograms split across two tracks. Technical depth for the data, engineering and MLOps teams who build and run models. Broad enablement for finance, marketing, HR and operations, who now use AI tools daily and are the larger source of ungoverned adoption.",
+
+      readMoreText: "READ MORE",
+      showLessText: "SHOW LESS",
+    }
+
   },
 ];
 

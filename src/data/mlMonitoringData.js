@@ -55,6 +55,22 @@ export const courses = [
           },
         },
       ],
+
+      buttons: {
+        course: {
+          text: "View Course Outline",
+          href: "#curriculum",
+          title: "Click Here to View Course Outline",
+          id: "view-course-outline",
+        },
+        enquire: {
+          text: "Enquire Now",
+          href: "#apply",
+          title: "Click Here to Enquire Now",
+          id: "enquire-now",
+        },
+      },
+
       data: {
         title: "ML Model Monitoring Corporate Training",
         image: {

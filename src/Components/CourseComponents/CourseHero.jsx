@@ -1,4 +1,7 @@
 "use client";
+
+import CourseButton from "@/app/Buttons/CourseButton";
+import EnquireButton from "@/app/Buttons/EnquireButton";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -10,6 +13,7 @@ export default function CourseHero({
   subtitle,
   lede,
   lede1,
+  buttons,
   data,
 }) {
   const [openTooltip, setOpenTooltip] = useState(null);
@@ -49,14 +53,14 @@ export default function CourseHero({
 
           <div className="relative z-10 lg:max-w-[46%]">
             {/* Breadcrumb */}
-            <div className="scrollbar-hide mb-6 flex flex-nowrap items-center gap-1.5 overflow-x-auto whitespace-nowrap font-[var(--mono)] text-[9.5px] uppercase tracking-[0.1em] text-[var(--muted-soft)]">
+            <div className="mb-6 flex flex-wrap items-center gap-x-1.5 gap-y-1 font-[var(--mono)] text-[9px] uppercase tracking-[0.08em] text-[var(--muted-soft)] sm:text-[9.5px] md:text-[10px]">
               {breadcrumb.map((item, index) => (
                 <span key={index} className="flex items-center gap-1.5">
                   {item.href ? (
                     <Link
                       href={item.href}
                       title={item.title}
-                      className="transition-colors hover:text-[var(--ink)]"
+                      className="transition-colors duration-200 hover:text-[var(--ink)]"
                     >
                       {item.label}
                     </Link>
@@ -70,6 +74,7 @@ export default function CourseHero({
                 </span>
               ))}
             </div>
+
             <h1 className="mb-[10px] max-w-3xl font-[var(--display)] text-[clamp(30px,3.5vw,47px)] font-bold leading-[1.05] tracking-[-0.035em] text-[var(--ink)]">
               {headline}{" "}
               <span className="[font-family:var(--serif)] italic font-bold text-[#6f8c0f]">
@@ -88,7 +93,7 @@ export default function CourseHero({
             </p>
 
             {/* Meta row */}
-            <div className="mb-5 flex flex-wrap items-center gap-x-[14px] gap-y-2.5 font-[var(--mono)] text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--ink)]">
+            <div className="max-w-[450px] mb-5 flex flex-wrap items-center gap-x-[14px] gap-y-2.5 font-[var(--mono)] text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--ink)]">
               {lede1.map((item, index) => (
                 <span
                   key={index}
@@ -150,24 +155,20 @@ export default function CourseHero({
               ))}
             </div>
 
-            {/* CTAs */}
+            {/* CTAs Buttons */}
             <div className="flex flex-wrap gap-3">
-              <a
-                href="#curriculum"
-                className="rounded-full bg-[var(--navy)] px-[28px] py-4 text-sm font-bold text-[var(--lime)] transition-all duration-300 ease-out hover:-translate-y-[3px] hover:shadow-[0_12px_30px_rgba(7,22,44,0.28)]"
-              >
-                View course outline
-              </a>
-              <a
-                href="#apply"
-                className="rounded-full border border-[var(--rule-strong)] bg-white px-[27px] py-[15px] text-sm font-bold text-[var(--ink)] transition-all duration-300 hover:border-[var(--navy)]"
-              >
-                Enquire now
-              </a>
+              <CourseButton
+                {...buttons.course}
+              />
+
+              <EnquireButton
+                {...buttons.enquire}
+              />
             </div>
 
           </div>
         </div>
+        
       </div>
     </section>
   );

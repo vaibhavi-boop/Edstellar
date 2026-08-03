@@ -7,6 +7,7 @@ import {
   alsoFromEdstellar,
   faqSection,
   WhyNow as whyNowData,
+  capabilityTransformation,
 } from "@/data/categorydata";
 
 import CourseHero from "@/Components/CourseComponents/CourseHero";
@@ -23,6 +24,7 @@ import AlsoFromEdstellar from "@/Components/CourseComponents/AlsoFromEdstellar";
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import ScrollProgressBar from "@/Components/CourseComponents/ScrollProgressBar";
 import WhyNow from "@/Components/CategoryComponents/WhyNow";
+import CapabilityTransformation from "@/Components/CategoryComponents/CapabilityTransformation";
 export default async function CategoryPage({ params }) {
   const { category } = await params;
 
@@ -42,6 +44,7 @@ export default async function CategoryPage({ params }) {
       <StickyCourseTabs data={categoryCourses[0].StickyTabsData} />
       <ExpandSection data={categoryCourses[0].ExpandSectionData} />
       <WhyNow data={whyNowData} />
+      <CapabilityTransformation data={capabilityTransformation} />
       <WhyEdstellarSection
         whyheading={whyheading}
         whyStats={whyStats}

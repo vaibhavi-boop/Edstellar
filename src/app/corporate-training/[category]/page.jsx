@@ -10,6 +10,10 @@ import {
 } from "@/data/categorydata";
 
 import CourseHero from "@/Components/CourseComponents/CourseHero";
+import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
+import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
+import StickyFooter from "@/Components/CourseComponents/StickyFooter";
+import RelatedDomainsSection from "@/Components/CategoryComponents/RelatedDomainsSection";
 import WhyEdstellarSection from "@/Components/CourseComponents/WhyEdstellarSection";
 import AlsoFromEdstellar from "@/Components/CourseComponents/AlsoFromEdstellar";
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
@@ -28,6 +32,9 @@ export default async function CategoryPage({ params }) {
   return (
     <>
       <CourseHero {...categoryCourses[0].hero} />
+      <RelatedDomainsSection />
+      <ContactFormSection />
+      <StickyFooter />
       <WhyEdstellarSection
         whyheading={whyheading}
         whyStats={whyStats}

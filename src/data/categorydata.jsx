@@ -1316,34 +1316,39 @@ export const faqSection = {
 
 export const related = [
   {
-    t: "LLM Observability Training",
-    d: "16 – 24 hrs",
-    u: "https://www.edstellar.com/course/llm-observability-training",
+    t: "Machine Learning Training",
+    d: "Model development from data preparation through validation and deployment.",
+    u: "https://www.edstellar.com/topic/machine-learning-training",
   },
   {
-    t: "MLOps for LLMs Training",
-    d: "12 – 24 hrs",
-    u: "https://www.edstellar.com/course/mlops-for-llms-training",
+    t: "Deep Learning Training",
+    d: "Neural network architectures, from convolutional and recurrent models to transformers.",
+    u: "https://www.edstellar.com/topic/deep-learning-training",
   },
   {
-    t: "AI Decision Support Systems Training",
-    d: "16 – 24 hrs",
-    u: "https://www.edstellar.com/course/ai-decision-support-systems-training",
+    t: "Natural Language Processing Training",
+    d: "Language models, text pipelines and conversational systems for enterprise use.",
+    u: "https://www.edstellar.com/topic/natural-language-processing-nlp-training",
   },
   {
-    t: "Vector Database for AI Systems Training",
-    d: "12 – 24 hrs",
-    u: "https://www.edstellar.com/course/vector-database-for-ai-systems-training",
+    t: "Computer Vision Training",
+    d: "Image processing, detection and inspection systems for industrial and product use.",
+    u: "https://www.edstellar.com/topic/computer-vision-training",
   },
   {
-    t: "Machine Learning with Scikit-Learn Training",
-    d: "16 – 24 hrs",
-    u: "https://www.edstellar.com/course/machine-learning-with-scikit-learn-training",
+    t: "ChatGPT Training",
+    d: "Prompting, assistants and safe day-to-day use of general-purpose AI tools.",
+    u: "https://www.edstellar.com/topic/chatgpt-training",
   },
   {
-    t: "Implementing an AI Management System Training",
-    d: "16 – 24 hrs",
-    u: "https://www.edstellar.com/course/implementing-an-ai-management-system-training",
+    t: "Cybersecurity Training",
+    d: "Security programs for teams defending the systems AI now runs inside.",
+    u: "https://www.edstellar.com/category/cybersecurity-training",
+  },
+  {
+    t: "IT & Technical Training",
+    d: "The wider engineering catalog this domain sits within.",
+    u: "https://www.edstellar.com/type/it-technical-training",
   },
 ];
 

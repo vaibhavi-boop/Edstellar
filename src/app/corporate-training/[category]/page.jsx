@@ -6,6 +6,7 @@ import {
   why,
   alsoFromEdstellar,
   faqSection,
+  WhyNow as whyNowData,
 } from "@/data/categorydata";
 
 import CourseHero from "@/Components/CourseComponents/CourseHero";
@@ -20,7 +21,8 @@ import RelatedDomainsSection from "@/Components/CategoryComponents/RelatedDomain
 import WhyEdstellarSection from "@/Components/CourseComponents/WhyEdstellarSection";
 import AlsoFromEdstellar from "@/Components/CourseComponents/AlsoFromEdstellar";
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
-
+import ScrollProgressBar from "@/Components/CourseComponents/ScrollProgressBar";
+import WhyNow from "@/Components/CategoryComponents/WhyNow";
 export default async function CategoryPage({ params }) {
   const { category } = await params;
 
@@ -39,9 +41,7 @@ export default async function CategoryPage({ params }) {
       <ClientsLogosSection data={categoryCourses[0].ClientsLogosSectionData} />
       <StickyCourseTabs data={categoryCourses[0].StickyTabsData} />
       <ExpandSection data={categoryCourses[0].ExpandSectionData} />
-      <RelatedDomainsSection />
-      <ContactFormSection />
-      <StickyFooter />
+      <WhyNow data={whyNowData} />
       <WhyEdstellarSection
         whyheading={whyheading}
         whyStats={whyStats}
@@ -58,7 +58,11 @@ export default async function CategoryPage({ params }) {
       <CourseFAQSection
         className="bg-[var(--paper-warm)] mt-16"
         faqSection={faqSection}
-      />
+      />{" "}
+      <RelatedDomainsSection />
+      <ContactFormSection />
+      <StickyFooter />
+      <ScrollProgressBar />
     </>
   );
 }

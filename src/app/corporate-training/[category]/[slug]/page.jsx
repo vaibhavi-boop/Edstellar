@@ -4,6 +4,7 @@ import {
   whyStats,
   why,
   alsoFromEdstellar,
+  faqSection,
 } from "@/data/mlMonitoringData";
 import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";

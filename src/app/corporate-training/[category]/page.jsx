@@ -13,7 +13,7 @@ import HeroStats from "@/Components/CourseComponents/HeroStatsSection";
 import ClientsLogosSection from "@/Components/CourseComponents/ClientsLogosSection";
 import StickyCourseTabs from "@/Components/CourseComponents/StickyTabsSection";
 import ExpandSection from "@/Components/CourseComponents/ExpandSection";
-import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
+{/*import CostOfInactionSection from "@/Components/CourseComponents/CostOfInactionSection";*/}
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
 import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import RelatedDomainsSection from "@/Components/CategoryComponents/RelatedDomainsSection";
@@ -39,6 +39,7 @@ export default async function CategoryPage({ params }) {
       <ClientsLogosSection data={categoryCourses[0].ClientsLogosSectionData} />
       <StickyCourseTabs data={categoryCourses[0].StickyTabsData} />
       <ExpandSection data={categoryCourses[0].ExpandSectionData} />
+      {/*<CostOfInactionSection data={categoryCourses[0].CostOfInactionData} />*/}
       <RelatedDomainsSection />
       <ContactFormSection />
       <StickyFooter />

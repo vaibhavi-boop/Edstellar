@@ -2,7 +2,8 @@
 
 import CourseButton from "@/app/Buttons/CourseButton";
 import EnquireButton from "@/app/Buttons/EnquireButton";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import Link from "next/link";
 
 export default function CourseHero({
@@ -18,62 +19,68 @@ export default function CourseHero({
 }) {
   const [openTooltip, setOpenTooltip] = useState(null);
   const [isDesktop, setIsDesktop] = useState(false);
+  const videoRef = useRef(null);
 
-    useEffect(() => {
-      const checkScreen = () => {
-        setIsDesktop(window.innerWidth >= 1024);
-      };
-
-      checkScreen();
-
-      window.addEventListener("resize", checkScreen);
-
-      return () => window.removeEventListener("resize", checkScreen);
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
     }, []);
+
+  useEffect(() => {
+    if (videoRef.current && data?.video) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.playbackRate = 0.4;
+      videoRef.current.play().catch(() => {});
+    }
+  }, [data]);
 
   return (
     <section id="top" className="relative overflow-hidden pt-[38px] pb-[54px]">
       <div className="container">
         <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-[34px]">
           {/* Photo bleed */}
-          <div
-            role="img"
-            aria-label={data.image.alt}
-            className="pointer-events-none absolute top-[-64px] bottom-[-24px] right-[-20px] right-0 z-0 hidden lg:block"
-            style={{
-              width: "72%",
-              backgroundImage: `url(${data.image.src})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center right",
-              backgroundRepeat: "no-repeat",
-              WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
-              maskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
-            }}
-          />
+          {data.video ? (
+            <video
+              ref={videoRef}
+              className="pointer-events-none absolute top-[-64px] bottom-[-24px] right-0 z-0 hidden h-[calc(100%+88px)] w-[72%] object-cover object-right lg:block"
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              aria-label={data.video.alt}
+              style={{
+                WebkitMaskImage:"linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
+                maskImage:"linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
+              }}
+              onEnded={(e) => {
+                // Freeze on the last frame
+                e.currentTarget.pause();
+              }}
+            >
+              <source src={data.video.src} type="video/mp4" />
+            </video>
+          ) : (
+            <div
+              role="img"
+              aria-label={data.image.alt}
+              className="pointer-events-none absolute top-[-64px] bottom-[-24px] right-0 z-0 hidden lg:block"
+              style={{
+                width: "72%",
+                backgroundImage: `url(${data.image.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center right",
+                backgroundRepeat: "no-repeat",
+                WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
+                maskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
+              }}
+            />
+          )}
 
           <div className="relative z-10 lg:max-w-[46%]">
-            {/* Breadcrumb */}
-            <div className="mb-6 flex flex-wrap items-center gap-x-1.5 gap-y-1 font-[var(--mono)] text-[9px] uppercase tracking-[0.08em] text-[var(--muted-soft)] sm:text-[9.5px] md:text-[10px]">
-              {breadcrumb.map((item, index) => (
-                <span key={index} className="flex items-center gap-1.5">
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      title={item.title}
-                      className="transition-colors duration-200 hover:text-[var(--ink)]"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span title={item.title}>{item.label}</span>
-                  )}
-
-                  {index < breadcrumb.length - 1 && (
-                    <span className="opacity-50">/</span>
-                  )}
-                </span>
-              ))}
-            </div>
 
             <h1 className="mb-[10px] max-w-3xl font-[var(--display)] text-[clamp(30px,3.5vw,47px)] font-bold leading-[1.05] tracking-[-0.035em] text-[var(--ink)]">
               {headline}{" "}
@@ -164,6 +171,29 @@ export default function CourseHero({
               <EnquireButton
                 {...buttons.enquire}
               />
+            </div>
+
+            {/* Breadcrumb */}
+            <div className="mt-6 flex flex-wrap items-center gap-x-1.5 gap-y-1 font-[var(--mono)] text-[9px] uppercase tracking-[0.08em] text-[var(--muted-soft)] sm:text-[9.5px] md:text-[10px]">
+              {breadcrumb.map((item, index) => (
+                <span key={index} className="flex items-center gap-1.5">
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      title={item.title}
+                      className="transition-colors duration-200 hover:text-[var(--ink)]"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span title={item.title}>{item.label}</span>
+                  )}
+
+                  {index < breadcrumb.length - 1 && (
+                    <span className="opacity-50">/</span>
+                  )}
+                </span>
+              ))}
             </div>
 
           </div>

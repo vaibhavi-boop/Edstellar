@@ -298,289 +298,289 @@ export default function TrainingEnquiryForm({
           </div>
         )}
 
-      <form
-        action="https://forms.zohopublic.in/arvindedst1/form/TrainingEnquiry/formperma/uB1eKs_l1E4npKVJKC49HDEQm5jBlAC3Ow4h9zLcGmA/htmlRecords/submit"
-        name="form2"
-        id="form2"
-        method="POST"
-        acceptCharset="UTF-8"
-        encType="multipart/form-data"
-        onSubmit={handleSubmit}
-        noValidate
-        className="grid grid-cols-1 gap-x-[18px] gap-y-[27px] sm:grid-cols-2"
-      >
-        <input type="hidden" name="zf_referrer_name" value="" />
-        <input
-          type="hidden"
-          name="zf_redirect_url"
-          value="https://www.edstellar.com/thank-you/course"
-        />
-        <input type="hidden" name="zc_gad" value="" />
-
-        {/* Name */}
-        <div className="relative flex flex-col gap-[7px]">
-          <label
-            htmlFor="lfName"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Name <span className="text-[#b3261e]">*</span>
-          </label>
+        <form
+          action="https://forms.zohopublic.in/arvindedst1/form/TrainingEnquiry/formperma/uB1eKs_l1E4npKVJKC49HDEQm5jBlAC3Ow4h9zLcGmA/htmlRecords/submit"
+          name="form2"
+          id="form2"
+          method="POST"
+          acceptCharset="UTF-8"
+          encType="multipart/form-data"
+          onSubmit={handleSubmit}
+          noValidate
+          className="grid grid-cols-1 gap-x-[18px] gap-y-[27px] sm:grid-cols-2"
+        >
+          <input type="hidden" name="zf_referrer_name" value="" />
           <input
-            id="lfName"
-            type="text"
-            name="SingleLine2"
-            maxLength={255}
-            placeholder="Enter your name"
-            onInput={(e) =>
-              validateRequired(
-                "Name-error2",
-                e.currentTarget.value,
-                "Name is required",
-              )
-            }
-            required
-            className={fieldClass}
+            type="hidden"
+            name="zf_redirect_url"
+            value="https://www.edstellar.com/thank-you/course"
           />
-          <p id="Name-error2" className={errClass} />
-        </div>
+          <input type="hidden" name="zc_gad" value="" />
 
-        {/* Email */}
-        <div className="relative flex flex-col gap-[7px]">
-          <label
-            htmlFor="lfEmail"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Work email <span className="text-[#b3261e]">*</span>
-          </label>
-          <input
-            id="lfEmail"
-            type="email"
-            name="Email"
-            maxLength={255}
-            placeholder="Enter your work email"
-            onInput={(e) => validateEmail(e.currentTarget.value)}
-            required
-            className={fieldClass}
-          />
-          <p id="Email-error2" className={errClass} />
-        </div>
-
-        {/* Company */}
-        <div className="relative flex flex-col gap-[7px]">
-          <label
-            htmlFor="lfCompany"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Company name <span className="text-[#b3261e]">*</span>
-          </label>
-          <input
-            id="lfCompany"
-            type="text"
-            name="SingleLine"
-            maxLength={255}
-            placeholder="Enter your company name"
-            onInput={(e) =>
-              validateRequired(
-                "Company-error2",
-                e.currentTarget.value,
-                "Company name is required",
-              )
-            }
-            required
-            className={fieldClass}
-          />
-          <p id="Company-error2" className={errClass} />
-        </div>
-
-        {/* Job Title */}
-        <div className="relative flex flex-col gap-[7px]">
-          <label
-            htmlFor="lfTitle"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Job title <span className="text-[#b3261e]">*</span>
-          </label>
-          <input
-            id="lfTitle"
-            type="text"
-            name="SingleLine1"
-            maxLength={255}
-            placeholder="Enter your job title"
-            onInput={(e) =>
-              validateRequired(
-                "Job-error2",
-                e.currentTarget.value,
-                "Job title is required",
-              )
-            }
-            required
-            className={fieldClass}
-          />
-          <p id="Job-error2" className={errClass} />
-        </div>
-
-        {/* Country Select */}
-        <div className="relative flex flex-col gap-[7px]">
-          <label
-            htmlFor="country-select1"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Country
-          </label>
-          <div className="relative">
-            <select
-              name="Dropdown"
-              id="country-select1"
-              value={selectedIso2}
-              onChange={(e) => {
-                const iso2 = e.target.value;
-                setSelectedIso2(iso2);
-                if (iso2) itiRef.current?.setSelectedCountry(iso2);
-              }}
-              style={{ colorScheme: "light" }}
-              className={`${fieldClass} cursor-pointer appearance-none pr-9 text-[var(--ink)]`}
+          {/* Name */}
+          <div className="relative flex flex-col gap-[7px]">
+            <label
+              htmlFor="lfName"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
             >
-              <option value="" disabled style={optionStyle}>
-                Select Country*
-              </option>
-              {preferred.map((c) => (
-                <option key={c.iso2} value={c.iso2} style={optionStyle}>
-                  {c.name}
-                </option>
-              ))}
-              <option value="" disabled style={optionStyle}>
-                ────────────
-              </option>
-              {rest.map((c) => (
-                <option key={c.iso2} value={c.iso2} style={optionStyle}>
-                  {c.name}
-                </option>
-              ))}
-            </select>
+              Name <span className="text-[#b3261e]">*</span>
+            </label>
             <input
-              type="hidden"
-              name="SingleLine7"
-              value={selectedCountryName}
-              readOnly
-            />
-            <svg
-              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-[10px] h-[6px]"
-              viewBox="0 0 10 6"
-              fill="none"
-            >
-              <path
-                d="M1 1l4 4 4-4"
-                stroke="#666"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-        </div>
-
-        {/* Phone */}
-        <div className="relative flex flex-col gap-[7px]">
-          <label
-            htmlFor="lfPhone"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Phone <span className="text-[#b3261e]">*</span>
-          </label>
-          <input type="hidden" name="SingleLine3" ref={dialCodeRef} />
-          <input
-            id="lfPhone"
-            ref={phoneRef}
-            type="tel"
-            name="PhoneNumber_countrycode"
-            maxLength={20}
-            placeholder="201-555-0123"
-            autoComplete="off"
-            required
-            className={fieldClass}
-          />
-          <p id="Phone-error2" className={errClass} />
-        </div>
-
-        {/* Message */}
-        <div className="relative flex flex-col gap-[7px] sm:col-span-2">
-          <label
-            htmlFor="lfMsg"
-            className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
-          >
-            Your training requirements
-          </label>
-          <textarea
-            id="lfMsg"
-            name="MultiLine"
-            maxLength={65535}
-            placeholder="Tell us about your training requirements: team size, delivery format, your production stack, and preferred timing."
-            rows={4}
-            className={`${fieldClass} min-h-[104px] resize-y leading-[1.6]`}
-          />
-        </div>
-
-        <input
-          type="hidden"
-          name="SingleLine5"
-          id="branch"
-          ref={branchRef}
-          defaultValue="course"
-        />
-        <input
-          type="hidden"
-          name="SingleLine4"
-          id="page-name"
-          ref={pageNameRef}
-          defaultValue=""
-        />
-
-        {/* Consent */}
-        <div className="sm:col-span-2">
-          <label className="flex items-start gap-[11px]">
-            <input
-              type="checkbox"
-              name="consent"
-              required
-              onChange={(e) =>
-                e.currentTarget.checked
-                  ? hideError("Consent-error2")
-                  : showError(
-                      "Consent-error2",
-                      "Please accept the privacy policy",
-                    )
+              id="lfName"
+              type="text"
+              name="SingleLine2"
+              maxLength={255}
+              placeholder="Enter your name"
+              onInput={(e) =>
+                validateRequired(
+                  "Name-error2",
+                  e.currentTarget.value,
+                  "Name is required",
+                )
               }
-              className="mt-0.5 h-[17px] w-[17px] flex-none accent-[var(--navy)]"
+              required
+              className={fieldClass}
             />
-            <span className="text-[12.5px] leading-[1.6] text-[var(--muted)]">
-              I agree that Edstellar may contact me about this training
-              request and store my details as described in the{" "}
-              <a
-                href="https://www.edstellar.com/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--ink)] underline underline-offset-2"
-              >
-                privacy policy
-              </a>
-              . <span className="text-[#b3261e]">*</span>
-            </span>
-          </label>
-          <p id="Consent-error2" className={`${errClass} ml-[28px]`} />
-        </div>
+            <p id="Name-error2" className={errClass} />
+          </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-6 border-t border-[var(--rule)] pt-6 sm:col-span-2">
-          <p className="max-w-[38ch] flex-1 text-[12.5px] leading-[1.55] text-[var(--muted)]">
-            We reply within one business day with a tailored proposal, no
-            automated sales sequence.
-          </p>
-          <button
-            type="submit"
-            className="whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-semibold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)]"
-          >
-            {submitLabel}
-          </button>
-        </div>
-      </form>
+          {/* Email */}
+          <div className="relative flex flex-col gap-[7px]">
+            <label
+              htmlFor="lfEmail"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+            >
+              Work email <span className="text-[#b3261e]">*</span>
+            </label>
+            <input
+              id="lfEmail"
+              type="email"
+              name="Email"
+              maxLength={255}
+              placeholder="Enter your work email"
+              onInput={(e) => validateEmail(e.currentTarget.value)}
+              required
+              className={fieldClass}
+            />
+            <p id="Email-error2" className={errClass} />
+          </div>
+
+          {/* Company */}
+          <div className="relative flex flex-col gap-[7px]">
+            <label
+              htmlFor="lfCompany"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+            >
+              Company name <span className="text-[#b3261e]">*</span>
+            </label>
+            <input
+              id="lfCompany"
+              type="text"
+              name="SingleLine"
+              maxLength={255}
+              placeholder="Enter your company name"
+              onInput={(e) =>
+                validateRequired(
+                  "Company-error2",
+                  e.currentTarget.value,
+                  "Company name is required",
+                )
+              }
+              required
+              className={fieldClass}
+            />
+            <p id="Company-error2" className={errClass} />
+          </div>
+
+          {/* Job Title */}
+          <div className="relative flex flex-col gap-[7px]">
+            <label
+              htmlFor="lfTitle"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+            >
+              Job title <span className="text-[#b3261e]">*</span>
+            </label>
+            <input
+              id="lfTitle"
+              type="text"
+              name="SingleLine1"
+              maxLength={255}
+              placeholder="Enter your job title"
+              onInput={(e) =>
+                validateRequired(
+                  "Job-error2",
+                  e.currentTarget.value,
+                  "Job title is required",
+                )
+              }
+              required
+              className={fieldClass}
+            />
+            <p id="Job-error2" className={errClass} />
+          </div>
+
+          {/* Country Select */}
+          <div className="relative flex flex-col gap-[7px]">
+            <label
+              htmlFor="country-select1"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+            >
+              Country
+            </label>
+            <div className="relative">
+              <select
+                name="Dropdown"
+                id="country-select1"
+                value={selectedIso2}
+                onChange={(e) => {
+                  const iso2 = e.target.value;
+                  setSelectedIso2(iso2);
+                  if (iso2) itiRef.current?.setSelectedCountry(iso2);
+                }}
+                style={{ colorScheme: "light" }}
+                className={`${fieldClass} cursor-pointer appearance-none pr-9 text-[var(--ink)]`}
+              >
+                <option value="" disabled style={optionStyle}>
+                  Select Country*
+                </option>
+                {preferred.map((c) => (
+                  <option key={c.iso2} value={c.iso2} style={optionStyle}>
+                    {c.name}
+                  </option>
+                ))}
+                <option value="" disabled style={optionStyle}>
+                  ────────────
+                </option>
+                {rest.map((c) => (
+                  <option key={c.iso2} value={c.iso2} style={optionStyle}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
+              <input
+                type="hidden"
+                name="SingleLine7"
+                value={selectedCountryName}
+                readOnly
+              />
+              <svg
+                className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-[10px] h-[6px]"
+                viewBox="0 0 10 6"
+                fill="none"
+              >
+                <path
+                  d="M1 1l4 4 4-4"
+                  stroke="#666"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div className="relative flex flex-col gap-[7px]">
+            <label
+              htmlFor="lfPhone"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+            >
+              Phone <span className="text-[#b3261e]">*</span>
+            </label>
+            <input type="hidden" name="SingleLine3" ref={dialCodeRef} />
+            <input
+              id="lfPhone"
+              ref={phoneRef}
+              type="tel"
+              name="PhoneNumber_countrycode"
+              maxLength={20}
+              placeholder="201-555-0123"
+              autoComplete="off"
+              required
+              className={fieldClass}
+            />
+            <p id="Phone-error2" className={errClass} />
+          </div>
+
+          {/* Message */}
+          <div className="relative flex flex-col gap-[7px] sm:col-span-2">
+            <label
+              htmlFor="lfMsg"
+              className="[font-family:var(--mono)] text-[10px] uppercase tracking-[0.15em] text-[var(--muted)]"
+            >
+              Your training requirements
+            </label>
+            <textarea
+              id="lfMsg"
+              name="MultiLine"
+              maxLength={65535}
+              placeholder="Tell us about your training requirements: team size, delivery format, your production stack, and preferred timing."
+              rows={4}
+              className={`${fieldClass} min-h-[104px] resize-y leading-[1.6]`}
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="SingleLine5"
+            id="branch"
+            ref={branchRef}
+            defaultValue="course"
+          />
+          <input
+            type="hidden"
+            name="SingleLine4"
+            id="page-name"
+            ref={pageNameRef}
+            defaultValue=""
+          />
+
+          {/* Consent */}
+          <div className="relative sm:col-span-2">
+            <label className="flex items-start gap-[11px]">
+              <input
+                type="checkbox"
+                name="consent"
+                required
+                onChange={(e) =>
+                  e.currentTarget.checked
+                    ? hideError("Consent-error2")
+                    : showError(
+                        "Consent-error2",
+                        "Please accept the privacy policy",
+                      )
+                }
+                className="mt-0.5 h-[17px] w-[17px] flex-none accent-[var(--navy)]"
+              />
+              <span className=" relative text-[12.5px] leading-[1.6] text-[var(--muted)]">
+                I agree that Edstellar may contact me about this training
+                request and store my details as described in the{" "}
+                <a
+                  href="https://www.edstellar.com/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--ink)] underline underline-offset-2"
+                >
+                  privacy policy
+                </a>
+                . <span className="text-[#b3261e]">*</span>
+              </span>
+            </label>
+            <p id="Consent-error2" className={`${errClass} ml-[28px]`} />
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-6 border-t border-[var(--rule)] pt-6 sm:col-span-2">
+            <p className="max-w-[38ch] flex-1 text-[12.5px] leading-[1.55] text-[var(--muted)]">
+              We reply within one business day with a tailored proposal, no
+              automated sales sequence.
+            </p>
+            <button
+              type="submit"
+              className="whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-semibold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)]"
+            >
+              {submitLabel}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -285,7 +285,7 @@ export const categorydata = [
     },
   },
 ];
-export const whyNow = {
+export const WhyNow = {
   title: "Why now",
   label: "Demand against supply",
   count: "3 sources",
@@ -320,6 +320,64 @@ export const whyNow = {
   ],
 
   note: "Figures are published research, linked at source. Outcomes vary by sector, model footprint, and governance maturity.",
+};
+export const capabilityTransformation = {
+  title: "Transformation",
+  label: "What changes in the organization",
+  count: "6 shifts",
+
+  heading: {
+    normal: "Capability is an",
+    italic: "organizational ",
+    normalAfter: "state, not a set of certificates.",
+  },
+
+  paragraph:
+    "Individual skills are the input. What a board can actually see is the change in how the organization behaves. These are the shifts that separate a company that has bought AI training from one that has built AI capability.",
+
+  beforeLabel: "Before",
+  afterLabel: "After capability is built",
+
+  shifts: [
+    {
+      before:
+        "AI use is invisible. Staff paste company data into personal accounts because no sanctioned path exists.",
+      after:
+        "Adoption runs on approved tools with agreed data-handling rules, and the organization can see what is being used.",
+    },
+    {
+      before:
+        "Two or three people understand the models. Everything queues behind them, and their leaving is an outage.",
+      after:
+        "Capability is distributed across the team. Work continues when any one person is unavailable.",
+    },
+    {
+      before:
+        "Whether a model is good enough is a matter of individual judgment, argued case by case.",
+      after:
+        "Shared evaluation standards decide it, and the same bar applies to every release.",
+    },
+    {
+      before:
+        "Governance is discovered during an audit, then reconstructed backwards under time pressure.",
+      after:
+        "Documentation, risk classification and evidence are produced as the work happens.",
+    },
+    {
+      before:
+        "Every change to a model or pipeline needs a vendor, a statement of work and a wait.",
+      after:
+        "The team makes its own changes, and brings in help for scale rather than for basics.",
+    },
+    {
+      before:
+        "AI is a set of pilots that impress in a demo and stall before production.",
+      after:
+        "Systems reach production because someone in-house can deploy, monitor and retrain them.",
+    },
+  ],
+
+  note: "These are observable states, not projected metrics. Where a shift is achieved, and how quickly, depends on the starting baseline established in discovery.",
 };
 export const whyheading = {
   section: {
@@ -391,88 +449,6 @@ export const alsoFromEdstellar = {
       title: "Coaching solutions",
       description: "Executive and manager coaching that keeps skills in use.",
       href: "https://www.edstellar.com/coaching-solutions",
-    },
-  ],
-};
-
-export const CostOfInactionData = {
-  eyebrow: {
-    label: "Cost of inaction",
-    caption: "What standing still costs",
-    count: "4 Pressures",
-  },
-
-  heading: {
-    title: "The organizations that",
-    highlight: "do nothing",
-    suffix: "are not standing still.",
-  },
-  description: "Not adopting AI is itself a decision with consequences, and they compound. These four pressures compound quietly, and none of them wait for a budget cycle.",
-  disclaimer: "The first two figures are published by the source named on the card; penalty ceilings are stated in the regulation itself. The last two are patterns we see in discovery, labeled as such rather than dressed up as research.",
-
-  cards: [
-    {
-      id: 1,
-      label: "Regulatory Exposure",
-
-      metric: "7%",
-      metricSuffix: "",
-      highlight: "of global annual turnover",
-
-      description:
-        "The EU AI Act sets its own penalty ceilings: up to 7% of worldwide annual turnover or 35 million euros for prohibited practices, and 3% or 15 million for other breaches. Obligations attach to the deploying organization, not the model vendor.",
-
-      footer: "EU AI Act, penalty provisions",
-
-      accent: "#C5E826",
-    },
-
-    {
-      id: 2,
-      label: "Lead Time",
-
-      metric: "Months",
-      metricSuffix: "",
-      highlight: "to build capability, not weeks",
-
-      description:
-        "Obligation dates do not move, but capability takes discovery, delivery and assessment cycles to build. Organizations that start when the deadline is already visible are starting late, and no amount of budget compresses a learning curve.",
-
-      footer: "Pattern, not a published statistic",
-
-      accent: "#C5E826",
-    },
-
-    {
-      id: 3,
-      label: "Key-Person Risk",
-
-      metric: "2–3",
-      metricSuffix: "",
-      highlight: "people hold the capability",
-
-      description:
-        "In most organizations the working knowledge of production AI systems sits with only a handful of individuals. Their departure creates an operational risk that compounds while nothing appears to be wrong.",
-
-      footer: "Observed in discovery engagements",
-
-      accent: "#C5E826",
-    },
-
-    {
-      id: 4,
-      label: "Competitive Delay",
-
-      metric: "Every",
-      metricSuffix: "",
-      highlight: "quarter compounds the gap",
-
-      description:
-        "Competitors who invest in AI capability improve faster with each delivery cycle. Waiting increases implementation effort, organizational resistance and the opportunity cost of delayed adoption.",
-
-      footer: "Market observation",
-
-      accent: "#C5E826",
     },
   ],
 };

@@ -1312,10 +1312,10 @@ export const trainers = [
 
 export const faqSection = {
   number: "XIII",
-  title: "FAQ",
-  label: "Before you commit",
-  count: "null",
-  description: "ML Model Monitoring training FAQs.",
+  title: "ML Model Monitoring training ",
+  hightlight: "FAQs.",
+  label: "Questions",
+  count: "10 questions",
   faqs: [
     {
       q: "What is ML Model Monitoring training?",

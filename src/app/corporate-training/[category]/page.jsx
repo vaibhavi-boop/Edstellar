@@ -33,12 +33,14 @@ export default async function CategoryPage({ params }) {
         whyStats={whyStats}
         why={why}
       />
-      {alsoFromEdstellar && (
-        <AlsoFromEdstellar
-          heading={alsoFromEdstellar.heading}
-          alsoFrom={alsoFromEdstellar.alsoFrom}
-        />
-      )}{" "}
+      <section>
+        {alsoFromEdstellar && (
+          <AlsoFromEdstellar
+            heading={alsoFromEdstellar.heading}
+            alsoFrom={alsoFromEdstellar.alsoFrom}
+          />
+        )}
+      </section>
       <CourseFAQSection
         className="bg-[var(--paper-warm)] mt-16"
         faqSection={faqSection}

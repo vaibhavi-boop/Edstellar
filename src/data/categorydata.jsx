@@ -1266,10 +1266,10 @@ export const trainers = [
 
 export const faqSection = {
   number: "XII",
-  title: "FAQ",
-  label: "Common questions",
+  title: "Questions enterprises ask ",
+  hightlight: "before booking.",
+  label: "· Common questions",
   count: "10 questions",
-  description: "Questions enterprises ask before booking.",
   faqs: [
     {
       q: "Which roles and teams is this AI training built for?",

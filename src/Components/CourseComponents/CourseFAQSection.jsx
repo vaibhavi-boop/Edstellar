@@ -47,7 +47,10 @@ export default function CourseFAQSection({ faqSection, className = "" }) {
 
         <h2 className="mb-[26px] max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
           {faqSection.title}{" "}
-          <em className="[font-family:var(--serif)] italic">FAQs</em>.
+          <em className="[font-family:var(--serif)] italic">
+            {faqSection.hightlight}
+          </em>
+          .
         </h2>
 
         <div className="mt-8">

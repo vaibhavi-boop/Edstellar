@@ -1117,43 +1117,25 @@ export const capability = {
     "8 Hands-On Labs on Live Infrastructure, Led by Industry Experts",
   ],
 };
-export const why = [
-  {
-    ic: "🎓",
-    t: "Experienced Trainers",
-    d: "Trainers from a vetted global network bring years of industry expertise, keeping every session practical and impactful.",
-  },
-  {
-    ic: "✓",
-    t: "Proven Quality",
-    d: "With a strong global track record, Edstellar is known for quality and engaging delivery.",
-  },
-  {
-    ic: "⚙️",
-    t: "Industry-Relevant Curriculum",
-    d: "Programs are built by experts to match the demands of today's industry.",
-  },
-  {
-    ic: "🧩",
-    t: "Fully Customisable",
-    d: "Every program can be tailored to your organisation's goals and your production stack.",
-  },
-  {
-    ic: "🤝",
-    t: "Comprehensive Support",
-    d: "We provide pre- and post-session support for a complete learning experience.",
-  },
-  {
-    ic: "🌐",
-    t: "Global, Multilingual Delivery",
-    d: "We deliver across multiple locations and languages to support diverse global teams.",
-  },
-];
 
+export const whyheading = {
+  section: {
+    number: "IX",
+    label: "Provider",
+    description: "The delivery model",
+    title: {
+      text: "Why enterprises choose  .",
+      highlight: "Edstellar",
+      suffix: "for AI.",
+    },
+    paragraph:
+      "Edstellar is a corporate training provider delivering instructor-led AI programs to teams of every size, from a single squad to an entire engineering organization, on-site, virtual, or blended, with programs built and led by practitioners.",
+  },
+};
 export const whyStats = [
   {
-    value: "10,000+",
-    label: "Expert Trainers",
+    value: "300+",
+    label: "Vetted AI trainers",
   },
   {
     value: "1,000+",
@@ -1168,41 +1150,47 @@ export const whyStats = [
     label: "Certified",
   },
 ];
+export const why = null;
 
-export const alsoFromEdstellar = [
-  {
-    title: "Talent assessments",
-    description:
-      "Psychometric, behavioral, leadership and 360-degree assessments.",
-    href: "https://www.edstellar.com/talent-assessment-services",
-  },
-  {
-    title: "Training needs analysis",
-    description: "Needs analysis, gap identification, and a training roadmap.",
-    href: "https://www.edstellar.com/training-needs-analysis-solutions",
-  },
-  {
-    title: "L&D consulting",
-    description: "Learning strategy, content, technology and ROI measurement.",
-    href: "https://www.edstellar.com/learning-development-consulting-services",
-  },
-  {
-    title: "OD consulting",
-    description: "Org design, succession planning and cultural change.",
-    href: "https://www.edstellar.com/organizational-development-consulting",
-  },
-  {
-    title: "Managed training services",
-    description:
-      "Training outsourcing, vendor management, logistics and administration.",
-    href: "https://www.edstellar.com/managed-training-services",
-  },
-  {
-    title: "Coaching solutions",
-    description: "Executive and manager coaching that keeps skills in use.",
-    href: "https://www.edstellar.com/coaching-solutions",
-  },
-];
+export const alsoFromEdstellar = {
+  heading: "Also from Edstellar",
+  alsoFrom: [
+    {
+      title: "Talent assessments",
+      description:
+        "Psychometric, behavioral, leadership and 360-degree assessments.",
+      href: "https://www.edstellar.com/talent-assessment-services",
+    },
+    {
+      title: "Training needs analysis",
+      description:
+        "Needs analysis, gap identification, and a training roadmap.",
+      href: "https://www.edstellar.com/training-needs-analysis-solutions",
+    },
+    {
+      title: "L&D consulting",
+      description:
+        "Learning strategy, content, technology and ROI measurement.",
+      href: "https://www.edstellar.com/learning-development-consulting-services",
+    },
+    {
+      title: "OD consulting",
+      description: "Org design, succession planning and cultural change.",
+      href: "https://www.edstellar.com/organizational-development-consulting",
+    },
+    {
+      title: "Managed training services",
+      description:
+        "Training outsourcing, vendor management, logistics and administration.",
+      href: "https://www.edstellar.com/managed-training-services",
+    },
+    {
+      title: "Coaching solutions",
+      description: "Executive and manager coaching that keeps skills in use.",
+      href: "https://www.edstellar.com/coaching-solutions",
+    },
+  ],
+};
 
 export const quotes = [
   {
@@ -1276,32 +1264,55 @@ export const trainers = [
   },
 ];
 
-export const faqs = [
-  {
-    q: "What is ML Model Monitoring training?",
-    a: "It is an instructor-led corporate training program that teaches teams how to keep production machine learning models accurate, reliable, fair, and compliant over time. It covers the full monitoring lifecycle: data and concept drift detection, performance tracking, alerting and incident response, retraining and lifecycle management, A/B testing, explainability, and fairness and compliance monitoring.",
-  },
-  {
-    q: "How long is the training and what is the format?",
-    a: "The program typically runs 24 to 40 hours, instructor-led, delivered virtually, onsite, or offsite, in 10+ languages, and is fully customizable to your team's schedule, experience level, and production stack.",
-  },
-  {
-    q: "Which tools and techniques does the course cover?",
-    a: "Hands-on labs use real real production tooling, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, attribution methods for explainability, and fairness assessment tooling. A range of ML observability platforms are also covered.",
-  },
-  {
-    q: "Who should attend?",
-    a: "It suits ML engineers and data scientists, MLOps and DevOps engineers, AI platform and infrastructure engineers, data engineers supporting ML pipelines, AI product managers, and analytics engineers and data architects.",
-  },
-  {
-    q: "What are the prerequisites?",
-    a: "Participants should have experience in machine learning model development and Python programming.",
-  },
-  {
-    q: "Do participants receive a certificate, and can the training be customized?",
-    a: "Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum, examples, and labs are fully customized to your industry, tools, and production environment, and delivered for teams onsite, offsite, or virtually worldwide.",
-  },
-];
+export const faqSection = {
+  number: "XII",
+  title: "Questions enterprises ask ",
+  hightlight: "before booking.",
+  label: "· Common questions",
+  count: "10 questions",
+  faqs: [
+    {
+      q: "Which roles and teams is this AI training built for?",
+      a: "Enterprise data, engineering and product teams: ML engineers, data scientists, MLOps engineers, data analysts, AI product managers and developers adopting AI, plus governance and risk owners. A separate enablement track covers finance, marketing, HR and operations staff who use AI tools without building them.",
+    },
+    {
+      q: "How is the training delivered?",
+      a: "Instructor-led and live, as a closed cohort for your team, on-site or virtually. There are no self-paced or recorded modules. You choose the format, location, language and schedule.",
+    },
+    {
+      q: "What is the difference between ILT and VILT?",
+      a: "ILT is instructor-led training delivered in person, with a trainer at your premises. VILT is the live online equivalent, run in real time rather than recorded. Both include hands-on labs and live interaction with the trainer. The choice is driven by location and logistics, not by depth of content.",
+    },
+    {
+      q: "Can programs be customized to our stack?",
+      a: "Yes. Each program is designed around your model stack, your data, your team's current level and your governance obligations. Engagements begin with a discovery call to map roles and gaps before a trainer is shortlisted.",
+    },
+    {
+      q: "How many people can attend one cohort?",
+      a: "Cohorts are sized to keep instructor-led sessions workable, typically from 5 trainees for a specialist team upwards. Large organizations run parallel cohorts across multiple locations rather than one oversized session.",
+    },
+    {
+      q: "How do you vet AI trainers?",
+      a: "Every trainer passes a technical domain assessment, a live delivery evaluation by a senior reviewer, and reference checks from past corporate cohorts. Trainers are matched by domain expertise, stack alignment and geography, and you can request a trial session before committing.",
+    },
+    {
+      q: "How is effectiveness measured?",
+      a: "Every cohort runs pre and post technical assessments to establish a measurable skills delta, benchmarked against role frameworks and shared in a post-program report. Where applicable, outcomes map to model accuracy, time to deployment and adoption rates.",
+    },
+    {
+      q: "Which governance frameworks do you cover?",
+      a: "Programs are built against the EU AI Act, the NIST AI Risk Management Framework and ISO/IEC 42001, with sector overlays where relevant. These are framework-aligned skills programs; Edstellar is not a certification body and does not issue framework certifications.",
+    },
+    {
+      q: "How do we choose an AI training provider?",
+      a: "Useful criteria are whether programs are designed around your stack rather than pulled from a catalog, whether delivery is live and instructor-led, whether trainers are practitioners you can trial before committing, and whether outcomes are measured rather than assumed. Ask to see what the post-program report actually contains.",
+    },
+    {
+      q: "Why group training rather than individual licenses?",
+      a: "Group training aligns a whole team on the same patterns, tooling and governance rules. Individual licenses produce uneven baselines and ungoverned adoption. A shared baseline is also what an auditor can be shown.",
+    },
+  ],
+};
 
 export const related = [
   {

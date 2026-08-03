@@ -55,8 +55,6 @@ export default function StickyTabs({ data = {} }) {
     }
   };
 
-  // Scroll-spy: highlight whichever section's tab is currently in view, and
-  // keep that tab scrolled into view within the (possibly overflowing) bar.
   useEffect(() => {
     if (!tabs?.length) return;
 

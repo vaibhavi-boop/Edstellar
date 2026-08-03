@@ -73,8 +73,8 @@ export const categorydata = [
 
       data: {
         title: "ML Model Monitoring Corporate Training",
-        image: {
-          src: "/Images/Course/hero-photo.jpg",
+        video: {
+          src: "/Images/Home-Animation.mp4",
           alt: "A team reviewing production model health metrics on a shared dashboard",
         },
       },

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function CourseHero({
@@ -13,6 +13,19 @@ export default function CourseHero({
   data,
 }) {
   const [openTooltip, setOpenTooltip] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+      const checkScreen = () => {
+        setIsDesktop(window.innerWidth >= 1024);
+      };
+
+      checkScreen();
+
+      window.addEventListener("resize", checkScreen);
+
+      return () => window.removeEventListener("resize", checkScreen);
+    }, []);
 
   return (
     <section id="top" className="relative overflow-hidden pt-[38px] pb-[54px]">
@@ -29,14 +42,34 @@ export default function CourseHero({
               backgroundSize: "cover",
               backgroundPosition: "center right",
               backgroundRepeat: "no-repeat",
-              WebkitMaskImage:
-                "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
-              maskImage:
-                "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
+              WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
+              maskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 40%)",
             }}
           />
 
           <div className="relative z-10 lg:max-w-[46%]">
+            {/* Breadcrumb */}
+            <div className="scrollbar-hide mb-6 flex flex-nowrap items-center gap-1.5 overflow-x-auto whitespace-nowrap font-[var(--mono)] text-[9.5px] uppercase tracking-[0.1em] text-[var(--muted-soft)]">
+              {breadcrumb.map((item, index) => (
+                <span key={index} className="flex items-center gap-1.5">
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      title={item.title}
+                      className="transition-colors hover:text-[var(--ink)]"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span title={item.title}>{item.label}</span>
+                  )}
+
+                  {index < breadcrumb.length - 1 && (
+                    <span className="opacity-50">/</span>
+                  )}
+                </span>
+              ))}
+            </div>
             <h1 className="mb-[10px] max-w-3xl font-[var(--display)] text-[clamp(30px,3.5vw,47px)] font-bold leading-[1.05] tracking-[-0.035em] text-[var(--ink)]">
               {headline}{" "}
               <span className="[font-family:var(--serif)] italic font-bold text-[#6f8c0f]">
@@ -71,27 +104,35 @@ export default function CourseHero({
                     {item.tooltip && (
                       <>
                         <button
-                          type="button"
-                          aria-expanded={openTooltip === index}
-                          aria-label={`More about ${item.text}`}
-                          onClick={() =>
-                            setOpenTooltip(openTooltip === index ? null : index)
-                          }
-                          className={`flex h-4 w-4 flex-none items-center justify-center rounded-full border [font-family:var(--serif)] text-[11px] italic leading-none transition-colors duration-200 ${
-                            openTooltip === index
-                              ? "border-[var(--navy)] bg-[var(--navy)] text-[var(--lime)]"
-                              : "border-[var(--rule-strong)] bg-transparent text-[var(--muted)] hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)]"
-                          }`}
-                        >
-                          i
+                            type="button"
+                            aria-expanded={openTooltip === index}
+                            aria-label={`More about ${item.text}`}
+                            onMouseEnter={() => {
+                              if (isDesktop) setOpenTooltip(index);
+                            }}
+                            onMouseLeave={() => {
+                              if (isDesktop) setOpenTooltip(null);
+                            }}
+                            onClick={() => {
+                              if (!isDesktop) {
+                                setOpenTooltip(openTooltip === index ? null : index);
+                              }
+                            }}
+                            className={`flex h-4 w-4 flex-none items-center justify-center rounded-full border [font-family:var(--serif)] text-[11px] italic leading-none transition-colors duration-200 ${
+                              openTooltip === index
+                                ? "border-[var(--navy)] bg-[var(--navy)] text-[var(--lime)]"
+                                : "border-[var(--rule-strong)] bg-transparent text-[var(--muted)] hover:border-[var(--navy)] hover:bg-[var(--navy)] hover:text-[var(--lime)]"
+                            }`}
+                          >
+                            i
                         </button>
 
                         <div
                           role="tooltip"
-                          className={`pointer-events-none absolute left-0 top-full z-50 mt-[11px] w-[330px] max-w-[78vw] rounded-[14px] bg-[var(--navy)] px-[18px] py-4 opacity-0 shadow-[0_26px_54px_-28px_rgba(10,22,40,0.75)] transition-all duration-200 ${
+                          className={`absolute left-0 top-full z-50 mt-[11px] w-[330px] max-w-[78vw] rounded-[14px] bg-[var(--navy)] px-[18px] py-4 shadow-[0_26px_54px_-28px_rgba(10,22,40,0.75)] transition-all duration-200 ${
                             openTooltip === index
-                              ? "!pointer-events-auto !translate-y-0 !opacity-100"
-                              : "-translate-y-[5px]"
+                              ? "pointer-events-auto translate-y-0 opacity-100"
+                              : "pointer-events-none -translate-y-[5px] opacity-0"
                           }`}
                         >
                           <span className="absolute -top-[6px] left-[22px] h-3 w-3 rotate-45 rounded-[2px] bg-[var(--navy)]" />
@@ -125,28 +166,6 @@ export default function CourseHero({
               </a>
             </div>
 
-            {/* Breadcrumb — bottom, small, horizontally scrollable */}
-            <div className="scrollbar-hide mt-6 flex flex-nowrap items-center gap-1.5 overflow-x-auto whitespace-nowrap font-[var(--mono)] text-[9.5px] uppercase tracking-[0.1em] text-[var(--muted-soft)]">
-              {breadcrumb.map((item, index) => (
-                <span key={index} className="flex items-center gap-1.5">
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      title={item.title}
-                      className="transition-colors hover:text-[var(--ink)]"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span title={item.title}>{item.label}</span>
-                  )}
-
-                  {index < breadcrumb.length - 1 && (
-                    <span className="opacity-50">/</span>
-                  )}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </div>

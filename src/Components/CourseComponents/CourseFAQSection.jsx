@@ -1,15 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { faqs } from "@/data/mlMonitoringData";
 
-export default function CourseFAQSection() {
+export default function CourseFAQSection({ faqSection, className = "" }) {
   const [open, setOpen] = useState(null);
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
+    mainEntity: faqSection.faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: {
@@ -20,35 +19,39 @@ export default function CourseFAQSection() {
   };
 
   return (
-    <section id="faq" className="border-b border-[var(--rule)] py-28">
+    <section
+      id="faq"
+      className={`border-b border-[var(--rule)] py-28 ${className}`}
+    >
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
       />
-      <div className="container-narrow">
 
+      <div className="container-narrow">
         <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
           <span className="text-[16px] text-[var(--ink)] [font-family:var(--serif)]">
-            XIII
+            {faqSection.number}
           </span>
 
           <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
-            Questions
+            {faqSection.label}
           </span>
 
-          <span>· Before you commit</span>
+          <span>{faqSection.count}</span>
+
+          <span>{faqSection.description}</span>
         </div>
 
         <h2 className="mb-[26px] max-w-[20ch] text-[clamp(30px,4vw,50px)] font-bold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
-          ML Model Monitoring training{" "}
-          <em className="[font-family:var(--serif)] italic">
-            FAQs
-          </em>
-          .
+          {faqSection.title}{" "}
+          <em className="[font-family:var(--serif)] italic">FAQs</em>.
         </h2>
 
         <div className="mt-8">
-          {faqs.map((f, i) => {
+          {faqSection.faqs.map((f, i) => {
             const isOpen = open === i;
 
             return (
@@ -89,7 +92,6 @@ export default function CourseFAQSection() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

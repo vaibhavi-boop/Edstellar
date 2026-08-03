@@ -1149,7 +1149,20 @@ export const why = [
     d: "We deliver across multiple locations and languages to support diverse global teams.",
   },
 ];
-
+export const whyheading = {
+  section: {
+    number: "IX",
+    label: "Provider",
+    description: "The delivery model",
+    title: {
+      text: "Why choose Edstellar for",
+      highlight: "ML monitoring",
+      suffix: "training.",
+    },
+    paragraph:
+      "Edstellar is a corporate training provider delivering instructor-led ML Model Monitoring programs to teams of every size, from a single squad to an entire engineering organization, on-site, virtual, or blended, with hands-on programs built and led by practitioners.",
+  },
+};
 export const whyStats = [
   {
     value: "10,000+",
@@ -1169,40 +1182,45 @@ export const whyStats = [
   },
 ];
 
-export const alsoFromEdstellar = [
-  {
-    title: "Talent assessments",
-    description:
-      "Psychometric, behavioral, leadership and 360-degree assessments.",
-    href: "https://www.edstellar.com/talent-assessment-services",
-  },
-  {
-    title: "Training needs analysis",
-    description: "Needs analysis, gap identification, and a training roadmap.",
-    href: "https://www.edstellar.com/training-needs-analysis-solutions",
-  },
-  {
-    title: "L&D consulting",
-    description: "Learning strategy, content, technology and ROI measurement.",
-    href: "https://www.edstellar.com/learning-development-consulting-services",
-  },
-  {
-    title: "OD consulting",
-    description: "Org design, succession planning and cultural change.",
-    href: "https://www.edstellar.com/organizational-development-consulting",
-  },
-  {
-    title: "Managed training services",
-    description:
-      "Training outsourcing, vendor management, logistics and administration.",
-    href: "https://www.edstellar.com/managed-training-services",
-  },
-  {
-    title: "Coaching solutions",
-    description: "Executive and manager coaching that keeps skills in use.",
-    href: "https://www.edstellar.com/coaching-solutions",
-  },
-];
+export const alsoFromEdstellar = {
+  heading: "Also from Edstellar",
+  alsoFrom: [
+    {
+      title: "Talent assessments",
+      description:
+        "Psychometric, behavioral, leadership and 360-degree assessments.",
+      href: "https://www.edstellar.com/talent-assessment-services",
+    },
+    {
+      title: "Training needs analysis",
+      description:
+        "Needs analysis, gap identification, and a training roadmap.",
+      href: "https://www.edstellar.com/training-needs-analysis-solutions",
+    },
+    {
+      title: "L&D consulting",
+      description:
+        "Learning strategy, content, technology and ROI measurement.",
+      href: "https://www.edstellar.com/learning-development-consulting-services",
+    },
+    {
+      title: "OD consulting",
+      description: "Org design, succession planning and cultural change.",
+      href: "https://www.edstellar.com/organizational-development-consulting",
+    },
+    {
+      title: "Managed training services",
+      description:
+        "Training outsourcing, vendor management, logistics and administration.",
+      href: "https://www.edstellar.com/managed-training-services",
+    },
+    {
+      title: "Coaching solutions",
+      description: "Executive and manager coaching that keeps skills in use.",
+      href: "https://www.edstellar.com/coaching-solutions",
+    },
+  ],
+};
 
 export const quotes = [
   {
@@ -1276,32 +1294,39 @@ export const trainers = [
   },
 ];
 
-export const faqs = [
-  {
-    q: "What is ML Model Monitoring training?",
-    a: "It is an instructor-led corporate training program that teaches teams how to keep production machine learning models accurate, reliable, fair, and compliant over time. It covers the full monitoring lifecycle: data and concept drift detection, performance tracking, alerting and incident response, retraining and lifecycle management, A/B testing, explainability, and fairness and compliance monitoring.",
-  },
-  {
-    q: "How long is the training and what is the format?",
-    a: "The program typically runs 24 to 40 hours, instructor-led, delivered virtually, onsite, or offsite, in 10+ languages, and is fully customizable to your team's schedule, experience level, and production stack.",
-  },
-  {
-    q: "Which tools and techniques does the course cover?",
-    a: "Hands-on labs use real real production tooling, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, attribution methods for explainability, and fairness assessment tooling. A range of ML observability platforms are also covered.",
-  },
-  {
-    q: "Who should attend?",
-    a: "It suits ML engineers and data scientists, MLOps and DevOps engineers, AI platform and infrastructure engineers, data engineers supporting ML pipelines, AI product managers, and analytics engineers and data architects.",
-  },
-  {
-    q: "What are the prerequisites?",
-    a: "Participants should have experience in machine learning model development and Python programming.",
-  },
-  {
-    q: "Do participants receive a certificate, and can the training be customized?",
-    a: "Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum, examples, and labs are fully customized to your industry, tools, and production environment, and delivered for teams onsite, offsite, or virtually worldwide.",
-  },
-];
+export const faqSection = {
+  number: "XIII",
+  title: "FAQ",
+  label: "Before you commit",
+  count: "null",
+  description: "ML Model Monitoring training FAQs.",
+  faqs: [
+    {
+      q: "What is ML Model Monitoring training?",
+      a: "It is an instructor-led corporate training program that teaches teams how to keep production machine learning models accurate, reliable, fair, and compliant over time. It covers the full monitoring lifecycle: data and concept drift detection, performance tracking, alerting and incident response, retraining and lifecycle management, A/B testing, explainability, and fairness and compliance monitoring.",
+    },
+    {
+      q: "How long is the training and what is the format?",
+      a: "The program typically runs 24 to 40 hours, instructor-led, delivered virtually, onsite, or offsite, in 10+ languages, and is fully customizable to your team's schedule, experience level, and production stack.",
+    },
+    {
+      q: "Which tools and techniques does the course cover?",
+      a: "Hands-on labs use real real production tooling, alongside drift tests such as Kolmogorov-Smirnov and Population Stability Index, attribution methods for explainability, and fairness assessment tooling. A range of ML observability platforms are also covered.",
+    },
+    {
+      q: "Who should attend?",
+      a: "It suits ML engineers and data scientists, MLOps and DevOps engineers, AI platform and infrastructure engineers, data engineers supporting ML pipelines, AI product managers, and analytics engineers and data architects.",
+    },
+    {
+      q: "What are the prerequisites?",
+      a: "Participants should have experience in machine learning model development and Python programming.",
+    },
+    {
+      q: "Do participants receive a certificate, and can the training be customized?",
+      a: "Yes. On successful completion, employees receive an Edstellar course completion certificate. The curriculum, examples, and labs are fully customized to your industry, tools, and production environment, and delivered for teams onsite, offsite, or virtually worldwide.",
+    },
+  ],
+};
 
 export const related = [
   {

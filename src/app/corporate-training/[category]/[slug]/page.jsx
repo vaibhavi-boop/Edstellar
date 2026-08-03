@@ -1,4 +1,10 @@
-import { courses } from "@/data/mlMonitoringData";
+import {
+  courses,
+  whyheading,
+  whyStats,
+  why,
+  alsoFromEdstellar,
+} from "@/data/mlMonitoringData";
 import allCourses from "@/data/courses.json";
 import { notFound } from "next/navigation";
 
@@ -63,7 +69,7 @@ export default async function CoursePage({ params }) {
       {course.whatIs && <WhatIsSection {...course.whatIs} />}
       <WhyNowSection />
       <LifecycleSection />
-      <div className="relative z-[10]">
+      <div className="relative z-10">
         <SkillsSection />
         <OutcomesSection />
         <CurriculumSection />
@@ -75,14 +81,21 @@ export default async function CoursePage({ params }) {
       </div>
       <GroupQuoteSection />
       <CapabilitySection />
-      <WhyEdstellarSection />
+      <WhyEdstellarSection
+        whyheading={whyheading}
+        whyStats={whyStats}
+        why={why}
+        alsoFromEdstellar={alsoFromEdstellar}
+      />
+
       <TestimonialsSection />
       <TrainersSection />
       <CertificateSection />
-      <CourseFAQSection />
+      <CourseFAQSection faqSection={faqSection} />
       <RelatedApplySection />
       <ContactFormSection />
       <StickyFooter />
+      <ScrollProgressBar />
     </main>
   );
 }

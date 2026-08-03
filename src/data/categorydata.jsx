@@ -27,7 +27,7 @@ export const categorydata = [
       ],
       badge: "Instructor-led Corporate Training · IT & Technical",
       headline: "Corporate",
-      headlineEm: "Artificail Intelligence",
+      headlineEm: "Artificial Intelligence",
       headlineSuffix: "Training",
       subtitle: "Build the people who will run your AI, not just the models.",
       lede: "We build AI capability inside enterprises: the people, the standards and the governance that let an organization run AI itself. Instructor-led programs across generative AI, machine learning, MLOps and governance are how we do it, scoped to your stack and delivered wherever your teams are.",
@@ -385,7 +385,7 @@ export const whyheading = {
     label: "Provider",
     description: "The delivery model",
     title: {
-      text: "Why enterprises choose  .",
+      text: "Why enterprises choose",
       highlight: "Edstellar",
       suffix: "for AI.",
     },

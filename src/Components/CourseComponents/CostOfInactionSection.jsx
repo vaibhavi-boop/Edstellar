@@ -1,114 +1,226 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Navigation } from "swiper/modules";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import "swiper/css";
+import "swiper/css/navigation";
 
 export default function CostOfInactionSection({ data }) {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   const [swiper, setSwiper] = useState(null);
-  const [active, setActive] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
 
-  const first = active === 0;
-  const last = active === data.cards.length - 1;
-
-  const btn = (disabled) =>
-    `flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300
-    ${
-      disabled
-        ? "cursor-not-allowed border-[#E5E2D8] text-[#C9C5B8]"
-        : "border-[#D8D5C9] text-[#0A1628] hover:bg-[#0A1628] hover:text-white hover:border-[#0A1628]"
-    }`;
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   return (
-    <section className="bg-[#FAF8F1] py-24">
-      <div className="container max-w-[980px]">
+    <section className="bg-[#F7F3EB]">
+      <div className="container">
 
-        {/* Top */}
-        <div className="mb-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-[var(--serif)] italic">
-              {data.eyebrow.label}
-            </span>
+        {/* ================= Header ================= */}
 
-            <span className="font-[var(--mono)] text-[10px] uppercase tracking-[0.3em] text-[#8D96A7]">
-              {data.eyebrow.caption}
-            </span>
+        <div className="mb-10">
+
+          {/* Left */}
+
+          <div>
+
+            <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {/* Left */}
+              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-3">
+                <p className="font-serif text-[16px] italic text-[#07162C]">
+                  {data.eyebrow.label}
+                </p>
+
+                <span className="text-[#B7B7B7]">•</span>
+
+                <p className="text-[12px] uppercase tracking-[3px] text-[#8E8E8E]">
+                  {data.eyebrow.caption}
+                </p>
+              </div>
+
+              {/* Right */}
+              <p className="text-[12px] uppercase tracking-[3px] text-[#8E8E8E]">
+                {data.eyebrow.count}
+              </p>
+
+            </div>
+
+            <h2 className="mb-5 max-w-[900px] text-[30px] font-semibold leading-[1.1] text-[#07162C] lg:text-[42px]">
+
+              {data.heading.title.first}{" "}
+
+              <span className="font-serif font-semibold italic font-normal">
+                {data.heading.title.italic}
+              </span>
+
+              <br />
+
+              {data.heading.title.second}
+
+            </h2>
+
           </div>
 
-          <span className="font-[var(--mono)] text-[10px] uppercase tracking-[0.3em] text-[#8D96A7]">
-            {data.eyebrow.count}
-          </span>
+          {/* Right */}
+
+          <div className="flex items-end">
+
+            <p className="max-w-[700px] text-[16px] leading-8 text-[#5F6977]">
+              {data.heading.description}
+            </p>
+
+          </div>
+
         </div>
 
-        {/* Heading */}
-        <h2 className="max-w-[720px] font-[var(--display)] text-[58px] font-semibold leading-none tracking-[-0.05em] text-[#091B34]">
-          {data.heading.title}{" "}
-          <span className="font-[var(--serif)] italic font-normal">
-            {data.heading.highlight}
-          </span>
-          <br />
-          {data.heading.suffix}
-        </h2>
+        {/* ================= Navigation ================= */}
 
-        <p className="mt-6 max-w-[760px] text-[22px] leading-[1.7] text-[#667085]">
-          {data.description}
-        </p>
+        <div className="mb-10 flex items-center gap-3">
 
-        {/* Navigation */}
-        <div className="mt-10 mb-5 flex items-center gap-4">
-          <button
-            disabled={first}
-            className={btn(first)}
-            onClick={() => swiper.slidePrev()}
-          >
-            <ChevronLeft size={18} />
-          </button>
+          <div className="flex items-center gap-4">
 
-          <button
-            disabled={last}
-            className={btn(last)}
-            onClick={() => swiper.slideNext()}
-          >
-            <ChevronRight size={18} />
-          </button>
+            <button
+              ref={prevRef}
+              disabled={isBeginning}
+              onClick={() => swiper?.slidePrev()}
+              className={`flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+                isBeginning
+                  ? "cursor-not-allowed border-[#E5E5E5] bg-[#F7F7F7] text-[#BDBDBD]"
+                  : "border-[#D8D8D8] bg-white hover:bg-[#07162C] hover:text-white"
+              }`}
+            >
+              <ArrowLeft size={12} />
+            </button>
 
-          <span className="font-[var(--mono)] text-[11px] uppercase tracking-[0.3em] text-[#9BA2B0]">
-            {active + 1} / {data.cards.length}
-          </span>
+            <button
+              ref={nextRef}
+              disabled={isEnd}
+              onClick={() => swiper?.slideNext()}
+              className={`flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+                isEnd
+                  ? "cursor-not-allowed border-[#E5E5E5] bg-[#F7F7F7] text-[#BDBDBD]"
+                  : "border-[#D8D8D8] bg-white hover:bg-[#07162C] hover:text-white"
+              }`}
+            >
+              <ArrowRight size={12} />
+            </button>
+
+          </div>
+
+          <div className="text-sm font-semibold text-[#0a162873]">
+
+            {currentSlide}
+            <span className="mx-1 text-[#0a162873]">/</span>
+            {data.cards.length}
+
+          </div>
+
         </div>
 
-        {/* Cards */}
+        {/* ================= Slider ================= */}
+
         <Swiper
-          onSwiper={setSwiper}
-          onSlideChange={(s) => setActive(s.activeIndex)}
-          slidesPerView={3.15}
-          spaceBetween={18}
-          speed={600}
-          className="!overflow-visible"
+          modules={[Navigation]}
+          spaceBetween={16}
+          slidesPerView={1}
+          onSwiper={(swiper) => {
+            setSwiper(swiper);
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+          onSlideChange={(swiper) => {
+            setCurrentSlide(swiper.realIndex + 1);
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
           breakpoints={{
-            0: {
-              slidesPerView: 1.05,
+            640: {
+              slidesPerView: 1.15,
             },
+
             768: {
-              slidesPerView: 2.1,
+              slidesPerView: 2,
             },
-            1200: {
+
+            1024: {
+              slidesPerView: 2.4,
+            },
+
+            1280: {
               slidesPerView: 3.15,
             },
           }}
         >
-          {data.cards.map((card) => (
-            <SwiperSlide key={card.id}>
-              <PressureCard card={card} />
+          {data.cards.map((card, index) => (
+            <SwiperSlide key={index}>
+              <article className="mb-8 flex h-full min-h-[380px] flex-col gap-3.5 overflow-hidden rounded-2xl border border-[#E5E0D7] bg-white">
+
+                {/* Green Top Border */}
+                <div
+                  className="h-[3px] w-full rounded-t-2xl"
+                  style={{
+                    
+                      background: "linear-gradient(90deg, #0A1628, #3f5f2a 60%, #C8F135)",
+                  }}
+                />
+
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-5 lg:p-6">
+
+                  {/* Tag */}
+                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[2px] text-[#8B8B8B]">
+                    {card.tag}
+                  </p>
+
+                  {/* Value */}
+                  <h3 className="mb-1.5 text-[24px] font-bold leading-none text-[#07162C] lg:text-[36px]">
+                    {card.value}
+                  </h3>
+
+                  {/* Highlight */}
+                  <h4 className="mb-3 max-w-[260px] text-[14px] font-semibold leading-6 text-[#6f8c0f]">
+                    {card.highlight}
+                  </h4>
+
+                  {/* Description */}
+                  <p className="flex-1 text-[14px] leading-6 text-[#0a162899]">
+                    {card.description}
+                  </p>
+
+                  {/* Source */}
+                  <div className="mt-5 border-t border-[#ECE7DE] pt-3.5">
+
+                    <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#0a162873]">
+                      {card.source}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </article>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <p className="mt-10 max-w-[900px] text-[14px] leading-7 text-[#8D95A4]">
-          {data.disclaimer}
+        {/* Footer */}
+
+        <p className="max-w-[750px] text-[12px] leading-5 text-[#0a162873]">
+          {data.footer}
         </p>
       </div>
     </section>

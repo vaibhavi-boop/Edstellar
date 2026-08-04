@@ -285,6 +285,159 @@ export const categorydata = [
     },
   },
 ];
+
+export const CostOfInactionData = {
+  eyebrow: {
+    label: "Cost of inaction",
+    caption: "WHAT STANDING STILL COSTS",
+    count: "4 PRESSURES",
+  },
+
+  heading: {
+    title: {
+      first: "The organizations that",
+      italic: "do nothing",
+      second: "are not standing still.",
+    },
+
+    description:
+      "Not adopting AI is itself a decision with consequences, and they compound. These four pressures compound quietly, and none of them wait for a budget cycle.",
+  },
+
+  cards: [
+    {
+      tag: "REGULATORY EXPOSURE",
+      value: "7%",
+      highlight: "of global annual turnover",
+      description:
+        "The EU AI Act sets its own penalty ceilings: up to 7% of worldwide annual turnover or 35 million euros for prohibited practices, and 3% or 15 million for other breaches. Obligations attach to the deploying organization, not the model vendor.",
+      source: "EU AI ACT, PENALTY PROVISIONS",
+    },
+
+    {
+      tag: "LEAD TIME",
+      value: "Months",
+      highlight: "to build capability, not weeks",
+      description:
+        "Obligation dates do not move, but capability takes discovery, delivery and assessment cycles to build. Organizations that start when the deadline is already visible are starting late, and no amount of budget compresses a learning curve.",
+      source: "PATTERN, NOT A PUBLISHED STATISTIC",
+    },
+
+    {
+      tag: "KEY-PERSON RISK",
+      value: "2–3",
+      highlight: "people hold the capability",
+      description:
+        "In most organizations the working knowledge of AI models sits with a handful of individuals. Their departure is an outage, and it is a risk that grows quietly while nothing appears to be wrong.",
+      source: "OBSERVED IN DISCOVERY ENGAGEMENTS",
+    },
+
+    {
+      tag: "Stalled pilots",
+      value: "Demo",
+      highlight: "is where most AI stops",
+      description:
+        "Pilots clear a demo and then stall, because reaching production needs deployment, monitoring and governance skills that no proof of concept required. The spend is already made; the return is not.",
+      source: "Pattern, not a published statistic",
+    },
+  ],
+
+  footer:
+    "The first two figures are published by the source named on the card; penalty ceilings are stated in the regulation itself. The last two are patterns we see in discovery, labelled as such rather than dressed up as research.",
+};
+
+export const CategoryOutcomeData = {
+  eyebrow: {
+    left: "Outcomes",
+    right: "WHERE IT LEADS",
+  },
+
+  heading: {
+    line1: "We do not train AI users. We",
+    line2: "build",
+    italic: "the people who will run it.",
+  },
+
+  description:
+    "Two tracks means two ceilings, and both are a success. Everyone starts in the same place; where a team stops depends on whether it uses AI or builds it. A marketing team reaching fluent is an arrival, not a stalled journey.",
+
+  tracks: [
+    {
+      category: "EVERYONE STARTS HERE",
+      items: [
+        {
+          title: "AI-curious",
+          active: false,
+          description:
+            "Aware the tools exist. No shared standard, no agreed rules for company data.",
+          tags: [],
+        },
+        {
+          title: "AI-fluent",
+          active: true,
+          description:
+            "Uses AI daily inside agreed guardrails, with the same patterns across the team.",
+          tags: [
+            "ChatGPT Prompt Engineering",
+            "AI for Managers",
+          ],
+        },
+      ],
+    },
+
+    {
+      category: "TEAMS WHO USE AI",
+      items: [
+        {
+          title: "AI-productive",
+          active: true,
+          description:
+            "Applies AI to its own function's work and can judge when the output is good enough to act on.",
+          tags: [
+            "AI for HR",
+            "AI for Accountants",
+            "AI Decision Support Systems",
+          ],
+        },
+      ],
+    },
+
+    {
+      category: "TEAMS WHO BUILD AI",
+      items: [
+        {
+          title: "AI-capable",
+          active: true,
+          description:
+            "Builds, evaluates and deploys its own systems, and can tell a working model from a convincing one.",
+          tags: [
+            "Machine Learning with Python",
+            "Generative AI (GenAI)",
+            "Retrieval Augmented Generation (RAG)",
+            "ML Model Monitoring",
+          ],
+        },
+
+        {
+          title: "AI-self-sustaining",
+          active: true,
+          description:
+            "Governs what it builds and refreshes its own practice as the tooling moves, without waiting for us.",
+          tags: [
+            "MLOps Foundations (proposed)",
+            "AI Evaluation and Red-Teaming (proposed)",
+            "Artificial Intelligence (AI) Governance",
+            "EU AI Act Implementation (proposed)",
+          ],
+        },
+      ],
+    },
+  ],
+
+  footer:
+    "Teams that reach the top of either track stop consuming AI and start improving it. Programs named above are drawn from the catalog below. Steps marked 'PROPOSED' are gaps we have identified and can build; they are not currently listed.",
+};
+
 export const WhyNow = {
   title: "Why now",
   label: "Demand against supply",

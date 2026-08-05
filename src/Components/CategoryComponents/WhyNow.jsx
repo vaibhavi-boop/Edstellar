@@ -1,6 +1,6 @@
 export default function WhyNow({ data }) {
   return (
-    <section className="border-y border-[#d9d7cf] bg-[#f2f0e8] py-20 md:py-24">
+    <section id="why-now" className="border-y border-[#d9d7cf] bg-[#f2f0e8] py-20 md:py-24">
       <div className="container">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">

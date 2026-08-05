@@ -1,6 +1,6 @@
 export default function CapabilityTransformation({ data }) {
   return (
-    <section className="border-y border-[#d9d7cf] bg-[#f7f6f2] py-20 md:py-24">
+    <section id="transformation" className="border-y border-[#d9d7cf] bg-[#f7f6f2] py-20 md:py-24">
       <div className="container">
         {/* Top meta */}
         <div className="mb-6 flex items-center justify-between">

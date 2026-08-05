@@ -1,6 +1,9 @@
 export default function CapabilityTransformation({ data }) {
   return (
-    <section id="transformation" className="border-y border-[#d9d7cf] bg-[#f7f6f2] py-20 md:py-24">
+    <section
+      id="transformation"
+      className="border-y border-[#d9d7cf] bg-[var(--paper)] py-20 md:py-24"
+    >
       <div className="container">
         {/* Top meta */}
         <div className="mb-6 flex items-center justify-between">
@@ -22,7 +25,7 @@ export default function CapabilityTransformation({ data }) {
         </div>
 
         {/* Heading */}
-        <h2 className="max-w-[750px] text-[clamp(36px,4vw,52px)] font-bold leading-[0.98] tracking-[-0.045em] text-[#092c4c]">
+        <h2 className="max-w-[750px] text-[clamp(36px,4vw,52px)] font-bold leading-[0.98] tracking-[-0.045em] ]">
           {data.heading.normal}{" "}
           <em className="[font-family:var(--serif)] font-normal italic">
             {data.heading.italic}

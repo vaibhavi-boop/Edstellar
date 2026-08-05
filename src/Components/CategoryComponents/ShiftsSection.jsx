@@ -48,7 +48,7 @@ export default function ShiftsSection() {
   const item = items[active];
 
   return (
-    <section id="shifts" className="border-b border-[var(--rule)] bg-white py-20 md:py-24">
+    <section id="shifts" className="border-b border-[var(--rule)] bg-[var(--paper)] py-20 md:py-24">
       <div className="container">
         <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
           <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
@@ -64,31 +64,31 @@ export default function ShiftsSection() {
 
         <p className="mb-12 max-w-[72ch] text-[15px] leading-[1.7] text-[var(--muted)]">{paragraph}</p>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:gap-10">
-          <div className="flex flex-col gap-2">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[0.82fr_1.18fr] lg:gap-[22px]">
+          <div className="flex flex-col gap-2.5">
             {items.map((it, i) => (
               <button
                 key={it.title}
                 onClick={() => setActive(i)}
-                className={`flex cursor-pointer items-center gap-4 rounded-[14px] border px-5 py-[16px] text-left transition-all [font-family:var(--body)] ${
+                className={`flex cursor-pointer items-center gap-3.5 rounded-[14px] border bg-[var(--paper)] px-[17px] py-[15px] text-left transition-all [font-family:var(--body)] ${
                   active === i
-                    ? "border-[var(--ink)] bg-[var(--paper-warm)]"
-                    : "border-[var(--rule)] bg-white hover:border-[var(--rule-strong)]"
+                    ? "border-[var(--navy)] shadow-[0_0_0_1px_var(--navy)]"
+                    : "border-[var(--rule)] hover:border-[var(--rule-strong)]"
                 }`}
               >
                 <span
                   aria-hidden="true"
-                  className={`flex h-[36px] w-[36px] flex-none items-center justify-center rounded-[9px] [&_svg]:h-[18px] [&_svg]:w-[18px] ${
-                    active === i ? "bg-[var(--ink)] text-[var(--lime)]" : "bg-[var(--paper-warm)] text-[var(--ink)]"
+                  className={`flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[11px] text-[var(--ink)] transition-colors [&_svg]:h-[19px] [&_svg]:w-[19px] ${
+                    active === i ? "bg-[var(--lime)]" : "bg-[var(--paper-warm)]"
                   }`}
                 >
                   {ICONS[it.icon]}
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-[15px] font-semibold tracking-[-0.01em] text-[var(--ink)] [font-family:var(--display)]">
+                  <span className="block text-[14.5px] font-semibold tracking-[-0.015em] text-[var(--ink)] [font-family:var(--display)] leading-[1.3]">
                     {it.title}
                   </span>
-                  <span className="block text-[11px] uppercase tracking-[0.1em] text-[var(--muted-soft)] [font-family:var(--mono)]">
+                  <span className="mt-[3px] block font-mono text-[9px] uppercase tracking-[0.11em] text-[var(--muted)]">
                     {it.fig} · {it.tag}
                   </span>
                 </span>
@@ -96,7 +96,7 @@ export default function ShiftsSection() {
             ))}
           </div>
 
-          <div className="min-h-[340px] rounded-[18px] border border-[var(--rule)] bg-[var(--paper-warm)] p-6 lg:p-9">
+          <div className="min-h-[300px] rounded-[16px] border border-[var(--rule)] bg-[var(--white)] p-[30px_32px]">
             <div className="text-[42px] font-bold leading-none tracking-[-0.04em] text-[var(--ink)]">{item.fig}</div>
             <p className="mt-2 max-w-[42ch] text-[13px] leading-[1.6] text-[var(--muted)]">{item.figLabel}</p>
 
@@ -114,18 +114,18 @@ export default function ShiftsSection() {
               dangerouslySetInnerHTML={{ __html: item.body }}
             />
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-[var(--rule)] pt-5">
-              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted-soft)]">Demands</span>
-              <span className="text-[13.5px] text-[var(--ink)]">{item.demands}</span>
+            <div className="mt-4.5 flex flex-wrap items-baseline gap-x-2.5 gap-y-2 border-t border-[var(--rule)] pt-[18px]">
+              <span className="flex-none font-mono text-[8.5px] uppercase tracking-[0.12em] text-[#6f8c0f]">Demands</span>
+              <span className="text-[13.5px] leading-[1.6] text-[var(--muted)]">{item.demands}</span>
               <a
                 href={item.isGap ? "#apply" : `https://www.edstellar.com/course/${item.program}`}
-                className="ml-auto text-[12.5px] font-medium text-[#6f8c0f] underline-offset-2 hover:underline"
+                className="text-[var(--ink)] underline decoration-[var(--rule-strong)] underline-offset-[3px] hover:text-[#6f8c0f] hover:decoration-[#6f8c0f]"
               >
                 {item.program.replace(/ Training$/, "")}
               </a>
               {item.isGap && (
-                <span className="rounded-full bg-[var(--ink)]/8 px-2 py-[3px] font-mono text-[9px] uppercase tracking-[0.12em] text-[var(--muted-soft)]">
-                  proposed
+                <span className="rounded-[4px] border border-dashed border-[var(--rule-strong)] px-[6px] py-[2px] font-mono text-[8.5px] uppercase tracking-[0.1em] whitespace-nowrap text-[var(--muted)]">
+                  no program yet
                 </span>
               )}
             </div>

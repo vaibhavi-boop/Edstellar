@@ -2,7 +2,7 @@ import { related } from "@/data/categorydata";
 
 export default function RelatedDomainsSection() {
   return (
-    <section id="related" className="border-b border-[var(--rule)] bg-[var(--paper-warm)] py-28">
+    <section id="related" className="border-b border-[var(--rule)] bg-[var(--paper)] py-28">
       <div className="container">
         <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
           <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">

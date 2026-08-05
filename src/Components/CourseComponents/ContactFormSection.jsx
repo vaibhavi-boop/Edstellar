@@ -9,7 +9,7 @@ export default function ContactFormSection({
   paragraph = "Tell us what your team needs. Anything you selected in the course outline comes through with your request.",
 }) {
   return (
-    <section id="apply" className="bg-[var(--paper)] py-28 border-b border-[var(--rule)]">
+    <section id="apply" className="bg-[var(--paper-warm)] py-28 border-b border-[var(--rule)]">
       <div className="container">
         <div className="text-[11px] tracking-[0.24em] uppercase text-[var(--muted)] mb-[18px] [font-family:var(--mono)]">
           <span className="[font-family:var(--serif)] text-[14px] text-[var(--ink)]">

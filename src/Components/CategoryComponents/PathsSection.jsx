@@ -37,7 +37,7 @@ export default function PathsSection() {
           {paths.map((p) => {
             const hrs = hoursFor(p.seq);
             return (
-              <div key={p.r} className="rounded-[14px] border border-[var(--rule)] bg-white p-5 lg:p-6">
+              <div key={p.r} className="rounded-[14px] border border-[var(--rule)] bg-[var(--white)] p-5 lg:p-6">
                 <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                   <span className="text-[15.5px] font-semibold tracking-[-0.01em] text-[var(--ink)] [font-family:var(--display)]">
                     {p.n}
@@ -52,20 +52,20 @@ export default function PathsSection() {
                     const course = programByTitle.get(t);
                     const label = t.replace(/ Training$/, "");
                     return (
-                      <span key={t} className="flex items-center gap-2">
+                      <span key={t} className="flex items-center gap-[7px]">
                         {course?.isNew ? (
-                          <span className="rounded-full bg-[var(--ink)]/8 px-2.5 py-1 text-[12px] text-[var(--muted-soft)]">
+                          <span className="rounded-[5px] border border-dashed border-[var(--rule-strong)] px-[9px] py-[5px] font-mono text-[9.5px] text-[var(--muted)]">
                             {label} (proposed)
                           </span>
                         ) : (
                           <a
                             href={course?.u ? `https://www.edstellar.com/course/${course.u}` : "#apply"}
-                            className="rounded-full border border-[var(--rule)] px-2.5 py-1 text-[12px] text-[var(--ink)] hover:border-[var(--rule-strong)]"
+                            className="rounded-[5px] bg-[var(--paper-warm)] px-[9px] py-[5px] font-mono text-[9.5px] text-[var(--ink)] transition-colors hover:bg-[var(--navy)] hover:text-[var(--lime)]"
                           >
                             {label}
                           </a>
                         )}
-                        {i < p.seq.length - 1 && <span className="text-[var(--muted-soft)]">→</span>}
+                        {i < p.seq.length - 1 && <span className="text-[11px] text-[#6f8c0f]">→</span>}
                       </span>
                     );
                   })}

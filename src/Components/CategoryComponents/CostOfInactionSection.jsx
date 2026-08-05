@@ -44,7 +44,7 @@ export default function CostOfInactionSection() {
             aria-label="Previous pressure"
             onClick={() => scrollBy(-1)}
             disabled={index === 0}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--rule-strong)] text-[var(--ink)] transition-opacity disabled:opacity-30"
+            className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[var(--rule-strong)] bg-[var(--white)] text-[var(--ink)] transition-colors hover:enabled:border-[var(--navy)] hover:enabled:bg-[var(--navy)] hover:enabled:text-[var(--lime)] disabled:opacity-30"
           >
             ←
           </button>
@@ -53,7 +53,7 @@ export default function CostOfInactionSection() {
             aria-label="Next pressure"
             onClick={() => scrollBy(1)}
             disabled={index === items.length - 1}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--rule-strong)] text-[var(--ink)] transition-opacity disabled:opacity-30"
+            className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[var(--rule-strong)] bg-[var(--white)] text-[var(--ink)] transition-colors hover:enabled:border-[var(--navy)] hover:enabled:bg-[var(--navy)] hover:enabled:text-[var(--lime)] disabled:opacity-30"
           >
             →
           </button>
@@ -70,13 +70,19 @@ export default function CostOfInactionSection() {
             <div
               data-card
               key={it.k}
-              className="w-[300px] flex-none rounded-[16px] border border-[var(--rule)] bg-white p-6 [scroll-snap-align:start] sm:w-[340px]"
+              className="relative flex w-[300px] flex-none flex-col overflow-hidden rounded-[16px] border border-[var(--rule)] bg-[var(--white)] p-6 [scroll-snap-align:start] sm:w-[340px]"
             >
-              <p className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-[var(--muted-soft)]">{it.k}</p>
-              <div className="mt-4 text-[40px] font-bold leading-none tracking-[-0.03em] text-[var(--ink)]">{it.fig}</div>
-              <p className="mt-1 text-[12px] text-[var(--muted)]">{it.u}</p>
-              <p className="mt-4 text-[14px] leading-[1.7] text-[var(--ink)]/85">{it.d}</p>
-              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--muted-soft)]">{it.src}</p>
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-[3px] bg-[linear-gradient(90deg,var(--navy),#3f5f2a_60%,var(--lime))]"
+              />
+              <p className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-[var(--muted)]">{it.k}</p>
+              <div className="mt-4 text-[38px] font-bold leading-none tracking-[-0.04em] text-[var(--ink)]">{it.fig}</div>
+              <p className="mt-[6px] text-[13px] leading-[1.4] font-semibold text-[#6f8c0f]">{it.u}</p>
+              <p className="mt-[14px] text-[13.5px] leading-[1.7] text-[var(--muted)]">{it.d}</p>
+              <p className="mt-auto border-t border-[var(--rule)] pt-[14px] font-mono text-[9px] uppercase tracking-[0.11em] text-[var(--muted-soft)]">
+                {it.src}
+              </p>
             </div>
           ))}
         </div>

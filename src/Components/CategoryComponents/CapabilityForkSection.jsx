@@ -1,33 +1,34 @@
 import { outcomesForkSection } from "@/data/aiDomainData";
+import ArcsMotif from "./ArcsMotif";
 
-function ProgramChip({ program }) {
+function StepRow({ step, isLast }) {
+  const on = step.programs.length > 0;
   return (
-    <span
-      className={`inline-flex items-center rounded-full border px-3 py-[5px] text-[11px] leading-none ${
-        program.isNew
-          ? "border-[var(--lime)]/40 text-[var(--lime)]"
-          : "border-white/20 text-white/75"
-      }`}
-    >
-      {program.t.replace(/ Training$/, "")}
-      {program.isNew && <span className="ml-1 text-white/50">(proposed)</span>}
-    </span>
-  );
-}
-
-function Step({ step, reached }) {
-  return (
-    <div
-      className={`rounded-[14px] border px-5 py-5 ${
-        reached ? "border-[var(--lime)]/35 bg-white/[0.04]" : "border-white/12 bg-white/[0.02]"
-      }`}
-    >
-      <div className="text-[15.5px] font-semibold tracking-[-0.01em] text-white [font-family:var(--display)]">{step.n}</div>
-      <p className="mt-2 text-[13.5px] leading-[1.6] text-white/70">{step.d}</p>
-      {step.programs.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2">
+    <div className={`relative ${isLast ? "" : "pb-6"}`}>
+      <span
+        aria-hidden="true"
+        className={`absolute top-[5px] left-[-30px] h-[11px] w-[11px] rounded-full border-2 max-[620px]:left-[-24px] ${
+          on ? "border-[var(--lime)] bg-[var(--lime)]" : "border-white/35 bg-[var(--navy-soft)]"
+        }`}
+      />
+      <div className="mb-1.5 text-[18px] font-semibold tracking-[-0.02em] text-white [font-family:var(--display)]">
+        {step.n}
+      </div>
+      <p className="mb-2.5 max-w-[64ch] text-[13.5px] leading-[1.7] text-white/70">{step.d}</p>
+      {on && (
+        <div className="flex flex-wrap gap-1.5">
           {step.programs.map((p) => (
-            <ProgramChip key={p.t} program={p} />
+            <span
+              key={p.t}
+              className={`rounded-[5px] px-2 py-1 font-mono text-[9px] tracking-[0.03em] ${
+                p.isNew
+                  ? "border border-dashed border-white/30 text-white/55"
+                  : "border border-white/16 bg-[var(--navy-soft)] text-white"
+              }`}
+            >
+              {p.t.replace(/ Training$/, "")}
+              {p.isNew ? " (proposed)" : ""}
+            </span>
           ))}
         </div>
       )}
@@ -35,12 +36,31 @@ function Step({ step, reached }) {
   );
 }
 
+function Group({ tag, steps, isBranch, isLastGroup }) {
+  return (
+    <div className={`relative pl-[30px] max-[620px]:pl-6 ${isBranch ? "mt-[26px]" : ""}`}>
+      <span
+        aria-hidden="true"
+        className={`absolute left-[5px] w-px bg-white/20 ${isLastGroup ? "top-2 h-[calc(100%-46px)]" : "top-2 bottom-2"}`}
+      />
+      <p className={`mb-4 font-mono text-[9px] uppercase tracking-[0.14em] ${isBranch ? "text-[var(--lime)]" : "text-white/50"}`}>
+        {tag}
+      </p>
+      {steps.map((step, i) => (
+        <StepRow key={step.n} step={step} isLast={i === steps.length - 1} />
+      ))}
+    </div>
+  );
+}
+
 export default function CapabilityForkSection() {
   const { eyebrow, heading, paragraph, note, shared, branches } = outcomesForkSection;
+  const noteParts = note.split(/(proposed)/);
 
   return (
-    <section id="outcomes" className="border-b border-white/10 bg-[var(--navy)] py-20 md:py-24">
-      <div className="container">
+    <section id="outcomes" className="relative isolate overflow-hidden border-b border-white/10 bg-[var(--navy)] py-20 md:py-24">
+      <ArcsMotif />
+      <div className="container relative z-10">
         <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-white/55 [font-family:var(--mono)]">
           <span className="text-[16px] italic normal-case tracking-normal text-white [font-family:var(--serif)]">
             {eyebrow.italic}
@@ -55,32 +75,27 @@ export default function CapabilityForkSection() {
 
         <p className="mb-14 max-w-[72ch] text-[15px] leading-[1.7] text-white/70">{paragraph}</p>
 
-        <div className="grid grid-cols-1 gap-3 lg:grid-cols-2 lg:gap-6">
-          {shared.steps.map((step) => (
-            <Step key={step.n} step={step} reached />
+        <div className="max-w-[820px]">
+          <Group tag={shared.tag} steps={shared.steps} isBranch={false} isLastGroup={false} />
+          {branches.map((b, i) => (
+            <Group key={b.tag} tag={b.tag} steps={b.steps} isBranch isLastGroup={i === branches.length - 1} />
           ))}
         </div>
 
-        <div className="my-8 flex items-center gap-3 text-white/30">
-          <span className="h-px flex-1 bg-white/10" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em]">then the track splits</span>
-          <span className="h-px flex-1 bg-white/10" />
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {branches.map((branch) => (
-            <div key={branch.tag} className="rounded-[18px] border border-white/12 p-5 lg:p-6">
-              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--lime)]">{branch.tag}</p>
-              <div className="flex flex-col gap-3">
-                {branch.steps.map((step) => (
-                  <Step key={step.n} step={step} reached />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-10 max-w-[80ch] text-[12px] leading-[1.6] text-white/45">{note}</p>
+        <p className="mt-7 max-w-[78ch] text-[12.5px] leading-[1.6] text-white/45">
+          {noteParts.map((part, i) =>
+            part === "proposed" ? (
+              <b
+                key={i}
+                className="rounded-[4px] border border-dashed border-white/30 px-[5px] py-px font-mono text-[9px] font-normal uppercase tracking-[0.1em] text-white/55"
+              >
+                proposed
+              </b>
+            ) : (
+              <span key={i}>{part}</span>
+            ),
+          )}
+        </p>
       </div>
     </section>
   );

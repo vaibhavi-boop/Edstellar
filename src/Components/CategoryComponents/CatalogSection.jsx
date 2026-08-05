@@ -18,10 +18,10 @@ function Chip({ active, onClick, children }) {
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full border px-3.5 py-1.5 text-[12.5px] transition-colors ${
+      className={`rounded-[8px] border px-3 py-[7px] text-[12.5px] font-medium whitespace-nowrap transition-colors ${
         active
-          ? "border-[var(--ink)] bg-[var(--ink)] text-white"
-          : "border-[var(--rule)] bg-white text-[var(--ink)]/75 hover:border-[var(--rule-strong)]"
+          ? "border-[var(--navy)] bg-[var(--navy)] text-[var(--lime)]"
+          : "border-[var(--rule-strong)] bg-[var(--white)] text-[var(--ink)] hover:border-[var(--navy)]"
       }`}
     >
       {children}
@@ -33,19 +33,19 @@ function ProgramCard({ p }) {
   const body = (
     <>
       <span className="flex items-center justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--muted-soft)]">{domainLabel[p.dom]}</span>
+        <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#6f8c0f]">{domainLabel[p.dom]}</span>
         {p.isNew && (
-          <span className="rounded-full bg-[var(--lime-soft)] px-2 py-[2px] font-mono text-[9px] uppercase tracking-[0.1em] text-[var(--ink)]">
+          <span className="ml-2 inline-block rounded-[4px] bg-[var(--lime)] px-[6px] py-[2px] font-mono text-[8.5px] uppercase tracking-[0.1em] text-[var(--navy)]">
             Proposed
           </span>
         )}
       </span>
-      <span className="mt-2 block text-[15.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-[var(--ink)] [font-family:var(--display)]">
+      <span className="mt-[9px] block text-[15.5px] font-semibold leading-[1.3] tracking-[-0.015em] text-[var(--ink)] [font-family:var(--display)]">
         {p.t}
       </span>
       <span className="mt-2 block text-[13px] leading-[1.6] text-[var(--muted)]">{p.d}</span>
-      <span className="mt-4 flex items-center gap-1.5 text-[11.5px] text-[var(--muted-soft)]">
-        <svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5">
+      <span className="mt-auto flex items-center gap-[9px] border-t border-[var(--rule)] pt-[13px] font-mono text-[9.5px] uppercase tracking-[0.1em] text-[var(--muted)]">
+        <svg viewBox="0 0 16 16" fill="none" className="h-[13px] w-[13px] flex-none">
           <circle cx="8" cy="8" r="6.2" stroke="currentColor" strokeWidth="1.5" />
           <path d="M8 4.6V8l2.4 1.6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -58,7 +58,7 @@ function ProgramCard({ p }) {
     return (
       <a
         href="#apply"
-        className="flex flex-col rounded-[14px] border border-[var(--rule)] bg-white p-5 transition-all hover:-translate-y-1 hover:border-[var(--rule-strong)] hover:shadow-[0_20px_42px_-26px_rgba(10,22,40,.5)]"
+        className="flex flex-col rounded-[14px] border border-dashed border-[var(--rule-strong)] bg-[var(--paper-warm)] p-5 transition-colors hover:border-[var(--navy)]"
       >
         {body}
       </a>
@@ -68,7 +68,7 @@ function ProgramCard({ p }) {
   return (
     <a
       href={`https://www.edstellar.com/course/${p.u}`}
-      className="flex flex-col rounded-[14px] border border-[var(--rule)] bg-white p-5 transition-all hover:-translate-y-1 hover:border-[var(--rule-strong)] hover:shadow-[0_20px_42px_-26px_rgba(10,22,40,.5)]"
+      className="flex flex-col rounded-[14px] border border-[var(--rule)] bg-[var(--white)] p-5 transition-all hover:-translate-y-1 hover:border-[var(--rule-strong)] hover:shadow-[0_22px_44px_-30px_rgba(10,22,40,.5)]"
     >
       {body}
     </a>
@@ -102,7 +102,7 @@ export default function CatalogSection() {
   };
 
   return (
-    <section id="catalog" className="border-b border-[var(--rule)] bg-white py-20 md:py-24">
+    <section id="catalog" className="border-b border-[var(--rule)] bg-[var(--paper)] py-20 md:py-24">
       <div className="container">
         <div className="mb-8 flex items-baseline gap-3 text-[11px] uppercase tracking-[0.24em] text-[var(--muted)] [font-family:var(--mono)]">
           <span className="text-[16px] italic normal-case tracking-normal text-[var(--ink)] [font-family:var(--serif)]">
@@ -165,7 +165,7 @@ export default function CatalogSection() {
             ))}
           </div>
         ) : (
-          <div className="rounded-[16px] border border-[var(--rule)] bg-[var(--paper-warm)] p-8 text-center">
+          <div className="rounded-[16px] border border-dashed border-[var(--rule-strong)] bg-[var(--white)] p-8 text-center">
             <p className="mx-auto max-w-[52ch] text-[14px] leading-[1.7] text-[var(--muted)]">{emptyText}</p>
             <a href="#apply" className="mt-5 inline-block rounded-full bg-[var(--ink)] px-5 py-2.5 text-[13px] font-medium text-white">
               Ask for a match →

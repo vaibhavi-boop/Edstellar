@@ -15,7 +15,6 @@ import HeroStats from "@/Components/CourseComponents/HeroStatsSection";
 import ClientsLogosSection from "@/Components/CourseComponents/ClientsLogosSection";
 import StickyCourseTabs from "@/Components/CourseComponents/StickyTabsSection";
 import ExpandSection from "@/Components/CourseComponents/ExpandSection";
-import CourseInfoBar from "@/Components/CourseComponents/CourseInfoBarSection";
 import ContactFormSection from "@/Components/CourseComponents/ContactFormSection";
 import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import RelatedDomainsSection from "@/Components/CategoryComponents/RelatedDomainsSection";
@@ -25,6 +24,15 @@ import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import ScrollProgressBar from "@/Components/CourseComponents/ScrollProgressBar";
 import WhyNow from "@/Components/CategoryComponents/WhyNow";
 import CapabilityTransformation from "@/Components/CategoryComponents/CapabilityTransformation";
+import ShiftsSection from "@/Components/CategoryComponents/ShiftsSection";
+import CostOfInactionSection from "@/Components/CategoryComponents/CostOfInactionSection";
+import CapabilityForkSection from "@/Components/CategoryComponents/CapabilityForkSection";
+import IndustriesSection from "@/Components/CategoryComponents/IndustriesSection";
+import StackBandSection from "@/Components/CategoryComponents/StackBandSection";
+import CatalogSection from "@/Components/CategoryComponents/CatalogSection";
+import PathsSection from "@/Components/CategoryComponents/PathsSection";
+import GovernanceSection from "@/Components/CategoryComponents/GovernanceSection";
+import MethodSection from "@/Components/CategoryComponents/MethodSection";
 export default async function CategoryPage({ params }) {
   const { category } = await params;
 
@@ -44,12 +52,21 @@ export default async function CategoryPage({ params }) {
       <StickyCourseTabs data={categoryCourses[0].StickyTabsData} />
       <ExpandSection data={categoryCourses[0].ExpandSectionData} />
       <WhyNow data={whyNowData} />
+      <ShiftsSection />
+      <CostOfInactionSection />
+      <CapabilityForkSection />
       <CapabilityTransformation data={capabilityTransformation} />
+      <IndustriesSection />
+      <StackBandSection />
+      <CatalogSection />
+      <PathsSection />
+      <GovernanceSection />
       <WhyEdstellarSection
         whyheading={whyheading}
         whyStats={whyStats}
         why={why}
       />
+      <MethodSection />
       <section>
         {alsoFromEdstellar && (
           <AlsoFromEdstellar

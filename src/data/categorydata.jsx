@@ -222,46 +222,21 @@ export const categorydata = [
       logo: "https://cdn.prod.website-files.com/6482a3cf7db698c2a80cc5e6/68b14925e3257ab4374ea01b_Edstellar.svg",
       target: "Home",
       tabs: [
-        {
-          id: "about",
-          label: "About",
-        },
-        {
-          id: "why-now",
-          label: "Why now",
-        },
-        {
-          id: "lifecycle",
-          label: "Lifecycle",
-        },
-        {
-          id: "skills",
-          label: "Skills",
-        },
-        {
-          id: "outcomes",
-          label: "Outcomes",
-        },
-        {
-          id: "curriculum",
-          label: "Curriculum",
-        },
-        {
-          id: "audience",
-          label: "Audience",
-        },
-        {
-          id: "modes",
-          label: "Delivery",
-        },
-        {
-          id: "why",
-          label: "Why Edstellar",
-        },
-        {
-          id: "trainers",
-          label: "Trainers",
-        },
+        { id: "about", label: "About" },
+        { id: "why-now", label: "Why now" },
+        { id: "shifts", label: "What changed" },
+        { id: "inaction", label: "Cost of inaction" },
+        { id: "outcomes", label: "Outcomes" },
+        { id: "transformation", label: "Transformation" },
+        { id: "industries", label: "Industries" },
+        { id: "catalog", label: "Programs" },
+        { id: "paths", label: "Paths" },
+        { id: "governance", label: "Governance" },
+        { id: "why", label: "Why Edstellar" },
+        { id: "lifecycle", label: "Method" },
+        { id: "faq", label: "FAQ" },
+        { id: "related", label: "Related" },
+        { id: "apply", label: "Ask a question" },
       ],
     },
 

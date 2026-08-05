@@ -6,7 +6,7 @@ export default function ExpandSection({ data }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="bg-white">
+    <section id="about" className="bg-white">
       <div className="container">
         <div className="max-w-[760px]">
 

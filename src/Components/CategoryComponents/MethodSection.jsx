@@ -1,4 +1,6 @@
 import { methodSection } from "@/data/aiDomainData";
+import { alsoFromEdstellar } from "@/data/categorydata";
+import AlsoFromEdstellar from "@/Components/CourseComponents/AlsoFromEdstellar";
 
 export default function MethodSection() {
   const { eyebrow, heading, paragraph, loopNote, stages } = methodSection;
@@ -51,6 +53,10 @@ export default function MethodSection() {
         <p className="mt-8 flex items-center gap-2 text-[13px] text-[var(--muted)]">
           <b className="text-[var(--ink)]">↻</b> {loopNote}
         </p>
+
+        {alsoFromEdstellar && (
+          <AlsoFromEdstellar heading={alsoFromEdstellar.heading} alsoFrom={alsoFromEdstellar.alsoFrom} />
+        )}
       </div>
     </section>
   );

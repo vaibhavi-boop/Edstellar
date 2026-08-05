@@ -4,7 +4,6 @@ import {
   whyheading,
   whyStats,
   why,
-  alsoFromEdstellar,
   faqSection,
   WhyNow as whyNowData,
   capabilityTransformation,
@@ -19,7 +18,6 @@ import ContactFormSection from "@/Components/CourseComponents/ContactFormSection
 import StickyFooter from "@/Components/CourseComponents/StickyFooter";
 import RelatedDomainsSection from "@/Components/CategoryComponents/RelatedDomainsSection";
 import WhyEdstellarSection from "@/Components/CourseComponents/WhyEdstellarSection";
-import AlsoFromEdstellar from "@/Components/CourseComponents/AlsoFromEdstellar";
 import CourseFAQSection from "@/Components/CourseComponents/CourseFAQSection";
 import ScrollProgressBar from "@/Components/CourseComponents/ScrollProgressBar";
 import WhyNow from "@/Components/CategoryComponents/WhyNow";
@@ -67,14 +65,6 @@ export default async function CategoryPage({ params }) {
         why={why}
       />
       <MethodSection />
-      <section>
-        {alsoFromEdstellar && (
-          <AlsoFromEdstellar
-            heading={alsoFromEdstellar.heading}
-            alsoFrom={alsoFromEdstellar.alsoFrom}
-          />
-        )}
-      </section>
       <CourseFAQSection
         className="bg-[var(--paper-warm)] mt-16"
         faqSection={faqSection}

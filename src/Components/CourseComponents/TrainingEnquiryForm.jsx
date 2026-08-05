@@ -568,14 +568,14 @@ export default function TrainingEnquiryForm({
             <p id="Consent-error2" className={`${errClass} ml-[28px]`} />
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-6 border-t border-[var(--rule)] pt-6 sm:col-span-2">
+          <div className="flex flex-col gap-4 border-t border-[var(--rule)] pt-6 sm:col-span-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
             <p className="max-w-[38ch] flex-1 text-[12.5px] leading-[1.55] text-[var(--muted)]">
               We reply within one business day with a tailored proposal, no
               automated sales sequence.
             </p>
             <button
               type="submit"
-              className="whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-semibold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)]"
+              className="w-full whitespace-nowrap rounded-full bg-[var(--navy)] px-8 py-3.5 text-[14px] font-semibold text-[var(--lime)] transition-colors hover:bg-[var(--navy-soft)] sm:w-auto"
             >
               {submitLabel}
             </button>

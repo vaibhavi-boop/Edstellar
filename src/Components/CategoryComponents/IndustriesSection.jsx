@@ -19,7 +19,7 @@ function SectorCard({ x }) {
   return (
     <article
       data-card
-      className={`flex h-full w-[300px] flex-none flex-col rounded-[16px] border p-6 sm:w-[340px] ${
+      className={`flex h-full w-[380px] flex-none flex-col rounded-[16px] border p-6 sm:w-[380px] ${
         isGap ? "border-dashed border-[var(--rule-strong)]" : "border-[var(--rule)] bg-[var(--white)]"
       }`}
     >
@@ -120,7 +120,7 @@ function Rail({ label, gap, items }) {
           </span>
         </div>
       </div>
-      <div className="overflow-hidden sm:max-w-[1090px]">
+      <div className="overflow-hidden sm:max-w-7xl">
         <div ref={trackRef} className="flex gap-3.5 overflow-x-auto pb-2 [scroll-snap-type:x_mandatory] scrollbar-hide">
           {items.map((x) => (
             <div key={x.n} className="[scroll-snap-align:start]">

@@ -62,29 +62,31 @@ export default function CostOfInactionSection() {
           </span>
         </div>
 
-        <div
-          ref={trackRef}
-          className="flex gap-4 overflow-x-auto pb-2 [scroll-snap-type:x_mandatory] scrollbar-hide"
-        >
-          {items.map((it) => (
-            <div
-              data-card
-              key={it.k}
-              className="relative flex w-[300px] flex-none flex-col overflow-hidden rounded-[16px] border border-[var(--rule)] bg-[var(--white)] p-6 [scroll-snap-align:start] sm:w-[340px]"
-            >
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-[3px] bg-[linear-gradient(90deg,var(--navy),#3f5f2a_60%,var(--lime))]"
-              />
-              <p className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-[var(--muted)]">{it.k}</p>
-              <div className="mt-4 text-[38px] font-bold leading-none tracking-[-0.04em] text-[var(--ink)]">{it.fig}</div>
-              <p className="mt-[6px] text-[13px] leading-[1.4] font-semibold text-[#6f8c0f]">{it.u}</p>
-              <p className="mt-[14px] text-[13.5px] leading-[1.7] text-[var(--muted)]">{it.d}</p>
-              <p className="mt-auto border-t border-[var(--rule)] pt-[14px] font-mono text-[9px] uppercase tracking-[0.11em] text-[var(--muted-soft)]">
-                {it.src}
-              </p>
-            </div>
-          ))}
+        <div className="overflow-hidden sm:max-w-[1090px]">
+          <div
+            ref={trackRef}
+            className="flex items-start gap-4 overflow-x-auto pb-2 [scroll-snap-type:x_mandatory] scrollbar-hide"
+          >
+            {items.map((it) => (
+              <div
+                data-card
+                key={it.k}
+                className="relative flex w-[300px] flex-none flex-col overflow-hidden rounded-[16px] border border-[var(--rule)] bg-[var(--white)] p-6 [scroll-snap-align:start] sm:w-[340px]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-[3px] bg-[linear-gradient(90deg,var(--navy),#3f5f2a_60%,var(--lime))]"
+                />
+                <p className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-[var(--muted)]">{it.k}</p>
+                <div className="mt-4 text-[38px] font-bold leading-none tracking-[-0.04em] text-[var(--ink)]">{it.fig}</div>
+                <p className="mt-[6px] text-[13px] leading-[1.4] font-semibold text-[#6f8c0f]">{it.u}</p>
+                <p className="mt-[14px] min-h-[168px] text-[13.5px] leading-[1.7] text-[var(--muted)] sm:min-h-[140px]">{it.d}</p>
+                <p className="mt-[16px] pt-[18px] border-t border-[var(--rule)] font-mono text-[9px] uppercase tracking-[0.11em] text-[var(--muted-soft)]">
+                  {it.src}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <p className="mt-8 max-w-[80ch] text-[12px] leading-[1.6] text-[var(--muted-soft)]">{note}</p>

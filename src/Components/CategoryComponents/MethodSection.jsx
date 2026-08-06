@@ -22,26 +22,28 @@ export default function MethodSection() {
 
         <p className="mb-14 max-w-[70ch] text-[15px] leading-[1.7] text-[var(--muted)]">{paragraph}</p>
 
-        <ol className="flex flex-col md:flex-row md:items-start">
+        <ol className="flex flex-col md:flex-row">
           {stages.map((s, i) => (
-            <li key={s.ix} className="flex flex-1 gap-4 md:flex-col md:gap-0">
+            <li key={s.ix} className="group flex flex-1 gap-4 md:flex-col md:gap-0">
               <div className="flex flex-col items-center md:w-full md:flex-row">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[var(--ink)] font-mono text-[12px] text-white">
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[var(--ink)] font-mono text-[12px] text-[var(--lime)] transition-colors duration-200 group-hover:bg-[var(--lime)] group-hover:text-[var(--navy)]">
                   {s.ix}
                 </span>
                 {i < stages.length - 1 && (
-                  <span
-                    aria-hidden="true"
-                    className="my-1 w-px flex-1 bg-[var(--rule-strong)] md:my-0 md:ml-2 md:h-px md:w-auto"
-                  />
+                  <span aria-hidden="true" className="my-1 flex flex-1 items-center md:my-0 md:ml-2 md:w-auto">
+                    <span className="h-full w-px flex-1 bg-[var(--rule-strong)] md:h-px md:w-full" />
+                    <svg viewBox="0 0 8 8" className="hidden h-[8px] w-[8px] flex-none text-[var(--rule-strong)] md:ml-1 md:block">
+                      <path d="M1.5 1l4 3-4 3" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                 )}
               </div>
-              <div className="pb-8 md:w-full md:pt-4 md:pr-4 md:pb-0">
+              <div className="flex flex-1 flex-col pb-8 md:w-full md:pt-4 md:pr-4 md:pb-0">
                 <div className="text-[15.5px] font-semibold tracking-[-0.01em] text-[var(--ink)] [font-family:var(--display)]">
                   {s.t}
                 </div>
-                <p className="mt-2 text-[13.5px] leading-[1.6] text-[var(--ink)]/80">{s.p.split(". ")[0]}.</p>
-                <span className="mt-3 block font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--muted-soft)]">
+                <p className="mt-2 mb-4 text-[13.5px] leading-[1.6] text-[var(--ink)]/80">{s.p.split(". ")[0]}.</p>
+                <span className="mt-auto block border-t border-[var(--rule)] pt-5 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--muted-soft)]">
                   {s.mods}
                 </span>
               </div>
@@ -49,7 +51,7 @@ export default function MethodSection() {
           ))}
         </ol>
 
-        <p className="mt-8 flex items-center gap-2 text-[13px] text-[var(--muted)]">
+        <p className="mt-2 flex items-center gap-2 border-t border-[var(--rule)] pt-4 text-[13px] text-[var(--muted)]">
           <b className="text-[var(--ink)]">↻</b> {loopNote}
         </p>
 

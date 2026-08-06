@@ -62,7 +62,7 @@ export default function CostOfInactionSection() {
           </span>
         </div>
 
-        <div className="overflow-hidden sm:max-w-[1090px]">
+        <div className="overflow-hidden sm:max-w-[1280px]">
           <div
             ref={trackRef}
             className="flex items-start gap-4 overflow-x-auto pb-2 [scroll-snap-type:x_mandatory] scrollbar-hide"
@@ -71,7 +71,7 @@ export default function CostOfInactionSection() {
               <div
                 data-card
                 key={it.k}
-                className="relative flex w-[300px] flex-none flex-col overflow-hidden rounded-[16px] border border-[var(--rule)] bg-[var(--white)] p-6 [scroll-snap-align:start] sm:w-[340px]"
+                className="relative flex w-[300px] flex-none flex-col overflow-hidden rounded-[16px] border border-[var(--rule)] bg-[var(--white)] p-6 [scroll-snap-align:start] sm:w-[380px]"
               >
                 <span
                   aria-hidden="true"

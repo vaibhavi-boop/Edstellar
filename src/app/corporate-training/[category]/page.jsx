@@ -48,6 +48,7 @@ export default async function CategoryPage({ params }) {
       <CourseHero {...categoryCourses[0].hero} />
       <HeroStats data={categoryCourses[0].heroStatsData} />
       <ClientsLogosSection data={categoryCourses[0].ClientsLogosSectionData} />
+      <div id="navSentinel" aria-hidden="true" className="h-px -mb-px" />
       <StickyCourseTabs data={categoryCourses[0].StickyTabsData} />
       <ExpandSection data={categoryCourses[0].ExpandSectionData} />
       <WhyNow data={whyNowData} />

@@ -43,8 +43,8 @@ function ProgramCard({ p }) {
       <span className="mt-[9px] block text-[15.5px] font-semibold leading-[1.3] tracking-[-0.015em] text-[var(--ink)] [font-family:var(--display)]">
         {p.t}
       </span>
-      <span className="mt-2 block text-[13px] leading-[1.6] text-[var(--muted)]">{p.d}</span>
-      <span className="mt-auto flex items-center gap-[9px] border-t border-[var(--rule)] pt-[13px] font-mono text-[9.5px] uppercase tracking-[0.1em] text-[var(--muted)]">
+      <span className="mt-2 block min-h-[63px] text-[13px] leading-[1.6] text-[var(--muted)]">{p.d}</span>
+      <span className="mt-[14px] flex items-center gap-[9px] border-t border-[var(--rule)] pt-[13px] font-mono text-[9.5px] uppercase tracking-[0.1em] text-[var(--muted)]">
         <svg viewBox="0 0 16 16" fill="none" className="h-[13px] w-[13px] flex-none">
           <circle cx="8" cy="8" r="6.2" stroke="currentColor" strokeWidth="1.5" />
           <path d="M8 4.6V8l2.4 1.6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -143,7 +143,7 @@ export default function CatalogSection() {
               ? `Showing ${(safePage - 1) * PER_PAGE + 1}–${(safePage - 1) * PER_PAGE + slice.length} of ${matches.length}`
               : "No program matches this selection"}
           </p>
-          <div className="flex items-center gap-2 rounded-full border border-[var(--rule-strong)] bg-white px-3.5 py-1.5">
+          <div className="flex items-center gap-2 rounded-[10px] border border-[var(--rule-strong)] bg-white px-3.5 py-1.5">
             <svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5 text-[var(--muted-soft)]">
               <circle cx="7" cy="7" r="4.6" stroke="currentColor" strokeWidth="1.5" />
               <path d="M10.6 10.6 14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -179,7 +179,7 @@ export default function CatalogSection() {
               type="button"
               disabled={safePage === 1}
               onClick={() => setPage(safePage - 1)}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--rule-strong)] disabled:opacity-30"
+              className="flex h-8 w-8 items-center justify-center rounded-[8px] border border-[var(--rule-strong)] disabled:opacity-30"
             >
               ←
             </button>
@@ -188,7 +188,7 @@ export default function CatalogSection() {
                 key={n}
                 onClick={() => setPage(n)}
                 aria-current={n === safePage ? "page" : undefined}
-                className={`flex h-8 w-8 items-center justify-center rounded-full text-[12.5px] ${
+                className={`flex h-8 w-8 items-center justify-center rounded-[8px] text-[12.5px] ${
                   n === safePage ? "bg-[var(--ink)] text-white" : "text-[var(--ink)]/70 hover:bg-[var(--paper-warm)]"
                 }`}
               >
@@ -199,7 +199,7 @@ export default function CatalogSection() {
               type="button"
               disabled={safePage === pages}
               onClick={() => setPage(safePage + 1)}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--rule-strong)] disabled:opacity-30"
+              className="flex h-8 w-8 items-center justify-center rounded-[8px] border border-[var(--rule-strong)] disabled:opacity-30"
             >
               →
             </button>
